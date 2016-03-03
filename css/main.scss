@@ -88,3 +88,18 @@ nav.site-nav {
     font-family:$secondary-font;
     font-size:1.5em;
 }
+.heading-wrap {
+    width: 100%;
+    display:block;
+    background-color:#333;
+}
+h2.section-heading {
+    @extend .wrapper;
+    width: calc(100% - 30px);
+    color:#fff;
+    font-family:$brand-font;
+    font-size:2em;
+}
+.post-header.no-title {
+    display:none;
+}

@@ -2,7 +2,14 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-
+@font-face {
+    font-family:'CabinSketch';
+    src: url('../CabinSketch-Regular.otf');
+}
+@font-face {
+    font-family:'Neucha';
+    src: url('../Neucha.ttf');
+}
 
 
 // Our variables
@@ -11,6 +18,9 @@ $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+
+$brand-font:       "CabinSketch";
+$secondary-font:   "Neucha";
 
 $spacing-unit:     30px;
 
@@ -51,3 +61,30 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+.site-title {
+    font-family:$brand-font;
+    font-size:4.5em;
+    line-height:1em;
+    margin-top:.2em;
+}
+.site-subtitle {
+    font-family:$secondary-font;
+    font-size:2em;
+    line-height:2em;
+}
+.site-title, .site-subtitle {
+    width:100%;
+}
+.navigation {
+    background-color:#eee;
+    display:block;
+    width:100%;
+}
+
+nav.site-nav {
+    @extend .wrapper;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    font-family:$secondary-font;
+    font-size:1.5em;
+}

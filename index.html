@@ -7,7 +7,19 @@ layout: default
 </div>
 <div class="wrapper">
   <p>
-    Add portfolio loop here.
+    {% for portfolio in site.portfolio %}
+      <div class="portfolio-block">
+        <div class="portfolio-title">
+          {{ portfolio.title }}
+        </div>
+        <div class="portfolio-img">
+          <img src="{{ portfolio.img.teaser }}" />
+        </div>
+        <div class="portfolio-excerpt">
+          {{ portfolio.excerpt }}
+        </div>
+      </div>
+    {% endfor %}
   </p>
 </div>
 <div class="heading-wrap">

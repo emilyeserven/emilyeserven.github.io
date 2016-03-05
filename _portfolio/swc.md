@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: portfolio
 title: Stamford Women's Club
 excerpt: SWC Stuff...
 img:

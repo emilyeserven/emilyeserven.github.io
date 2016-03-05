@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: portfolio
 title: Mary Wathen
 excerpt: Mary Wathen words...
 img:

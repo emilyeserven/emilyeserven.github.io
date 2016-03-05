@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: portfolio
 title: EPM Channel
 excerpt: EPM words...
 img:

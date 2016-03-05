@@ -6,11 +6,11 @@ layout: default
   <h2 class="section-heading">Portfolio</h2>
 </div>
 <div class="wrapper">
-  <p>
+  <div class="portfolio-holder">
     {% for portfolio in site.portfolio %}
       <div class="portfolio-block">
         <div class="portfolio-title">
-          {{ portfolio.title }}
+          <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
         </div>
         <div class="portfolio-img">
           <img src="{{ portfolio.img.teaser }}" />
@@ -20,15 +20,31 @@ layout: default
         </div>
       </div>
     {% endfor %}
-  </p>
+  </div>
+  <div class="slider-holder">
+    <img src="../assets/images/placeholder.png" />
+  </div>
 </div>
 <div class="heading-wrap">
   <h2 class="section-heading">About Me</h2>
 </div>
 <div class="wrapper">
-  <p>
-    Info about me here.
-  </p>
+  <div class="info-block">
+    Lorem ipsum dolor set amet....
+    <!-- TODO: Add a section of the about page here. -->
+    <div class="info-buttons">
+      <a class="button-link" href="#">Download My Resume</a>
+      <a class="button-link" href="#">Learn More About Me</a>
+    </div>
+  </div>
+  <div class="avatar-block">
+    <div class="social-row">
+      <!-- TODO: Social buttons here. -->
+    </div>
+    <div class="avatar">
+      <!-- TODO: Avatar here. -->
+    </div>
+  </div>
 </div>
 <div class="heading-wrap">
   <h2 class="section-heading">Contact Me</h2>

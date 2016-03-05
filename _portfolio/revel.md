@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: portfolio
 title: Revel Cellars
 excerpt: Revel cellars words.
 img:

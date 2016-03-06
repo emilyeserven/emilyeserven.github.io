@@ -129,7 +129,7 @@ h2.section-heading {
 .portfolio-block {
     display:inline-block;
     vertical-align:top;
-    width:50%;
+    width:49%;
     margin-bottom:1em;
     &:nth-of-type(odd) {
         margin-right:1%;
@@ -177,4 +177,20 @@ h2.section-heading {
     background-image: $bg-image;
     background-repeat: repeat;
     background-position: center;
+}
+.button-link {
+    background-color:$grey-color-light;
+    color:$grey-color-dark;
+    font-family:$secondary-font;
+    font-size: 1.3em;
+    padding: 8px 20px 5px;
+    display:inline-block;
+    transition: background-color ease-in-out 200ms;
+    &:nth-of-type(odd) {
+        margin-right:2em;
+    }
+    &:hover {
+        text-decoration:none;
+        background-color:darken($grey-color-light, 10%);
+    }
 }

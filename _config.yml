@@ -17,7 +17,9 @@ url: "" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 collections:
-  - portfolio
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
 
 # Build settings
 markdown: kramdown

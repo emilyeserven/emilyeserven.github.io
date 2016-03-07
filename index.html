@@ -6,6 +6,9 @@ layout: default
   <h2 class="section-heading">Portfolio</h2>
 </div>
 <div class="wrapper">
+  <div class="slider-holder">
+    <img src="../assets/images/placeholder.png" />
+  </div>
   <div class="portfolio-holder">
     {% for portfolio in site.portfolio %}
       <div class="portfolio-block">
@@ -21,9 +24,6 @@ layout: default
       </div>
     {% endfor %}
   </div>
-  <div class="slider-holder">
-    <img src="../assets/images/placeholder.png" />
-  </div>
 </div>
 <div class="heading-wrap">
   <h2 class="section-heading">About Me</h2>
@@ -36,7 +36,7 @@ layout: default
     <!-- TODO: Add a section of the about page here. -->
     <div class="info-buttons">
       <a class="button-link" href="#">Download My Resume</a>
-      <a class="button-link" href="#">Learn More About Me</a>
+      <a class="button-link" href="../about/">Learn More About Me</a>
     </div>
   </div>
   <div class="avatar-block">

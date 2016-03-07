@@ -132,7 +132,8 @@ h2.section-heading {
 }
 .portfolio-holder {
     @include blkstruc(65%);
-    margin-right:1%;
+    margin-left:1%;
+    float:left;
 }
 .portfolio-block {
     @include blkstruc(49%);
@@ -167,8 +168,9 @@ h2.section-heading {
 }
 .slider-holder {
     @include blkstruc(32%);
-    margin-left:1%;
+    margin-right:1%;
     height: 25em; //TODO: Revisit this later!
+    float:left;
     img {
         height:100%;
     }

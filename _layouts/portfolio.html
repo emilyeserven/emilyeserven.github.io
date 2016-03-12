@@ -8,8 +8,20 @@ layout: default
   </header>
 
   <div class="post-content">
-    {{ portfolio.excerpt }}
-    {{ content }}
+    <div class="content-left">
+        {{ content }}
+    </div>
+    <div class="content-right">
+      <b>Services Provided</b>:
+      {{ portfolio.excerpt }}
+        {% for tags in page.tags %}
+            {{tags}},
+        {% endfor %}
+      <p><b>Time of Project</b>: {{ page.time }}<br />
+      <b>Platform</b>: {{ page.platform }}<br />
+      <b>Category</b>: {{ page.categories }}</p>
+    </div>
+  <div class="clearfix"></div>
     {% for photo in page.pageimg %}
     <div class="photo-block">
     <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image"/>

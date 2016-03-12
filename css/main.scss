@@ -107,6 +107,7 @@ nav.site-nav {
     margin: 0 auto;
     font-family:$secondary-font;
     font-size:1.5em;
+    line-height: 30px !important;
 }
 .heading-wrap {
     width: 100%;
@@ -208,4 +209,28 @@ h2.section-heading {
         text-decoration:none;
         background-color:darken($grey-color-light, 10%);
     }
+}
+img.portfolio-image {
+    width: 100%;
+    height: 550px;
+}
+.photo-block {
+    margin-bottom: 15px;
+}
+.post-header.fullwidth {
+    margin-bottom: 30px;
+    background: #333;
+    padding: 5px 0;
+    .post-title {
+        font-size: 42px;
+        letter-spacing: 0px;
+        line-height: 1;
+        max-width: calc(1000px - (30px * 2));
+        margin: 0 auto;
+        font-family: "CabinSketch";
+        color: #fff;
+    }
+}
+.post-header.silent {
+    display:none;
 }

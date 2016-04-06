@@ -15,8 +15,8 @@ layout: default
         <div class="portfolio-title">
           <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
         </div>
-        <div class="portfolio-img">
-          <img src="{{ portfolio.img.teaser }}" />
+        <div class="portfolio-img bg-{{portfolio.code}}">
+          <img src="../assets/images/{{portfolio.code}}/sized.png" />
         </div>
         <div class="portfolio-excerpt">
           {{ portfolio.excerpt }}
@@ -41,10 +41,10 @@ layout: default
   </div>
   <div class="avatar-block">
     <div class="social-row">
-      <div class="width-25"><img src="../assets/images/placeholder.png" width="30px" height="30px" /></div>
-      <div class="width-25"><img src="../assets/images/placeholder.png" width="30px" height="30px" /></div>
-      <div class="width-25"><img src="../assets/images/placeholder.png" width="30px" height="30px" /></div>
-      <div class="width-25"><img src="../assets/images/placeholder.png" width="30px" height="30px" /></div>
+      <div class="width-25"><i class="fa fa-linkedin-square fa-2x"></i></div>
+      <div class="width-25"><i class="fa fa-github-square fa-2x"></i></div>
+      <div class="width-25"><i class="fa fa-pencil-square fa-2x"></i></div>
+      <div class="width-25"><i class="fa fa-twitter-square fa-2x"></i></div>
       <!-- TODO: Social buttons here. -->
     </div>
     <div class="avatar">
@@ -58,6 +58,28 @@ layout: default
 </div>
 <div class="wrapper">
   <p>
-    Contact form here.
+    <form id="contact-form" action="http://formspree.io/emily.e.serven@gmail.com" method="POST">
+
+      <div class="form-title">Name:</div>
+      <input type="text" name="name" placeholder="Enter your name" class="form-field">
+
+      <div class="form-title">Email:</div>
+      <input type="email" name="_replyto" placeholder="Enter your email" class="form-field">
+
+      <div class="form-title">Website <span style="color:#aaaaaa">(If applicable)</span>:</div>
+      <input type="email" name="website" placeholder="Enter your website" class="form-field">
+
+      <div class="form-title">Message:</div>
+      <textarea name="message" rows="10" placeholder="Enter your message" class="form-field form-message"></textarea>
+
+      <input type="hidden" name="_subject" value="Website contact" />
+      <input type="hidden" name="_next" value="/" />
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="buttons-container">
+         <input type="submit" value="Send" class="buttons">
+      </div>
+
+    </form>
   </p>
 </div>

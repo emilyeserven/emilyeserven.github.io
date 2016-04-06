@@ -1,0 +1,22 @@
+---
+layout: default
+title: Portfolio
+permalink: /portfolio/
+weight: 2
+---
+<div class="portfolio-holder standalone">
+  <h2>Full Projects</h2>
+{% for portfolio in site.portfolio %}
+  <div class="portfolio-block">
+    <div class="portfolio-title">
+      <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
+    </div>
+    <div class="portfolio-img bg-{{portfolio.code}}">
+      <img src="../assets/images/{{portfolio.code}}/sized.png" />
+    </div>
+    <div class="portfolio-excerpt">
+      {{ portfolio.excerpt }}
+    </div>
+  </div>
+{% endfor %}
+</div>

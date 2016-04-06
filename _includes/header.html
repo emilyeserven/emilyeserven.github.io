@@ -18,7 +18,9 @@
           </a>
 
           <div class="trigger">
-            {% for my_page in site.pages %}
+            <!-- SORTED MENU: https://stackoverflow.com/questions/9053066/sorted-navigation-menu-with-jekyll-and-liquid -->
+            {% assign all_pages = site.pages | sort:"weight" %}
+            {% for my_page in all_pages %}
               {% if my_page.title %}
               <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
               {% endif %}

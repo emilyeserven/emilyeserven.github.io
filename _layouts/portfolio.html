@@ -24,7 +24,7 @@ layout: default
   <div class="clearfix"></div>
     {% for photo in page.pageimg %}
     <div class="photo-block">
-    <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image"/>
+    <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image bg-{{page.code}}"/>
     <caption>
       {{ photo.img-name }}
     </caption>

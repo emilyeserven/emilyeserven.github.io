@@ -1,0 +1,31 @@
+---
+layout: default
+title: Contact Me
+permalink: /contact/
+weight: 4
+---
+<div class="portfolio-holder standalone">
+  <form id="contact-form" action="http://formspree.io/emily.e.serven@gmail.com" method="POST">
+
+    <div class="form-title">Name:</div>
+    <input type="text" name="name" placeholder="Enter your name" class="form-field">
+
+    <div class="form-title">Email:</div>
+    <input type="email" name="_replyto" placeholder="Enter your email" class="form-field">
+
+    <div class="form-title">Website <span style="color:#aaaaaa">(If applicable)</span>:</div>
+    <input type="email" name="website" placeholder="Enter your website" class="form-field">
+
+    <div class="form-title">Message:</div>
+    <textarea name="message" rows="10" placeholder="Enter your message" class="form-field form-message"></textarea>
+
+    <input type="hidden" name="_subject" value="Website contact" />
+    <input type="hidden" name="_next" value="/" />
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="buttons-container">
+       <input type="submit" value="Send" class="buttons">
+    </div>
+
+  </form>
+</div>

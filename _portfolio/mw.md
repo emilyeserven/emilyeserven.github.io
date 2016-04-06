@@ -2,6 +2,7 @@
 layout: portfolio
 title: Mary Wathen
 excerpt: Full service residential design.
+code: mw
 time: June 2014 - Present
 tags: [Design]
 categories: Business

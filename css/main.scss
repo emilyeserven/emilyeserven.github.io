@@ -81,6 +81,13 @@ $on-laptop:        800px;
 .page-content {
     padding: 0;
 }
+.trigger {
+    a.page-link {
+        width: 22%;
+        display:inline-block;
+        text-align:center;
+    }
+}
 .site-title {
     font-family:$brand-font;
     font-size:4.5em;
@@ -116,6 +123,10 @@ nav.site-nav {
     z-index: 2;
     position:relative;
 }
+h2 {
+    font-family: $secondary-font;
+    font-size:2em;
+}
 h2.section-heading {
     @extend .wrapper;
     width: calc(100% - 30px);
@@ -144,6 +155,9 @@ h2.section-heading {
     @include blkstruc(65%);
     margin-left:1%;
     float:left;
+    &.standalone {
+        width:100% !important;
+    }
 }
 .portfolio-block {
     @include blkstruc(49%);
@@ -166,14 +180,26 @@ h2.section-heading {
         }
     }
     .portfolio-img {
+        height: 8.5em;
+        overflow: hidden;
+        padding: 0 15px;
         img {
-            @include widthprop(100%,300px);
-            height: 150px;
+            @include widthprop(100%,auto);
+            height: 8.5em;
+            margin:0 auto !important;
+            vertical-align: bottom;
+            display:block;
         }
     }
     .portfolio-excerpt {
         background-color:$grey-color-light;
         padding:5px;
+    }
+}
+.portfolio-holder.standalone .portfolio-img {
+    height:12em !important;
+    img {
+        height:12em;
     }
 }
 .slider-holder {
@@ -264,6 +290,20 @@ img.portfolio-image {
         display:inline-block;
     }
 }
+.bg- {
+    &epm {
+        background-color:#CE171F;
+    }
+    &rc {
+        background-color:#4B181F;
+    }
+    &swc {
+        background-color:#01407D;
+    }
+    &mw {
+        background-color:#000;
+    }
+}
 @include media-query(767px) {
     .slider-holder, .portfolio-holder {
         width: 100%;
@@ -283,8 +323,10 @@ img.portfolio-image {
         margin-top: 15px;
     }
     .portfolio-block .portfolio-img img {
-        width: 100%;
+        width: 50% !important;
         max-width: initial;
+        vertical-align: bottom;
+        margin:0 auto !important;
     }
     .slider-holder img {
         max-width: initial;

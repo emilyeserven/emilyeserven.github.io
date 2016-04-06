@@ -1,7 +1,8 @@
 ---
 layout: portfolio
 title: Stamford Women's Club
-excerpt: SWC Stuff...
+excerpt: Community service and scolarships.
+code: swc
 img:
     teaser: ../assets/images/placeholder.png
 

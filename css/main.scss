@@ -230,15 +230,16 @@ img.portfolio-image {
     margin-bottom: 30px;
     background: #333;
     padding: 5px 0;
-    .post-title {
-        font-size: 42px;
-        letter-spacing: 0px;
-        line-height: 1;
-        max-width: calc(1000px - (30px * 2));
-        margin: 0 auto;
-        font-family: "CabinSketch";
-        color: #fff;
-    }
+}
+.post-title {
+    font-size: 42px;
+    letter-spacing: 0px;
+    line-height: 1;
+    max-width: calc(1000px - 30px) !important;
+    margin: 0 auto;
+    font-family: "CabinSketch";
+    color: #fff;
+    display:block;
 }
 .post-header.silent {
     display:none;
@@ -246,13 +247,74 @@ img.portfolio-image {
 .social-row {
     margin-top: 15px;
     margin-bottom: -20px;
+    text-align:center;
     img {
-        margin-right: 15%;
+        margin-right: 13%;
         &:first-of-type {
             margin-left: 5%;
         }
         &:last-of-type {
             margin-right: 0;
         }
+    }
+}
+.width- {
+    &25 {
+        width: 23%;
+        display:inline-block;
+    }
+}
+@include media-query(767px) {
+    .slider-holder, .portfolio-holder {
+        width: 100%;
+        display:block;
+    }
+    .avatar-block, .info-block {
+        width:48%;
+        display:inline-block;
+    }
+    .avatar-block {
+        float:right;
+    }
+    .slider-holder {
+        height: auto;
+    }
+    .portfolio-holder, .avatar-block {
+        margin-top: 15px;
+    }
+    .portfolio-block .portfolio-img img {
+        width: 100%;
+        max-width: initial;
+    }
+    .slider-holder img {
+        max-width: initial;
+        width: 100%;
+        height: auto;
+    }
+    a.button-link {
+        width:calc(100% - 2em);
+        margin-top:10px;
+        margin-right: 20px;
+        text-align:left;
+    }
+}
+@include media-query(600px) {
+    .title {
+        margin-top: 50px;
+    }
+    .avatar-block {
+        margin-top: -15px;
+    }
+}
+@include media-query(470px) {
+    .portfolio-block {
+        width: 100%;
+    }
+    .avatar-block, .info-block {
+        width:100%;
+        display:block;
+    }
+    .avatar-block {
+        margin-top:15px;
     }
 }

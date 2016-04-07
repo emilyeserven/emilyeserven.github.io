@@ -190,7 +190,7 @@ h2.section-heading {
     .portfolio-img {
         height: 8.5em;
         overflow: hidden;
-        padding: 0 30px;
+        padding: 0 20px;
         img {
             height: auto;
             margin:0 auto !important;
@@ -207,7 +207,7 @@ h2.section-heading {
 .portfolio-holder.standalone .portfolio-img {
     height:12em !important;
     img {
-        height:12em;
+        height:auto;
     }
 }
 .contact-holder {
@@ -345,7 +345,6 @@ img.portfolio-image {
     }
     .portfolio-block .portfolio-img img {
         width: auto;
-        max-width: initial;
         vertical-align: bottom;
         margin:0 auto !important;
     }

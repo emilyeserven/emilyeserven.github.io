@@ -6,8 +6,8 @@ layout: default
   <h2 class="section-heading">Portfolio</h2>
 </div>
 <div class="wrapper">
-  <div class="slider-holder">
-    <img src="../assets/images/placeholder.png" />
+  <div class="slider-holder bg-epm">
+    <a href="../portfolio/epm"><img src="../assets/images/epm/logo.jpg" /></a>
   </div>
   <div class="portfolio-holder">
     {% for portfolio in site.portfolio %}
@@ -16,7 +16,7 @@ layout: default
           <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
         </div>
         <div class="portfolio-img bg-{{portfolio.code}}">
-          <img src="../assets/images/{{portfolio.code}}/sized.png" />
+          <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
         </div>
         <div class="portfolio-excerpt">
           {{ portfolio.excerpt }}
@@ -30,12 +30,56 @@ layout: default
 </div>
 <div class="wrapper">
   <div class="info-block">
-    Lorem ipsum dolor set amet....
-    <br />
+    <p>
+      I'm a web developer with 4 years of professional experience and 10 years making websites overall.
+    </p>
 
+    <h2>Skills</h2>
+    <div class="skills-left">
+    <h3>Languages</h3>
+    <ul>
+      <li>
+        HTML5
+      </li>
+      <li>
+        CSS3
+      </li>
+      <li>
+        PHP
+      </li>
+    </ul>
+
+    </div>
+    <div class="skills-center">
+    <h3>Applications</h3>
+    <ul>
+      <li>
+        Adobe Suite (Photoshop, Illustrator, Premiere)
+      </li>
+      <li>
+        Sketch
+      </li>
+    </ul>
+
+    </div>
+    <div class="skills-right">
+    <h3>Operating Systems</h3>
+    <ul>
+      <li>
+        Windows 7/8/10
+      </li>
+      <li>
+        Apple OSX - El Capitan
+      </li>
+      <li>
+        Linux Mint
+      </li>
+    </ul>
+
+    </div>
     <!-- TODO: Add a section of the about page here. -->
     <div class="info-buttons">
-      <a class="button-link" href="#">Download My Resume</a>
+      <a class="button-link" href="../assets/emily_resume.pdf">Download My Resume</a>
       <a class="button-link" href="../about/">Learn More About Me</a>
     </div>
   </div>
@@ -58,7 +102,7 @@ layout: default
 </div>
 <div class="wrapper">
   <div class="contact-holder">
-    Words
+    <p><br />If you think I may be right for your website project, please don't hesitate to contact me. I always reply within 2 business days.</p>
   </div>
   <div class="form-holder">
     <p>

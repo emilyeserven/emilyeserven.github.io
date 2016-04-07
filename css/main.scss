@@ -226,11 +226,26 @@ h2.section-heading {
 .slider-holder {
     @include blkstruc(32%);
     margin-right:1%;
-    height: 25em; //TODO: Revisit this later!
+    height: 26em; //TODO: Revisit this later!
     float:left;
+    padding: 10px 0;
     img {
-        height:100%;
+        height:auto;
+        position:relative;
+        top:45%;
     }
+    a {
+        height:100%;
+        display:block;
+    }
+}
+.portfolio-img a {
+    height: 100%;
+    display:block;
+}
+.info-buttons {
+    margin-top:20px;
+    display:block;
 }
 .info-block {
     @include blkstruc(65%);
@@ -259,7 +274,7 @@ h2.section-heading {
     display:inline-block;
     transition: background-color ease-in-out 200ms;
     &:nth-of-type(odd) {
-        margin-right:2em;
+        margin-right:0em;
     }
     &:hover {
         text-decoration:none;
@@ -325,8 +340,28 @@ img.portfolio-image {
         background-color:#000;
     }
 }
+.skills- {
+    &left {
+        width: 22%;
+        float:left;
+        display:inline-block;
+        vertical-align:top;
+    }
+    &center {
+        width: 37%;
+        margin:0 auto;
+        display:inline-block;
+        vertical-align:top;
+    }
+    &right {
+        width:37%;
+        float:right;
+        display:inline-block;
+        vertical-align:top;
+    }
+}
 @include media-query(767px) {
-    .slider-holder, .portfolio-holder {
+    .slider-holder, .portfolio-holder, .content-left, .content-right {
         width: 100%;
         display:block;
     }
@@ -393,5 +428,37 @@ textarea.form-field.form-message, input.form-field {
     }
     .avatar-block {
         margin-top:15px;
+    }
+    .site-subtitle {
+        line-height: 1.25em;
+    }
+    .portfolio-holder.standalone .portfolio-img {
+        height:8.5em !important;
+    }
+    .post-header.fullwidth {
+        margin-bottom: 0px;
+    }
+    .post-title {
+        padding: 0 15px;
+    }
+    img.portfolio-image {
+        height:200px;
+    }
+    .skills- {
+        &left {
+            width: 100%;
+            display:block;
+            vertical-align:top;
+        }
+        &center {
+            width: 100%;
+            display:block;
+            vertical-align:top;
+        }
+        &right {
+            width: 100%;
+            display:block;
+            vertical-align:top;
+        }
     }
 }

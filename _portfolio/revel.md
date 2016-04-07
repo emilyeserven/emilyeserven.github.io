@@ -10,12 +10,8 @@ platform: WordPress
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:
-    - img-name: Full
+    - img-name: The Revel Cellars website on all main devices.
       feat-image: ../../assets/images/rc/aoi.png
-    - img-name: Tablet
-      feat-image: ../../assets/images/placeholder.png
-    - img-name: Phone
-      feat-image: ../../assets/images/placeholder.png
 ---
 
 Revel introduces intelligent custom wine cellar cabinetry inspired by and designed for the discerning wine collector - the revolutionary way to showcase, access and protect your wine collection.

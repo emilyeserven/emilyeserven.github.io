@@ -10,12 +10,8 @@ platform: WordPress
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:
-    - img-name: Desktop
-      feat-image: ../../assets/images/placeholder.png
-    - img-name: Tablet
-      feat-image: ../../assets/images/placeholder.png
-    - img-name: Phone
-      feat-image: ../../assets/images/placeholder.png
+    - img-name: The Mary Wathen website on all main devices.
+      feat-image: ../../assets/images/mw/aoi.png
 ---
 
 Mary Wathen Interiors is a full service firm that specializes in residential design. Her interior design team harmoniously combines clean, precise lines, architectural detailing, and opulent layered textures to produce elegant, dramatic and immaculate interiors.

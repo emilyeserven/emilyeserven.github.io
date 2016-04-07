@@ -190,13 +190,13 @@ h2.section-heading {
     .portfolio-img {
         height: 8.5em;
         overflow: hidden;
-        padding: 0 15px;
+        padding: 0 30px;
         img {
-            @include widthprop(100%,auto);
-            height: 8.5em;
+            height: auto;
             margin:0 auto !important;
             vertical-align: bottom;
             display:block;
+            width: auto;
         }
     }
     .portfolio-excerpt {
@@ -219,6 +219,9 @@ h2.section-heading {
     @include blkstruc(74%);
     margin-left: 1%;
     float:right;
+}
+.icon-holder {
+    display:block;
 }
 .slider-holder {
     @include blkstruc(32%);
@@ -341,7 +344,7 @@ img.portfolio-image {
         margin-top: 15px;
     }
     .portfolio-block .portfolio-img img {
-        width: 50% !important;
+        width: auto;
         max-width: initial;
         vertical-align: bottom;
         margin:0 auto !important;

@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Why Blog?"
+date:   2016-01-24 19:28:41 -0500
+categories: blogging
+---
+A piece I had to write for a digital media class that ended up being 5 paragraphs long. There’s too much to discuss though... right?
+
+(An edit was made 1/31/2016 outlining my entire personal history with blogging. It’s not useful, probably, I just thought it’d be an interesting read for future me.)
+
+## ...to learn
+
+Every article I read mentioned that blogging facilitated learning by forcing the writer to research their subject more. They also mentioned the power of the comment section, and how that would help teach the writer more. Comments are a particularly interesting thing. There have been studies conducted that prove online comments make people enjoy the article itself less, and there’s natural human bias to believe negative feedback more. While deciding to listen to or ignore the comments, the writer (and even readers) need to do more research beyond just reading the comments to get closer to what’s “correct”.
+
+## ...to promote
+
+Blogging is a relatively easy way to accomplish several things at once, if it’s done well. There are so many benefits that it’s very common to see blogs for entire companies. Those benefits can be summarized well in this article that was written by the marketing company I work at.
+
+Personally, when something is attached to my name, I attempt to clean it up as much as possible so I may try and maintain a professional image. However, wanting that also comes at the cost of caring too much about little things. It’s very rare that I post a blog that is attached to my real name, but it’s not uncommon to see something written from an internet persona of mine just because there’s no pressure to write something “valid”. In the end, am I just missing out on chances to promote myself? Even doing little things like sharing articles is a chance to show you’re keeping up with the latest happenings.
+
+## ...to share
+
+Overall, it’s hard to deny that people just want their thoughts and opinions heard. Blogging is a terrific platform for that, of course. But is that selfish? More importantly, does it matter if it’s selfish? I follow the thoughts of popular YouTubers on this subject. Essentially, be selfish. If you care what other people think, and what the metrics are, you’ll run out of steam pretty quickly. Even if it doesn’t “get popular”, as long as it’s useful to you, then at least you have an archive of your thoughts and the experiences of getting them.
+
+## ...to let thoughts flow and get slightly off topic
+
+Something I was thinking about while writing this post was if blogging differs across cultures. In particular, I wonder about Asian cultures, since I’m ethnically Chinese and love consuming Japanese and Korean entertainment.
+
+Asian websites often don’t favor minimalist and “simplistic” design over a preference for more functionality. Social media companies such as Facebook and Twitter have had a hard time breaking into Asian markets due to differing cultural attitudes. A Chinese girl I met last semester had said Facebook felt superficial and like a breach of privacy. Furthermore, the prevalence of censorship on China’s side has a large impact of what content is created and how much people are able to share. How do all these things affect the international blog culture, how wide or narrow do these factors make the diversity of voices we can hear online? I’ll probably explore this topic again later, I’m already past the limit of how long this post should be in the first place. :)
+
+I’ll turn on answering to this post, so if you have thoughts on your own... what do you think, why do you (or don’t you) blog?
+
+*EDITS, 1/31/2016 - (Really long and mostly for my personal benefit.)*
+
+So after having more time to think, I thought it’d be a little interesting (for me, at least) to outline my personal history with blogging.
+
+When I started my first website, I included a blog that was supposed to keep site updates. But in reality, it turned into a life log because I blurted out whatever I felt like talking about. There was absolutely no filter. Heck, my funeral posts for the frogs I kept sounded so scatterbrained, you’d think I didn’t actually care about any of their deaths at all.
+
+The coolest thing about this blog is the fact I can track exactly when I started making websites to March 15, 2006. (Which means my 10 year website development anniversary is coming up soon...) I stopped using it at the beginning of 2008.
+
+The next official blog I owned was in use from 2009-2011 (and contains both bad writing and one of my internet persona names, so I won’t be including links to it). It was supposed to be both a life log and website update blog (for my international music website), but it seems I still hadn’t grown out of having next to no filter. This blog does show more attempts at serious writing, however, as there’s a few posts dedicated to reviewing various services and apps. As I am not surprised, they all contained a structure that carried through every entry and set lists for details.
+
+I had a tumblr that I used from 2009 until early 2015 (October 2012 until May 2014 were its most active years). Surprisingly, the entire time I only had 6 politically related posts. Considering the people I hung out with at the time and the segment of tumblr I was around the most, I find this to be quite the feat. Generally, if I wanted to track down any fandom I was most into during those months, this would be the place to go.
+
+Along with the tumblr, my most active time blogging about my life was the time my Twitter account (protected and under my internet persona) was active, having accumulated ~38.4K tweets when I still used it. During it’s most active point, I was almost live-tweeting every thought I had, which, looking back on it, is really scary and weird. (Although I suppose it’s special that I’ll have an archive of my thoughts the day I was asked to prom?) This was mostly used as a communication tool between my friends at that time, and the live-tweeting was directly influenced by them as well.
+
+All of the accounts mentioned after the edit mark were generally under an internet pseudonym of sorts. After I turned 18 and started to look at building a personal brand, I began to get more public accounts, Moreover, having recently turned 20, I’ve been posting to these accounts with my real name on them more. (Ultimately, I’m very happy with the level of privacy my younger self was able to keep over the years, since I don’t have to worry about a massive clean-up now.) The biggest challenge now is when I’m creating practice projects is what name I publish it under. Do I use a pseudonym and not get professional credit? Is the project worth putting under my real name? Is the subject itself too weird or is it mainstream enough to be okay? (ie sports are mainstream enough, anime is too weird, and where does Game of Thrones lie on this scale?) It’s been said that your professional profile should say more about you than just your work, but unfortunately my hobbies are too niche and I’d probably get carried away if I started.
+
+As said above, attempting to brand makes it very difficult to decide what to and what not to show, and what degree of location-based privacy I’m willing to let go of. (For example, if I was to completely settle on not letting people know location, then I couldn’t talk about local events I was part of.) But... once I realized my name has been in local newspapers that published online (and my name was on the company website) I sort of just gave up on that front. Instead, I’ve attempted to give myself strict rules on what not to post. Anything that has to do with political personal beliefs (and that can encompass many things) and stuff that could be potentially used to compromise security were not to be published.
+
+I’ve backed up all copies of information I could find in case old websites go down, and kept things up (that don’t compromise security) for anyone who felt like looking. Overall, I find it interesting to think about how much of my life I have documented, and hope I keep doing a responsible job of it for my future self’s sake.

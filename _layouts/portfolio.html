@@ -25,9 +25,9 @@ layout: default
     {% for photo in page.pageimg %}
     <div class="photo-block">
     <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image bg-{{page.code}}"/>
-    <caption>
+    <span class="photo-caption">
       {{ photo.img-name }}
-    </caption>
+    </span>
     <br />
     </div>
     {% endfor %}

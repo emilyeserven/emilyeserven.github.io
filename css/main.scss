@@ -313,7 +313,7 @@ img.portfolio-image {
     margin-bottom: 15px;
 }
 .post-header.fullwidth {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background: #333;
     padding: 5px 0;
 }
@@ -448,6 +448,11 @@ textarea.form-field.form-message, input.form-field {
 @include media-query(470px) {
     .portfolio-block {
         width: 100%;
+    }
+    .post-header.fullwidth {
+        margin-bottom: 30px;
+        background: #333;
+        padding: 5px 0;
     }
     .avatar-block, .info-block {
         width:100%;

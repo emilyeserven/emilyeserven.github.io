@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Post-Hackathon Reflection"
-date:   2016-02-23 16:26:24 -0500
+date:   2016-02-23 17:02:24 -0500
 categories: hackathon
 ---
 Index | Pre-Hackathon | Day 1 | Day 2 | Day 3 | Post-Hackathon

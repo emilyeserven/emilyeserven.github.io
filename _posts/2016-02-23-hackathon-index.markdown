@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Post-Hackathon Reflection"
+title:  "Hackathon Post Index"
 date:   2016-02-23 17:02:24 -0500
 categories: hackathon
 ---

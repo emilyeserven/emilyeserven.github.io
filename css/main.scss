@@ -434,9 +434,14 @@ img.portfolio-image {
     }
 }
 @include media-query(767px) {
-    .slider-holder, .portfolio-holder, .content-left, .content-right {
+    .slider-holder, .portfolio-holder, .content-left, .content-right, .contact-holder, .form-holder, .skills-block {
         width: 100%;
         display:block;
+    }
+    .trigger a.page-link {
+        width: initial;
+        text-align: left;
+        font-size: .8em;
     }
     .avatar-block, .info-block {
         width:48%;

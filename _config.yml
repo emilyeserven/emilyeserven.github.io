@@ -18,6 +18,8 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
+  skills:
+    output: false
 
 # Build settings
 markdown: kramdown

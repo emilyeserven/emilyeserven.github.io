@@ -61,14 +61,45 @@ weight: 1
   </div>
   <div class="avatar-block">
     <div class="social-row">
-      <div class="width-25"><a href="https://www.linkedin.com/in/emilyserven"><span class="icon-holder"><i class="fa fa-linkedin-square fa-2x"></i></span></a></div>
-      <div class="width-25"><a href="https://github.com/emilyeserven"><span class="icon-holder"><i class="fa fa-github-square fa-2x"></i></span></a></div>
-      <div class="width-25"><a href="http://emilyserven.net/blog/"><span class="icon-holder"><i class="fa fa-pencil-square fa-2x"></i></span></a></div>
-      <div class="width-25"><a href="https://twitter.com/emilyeserven"><span class="icon-holder"><i class="fa fa-twitter-square fa-2x"></i></span></a></div>
+      <div class="width-25"><a href="https://www.linkedin.com/in/emilyserven" class="icon-holder"><img src="../assets/icons/linkedin.png"/></a></div>
+      <div class="width-25"><a href="https://github.com/emilyeserven" class="icon-holder"><img src="../assets/icons/git.png"/></a></div>
+      <div class="width-25"><a href="http://emilyserven.net/blog/" class="icon-holder"><img src="../assets/icons/pencil.png"/></a></div>
+      <div class="width-25"><a href="https://twitter.com/emilyeserven" class="icon-holder"><img src="../assets/icons/twitter.png"/></a></div>
       <!-- TODO: Social buttons here. -->
     </div>
     <div class="avatar">
       <!-- TODO: Avatar here. -->
       <img src="../assets/images/emilyavi.png" />
+    </div>
+  </div>
+</div>
+    <div class="heading-wrap">
+      <h2 class="section-heading">Skills</h2>
+    </div>
+    <div class="wrapper">
+      <div class="skills-holder">
+
+            {% for skills in site.skills %}
+              <div class="skills-block">
+                <div class="skills-img">
+                  <span class="skills-ico ico-size-tri fleft"><img src="{{skills.fleft-ico}}" /></span>
+                  <span class="skills-ico ico-size-sec left"><img src="{{skills.left-ico}}" /></span>
+                  <span class="skills-ico ico-size-pri main"><img src="{{skills.main-ico}}" /></span>
+                  <span class="skills-ico ico-size-sec right"><img src="{{skills.right-ico}}" /></span>
+                  <span class="skills-ico ico-size-tri fright"><img src="{{skills.fright-ico}}" /></span>
+                </div>
+                <div class="skill-items">
+                  <h3>{{skills.name}}</h3>
+                  <ul>
+                  {% for item in skills.skl-items %}
+                        <li>
+                          {{item}}
+                        </li>
+                  {% endfor %}
+                </ul>
+                </div>
+              </div>
+            {% endfor %}
+      </div>
     </div>
   </div>

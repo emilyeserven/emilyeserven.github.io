@@ -131,7 +131,7 @@ nav.site-nav {
     z-index: 2;
     position:relative;
 }
-h3 {
+.skills-holder h3 {
     font-family: $secondary-font;
     font-size:1.5em;
 }
@@ -438,10 +438,16 @@ img.portfolio-image {
         width: 100%;
         display:block;
     }
+    .skills-block:nth-of-type(2) {
+        left: initial !important;
+    }
+    h1.post-title {
+        margin-bottom: 15px;
+    }
     .trigger a.page-link {
         width: initial;
         text-align: left;
-        font-size: .8em;
+        font-size: .75em;
     }
     .avatar-block, .info-block {
         width:48%;

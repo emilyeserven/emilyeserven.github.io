@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tron, The Matrix, and a History of Computers"
-date:   2016-06-05 16:26:24 -0500
+date:   2016-03-22 16:26:24 -0500
 categories: essays media
 ---
 *This post was originally written for my Digital Culture class, but I thought it was interesting enough to stay published.*

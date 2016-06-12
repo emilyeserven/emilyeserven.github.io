@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why Can't We Get Along? Security and User Experience"
-date:   2016-06-12 16:26:24 -0500
+date:   2016-06-12 12:26:24 -0500
 categories: essays
 ---
 As more people get their own devices and go on the internet, they become increasingly reliant on the services it provides. Proportionally, security and user experience become more important, and better implementation of each becomes more common. Sadly though, it would seem that user experience and security are more often than not at odds with each other, creating a zero sum game that is nothing more than an eternal tug of war. Typically implemented security is about presenting barriers to a user while typically implemented user experience design is about removing barriers to a user. To truly understand this complex relationship, we need to examine each more closely.

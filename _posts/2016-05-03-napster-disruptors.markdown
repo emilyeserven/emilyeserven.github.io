@@ -3,7 +3,8 @@ layout: post
 title:  "Everlasting Disruptor: Napster and Entertainment"
 date:   2016-05-03 16:26:24 -0500
 categories: essays media
-excerpt: <b>An exploration of the entertainment industry and digital disruptors.</b>
+excerpt: <b>An exploration of the entertainment industry and digital disruptors.</b> - <i>"The entertainment industry faces many challenges, both internal and external, but the largest problem from the world of digital culture was the foundation for online piracy brought about by Napster, as well as the solutions learned from dealing with it."</i>
+media: ../../../../assets/images/blog/napster-preview.jpg
 ---
 *This post was originally written for my Digital Culture class as the final exam, but I thought it was interesting enough publish.*
 

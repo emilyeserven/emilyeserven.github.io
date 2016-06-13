@@ -3,7 +3,8 @@ layout: post
 title:  "Stamford Hackathon Pre-Reflection"
 date:   2016-02-18 14:37:34 -0500
 categories: hackathon
-excerpt: <b>A record of my expectations.</b>
+excerpt: <b>A reflection of my expectations.</b>
+media: ../../../../assets/images/blog/hackpre-preview.jpg
 ---
 [Index](../../../../hackathon/2016/02/23/hackathon-index.html) - **Pre-Hackathon** - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
 

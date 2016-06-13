@@ -3,11 +3,9 @@ layout: post
 title:  "Why Blog?"
 date:   2016-01-24 19:28:41 -0500
 categories: blogging
-excerpt: <b>Why do we blog?</b> - Also included is my personal history of blogging, 10 years long.
+excerpt: <b>Why do we blog?</b> - To learn, to promote, to share, to let thoughts flow.
+media: ../../../../assets/images/blog/why-blog-preview.jpg
 ---
-A piece I had to write for a digital media class that ended up being 5 paragraphs long. There’s too much to discuss though... right?
-
-(An edit was made 1/31/2016 outlining my entire personal history with blogging. It’s not useful, probably, I just thought it’d be an interesting read for future me.)
 
 ## ...to learn
 
@@ -28,8 +26,6 @@ Overall, it’s hard to deny that people just want their thoughts and opinions h
 Something I was thinking about while writing this post was if blogging differs across cultures. In particular, I wonder about Asian cultures, since I’m ethnically Chinese and love consuming Japanese and Korean entertainment.
 
 Asian websites often don’t favor minimalist and “simplistic” design over a preference for more functionality. Social media companies such as Facebook and Twitter have had a hard time breaking into Asian markets due to differing cultural attitudes. A Chinese girl I met last semester had said Facebook felt superficial and like a breach of privacy. Furthermore, the prevalence of censorship on China’s side has a large impact of what content is created and how much people are able to share. How do all these things affect the international blog culture, how wide or narrow do these factors make the diversity of voices we can hear online? I’ll probably explore this topic again later, I’m already past the limit of how long this post should be in the first place. :)
-
-I’ll turn on answering to this post, so if you have thoughts on your own... what do you think, why do you (or don’t you) blog?
 
 *EDITS, 1/31/2016 - (Really long and mostly for my personal benefit.)*
 

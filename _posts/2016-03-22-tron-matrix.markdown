@@ -3,7 +3,8 @@ layout: post
 title:  "Tron, The Matrix, and a History of Computers"
 date:   2016-03-22 16:26:24 -0500
 categories: essays media
-excerpt: <b>An exploration of our perceptions of technology and movies</b>.
+excerpt: <b>An exploration of our perceptions of technology and movies</b>. - <i>"People today in 2016 are worried about artificial intelligence and the possibility that one day, just maybe, machines will overtake humans. Interestingly, the movies Tron and Matrix both deal with that same fear even though they were made 2 and 1 decades ago respectively."</i>
+media: ../../../../assets/images/blog/tron-matrix-preview.jpg
 ---
 *This post was originally written for my Digital Culture class, but I thought it was interesting enough to stay published.*
 

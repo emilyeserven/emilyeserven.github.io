@@ -5,16 +5,20 @@ permalink: /blog/
 weight: 3
 ---
 <div class="portfolio-holder standalone">
-  <h2>Posts</h2>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
+        <div class="post-image">
+          <img src="{{ post.media }}" />
+        </div>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <p>{{ post.excerpt }}</p>
+        <div class="clearfix">
+        </div>
       </li>
     {% endfor %}
   </ul>

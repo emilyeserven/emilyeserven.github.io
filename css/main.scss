@@ -368,6 +368,14 @@ img.portfolio-image {
     z-index: 1;
     position: relative;
 }
+.post-image {
+    float:left;
+    max-width:325px;
+    width:100%;
+    margin-right: 15px;
+    margin-bottom:15px;
+    margin-top:6px;
+}
 .post-title {
     font-size: 42px;
     letter-spacing: 0px;
@@ -438,6 +446,19 @@ img.portfolio-image {
         vertical-align:top;
     }
 }
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
 @include media-query(767px) {
     .slider-holder, .portfolio-holder, .content-left, .content-right, .contact-holder, .form-holder, .skills-block {
         width: 100%;
@@ -502,6 +523,7 @@ textarea.form-field.form-message, input.form-field, input {
     border: 1px #000 solid;
     padding: 2px 5px;
 }
+
 @include media-query(600px) {
     .title {
         margin-top: 50px;

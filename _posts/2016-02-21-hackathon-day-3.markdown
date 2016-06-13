@@ -3,13 +3,12 @@ layout: post
 title:  "Stamford Hackathon Reflection Day 3"
 date:   2016-02-21 23:44:43 -0500
 categories: hackathon
-excerpt: What did we do, and how did we win?
+excerpt: <b>A reflection of the third day of the Stamford Hackathon</b> - <i>This post is mostly about our project as a whole. Ideas about the hackathon itself in the post-reflection.</i>
+media: ../../../../assets/images/blog/hack3-preview.jpg
 ---
 [Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - **Day 3** - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
 
-(This post is on the selfish side because I’m mostly going to be talking about the project I was involved in. Overall thoughts about the hackathon as a whole will be in a post tomorrows!)
-
-The rest of the post is under the cut!
+(This post is on the selfish side because I’m mostly going to be talking about the project I was involved in. Overall thoughts about the hackathon as a whole will be in a post tomorrow!)
 
 ## Settling on an Idea
 I forgot to add this to the last post, but it’s too late to edit it so I’ll explain what our project idea was here.

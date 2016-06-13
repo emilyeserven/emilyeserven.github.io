@@ -3,8 +3,9 @@ layout: post
 title:  "Hackathon Post Index"
 date:   2016-02-23 17:02:24 -0500
 categories: hackathon
+excerpt: An index to help you check the contents of each hackathon post in case you were more interested in specific aspects.
 ---
-Index | Pre-Hackathon | Day 1 | Day 2 | Day 3 | Post-Hackathon
+**Index** - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
 
 I wrote about my entire hackathon experience with daily blog posts. Each post about a specific day was written before about midnight the day it happened, an the post-hackathon recap was posted 2 days after it happened.
 

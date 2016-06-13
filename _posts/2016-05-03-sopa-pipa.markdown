@@ -3,6 +3,7 @@ layout: post
 title:  "SOPA, PIPA, and the Founding Principles of the World Wide Web"
 date:   2016-05-03 16:26:24 -0500
 categories: essays media
+excerpt: <b>An exploration of laws and the internet.</b>
 ---
 *This post was originally written for my Digital Culture class as the final exam, but I thought it was interesting enough publish.*
 

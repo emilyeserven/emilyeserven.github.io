@@ -81,6 +81,9 @@ $on-laptop:        800px;
 .page-content {
     padding: 0;
 }
+.post-list h2 {
+    margin-bottom: -5px;
+}
 .trigger {
     a.page-link {
         width: 24%;
@@ -138,6 +141,7 @@ nav.site-nav {
 h2 {
     font-family: $secondary-font;
     font-size:2em;
+    margin-bottom:-5px;
 }
 h2.section-heading {
     @extend .wrapper;
@@ -145,6 +149,7 @@ h2.section-heading {
     color:#fff;
     font-family:$brand-font;
     font-size:2em;
+    margin-bottom:10px;
 }
 .post-header.no-title {
     display:none;

@@ -3,6 +3,7 @@ layout: post
 title:  "Why Blog?"
 date:   2016-01-24 19:28:41 -0500
 categories: blogging
+excerpt: <b>Why do we blog?</b> - Also included is my personal history of blogging, 10 years long.
 ---
 A piece I had to write for a digital media class that ended up being 5 paragraphs long. There’s too much to discuss though... right?
 

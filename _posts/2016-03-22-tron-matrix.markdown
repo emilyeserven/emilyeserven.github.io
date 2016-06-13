@@ -3,6 +3,7 @@ layout: post
 title:  "Tron, The Matrix, and a History of Computers"
 date:   2016-03-22 16:26:24 -0500
 categories: essays media
+excerpt: <b>An exploration of our perceptions of technology and movies</b>.
 ---
 *This post was originally written for my Digital Culture class, but I thought it was interesting enough to stay published.*
 

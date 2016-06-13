@@ -3,10 +3,9 @@ layout: post
 title:  "Post-Hackathon Reflection"
 date:   2016-02-23 16:26:24 -0500
 categories: hackathon
+excerpt: So, what did I learn at the hackathon overall?
 ---
-Index | Pre-Hackathon | Day 1 | Day 2 | Day 3 | Post-Hackathon
-
-So, all in all, what did I learn at Stamford’s second Hackathon? The answer is below the cut!
+[Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - **Post-Hackathon**
 
 ## Who Are You, Anyway?
 In case you’re just jumping into these blogs now, let me give you some context about myself.

@@ -1,9 +1,9 @@
 ---
 name: Optimization
-main-ico: ../assets/icons/mobile.png
-left-ico: ../assets/icons/analytics.png
-right-ico: ../assets/icons/ecommerce.png
-fleft-ico: ../assets/icons/speed.png
-fright-ico: ../assets/icons/plan.png
+main-ico: jolly hdg-mobile
+left-ico: busy hdg-chart05
+right-ico: busy hdg-shopping-cart
+fleft-ico: jolly hdg-gauge-speed
+fright-ico: jolly hdg-strategy
 skl-items: [Mobile Compatibility, Analytics, Speed Optimization, Social Media]
 ---

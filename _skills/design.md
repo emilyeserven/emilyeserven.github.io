@@ -1,9 +1,9 @@
 ---
 name: Design
-main-ico: ../assets/icons/pencil.png
-left-ico: ../assets/icons/mouse.png
-right-ico: ../assets/icons/sketch.png
-fleft-ico: ../assets/icons/psd.png
-fright-ico: ../assets/icons/ai.png
+main-ico: brainy hdg-pencil
+left-ico: jolly hdg-mouse
+right-ico: jolly hdg-diamond-ruby
+fleft-ico: jolly hdg-psd-file-extension
+fright-ico: jolly hdg-ai-illustrator-file-extension
 skl-items: [Photoshop, Illustrator, SketchApp]
 ---

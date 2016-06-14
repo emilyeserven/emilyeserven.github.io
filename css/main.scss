@@ -176,6 +176,7 @@ h2.section-heading {
         width:100% !important;
     }
 }
+
 .skills-block {
     @include blkstruc(30%);
     margin-bottom:1em;
@@ -200,16 +201,25 @@ h2.section-heading {
     padding: 5px 10px;
 }
 .skills-ico {
-    &.ico-size-tri img {
-        width: 2.5em;
+    display:inline-block;
+    position:relative;
+    &.ico-size-tri {
+        top:-1.25em;
+        i {
+            font-size: 2.25em;
+            margin-top:-1em;
+        }
     }
-    &.ico-size-sec img {
-        width: 2.75em;
-        padding: 0 .05em;
+    &.ico-size-sec {
+        top:-1em;
+        i {
+            font-size: 2.5em;
+            padding: 0 .05em;
+        }
     }
-    &.ico-size-pri img {
-        width: 5em;
-        padding:0 .25em;
+    &.ico-size-pri i {
+        font-size: 5em;
+        padding:0em;
     }
 }
 .portfolio-block {
@@ -393,7 +403,9 @@ img.portfolio-image {
     margin-top: 15px;
     margin-bottom: -20px;
     text-align:center;
-    img {
+    i {
+        cursor:pointer;
+        font-size:2.25em;
         margin-right: 13%;
         &:first-of-type {
             margin-left: 5%;

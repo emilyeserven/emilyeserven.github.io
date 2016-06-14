@@ -5,6 +5,15 @@ date:   2016-03-22 16:26:24 -0500
 categories: essays
 excerpt: <b>An exploration of our perceptions of technology and movies</b>. - <i>"People today in 2016 are worried about artificial intelligence and the possibility that one day, just maybe, machines will overtake humans. Interestingly, the movies Tron and Matrix both deal with that same fear even though they were made 2 and 1 decades ago respectively."</i>
 media: ../../../../assets/images/blog/tron-matrix-preview.jpg
+media-bgcolor: darkgrey
+media-layout: thirds
+media-layweight: even
+textcolor: white
+col1-content: <i class="busy hdg-monitor"></i>
+col2-content: <i class="jolly hdg-pulse"></i>
+col3-content: <i class="busy hdg-head-gears"></i>
+
+
 ---
 *This post was originally written for my Digital Culture class, but I thought it was interesting enough to stay published.*
 

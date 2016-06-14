@@ -5,6 +5,12 @@ date:   2016-01-24 19:28:41 -0500
 categories: blogging
 excerpt: <b>Why do we blog?</b> - To learn, to promote, to share, to let thoughts flow.
 media: ../../../../assets/images/blog/why-blog-preview.jpg
+media-bgcolor: darkgrey
+media-layout: half
+media-layweight: even
+textcolor: white
+col1-content: <i class="brainy hdg-laptop01"></i>
+col2-content: <i class="jolly hdg-wifi"></i>
 ---
 
 ## ...to learn

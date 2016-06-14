@@ -385,6 +385,106 @@ img.portfolio-image {
     margin-right: 15px;
     margin-bottom:15px;
     margin-top:6px;
+    .media-holder {
+        width:275px;
+        height:130px;
+        padding: 10px 25px;
+        .media-text {
+            font-family: $secondary-font;
+        }
+        &.layout-thirds {
+            .media-col {
+                width:32%;
+                display:inline-block;
+                text-align:center;
+                &.media-col-1 {
+                    float:left;
+                }
+                &.media-col-2 {
+                    float:none;
+                    margin:0 auto;
+                }
+                &.media-col-3 {
+                    float:right;
+                }
+            }
+        }
+        &.weight- {
+            &sides- {
+                &large {
+                    .media-col {
+                        &.media-col-1, &.media-col-3 {
+                            font-size:5em;
+                        }
+                        &.media-col-2 {
+                            font-size:3em;
+                            margin-top:.25em;
+                        }
+                    }
+                }
+                &small {
+                    .media-col {
+                        &.media-col-1, &.media-col-3 {
+                            font-size:3em;
+                            margin-top:.25em;
+                        }
+                        &.media-col-2 {
+                            font-size:5em;
+                        }
+                    }
+                }
+            }
+            &leftheavy {
+                .media-col {
+                    &.media-col-1 {
+                        font-size:5.5em;
+                        text-align:right !important;
+                    }
+                    &.media-col-3 {
+                        font-size:4.5em;
+                    }
+                    &.media-col-2 {
+                        text-align:left !important;
+                        font-size:3em;
+                        margin-top:.5em;
+                    }
+                }
+            }
+            &even {
+                .media-col {
+                    font-size:5em;
+                }
+                .media-text {
+                    font-size: .75em;
+                    top:-.25em;
+                    position:relative;
+                }
+            }
+        }
+        &.layout-half {
+            &.weight- {
+                &close {
+                    .media-col {
+                        font-size:5em;
+                        &.media-col-1 {
+                            text-align:right !important;
+                        }
+                        &.media-col-2 {
+                            text-align:left !important;
+                        }
+                    }
+                }
+            }
+            .media-col {
+                width: 49%;
+                display:inline-block;
+                text-align:center;
+                &.media-col-3 {
+                    display:none !important;
+                }
+            }
+        }
+    }
 }
 .post-title {
     font-size: 42px;
@@ -421,6 +521,16 @@ img.portfolio-image {
         display:inline-block;
     }
 }
+a .textcolor- {
+    &white {
+        color:#fff;
+    }
+}
+.textcolor- {
+    &white {
+        color:#fff;
+    }
+}
 .bg- {
     &epm {
         background-color:#CE171F;
@@ -436,6 +546,12 @@ img.portfolio-image {
     }
     &white {
         background-color: #fff;
+    }
+    &lightgrey {
+        background-color:#eee;
+    }
+    &darkgrey {
+        background-color:#333;
     }
 }
 .skills- {

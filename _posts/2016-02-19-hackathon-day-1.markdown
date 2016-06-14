@@ -5,6 +5,12 @@ date:   2016-02-19 23:04:37 -0500
 categories: hackathon
 excerpt: <b>A reflection of the first day of the Stamford Hackathon.</b> - <i>"Day 1 was a lot of fun, most of the night was split into presentations and then meeting and greeting people to learn about their skills and project ideas."</i>
 media: ../../../../assets/images/blog/hack1-preview.jpg
+media-bgcolor: darkgrey
+media-layout: half
+media-layweight: even
+textcolor: white
+col1-content: <i class="jolly hdg-console"></i>
+col2-content: <span class="media-text">1</span>
 ---
 [Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - **Day 1**- [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
 

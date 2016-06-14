@@ -8,7 +8,18 @@ layout: default
     </header>
 
     <div class="post-image">
-      <img src="../{{ page.media }}" />
+        <div class="media-holder bg-{{ page.media-bgcolor }} layout-{{ page.media-layout }} weight-{{ page.media-layweight }} textcolor-{{ page.textcolor }}">
+          <div class="media-col media-col-1">
+            {{ page.col1-content }}
+          </div>
+          <div class="media-col media-col-2">
+            {{ page.col2-content }}
+          </div>
+          <div class="media-col media-col-3">
+            {{ page.col3-content }}
+
+          </div>
+        </div>
     </div>
     <div class="post-content" itemprop="articleBody">
     {{ content }}

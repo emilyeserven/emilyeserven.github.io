@@ -5,6 +5,12 @@ date:   2016-02-21 23:44:43 -0500
 categories: hackathon
 excerpt: <b>A reflection of the third day of the Stamford Hackathon</b> - <i>This post is mostly about our project as a whole. Ideas about the hackathon itself in the post-reflection.</i>
 media: ../../../../assets/images/blog/hack3-preview.jpg
+media-bgcolor: darkgrey
+media-layout: half
+media-layweight: even
+textcolor: white
+col1-content: <i class="jolly hdg-console"></i>
+col2-content: <span class="media-text">3</span>
 ---
 [Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - **Day 3** - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
 

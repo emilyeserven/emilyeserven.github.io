@@ -5,6 +5,13 @@ date:   2016-05-03 16:26:24 -0500
 categories: essays
 excerpt: <b>An exploration of the entertainment industry and digital disruptors.</b> - <i>"The entertainment industry faces many challenges, both internal and external, but the largest problem from the world of digital culture was the foundation for online piracy brought about by Napster, as well as the solutions learned from dealing with it."</i>
 media: ../../../../assets/images/blog/napster-preview.jpg
+media-bgcolor: darkgrey
+media-layout: thirds
+media-layweight: leftheavy
+textcolor: white
+col1-content: <i class="jolly hdg-headphones-music-listen"></i>
+col2-content: <i class="brainy hdg-music04"></i>
+col3-content: <i class="brainy hdg-biohazard"></i>
 ---
 *This post was originally written for my Digital Culture class as the final exam, but I thought it was interesting enough publish.*
 

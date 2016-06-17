@@ -2,7 +2,7 @@
 layout: post
 title:  "Why Can't We Get Along? Security and User Experience"
 date:   2016-06-12 12:26:24 -0500
-categories: essays
+categories: ux-design
 excerpt: <b>An exploration of security and user experience.</b> - <i>"Typically implemented security is about presenting barriers to a user while typically implemented user experience design is about removing barriers to a user.</i>"
 media: ../../../../assets/images/blog/security-ux-preview.jpg
 media-bgcolor: darkgrey

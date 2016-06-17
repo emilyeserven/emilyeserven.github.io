@@ -2,15 +2,16 @@
 layout: post
 title:  "Portfolio Dev Blog #1"
 date:   2016-02-16 16:53:50 -0500
-categories: blogging
+categories: dev-blog
 excerpt: <b>A documentation of my thoughts of making my portfolio.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
 media: ../../../../assets/images/blog/dev-blog-1-preview.jpg
 media-bgcolor: darkgrey
-media-layout: half
+media-layout: thirds
 media-layweight: even
 textcolor: white
 col1-content: <i class="brainy hdg-briefcase"></i>
 col2-content: <i class="jolly hdg-opening-tag"></i>
+col3-content: <span class="media-text">#1</span>
 
 ---
 I’ve been meaning to get my portfolio and redesigned and rebranded for a little while now, but time has always been a huge constraint. With the career fair coming up in April, I figured that would be a good deadline to meet. My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio.

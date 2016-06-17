@@ -13,8 +13,7 @@ layout: default
     </div>
     <div class="content-right">
       <b>Services Provided</b>:
-      {{ portfolio.excerpt }}
-        {% page.tags | join: ', ' %}
+        {{ page.tags | join: ', ' }}
       <p><b>Time of Project</b>: {{ page.time }}<br />
       <b>Platform</b>: {{ page.platform }}<br />
       <b>Category</b>: {{ page.categories }}</p>

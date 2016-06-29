@@ -13,7 +13,9 @@ col1-content: <i class="brainy hdg-briefcase"></i>
 col2-content: <i class="jolly hdg-opening-tag"></i>
 col3-content: <span class="media-text">#2</span>
 ---
-[Please read the previous portfolio blog post](../../../../dev-blog/2016/02/16/blog-development-1.html) first, or this post might not make sense!
+[1: Planning and Pre-Launch](../../../../dev-blog/2016/02/16/blog-development-1.html) - **2: What happened and what's to come?**
+
+**Please read the previous portfolio blog post first**, or this post might not make sense!
 
 My portfolio has technically been "finished" since the end of May, but it's taken me some time to actually write up a post. It's been said that a website is never truly "finished", since there's always more work to be done. I've found that in both client work I've done and in this website, the idea certainly holds true. So, in addition to reflecting on intended outcomes from my preview development blog post, I will be going over what I intend to improve in the future.
 

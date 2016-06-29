@@ -1,3 +1,5 @@
+PROFESSOR COMMENTS: "Emily, yours is an important topic that the most casual computer-user needs to understand. Unfortunately, this essay doesn't clarify security and user experience, although all the information is in the essay. This essay really needed a short, striking introduction, set off by a page break or at least some white space. The rest of the paragraphs need to be shorter, with less material presented. I think the underlying structure of the essay is fine, it just isn't clear. Nearly every sentence could (or should) be separated into two sentences — some should be three sentences. The blog is going to be really good. The illustrations work well as "subheadings" to separate blocks of text — good idea. And they go with the banner and design. I just really want to get your writing to present what you know in the best possible way."
+
 ---
 layout: post
 title:  "Why Can't We Get Along? Security and User Experience"

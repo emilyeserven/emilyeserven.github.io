@@ -14,6 +14,8 @@ col2-content: <i class="jolly hdg-opening-tag"></i>
 col3-content: <span class="media-text">#1</span>
 
 ---
+**1: Planning and Pre-Launch** - [2: What happened and what's to come?](../../../../dev-blog/2016/06/14/blog-development-2.html)
+
 I’ve been meaning to get my portfolio and redesigned and rebranded for a little while now, but time has always been a huge constraint. With the career fair coming up in April, I figured that would be a good deadline to meet. My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio.
 
 

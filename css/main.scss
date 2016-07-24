@@ -352,7 +352,7 @@ h2.section-heading {
     background-position: center;
     height: 25em;
     overflow:hidden;
-    position-relative:relative;
+    padding-top:1em;
     z-index:1;
     margin-top:-1em;
 }
@@ -516,19 +516,21 @@ img.portfolio-image {
     display:none;
 }
 .social-row {
-    margin-top: 15px;
-    margin-bottom: -20px;
     text-align:center;
+    a {
+        display: inline-block;
+        margin:0 15px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            text-decoration: none;
+            border-color: #111;
+        }
+    }
+
     i {
         cursor:pointer;
         font-size:2.25em;
-        margin-right: 13%;
-        &:first-of-type {
-            margin-left: 5%;
-        }
-        &:last-of-type {
-            margin-right: 0;
-        }
     }
 }
 .width- {

@@ -7,6 +7,7 @@ time: June 2014 - Present
 tags: [Design]
 categories: Business
 platform: WordPress
+proj-link: http://www.marywatheninteriors.com
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:

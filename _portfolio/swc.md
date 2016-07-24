@@ -7,6 +7,7 @@ time: October 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Non-Profit
 platform: WordPress
+proj-link: http://www.stamfordwomansclub.org
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:
@@ -14,4 +15,4 @@ pageimg:
       feat-image: ../../assets/images/swc/aoi.png
 
 ---
-The Stamford Woman’s Club (SWC) was started by a small group of civic minded women in 1905. The focus of the Club is leadership development and community service. 
+The Stamford Woman’s Club (SWC) was started by a small group of civic minded women in 1905. The focus of the Club is leadership development and community service.

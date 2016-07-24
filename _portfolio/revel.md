@@ -7,6 +7,7 @@ time: April 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Business
 platform: WordPress
+proj-link: http://www.revelcellars.com
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:

@@ -7,6 +7,7 @@ time: January 2012 - Present
 tags: [Custom Backend, Graphics, Mobile Advisory, SEO, Tutoring, Design]
 categories: Business
 platform: WordPress
+proj-link: http://www.epmchannel.com
 img:
     teaser: ../assets/images/placeholder.png
 pageimg:

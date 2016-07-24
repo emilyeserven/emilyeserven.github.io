@@ -54,6 +54,11 @@ $on-laptop:        800px;
         @content;
     }
 }
+@mixin media-query-maxmin($max-width,$min-width) {
+    @media screen and (max-width: $max-width) and (min-width: $min-width) {
+        @content;
+    }
+}
 
 // WIDTH PROPERTIES
 @mixin widthprop($maxwidth,$width) {
@@ -75,6 +80,9 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+html {
+    -webkit-font-smoothing: antialiased;
+}
 .wrapper {
     max-width: calc(1000px - (30px * 2));
 }
@@ -143,6 +151,9 @@ h2 {
     font-size:2em;
     margin-bottom:-5px;
 }
+.form-title {
+    margin-top: 10px;
+}
 h2.section-heading {
     @extend .wrapper;
     width: calc(100% - 30px);
@@ -195,7 +206,7 @@ h2.section-heading {
 }
 .skills-img {
     text-align:center;
-    border-bottom: 3px #eee solid;
+    /* border-bottom: 3px #eee solid; */
 }
 .skill-items {
     padding: 5px 10px;
@@ -245,7 +256,6 @@ h2.section-heading {
     .portfolio-img {
         height: 8.5em;
         overflow: hidden;
-        padding: 0 20px;
         img {
             height: auto;
             margin:0 auto !important;
@@ -297,18 +307,14 @@ h2.section-heading {
         display:block;
     }
     .slider-block {
-        padding: 10px 10px;
-        margin: -2px -2px;
         /*border: 2px #333 solid;*/
-        height: 21.5em; //TODO: Revisit this later!
+        height: 22.5em;
     }
     .slider-description {
         background-color:$grey-color-light;
         padding:5px;
         /*border:2px #333 solid;
         border-top:0px;*/
-        margin-left: -2px;
-        margin-right: -2px;
     }
     img {
         height:auto;
@@ -318,6 +324,9 @@ h2.section-heading {
     a {
         height:100%;
         display:block;
+        padding: 10px;
+        border-left: #eee 1px solid;
+        border-right: #eee 1px solid;
     }
 }
 
@@ -325,6 +334,7 @@ h2.section-heading {
 .portfolio-img a {
     height: 100%;
     display:block;
+    padding: 0 20px;
 }
 .info-buttons {
     margin-top:20px;
@@ -369,6 +379,10 @@ img.portfolio-image {
     max-height: 550px;
     height: auto;
     padding: 10px 10px;
+}
+.photo-caption {
+    margin-top: .25em;
+    font-size: 1.25em;
 }
 .photo-block {
     margin-bottom: 15px;
@@ -489,7 +503,7 @@ img.portfolio-image {
     }
 }
 .post-title {
-    font-size: 42px;
+    font-size: 2.5em;
     letter-spacing: 0px;
     line-height: 1;
     max-width: calc(1000px - 60px) !important;
@@ -589,6 +603,25 @@ a .textcolor- {
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
+
+@include media-query-maxmin(1005px,799px) {
+    h1.post-title {
+        margin-left:30px;
+    }
+}
+@include media-query-maxmin(919px,768px) {
+    .skills-block {
+        width:50%;
+        height:15em;
+        margin-bottom:2em;
+    }
+    .skills-block:nth-of-type(2) {
+        margin-bottom:2em;
+    }
+    .skills-block:nth-of-type(3) {
+        float:left;
+    }
+}
 @include media-query(767px) {
     .slider-holder, .portfolio-holder, .content-left, .content-right, .contact-holder, .form-holder, .skills-block {
         width: 100%;
@@ -597,17 +630,10 @@ a .textcolor- {
     .skills-block:nth-of-type(2) {
         left: initial !important;
     }
-    h1.post-title {
-        margin-bottom: 15px;
-    }
-    .trigger a.page-link {
-        width: initial;
-        text-align: left;
-        font-size: .75em;
-    }
     .avatar-block, .info-block {
         width:48%;
         display:inline-block;
+        margin-bottom: 15px;
     }
     .avatar-block {
         float:right;
@@ -623,10 +649,23 @@ a .textcolor- {
         vertical-align: bottom;
         margin:0 auto !important;
     }
+    h2.section-heading {
+        font-size:2.75em;
+    }
+    .portfolio-holder {
+        margin-left: 0;
+    }
+    .portfolio-block .portfolio-title {
+        font-size:1.5em;
+    }
+    .slider-holder .slider-title {
+        font-size: 2em;
+    }
     .slider-holder img {
         max-width: initial;
         width: 100%;
         height: auto;
+        top:20%;
     }
     a.button-link {
         width:calc(100% - 2em);
@@ -648,10 +687,13 @@ input.buttons {
         color:#000;
     }
 }
-textarea.form-field.form-message, input.form-field, input {
-    width: 100%;
+textarea.form-field.form-message, input.form-field {
+    width: calc(100% - 10px);
     border: 1px #000 solid;
     padding: 2px 5px;
+}
+input.buttons {
+    width:100%;
 }
 
 @include media-query(600px) {
@@ -662,9 +704,75 @@ textarea.form-field.form-message, input.form-field, input {
         margin-top: -15px;
     }
 }
+@include media-query-maxmin(767px,601px) {
+    h1.post-title {
+        margin-bottom: 0px;
+        margin-left:15px;
+    }
+    .skills-img {
+        text-align: left;
+    }
+}
+@include media-query-maxmin(800px,470px) {
+    h1.post-title {
+        margin-bottom: 0px;
+        margin-left:15px;
+    }
+    .skills-img {
+        text-align: left;
+    }
+}
+@include media-query(600px) {
+    .trigger a.page-link {
+        width: initial;
+        text-align: left;
+        font-size: .75em;
+    }
+}
 @include media-query(470px) {
+    .trigger a.page-link {
+        font-size:.8em;
+    }
+    .slider-holder {
+        .slider-title {
+            font-size:1.75em;
+        }
+        .slider-block {
+            height:15em;
+        }
+        img {
+            top:23%;
+        }
+        .slider-description {
+            padding: 5px 8px;
+            font-size: 1.1em;
+        }
+    }
+
+    .portfolio-holder {
+        margin-left: 0;
+        &.standalone .portfolio-img {
+            height:8.5em !important;
+        }
+    }
     .portfolio-block {
         width: 100%;
+        .portfolio-title {
+            font-size:1.5em;
+        }
+        .portfolio-excerpt {
+            padding: 5px 8px;
+            font-size: 1.1em;
+        }
+    }
+    textarea.form-field.form-message, input.form-field {
+        width: calc(100% - 10px);
+    }
+    input {
+        width:100%;
+    }
+    h2.section-heading {
+        font-size: 2.5em;
     }
     .post-header.fullwidth {
         margin-bottom: 30px;
@@ -680,20 +788,37 @@ textarea.form-field.form-message, input.form-field, input {
     }
     .site-subtitle {
         line-height: 1.25em;
-    }
-    .portfolio-holder.standalone .portfolio-img {
-        height:8.5em !important;
+        font-size: 1.75em;
     }
     .post-header.fullwidth {
-        margin-bottom: 0px;
+        margin-bottom: 15px;
     }
-    .post-title {
+    .site-title {
+        font-size:3.5em;
+        margin-bottom:.25em;
+    }
+    h1.post-title {
         padding: 0 15px;
+        margin-top:.15em;
+        margin-bottom: 5px;
     }
     img.portfolio-image {
         max-height:200px;
     }
+    .site-nav .page-link {
+        margin-left: 0px;
+    }
+    .photo-caption {
+        font-size:1em;
+    }
+    .post-image .media-holder {
+        height:120px;
+        padding: 10px 25px 0;
+    }
     .skills- {
+        &block, &block:nth-of-type(2) {
+            margin-bottom: 2em;
+        }
         &left {
             width: 100%;
             display:block;

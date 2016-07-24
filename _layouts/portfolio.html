@@ -16,15 +16,16 @@ layout: default
         {{ page.tags | join: ', ' }}
       <p><b>Time of Project</b>: {{ page.time }}<br />
       <b>Platform</b>: {{ page.platform }}<br />
-      <b>Category</b>: {{ page.categories }}</p>
+      <b>Category</b>: {{ page.categories }}<br />
+      <b><a href="{{ page.proj-link }}">Visit the Site</a></b></p>
     </div>
   <div class="clearfix"></div>
     {% for photo in page.pageimg %}
       <div class="photo-block">
         <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image bg-{{page.code}}"/>
-        <span class="photo-caption">
+        <div class="photo-caption">
           {{ photo.img-name }}
-        </span>
+        </div>
         <br />
       </div>
     {% endfor %}

@@ -10,9 +10,59 @@
     font-family:'Neucha';
     src: url('../Neucha.ttf');
 }
+/* TABLE OF CONTENTS
+SECTION 1: SETUP
+1.10 - VARIABLES
+1.11 -- Fonts and Colors
+1.12 -- Content Width
+1.20 - MIXINS
+1.21 -- Media Queries
+1.22 -- Layout Rules
+1.30 - IMPORT AND STYLESHEETS
+*
+SECTION 2: STRUCTURAL RULES
+2.10 - GLOBAL
+2.20 - PAGE LAYOUT
+2.21 -- Page Overall
+2.22 -- Inline Layout
+2.23 -- Color Standards
+2.30 - HEADER
+2.31 -- Logo Area
+2.32 -- Main Menu
+2.33 -- Mobile Menu
+2.34 -- Titles and Content Headers
+*
+SECTION 3: LOOPS AND BLOCKS
+3.10 - HOMEPAGE LAYOUT
+3.11 -- Slider
+3.20 - BLOG LOOP
+3.21 -- Post Image
+3.30 - PORTFOLIO LOOP
+3.40 - SOCIAL LOOP
+3.50 - SKILLS LOOP
+3.60 - CONTACT FORM LAYOUT
+*
+SECTION 5: PAGE SPECIFIC RULES
+5.10 - ABOUT PAGE
+5.20 - CONTACT FORM
+*
+SECTION 6: SPECIFIC ELEMENTS
+SECTION 7: DISPLAY NONES
+*
+SECTION 8: MOBILE STYLES
+8.10 - Between 799-1005
+8.20 - Between 768-919
+8.30 - Below 767
+8.40 - Below 600
+8.50 - Between 601-767
+8.60 - Between 470-800
+8.70 - Below 600
+8.80 - Below 470
+*/
 
-
-// Our variables
+// SECTION 1: SETUP
+// 1.10 - VARIABLES
+// 1.11 -- Fonts and Colors
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
@@ -34,21 +84,14 @@ $grey-color-dark:  #333;
 
 $bg-image:         url(../assets/images/bg.png);
 
-// Width of the content area
+// 1.12 -- Content Width
 $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+// 1.20 - MIXINS
+// 1.21 -- Media Queries
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -60,66 +103,147 @@ $on-laptop:        800px;
     }
 }
 
-// WIDTH PROPERTIES
+// 1.22 -- Layout Rules
 @mixin widthprop($maxwidth,$width) {
     max-width: $maxwidth;
     width: $width;
 }
-
-//BLOCK STRUCTURE
 @mixin blkstruc($width) {
     display: inline-block;
     vertical-align:top;
     width: $width;
 }
 
-
+// 1.30 - IMPORT STYLESHEETS
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting"
 ;
+
+// SECTION 2: STRUCTURAL RULES
+// 2.10 - GLOBAL
 html {
     -webkit-font-smoothing: antialiased;
 }
+h2 {
+    font-family: $secondary-font;
+    font-size:2em;
+    margin-bottom:-5px;
+}
+
+// 2.20 - PAGE LAYOUT
+// 2.21 -- Page Overall
 .wrapper {
     max-width: calc(1000px - (30px * 2));
 }
 .page-content {
     padding: 0;
 }
-.post-list h2 {
-    margin-bottom: -5px;
+.clearfix {
+    display:inline-block;
+    &:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+ }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+// 2.22 -- Inline Layout
+.content-left {
+    @include blkstruc(49%);
+    margin-right:1%;
+    float:left;
 }
-.trigger {
-    a.page-link {
-        width: 24%;
+.content-right {
+    @include blkstruc(49%);
+    float:right;
+}
+
+.info-block {
+    @include blkstruc(65%);
+    margin-right:1%;
+}
+.avatar-block {
+    @include blkstruc(32%);
+    margin-left: 1%;
+    background-image: $bg-image;
+    background-repeat: repeat;
+    background-position: center;
+    height: 25em;
+    overflow:hidden;
+    padding-top:1em;
+    z-index:1;
+    margin-top:-1em;
+}
+.width- {
+    &25 {
+        width: 23%;
         display:inline-block;
-        text-align:center;
-        margin-right: 0 !important;
-        &:first-child {
-            text-align:left;
-        }
-        &:last-child {
-            text-align:right;
-        }
     }
 }
-.site-title {
-    font-family:$brand-font;
-    font-size:4.5em;
-    line-height:1em;
-    margin-top:.2em;
+// 2.23 -- Color Standards
+a .textcolor- {
+    &white {
+        color:#fff;
+    }
 }
-.site-subtitle {
-    font-family:$secondary-font;
-    font-size:2em;
-    line-height:2em;
+.textcolor- {
+    &white {
+        color:#fff;
+    }
+}
+.bg- {
+    &epm {
+        background-color:#CE171F;
+    }
+    &rc {
+        background-color:#4B181F;
+    }
+    &swc {
+        background-color:#01407D;
+    }
+    &mw {
+        background-color:#000;
+    }
+    &white {
+        background-color: #fff;
+    }
+    &lightgrey {
+        background-color:#eee;
+    }
+    &darkgrey {
+        background-color:#333;
+    }
+}
+
+// 2.30 - HEADER
+// 2.31 -- Logo Area
+.site- {
+    &title {
+        font-family:$brand-font;
+        font-size:4.5em;
+        line-height:1em;
+        margin-top:.2em;
+    }
+    &subtitle {
+        font-family:$secondary-font;
+        font-size:2em;
+        line-height:2em;
+    }
 }
 .site-title, .site-subtitle {
     width:100%;
 }
+// 2.32 -- Main Menu
 .navigation {
     background-color:#eee;
     display:block;
@@ -135,24 +259,38 @@ nav.site-nav {
     padding: 0px !important;
     line-height: 30px !important;
 }
+
+// 2.33 -- Mobile Menu
+.trigger {
+    a.page-link {
+        width: 24%;
+        display:inline-block;
+        text-align:center;
+        margin-right: 0 !important;
+        &:first-child {
+            text-align:left;
+        }
+        &:last-child {
+            text-align:right;
+        }
+    }
+}
+
+// 2.34 -- Titles and Content Headers
 .heading-wrap {
+    // Wrapper for non-title section head bands
     width: 100%;
     display:block;
     background-color:#333;
     z-index: 2;
     position:relative;
 }
-.skills-holder h3 {
-    font-family: $secondary-font;
-    font-size:1.5em;
-}
-h2 {
-    font-family: $secondary-font;
-    font-size:2em;
-    margin-bottom:-5px;
-}
-.form-title {
-    margin-top: 10px;
+.post-header.fullwidth {
+    margin-bottom: 10px;
+    background: #333;
+    padding: 5px 0;
+    z-index: 1;
+    position: relative;
 }
 h2.section-heading {
     @extend .wrapper;
@@ -162,136 +300,15 @@ h2.section-heading {
     font-size:2em;
     margin-bottom:10px;
 }
-.post-header.no-title {
-    display:none;
-}
 .site-header {
     background-image: $bg-image;
     background-repeat: repeat;
     background-position: center;
 }
-.content-left {
-    @include blkstruc(49%);
-    margin-right:1%;
-    float:left;
-}
-.content-right {
-    @include blkstruc(49%);
-    float:right;
-}
-.portfolio-holder {
-    @include blkstruc(65%);
-    margin-left:2%;
-    float:left;
-    &.standalone {
-        width:100% !important;
-    }
-}
 
-.skills-block {
-    @include blkstruc(30%);
-    margin-bottom:1em;
-    &:nth-of-type(1) {
-        float:left;
-    }
-    &:nth-of-type(2) {
-        margin: 0 auto;
-        position: relative;
-        left: 5%;
-    }
-    &:nth-of-type(3) {
-        float:right;
-    }
-
-}
-.skills-img {
-    text-align:center;
-    /* border-bottom: 3px #eee solid; */
-}
-.skill-items {
-    padding: 5px 10px;
-}
-.skills-ico {
-    display:inline-block;
-    position:relative;
-    &.ico-size-tri {
-        top:-1.25em;
-        i {
-            font-size: 2.25em;
-            margin-top:-1em;
-        }
-    }
-    &.ico-size-sec {
-        top:-1em;
-        i {
-            font-size: 2.5em;
-            padding: 0 .05em;
-        }
-    }
-    &.ico-size-pri i {
-        font-size: 5em;
-        padding:0em;
-    }
-}
-.portfolio-block {
-    @include blkstruc(49%);
-    margin-bottom:1em;
-    &:nth-of-type(odd) {
-        margin-right:1%;
-    }
-    .portfolio-title {
-        background-color:$grey-color-dark;
-        color: #fff;
-        font-family:$secondary-font;
-        padding: 10px;
-        font-size: 1.3em;
-        line-height: 1em;
-        a {
-            color:#fff;
-        }
-        h3 {
-            margin-bottom: 0px;
-        }
-    }
-    .portfolio-img {
-        height: 8.5em;
-        overflow: hidden;
-        img {
-            height: auto;
-            margin:0 auto !important;
-            vertical-align: bottom;
-            display:block;
-            width: auto;
-        }
-    }
-    .portfolio-excerpt {
-        background-color:$grey-color-light;
-        padding:5px;
-    }
-}
-.portfolio-holder.standalone .portfolio-img {
-    height:12em !important;
-    img {
-        height:auto;
-    }
-}
-.contact-holder {
-    @include blkstruc(24%);
-    margin-right:1%;
-    float:left;
-}
-.form-holder {
-    @include blkstruc(74%);
-    margin-left: 1%;
-    float:right;
-}
-.icon-holder {
-    display:block;
-    img {
-        width:2.3em;
-        height:2.3em;
-    }
-}
+// SECTION 3: LOOPS AND BLOCKS
+// 3.10 - HOMEPAGE LAYOUT
+// 3.11 -- Slider
 .slider-holder {
     @include blkstruc(32%);
     /*margin-right:1%; */
@@ -329,71 +346,12 @@ h2.section-heading {
         border-right: #eee 1px solid;
     }
 }
-
-
-.portfolio-img a {
-    height: 100%;
-    display:block;
-    padding: 0 20px;
-}
-.info-buttons {
-    margin-top:20px;
-    display:block;
-}
-.info-block {
-    @include blkstruc(65%);
-    margin-right:1%;
-}
-.avatar-block {
-    @include blkstruc(32%);
-    margin-left: 1%;
-    background-image: $bg-image;
-    background-repeat: repeat;
-    background-position: center;
-    height: 25em;
-    overflow:hidden;
-    padding-top:1em;
-    z-index:1;
-    margin-top:-1em;
+// 4.20 - BLOG LOOP
+.post-list h2 {
+    margin-bottom: -5px;
 }
 
-
-.button-link {
-    background-color:$grey-color-light;
-    color:$grey-color-dark;
-    font-family:$secondary-font;
-    font-size: 1.3em;
-    padding: 8px 20px 5px;
-    display:inline-block;
-    transition: background-color ease-in-out 200ms;
-    &:nth-of-type(odd) {
-        margin-right:0em;
-    }
-    &:hover {
-        text-decoration:none;
-        background-color:darken($grey-color-light, 10%);
-    }
-}
-img.portfolio-image {
-    width: calc(100% - 20px);
-    max-height: 550px;
-    height: auto;
-    padding: 10px 10px;
-}
-.photo-caption {
-    margin-top: .25em;
-    font-size: 1.25em;
-}
-.photo-block {
-    margin-bottom: 15px;
-}
-.post-header.fullwidth {
-    margin-bottom: 10px;
-    background: #333;
-    padding: 5px 0;
-    z-index: 1;
-    position: relative;
-}
+// 4.21 -- Post Image
 .post-image {
     float:left;
     max-width:325px;
@@ -403,7 +361,7 @@ img.portfolio-image {
     margin-top:6px;
     .media-holder {
         width:275px;
-        height:130px;
+        height:115px;
         padding: 10px 25px;
         .media-text {
             font-family: $secondary-font;
@@ -478,16 +436,14 @@ img.portfolio-image {
             }
         }
         &.layout-half {
-            &.weight- {
-                &close {
-                    .media-col {
-                        font-size:5em;
-                        &.media-col-1 {
-                            text-align:right !important;
-                        }
-                        &.media-col-2 {
-                            text-align:left !important;
-                        }
+            &.weight-close {
+                .media-col {
+                    font-size:5em;
+                    &.media-col-1 {
+                        text-align:right !important;
+                    }
+                    &.media-col-2 {
+                        text-align:left !important;
                     }
                 }
             }
@@ -512,65 +468,109 @@ img.portfolio-image {
     color: #fff;
     display:block;
 }
-.post-header.silent {
-    display:none;
+
+// 3.30 - PORTFOLIO LOOP
+.portfolio-holder {
+    @include blkstruc(65%);
+    margin-left:2%;
+    float:left;
+    &.standalone {
+        width:100% !important;
+    }
 }
+.portfolio-img a {
+    height: 100%;
+    display:block;
+    padding: 0 20px;
+}
+.portfolio-block {
+    @include blkstruc(49%);
+    margin-bottom:1em;
+    &:nth-of-type(odd) {
+        margin-right:1%;
+    }
+    .portfolio-title {
+        background-color:$grey-color-dark;
+        color: #fff;
+        font-family:$secondary-font;
+        padding: 10px;
+        font-size: 1.3em;
+        line-height: 1em;
+        a {
+            color:#fff;
+        }
+        h3 {
+            margin-bottom: 0px;
+        }
+    }
+    .portfolio-img {
+        height: 8.5em;
+        overflow: hidden;
+        img {
+            height: auto;
+            margin:0 auto !important;
+            vertical-align: bottom;
+            display:block;
+            width: auto;
+        }
+    }
+    .portfolio-excerpt {
+        background-color:$grey-color-light;
+        padding:5px;
+    }
+}
+.portfolio-holder.standalone .portfolio-img {
+    height:12em !important;
+    img {
+        height:auto;
+    }
+}
+img.portfolio-image {
+    width: calc(100% - 20px);
+    max-height: 550px;
+    height: auto;
+    padding: 10px 10px;
+}
+.photo-caption {
+    margin-top: .25em;
+    font-size: 1.25em;
+}
+.photo-block {
+    margin-bottom: 15px;
+}
+// 3.40 - SOCIAL LOOP
 .social-row {
     text-align:center;
     a {
         display: inline-block;
         margin:0 15px;
         border-bottom: 2px solid transparent;
-
-        &:hover {
-            text-decoration: none;
-            border-color: #111;
-        }
     }
-
+    a:hover {
+        text-decoration: none;
+        border-color: #111;
+    }
     i {
         cursor:pointer;
         font-size:2.25em;
     }
 }
-.width- {
-    &25 {
-        width: 23%;
-        display:inline-block;
+// 3.50 - SKILLS LOOP
+.skills-block {
+    @include blkstruc(30%);
+    margin-bottom:1em;
+    &:nth-of-type(1) {
+        float:left;
     }
-}
-a .textcolor- {
-    &white {
-        color:#fff;
+    &:nth-of-type(2) {
+        margin: 0 auto;
+        position: relative;
+        left: 5%;
     }
-}
-.textcolor- {
-    &white {
-        color:#fff;
+    &:nth-of-type(3) {
+        float:right;
     }
-}
-.bg- {
-    &epm {
-        background-color:#CE171F;
-    }
-    &rc {
-        background-color:#4B181F;
-    }
-    &swc {
-        background-color:#01407D;
-    }
-    &mw {
-        background-color:#000;
-    }
-    &white {
-        background-color: #fff;
-    }
-    &lightgrey {
-        background-color:#eee;
-    }
-    &darkgrey {
-        background-color:#333;
-    }
+
 }
 .skills- {
     &left {
@@ -592,25 +592,108 @@ a .textcolor- {
         vertical-align:top;
     }
 }
-.clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
+.skills-img {
+    text-align:center;
+    /* border-bottom: 3px #eee solid; */
+}
+.skill-items {
+    padding: 5px 10px;
+}
+.skills-ico {
+    display:inline-block;
+    position:relative;
+    &.ico-size-tri {
+        top:-1.25em;
+        i {
+            font-size: 2.25em;
+            margin-top:-1em;
+        }
+    }
+    &.ico-size-sec {
+        top:-1em;
+        i {
+            font-size: 2.5em;
+            padding: 0 .05em;
+        }
+    }
+    &.ico-size-pri i {
+        font-size: 5em;
+        padding:0em;
+    }
+}
+// 3.60 - CONTACT FORM LAYOUT
+.contact-holder {
+    @include blkstruc(24%);
+    margin-right:1%;
+    float:left;
+}
+.form-holder {
+    @include blkstruc(74%);
+    margin-left: 1%;
+    float:right;
+}
 
+// SECTION 5: PAGE SPECIFIC RULES
+// 5.10 - ABOUT PAGE
+.skills-holder h3 {
+    font-family: $secondary-font;
+    font-size:1.5em;
+}
+
+// 5.20 - CONTACT FORM
+.form-title {
+    margin-top: 10px;
+}
+
+// SECTION 6: SPECIFIC ELEMENTS
+.icon-holder {
+    // class for the `a` tag, parent of `i` class of an icon
+    display:block;
+    img {
+        width:2.3em;
+        height:2.3em;
+    }
+}
+
+.info-buttons {
+    margin-top:20px;
+    display:block;
+}
+
+.button-link {
+    background-color:$grey-color-light;
+    color:$grey-color-dark;
+    font-family:$secondary-font;
+    font-size: 1.3em;
+    padding: 8px 20px 5px;
+    display:inline-block;
+    transition: background-color ease-in-out 200ms;
+    &:nth-of-type(odd) {
+        margin-right:0em;
+    }
+    &:hover {
+        text-decoration:none;
+        background-color:darken($grey-color-light, 10%);
+    }
+}
+
+// SECTION 7: DISPLAY NONES
+.post-header.no-title {
+    display:none;
+}
+.post-header.silent {
+    display:none;
+}
+
+// SECTION 8: MOBILE STYLES
+// 8.10 - Between 799-1005
 @include media-query-maxmin(1005px,799px) {
     h1.post-title {
         margin-left:30px;
     }
 }
+
+// 8.20 - Between 768-919
 @include media-query-maxmin(919px,768px) {
     .skills-block {
         width:50%;
@@ -624,6 +707,7 @@ a .textcolor- {
         float:left;
     }
 }
+// 8.30 Below 767
 @include media-query(767px) {
     .slider-holder, .portfolio-holder, .content-left, .content-right, .contact-holder, .form-holder, .skills-block {
         width: 100%;
@@ -697,7 +781,7 @@ textarea.form-field.form-message, input.form-field {
 input.buttons {
     width:100%;
 }
-
+// 8.40 Below 600
 @include media-query(600px) {
     .title {
         margin-top: 50px;
@@ -706,6 +790,8 @@ input.buttons {
         margin-top: -15px;
     }
 }
+
+// 8.50 Between 601-767
 @include media-query-maxmin(767px,601px) {
     h1.post-title {
         margin-bottom: 0px;
@@ -715,6 +801,8 @@ input.buttons {
         text-align: left;
     }
 }
+
+// 8.60 Between 470-800
 @include media-query-maxmin(800px,470px) {
     h1.post-title {
         margin-bottom: 0px;
@@ -724,6 +812,8 @@ input.buttons {
         text-align: left;
     }
 }
+
+// 8.70 Below 600
 @include media-query(600px) {
     .trigger a.page-link {
         width: initial;
@@ -731,6 +821,8 @@ input.buttons {
         font-size: .75em;
     }
 }
+
+// 8.80 Below 470
 @include media-query(470px) {
     .trigger a.page-link {
         font-size:.8em;

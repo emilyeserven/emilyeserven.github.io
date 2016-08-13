@@ -144,12 +144,12 @@ h2 {
 .clearfix {
     display:inline-block;
     &:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
+         visibility: hidden;
+         display: block;
+         font-size: 0;
+         content: " ";
+         clear: both;
+         height: 0;
      }
  }
 /* start commented backslash hack \*/
@@ -346,12 +346,12 @@ h2.section-heading {
         border-right: #eee 1px solid;
     }
 }
-// 4.20 - BLOG LOOP
+// 3.20 - BLOG LOOP
 .post-list h2 {
     margin-bottom: -5px;
 }
 
-// 4.21 -- Post Image
+// 3.21 -- Post Image
 .post-image {
     float:left;
     max-width:325px;
@@ -467,6 +467,16 @@ h2.section-heading {
     font-family: "CabinSketch";
     color: #fff;
     display:block;
+}
+.post-image .media-holder.post-img {
+    width: 275px;
+    height: 125px;
+    padding: 10px 25px 0;
+}
+.post-img a {
+    height: 100%;
+    display:block;
+    padding: 0 20px;
 }
 
 // 3.30 - PORTFOLIO LOOP

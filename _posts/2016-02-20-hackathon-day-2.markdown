@@ -4,7 +4,6 @@ title:  "Stamford Hackathon Reflection Day 2"
 date:   2016-02-20 23:17:09 -0500
 categories: hackathon
 excerpt: <b>A reflection of the second day of the Stamford Hackathon.</b> - <i>"First of all, I learned that people don’t settle on ideas very easily or quickly. Heck, my group settled on our idea around 3:30pm officially."</i>
-media: ../../../../assets/images/blog/hack2-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

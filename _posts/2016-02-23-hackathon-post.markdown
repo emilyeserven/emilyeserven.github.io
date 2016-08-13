@@ -4,7 +4,6 @@ title:  "Post-Hackathon Reflection"
 date:   2016-02-23 16:26:24 -0500
 categories: hackathon
 excerpt: <b>A reflection on the hackathon as a whole.</b> - Hackathons are win-win, play with the cool toys and learn new things, ideas win, stick through to the end, a community event.
-media: ../../../../assets/images/blog/hackpost-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

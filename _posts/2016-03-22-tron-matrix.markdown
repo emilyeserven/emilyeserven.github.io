@@ -4,7 +4,6 @@ title:  "Tron, The Matrix, and a History of Computers"
 date:   2016-03-22 16:26:24 -0500
 categories: technology
 excerpt: <b>An exploration of our perceptions of technology and movies</b>. - <i>"People today in 2016 are worried about artificial intelligence and the possibility that one day, just maybe, machines will overtake humans. Interestingly, the movies Tron and Matrix both deal with that same fear even though they were made 2 and 1 decades ago respectively."</i>
-media: ../../../../assets/images/blog/tron-matrix-preview.jpg
 media-bgcolor: darkgrey
 media-layout: thirds
 media-layweight: even
@@ -25,4 +24,4 @@ Both film antagonists (Master Control Program in Torn and the Agents in The Matr
 
 The way Tron and The Matrix alleviated the anxieties of the audiences was showing that in the end, the humans ultimately had the most power over the machines. In Tron, the User trapped in the virtual world was able to convert and control a machine vehicle and gain a heavy advantage against the programs. In the Matrix, Neo was able to use his knowledge that the Matrix existed to gain what could be considered superhuman abilities, and ultimately was able to see the code making up the Matrix and manipulate it at will at the end of the movie (resulting in him winning against the Agents). In today’s world, when the world champion of the game Go was beat 4-1 by an AI, do we still have that feeling of empowerment? A hope that we ultimately control the machines and technology we create? No doubt, the movies of today reflect that struggle, but with movies like Tron and The Matrix, we have a time capsule into thoughts of technologies decades past.
 
-**Edit 6/18/2016:** The post preface was edited. 
+**Edit 6/18/2016:** The post preface was edited.

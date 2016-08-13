@@ -4,7 +4,6 @@ title:  "Stamford Hackathon Pre-Reflection"
 date:   2016-02-18 14:37:34 -0500
 categories: hackathon
 excerpt: <b>A reflection of my expectations.</b>
-media: ../../../../assets/images/blog/hackpre-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

@@ -4,7 +4,6 @@ title:  "Why Blog?"
 date:   2016-01-24 19:28:41 -0500
 categories: dev-blog
 excerpt: <b>Why do we blog?</b> - To learn, to promote, to share, to let thoughts flow.
-media: ../../../../assets/images/blog/why-blog-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

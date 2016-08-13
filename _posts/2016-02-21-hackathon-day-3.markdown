@@ -4,7 +4,6 @@ title:  "Stamford Hackathon Reflection Day 3"
 date:   2016-02-21 23:44:43 -0500
 categories: hackathon
 excerpt: <b>A reflection of the third day of the Stamford Hackathon</b> - <i>This post is mostly about our project as a whole. Ideas about the hackathon itself in the post-reflection.</i>
-media: ../../../../assets/images/blog/hack3-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

@@ -4,7 +4,6 @@ title:  "Hackathon Post Index"
 date:   2016-02-23 17:02:24 -0500
 categories: hackathon
 excerpt: An index to help you check the contents of each hackathon post in case you were more interested in specific aspects.
-media: ../../../../assets/images/blog/hack-index-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

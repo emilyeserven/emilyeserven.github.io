@@ -4,7 +4,6 @@ title:  "SOPA, PIPA, and the Founding Principles of the World Wide Web"
 date:   2016-05-03 16:26:24 -0500
 categories: internet
 excerpt: <b>An exploration of laws and the internet.</b> - <i>"Laws such as PIPA and SOPA are the greatest threats to the founding principles of the World Wide Web. These laws didn’t do something as simple as de-indexing pages from search engines, but instead went the extra mile and proposed that internet service providers themselves blocked access to the websites."</i>
-media: ../../../../assets/images/blog/laws-internet-preview.jpg
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: close

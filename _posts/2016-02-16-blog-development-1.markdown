@@ -4,7 +4,6 @@ title:  "Portfolio Dev Blog #1"
 date:   2016-02-16 16:53:50 -0500
 categories: dev-blog
 excerpt: <b>A documentation of my thoughts of making my portfolio.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
-media: ../../../../assets/images/blog/dev-blog-1-preview.jpg
 media-bgcolor: darkgrey
 media-layout: thirds
 media-layweight: even

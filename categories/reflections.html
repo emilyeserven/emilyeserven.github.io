@@ -1,0 +1,13 @@
+---
+layout: category-default
+categoryid: reflectionss
+nomenutitle: "Blog: Reflections"
+---
+
+{% include blog-header.html slug="reflections" %}
+
+<ul class="post-list">
+{% for post in site.categories.reflections %}
+  {% include blog-loop.html %}
+{% endfor %}
+</ul>

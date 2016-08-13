@@ -1,0 +1,13 @@
+---
+layout: category-default
+categoryid: events
+nomenutitle: "Blog: Events"
+---
+
+{% include blog-header.html slug="events" %}
+
+<ul class="post-list">
+{% for post in site.categories.events %}
+  {% include blog-loop.html %}
+{% endfor %}
+</ul>

@@ -37,6 +37,7 @@ SECTION 3: LOOPS AND BLOCKS
 3.11 -- Slider
 3.20 - BLOG LOOP
 3.21 -- Post Image
+3.22 -- Category List
 3.30 - PORTFOLIO LOOP
 3.40 - SOCIAL LOOP
 3.50 - SKILLS LOOP
@@ -477,6 +478,38 @@ h2.section-heading {
     height: 100%;
     display:block;
     padding: 0 20px;
+}
+a.post-category {
+    font-size: 14px;
+    color: #333;
+}
+
+// 3.22 -- Tag List
+// Sort of a misnomer, this actually refers to a category list.
+
+ul.tag-box.inline {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    display: inline-block;
+}
+
+.tag-box li {
+    display: inline-block;
+    a {
+        background-color: $grey-color-light;
+        padding: 2px 8px;
+        display: inline-block;
+    }
+    a:hover {
+        background-color: $grey-color-dark;
+        color: #fff;
+        text-decoration:none;
+        padding: 2px 8px;
+    }
+    a.active {
+        color: #fff;
+        background-color: $grey-color-dark;
+    }
 }
 
 // 3.30 - PORTFOLIO LOOP

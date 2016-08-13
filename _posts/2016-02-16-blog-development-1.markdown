@@ -2,7 +2,7 @@
 layout: post
 title:  "Portfolio Dev Blog #1"
 date:   2016-02-16 16:53:50 -0500
-categories: dev-blog
+categories: development
 excerpt: <b>A documentation of my thoughts of making my portfolio.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
 media-bgcolor: darkgrey
 media-layout: thirds

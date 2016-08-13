@@ -2,7 +2,7 @@
 layout: post
 title:  "Why Blog?"
 date:   2016-01-24 19:28:41 -0500
-categories: dev-blog
+categories: reflections
 excerpt: <b>Why do we blog?</b> - To learn, to promote, to share, to let thoughts flow.
 media-bgcolor: darkgrey
 media-layout: half

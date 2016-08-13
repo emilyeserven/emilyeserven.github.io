@@ -1,0 +1,18 @@
+<!-- <div class="blog-holder standalone"> -->
+  <span>Topics:</span> <ul class="tag-box inline">
+<!-- Following code from: http://stackoverflow.com/a/21080786 -->
+{% assign tags_list = site.categories | sort %}
+    {% if include.slug == "all" %}
+    <li><a href="/blog/" class="active">All Posts</a></li>
+    {% else %}
+    <li><a href="/blog/">All Posts</a></li>
+    {% endif %}
+  {% for tag in tags_list %}
+    {% if include.slug == tag[0] %}
+      <li><a href="/categories/{{ tag[0] }}" class="active">{{ tag[0] }}</a></li>
+    {% else %}
+      <li><a href="/categories/{{ tag[0] }}">{{ tag[0] }}</a></li>
+    {% endif %}
+  {% endfor %}
+{% assign tags_list = nil %}
+</ul>

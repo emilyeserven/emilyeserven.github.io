@@ -2,7 +2,7 @@
 layout: post
 title:  "Stamford Hackathon Pre-Reflection"
 date:   2016-02-18 14:37:34 -0500
-categories: hackathon
+categories: events
 excerpt: <b>A reflection of my expectations.</b>
 media-bgcolor: darkgrey
 media-layout: half

@@ -1,0 +1,13 @@
+---
+layout: category-default
+categoryid: design
+nomenutitle: "Blog: Design"
+---
+
+{% include blog-header.html slug="design" %}
+
+<ul class="post-list">
+{% for post in site.categories.design %}
+  {% include blog-loop.html %}
+{% endfor %}
+</ul>

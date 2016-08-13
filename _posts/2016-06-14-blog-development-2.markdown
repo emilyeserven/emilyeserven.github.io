@@ -2,7 +2,7 @@
 layout: post
 title:  "Portfolio Dev Blog #2: A Work in Progress"
 date:   2016-06-14 12:53:50 -0500
-categories: development
+tags: [development, reflections]
 excerpt: <b>A documentation of my thoughts of making my portfolio.</b> - <i>"It's been said that a website is never truly "finished", since there's always more work to be done. I've found that in both client work I've done and in this website, the idea certainly holds true."</i>
 media-bgcolor: darkgrey
 media-layout: thirds

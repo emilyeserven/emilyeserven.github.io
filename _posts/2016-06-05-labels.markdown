@@ -2,7 +2,7 @@
 layout: post
 title:  "The Problem With Labels"
 date:   2016-06-05 16:26:24 -0500
-categories: reflections
+tags: [reflections]
 excerpt: <b>An exploration of professional labels.</b> - <i>"Unlike changing a website, changing business cards is costly, and good branding dictates that essential pieces of your message are consistent across all platforms. I could not afford to be fickle, but nor could I afford to let down clients with design skills I thought that they might perceive as subpar."</i>
 media-bgcolor: darkgrey
 media-layout: half

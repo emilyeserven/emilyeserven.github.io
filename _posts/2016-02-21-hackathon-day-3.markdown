@@ -2,7 +2,7 @@
 layout: post
 title:  "Stamford Hackathon Reflection Day 3"
 date:   2016-02-21 23:44:43 -0500
-categories: events
+tags: [events, development]
 excerpt: <b>A reflection of the third day of the Stamford Hackathon</b> - <i>This post is mostly about our project as a whole. Ideas about the hackathon itself in the post-reflection.</i>
 media-bgcolor: darkgrey
 media-layout: half

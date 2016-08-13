@@ -1,5 +1,17 @@
 ---
-
+layout: post
+title:  "CS50 Scratch"
+date:   2016-08-12 16:53:50 -0500
+tags: [development, projects]
+excerpt: <b>A brief foray into Scratch.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+show-default-image: false
+media-bgcolor: white
+media: ../../../../assets/images/feat-media/keyrush.jpg
+alt-cover: ../../../../assets/images/blog/keyrush.png
+alt-class: float-left width-33
+buttons:
+    - link: "https://scratch.mit.edu/projects/114377927/"
+      text: "View the Project"
 ---
 
 The project is a small game in which you collect keys (using your mouse) while avoiding the lightning. At the end of 15 seconds, the game tells you your score. If you press the space bar, you'll gain more keys (a trick alluded to on the home screen).

@@ -190,6 +190,31 @@ h2 {
         width: 23%;
         display:inline-block;
     }
+    &33 {
+        width: 33%;
+        display: inline-block;
+    }
+}
+.cover {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    padding: 20px 0;
+    text-align:center;
+}
+.img-width- {
+    &75 img {
+        max-width:75%;
+        margin:0 auto;
+    }
+}
+img.float-left {
+    margin: 0 10px 10px 0;
+}
+.float- {
+    &left {
+        float:left;
+    }
 }
 // 2.23 -- Color Standards
 a .textcolor- {
@@ -203,6 +228,12 @@ a .textcolor- {
     }
 }
 .bg- {
+    &twitter {
+        background-color: #A2DAFD;
+    }
+    &black {
+        background-color:#000;
+    }
     &epm {
         background-color:#CE171F;
     }
@@ -360,6 +391,7 @@ h2.section-heading {
     margin-right: 15px;
     margin-bottom:15px;
     margin-top:6px;
+    overflow:hidden;
     .media-holder {
         width:275px;
         height:115px;

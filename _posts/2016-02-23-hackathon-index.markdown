@@ -2,7 +2,7 @@
 layout: post
 title:  "Hackathon Post Index"
 date:   2016-02-23 17:02:24 -0500
-categories: events
+tags: [events, development]
 excerpt: An index to help you check the contents of each hackathon post in case you were more interested in specific aspects.
 media-bgcolor: darkgrey
 media-layout: half

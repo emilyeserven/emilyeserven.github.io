@@ -1,7 +1,7 @@
 <!-- <div class="blog-holder standalone"> -->
   <span>Topics:</span> <ul class="tag-box inline">
 <!-- Following code from: http://stackoverflow.com/a/21080786 -->
-{% assign tags_list = site.categories | sort %}
+{% assign tags_list = site.tags | sort %}
     {% if include.slug == "all" %}
     <li><a href="/blog/" class="active">All Posts</a></li>
     {% else %}
@@ -9,9 +9,9 @@
     {% endif %}
   {% for tag in tags_list %}
     {% if include.slug == tag[0] %}
-      <li><a href="/categories/{{ tag[0] }}" class="active">{{ tag[0] }}</a></li>
+      <li><a href="/topics/{{ tag[0] }}" class="active">{{ tag[0] | capitalize }}</a></li>
     {% else %}
-      <li><a href="/categories/{{ tag[0] }}">{{ tag[0] }}</a></li>
+      <li><a href="/topics/{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
     {% endif %}
   {% endfor %}
 {% assign tags_list = nil %}

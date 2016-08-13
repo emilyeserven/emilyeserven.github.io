@@ -7,7 +7,7 @@ nomenutitle: "Blog: Events"
 {% include blog-header.html slug="events" %}
 
 <ul class="post-list">
-{% for post in site.categories.events %}
+{% for post in site.tags.events %}
   {% include blog-loop.html %}
 {% endfor %}
 </ul>

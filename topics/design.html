@@ -7,7 +7,7 @@ nomenutitle: "Blog: Design"
 {% include blog-header.html slug="design" %}
 
 <ul class="post-list">
-{% for post in site.categories.design %}
+{% for post in site.tags.design %}
   {% include blog-loop.html %}
 {% endfor %}
 </ul>

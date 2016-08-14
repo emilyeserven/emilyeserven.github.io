@@ -13,6 +13,12 @@ img:
 pageimg:
     - img-name: The Stamford Woman's Club website on all main devices.
       feat-image: ../../assets/images/swc/aoi.png
+    - img-name: The Stamford Woman's Club website on all main devices.
+      feat-image: ../../assets/images/swc/homepage.png
+    - img-name: The Stamford Woman's Club website on all main devices.
+      feat-image: ../../assets/images/swc/contact.png
+    - img-name: The Stamford Woman's Club website on all main devices.
+      feat-image: ../../assets/images/swc/managepanel.png
 
 ---
 The Stamford Woman’s Club (SWC) was started by a small group of civic minded women in 1905. The focus of the Club is leadership development and community service.

@@ -1,6 +1,6 @@
 PROFESSOR COMMENTS: "Emily, yours is an important topic that the most casual computer-user needs to understand. Unfortunately, this essay doesn't clarify security and user experience, although all the information is in the essay. This essay really needed a short, striking introduction, set off by a page break or at least some white space. The rest of the paragraphs need to be shorter, with less material presented. I think the underlying structure of the essay is fine, it just isn't clear. Nearly every sentence could (or should) be separated into two sentences — some should be three sentences. The blog is going to be really good. The illustrations work well as "subheadings" to separate blocks of text — good idea. And they go with the banner and design. I just really want to get your writing to present what you know in the best possible way."
 
----
+
 layout: post
 title:  "Why Can't We Get Along? Security and User Experience"
 date:   2016-06-12 12:26:24 -0500
@@ -15,7 +15,7 @@ col1-content: <i class="busy hdg-laptop-privacy"></i>
 col2-content: <span class="media-text">VS</span>
 col3-content: <i class="busy hdg-head-question"></i>
 
----
+
 *This essay was written for a college assignment. Students were to write a commentary on a social issue of their choosing. An 800 word limit was enforced.*
 
 As more people get their own devices and go on the internet, they become increasingly reliant on the services it provides. Proportionally, security and user experience become more important, and better implementation of each becomes more common. Sadly though, it would seem that user experience and security are more often than not at odds with each other. This results in what feels like a zero sum game that is nothing more than an eternal tug of war. Typically implemented security is about presenting barriers to a user. Meanwhile ,typically implemented user experience design is about removing barriers to a user. To truly understand this complex relationship, we need to examine each more closely.

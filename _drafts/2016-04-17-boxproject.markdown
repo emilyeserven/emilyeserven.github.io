@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "The Box Project"
+date:   2016-04-17 16:53:50 -0500
+tags: [design, projects]
+excerpt: <b>An exercise in hand-coding and design.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+media-bgcolor: black
+show-default-image: false
+media: ../../../../assets/images/feat-media/boxproject.jpg
+alt-cover: ../../../../assets/images/blog/boxproject.png
+alt-class: cover img-width-75
+buttons:
+    - link: "https://rawgit.com/emilyeserven/testwebsites/master/boxproject/index.html"
+      text: "View on RawGit"
+    - link: "https://github.com/emilyeserven/testwebsites/tree/master/boxproject"
+      text: "See Source Code"
+---
+
+The project is a small game in which you collect keys (using your mouse) while avoiding the lightning. At the end of 15 seconds, the game tells you your score. If you press the space bar, you'll gain more keys (a trick alluded to on the home screen).
+
+There are 3 "backdrops" that are supposed to trigger certain events. The first change in backdrops will trigger hiding of the opening screen material and showing of the cat sprite, key, and lightning sprites. The cat sprite is meant to follow the cursor then add 1 point if it hits keys while subtracting 2 if it hits the bolt. To keep things interesting, a new clone of keys is added at 5, 10, and 13 seconds. Once 15 seconds hit, the next backdrop will appear with the cat in a fixed position telling the player the score. Additionally, there's a strategic element to when someone decides to be pressing the space bar. Is earlier more advantageous to let future key cloning easier, or is it best to wait with more keys on the board? It's up to the player to figure out!
+
+Currently, the objects don't all disappear at the end of the game, and the score doesn't stay displayed permanently. The game achieved its primary objective and I wanted to move on, so I decided not to fix them. If I were to use Scratch for other projects, I'd work harder to solve them, but I don't want to spend too much time on a platform I won't be using much. I also just noticed that there's no limit to how many times you can use the Space bar easter egg, so it can certainly skew results!
+
+You can view the game [here](https://scratch.mit.edu/projects/114377927/)!

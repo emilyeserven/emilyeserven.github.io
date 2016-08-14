@@ -1,19 +1,18 @@
 ---
 layout: post
-title:  "Typography Experiments - Jaden Smith"
-date:   2016-08-12 16:53:50 -0500
-tags: [design, projects]
-excerpt: <b>An experiment with typography</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
-media-bgcolor: twitter
+title:  "Refs & Docs"
+date:   2016-07-29 16:53:50 -0500
+tags: [development, projects]
+excerpt: <b>A personal learning tool and knowledgebase.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
 show-default-image: false
-media-bgcolor: twitter
-media: ../../../../assets/images/feat-media/jsquote.jpg
-alt-cover: ../../../../assets/images/blog/jsquote.png
+media-bgcolor: darkgrey
+media: ../../../../assets/images/feat-media/refdocs.jpg
+alt-cover: ../../../../assets/images/blog/refdocs.png
 alt-class: cover img-width-75
 buttons:
-    - link: "https://rawgit.com/emilyeserven/testwebsites/master/typography/smith.html"
-      text: "View on RawGit"
-    - link: "https://github.com/emilyeserven/testwebsites/tree/master/typography"
+    - link: "http://emilyserven.net/ref-docs/"
+      text: "View Website"
+    - link: "https://github.com/emilyeserven/ref-docs"
       text: "See Source Code"
 ---
 

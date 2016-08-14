@@ -208,7 +208,7 @@ h2 {
         margin:0 auto;
     }
 }
-img.float-left {
+.float-left img {
     margin: 0 10px 10px 0;
 }
 .float- {
@@ -228,6 +228,9 @@ a .textcolor- {
     }
 }
 .bg- {
+    &hack-blue {
+        background-color: #64AADB;
+    }
     &twitter {
         background-color: #A2DAFD;
     }

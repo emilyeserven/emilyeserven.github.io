@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "Typography Experiments - Lovecraft"
-date:   2016-08-12 16:53:50 -0500
+title:  "Typography Experiments - Jaden Smith"
+date:   2016-03-09 16:53:50 -0500
 tags: [design, projects]
-excerpt: <b>An experiment with typography</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+excerpt: <b>A "unique" experiment with typography</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+media-bgcolor: twitter
 show-default-image: false
-media-bgcolor: black
-media: ../../../../assets/images/feat-media/lcquote.jpg
-alt-cover: ../../../../assets/images/blog/lcquote.png
+media-bgcolor: twitter
+media: ../../../../assets/images/feat-media/jsquote.jpg
+alt-cover: ../../../../assets/images/blog/jsquote.png
 alt-class: cover img-width-75
 buttons:
-    - link: "https://rawgit.com/emilyeserven/testwebsites/master/typography/lovecraft.html"
+    - link: "https://rawgit.com/emilyeserven/testwebsites/master/typography/smith.html"
       text: "View on RawGit"
     - link: "https://github.com/emilyeserven/testwebsites/tree/master/typography"
       text: "See Source Code"

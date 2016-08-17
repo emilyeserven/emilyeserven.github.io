@@ -3,7 +3,7 @@ layout: post
 title:  "Google Changes How We Think. So What?"
 date:   2016-07-24 19:28:41 -0500
 tags: [reflections, internet]
-excerpt: <b>A reflection on the reach of the Internet.</b> - A different way of thinking isn’t necessarily bad; nowadays we’re able to access more information at a quicker pace, and long form writing will still have importance even if it goes out of the mainstream.
+excerpt: <b>A reflection on the reach of the Internet.</b> - <i>A different way of thinking isn’t necessarily bad; nowadays we’re able to access more information at a quicker pace, and long form writing will still have importance even if it goes out of the mainstream.</i>
 media-bgcolor: darkgrey
 media-layout: half
 media-layweight: even

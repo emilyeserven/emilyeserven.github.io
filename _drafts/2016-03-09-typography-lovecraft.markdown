@@ -16,10 +16,22 @@ buttons:
       text: "See Source Code"
 ---
 
-The project is a small game in which you collect keys (using your mouse) while avoiding the lightning. At the end of 15 seconds, the game tells you your score. If you press the space bar, you'll gain more keys (a trick alluded to on the home screen).
 
-There are 3 "backdrops" that are supposed to trigger certain events. The first change in backdrops will trigger hiding of the opening screen material and showing of the cat sprite, key, and lightning sprites. The cat sprite is meant to follow the cursor then add 1 point if it hits keys while subtracting 2 if it hits the bolt. To keep things interesting, a new clone of keys is added at 5, 10, and 13 seconds. Once 15 seconds hit, the next backdrop will appear with the cat in a fixed position telling the player the score. Additionally, there's a strategic element to when someone decides to be pressing the space bar. Is earlier more advantageous to let future key cloning easier, or is it best to wait with more keys on the board? It's up to the player to figure out!
+## Origin & Goals
 
-Currently, the objects don't all disappear at the end of the game, and the score doesn't stay displayed permanently. The game achieved its primary objective and I wanted to move on, so I decided not to fix them. If I were to use Scratch for other projects, I'd work harder to solve them, but I don't want to spend too much time on a platform I won't be using much. I also just noticed that there's no limit to how many times you can use the Space bar easter egg, so it can certainly skew results!
+- typography assignment for web development class
 
-You can view the game [here](https://scratch.mit.edu/projects/114377927/)!
+"Choose two quotes or song lyrics and create two web pages that display the quotes in different styles."
+
+Picked one serious quote and a more fun quote.
+
+H. P. Lovecraft is an author who influenced a large amount of my favorite shows and books.
+
+## Functionality & Design
+
+Combination of blackletter font and heavy san serif.
+
+Black and muted white, hilighted word is 'fear', is dark red to show ominous atmosphere.
+
+Font: Deutsch
+Font: Archivo Black

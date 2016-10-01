@@ -775,6 +775,19 @@ img.portfolio-image {
 code {
     background-color: #eee;
 }
+pre.lineno {
+    background-color: #333;
+    color: #eee;
+    border: #333;
+    border-radius: 0;
+    /* margin-top: 0; */
+    padding: 10px;
+}
+.highlighter-rouge td.gutter.gl {
+    border-right: #333 solid 2px;
+    padding: 0;
+    border-radius: 0;
+}
 
 // SECTION 7: DISPLAY NONES
 .post-header.no-title {

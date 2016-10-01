@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Solving JavaScript - Removing Untagged Colons"
+title:  "A JavaScript Study, #1 - Removing Untagged Colons"
 date:   2016-09-30 00:00:50 -0500
 tags: [development, projects]
 excerpt: <b>A case study of a basic JavaScript problem.</b> - <i>"I wanted to write something showing the trial and error that goes into solving a development problem, especially when inexperienced with the language and jargon."</i>
@@ -10,13 +10,6 @@ media-layweight: even
 textcolor: white
 col1-content: <i class="jolly hdg-js-javascript-file-extension"></i>
 col2-content: <span class="media-text">1</span>
-buttons:
-    - link: "https://rawgit.com/emilyeserven/testwebsites/master/ornette/original/index.html"
-      text: "View Starter Project"
-    - link: "https://rawgit.com/emilyeserven/testwebsites/master/ornette/index.html"
-      text: "View Project with Styling"
-    - link: "https://github.com/emilyeserven/testwebsites/tree/master/ornette"
-      text: "See Source Code"
 ---
 
 ## Warnings and Upfront Disclaimers

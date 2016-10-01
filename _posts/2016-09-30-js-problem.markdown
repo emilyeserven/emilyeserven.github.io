@@ -16,15 +16,14 @@ col2-content: <span class="media-text">1</span>
 
 This is an exploration of a problem that would be considered extremely basic by someone experienced with JavaScript. However, I wanted to write something showing the trial and error that goes into solving a development problem, especially when inexperienced with the language and jargon. There aren't many of those articles around the internet (that I'm aware of), so hopefully this can help other learning developers that not always having a quick and easy fix is normal!
 
-(To that end, there's a bunch of footnotes to help people understand my research process and other general )
+(To that end, there's a bunch of footnotes to help people understand my research process and other general.)
 
 ## The Problem
 
-The website used a [plugin](https://wordpress.org/plugins/wp-user-frontend/) that would allow you to create forms, and then generate posts based on those forms. Unfortunately, it's extremely inflexible plugin. The generated posts wouldn't let you control how the fields displayed. This meant the form field titles were added in, and also didn't have the colons inside the `<label>` tag (so that even if the label was hidden with CSS, the colon would still show).
+The website used a [plugin](https://wordpress.org/plugins/wp-user-frontend/) that would allow you to create forms, and then generate posts based on those forms. Unfortunately, it's extremely inflexible plugin and there was too much time already sunk into it. The generated posts wouldn't let you control how the fields displayed. This meant the form field titles were added in, and also didn't have the colons inside the `<label>` tag (so that even if the label was hidden with CSS, the colon would still show).
 
-<p data-height="265" data-theme-id="0" data-slug-hash="YGAzEG" data-default-tab="html,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/YGAzEG/">Colon JS Problem</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="25744" data-slug-hash="YGAzEG" data-default-tab="html,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/YGAzEG/">Colon JS Problem, Before</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-<br />
 
 ## Possible Solutions without JavaScript?
 
@@ -37,15 +36,15 @@ overflow: hidden;
 }
 ```
 
-Another option was to edit the PHP file in the actual plugin. However, I couldn't find where to make the edit, and this method would require re-editing the hack in every time the plugin was updated.
+Another option was to edit the PHP file in the actual plugin. However, I couldn't find where to make the edit, and this solution would require re-editing the hack in every time the plugin was updated.
 
-Finally, the last option was to try using a plugin. The [WP Toolset](https://wp-types.com/) content template system is used insert information into a post, and usually it will override the rest of the content, regardless of any other settings. However, the problem plugin overrode the content template to the point that it stripped all the HTML out.
+Finally, the last option was to try using a different plugin on top of the currently existing one. The [WP Toolset](https://wp-types.com/) content template system is used insert information into a post, and usually it will override the rest of the content, regardless of any other settings. However, the problem plugin overrode the content template to the point that it stripped all the HTML out.
 
 With all those options exhausted, it was time to resort to JavaScript.
 
 ## The Plan
 
-I needed to write a function[^function] that would iterate[^nodelistrepeat] through a list[^JSselector] and replace the colons with empty spaces, either through a `replace()`[^JSreplace] method or a regular expression[^MOZregex]. I checked out regular expressions first (and did find a tool[^regex] to make sure I wrote a valid expression), but decided that just using `replace()` would be easier.
+I needed to write a function[^function] that would iterate[^nodelistrepeat] through a list[^JSselector] and replace the colons with empty spaces, either through a `replace()`[^JSreplace] method[^method] or a regular expression[^MOZregex]. I checked out regular expressions first (and did find a tool[^regex] to make sure I wrote a valid expression), but decided that just using `replace()` would be easier.
 
 ## Trial and Error 1: I Used a String Method on an Object
 
@@ -62,7 +61,7 @@ function memberList() {
 memberList();
 ```
 
-A function called `memberList()` that had a local variable `memberListItems`. This variable kept the DOM query[^domquery] and allowed me to use it in a `for` loop[^forloop]. However, I kept getting an error that I wasn't working with a string.
+A function called `memberList()` that had a local[^scope] variable `memberListItems`. This variable kept the DOM query[^domquery] and allowed me to use it in a `for` loop[^forloop]. However, I kept getting an error that I wasn't working with a string.
 
 After further investigation, I found out that I was trying to use a string method on an object. Which leads us into the next part...
 
@@ -103,7 +102,7 @@ function memberList() {
 memberList();
 ```
 
-Before removing the colon (and stripping the HTML), I used the `includes()` method[^includes] to remove the `<label>` tag and all of its content[^removetagviaJS]. To protect the area with the image (which had a colon inside its `<label>` tag, for some reason...) I added an `if` statement checking to see if a selected object included a `:` character.
+Before removing the colon (and stripping the HTML), I used the `includes()`[^includes] method to remove the `<label>` tag and all of its content[^removetagviaJS]. To protect the area with the image (which had a colon inside its `<label>` tag, for some reason...) I added an `if` statement checking to see if a selected object included a `:` character.
 
 (I had experimented with testing[^fiddleIfContainingElement] if an element contains a class[^ifcontainclass] and removing nodes[^removenodes], but neither of those solutions worked.)
 
@@ -147,21 +146,26 @@ memberList();
 
 `innerHTML` solved a lot of problems, thereby creating unneeded code. I removed the `label` query selector, the item in the `for` loop that removed the actual `<label>`, and all the `console.log`s that were used for debugging.
 
-Finally, I inserted the JavaScript into a Toolset content template, which only loaded on the pages it was needed. This allowed to loading times to be less negatively affected.
+Finally, I wanted to optimize loading times. Since this script was only needed on a specific category of pages, I inserted the JavaScript into a Toolset content template, which only loaded on the needed pages. 
 
 ## Final Product
 
-<p data-height="265" data-theme-id="0" data-slug-hash="ZpXEjN" data-default-tab="js,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/ZpXEjN/">Colon JS Problem, After</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="25744" data-slug-hash="ZpXEjN" data-default-tab="css,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/ZpXEjN/">Colon JS Problem, After</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-<br />
+
+## Some Notes on Research and Asking for Help
+
+Knowing how to efficiently Google and being familiar with StackOverflow are essential for this job/hobby. However, I can't emphasize enough how nice it is to have other people to ask for help, especially if you don't have as much experience in the language you're working on. On that front, I had some support via some Slack channels since this was a time-sensitive problem. The people here did not outright solve the problem for me, but definitely pointed out places for me to investigate. This would have taken another hour or so if I did not have that help! (I was using [frontenddevelopers](http://frontenddevelopers.org/) and [CodeNewbie](http://www.codenewbie.org/) for this project specifically, since more people were online at the time.)
 
 ## Footnotes / References
+
+Refs&Docs is my own personal documentation site, and is included in these footnotes to try and explain fundamentals. Other links are part of the research process. They were Googled unless noted.
 
 [^innerTextinnerHTML1]: StackOverflow: [The Difference Between innerText and innerHTML in JS](http://stackoverflow.com/questions/19030742/difference-between-innertext-and-innerhtml-in-javascript).
 [^innerTextinnerHTML2]: StackOverflow: [nodeValue vs innerHTML and textContent](http://stackoverflow.com/questions/21311299/nodevalue-vs-innerhtml-and-textcontent-how-to-choose).
 [^includes]: w3Schools: [JS Reference, `includes()`](http://www.w3schools.com/jsref/jsref_includes.asp).
-[^fiddleColonRemoval]: JSFiddle: [Untitled Fiddle with Colon Removal Demo](https://jsfiddle.net/qbwqtc32/).
-[^fiddleIfContainingElement]: JSFiddle: [Untitled Fiddle with Element Containing Demo](http://jsfiddle.net/qLPJC/).
+[^fiddleColonRemoval]: JSFiddle, found via a Slack friend: [Untitled Fiddle with Colon Removal Demo](https://jsfiddle.net/qbwqtc32/).
+[^fiddleIfContainingElement]: JSFiddle, found via a Slack friend: [Untitled Fiddle with Element Containing Demo](http://jsfiddle.net/qLPJC/).
 [^removetagviaJS]: StackOverflow: [Removing a Div Tag using JS or jQuery](http://stackoverflow.com/questions/4755546/remove-div-tag-using-javascript-or-jquery).
 [^ifcontainclass]: StackOverflow: [Test if an Element Contains a Class](http://stackoverflow.com/questions/5898656/test-if-an-element-contains-a-class).
 [^JSreplace]: w3Schools: [JS Reference, `replace()`](http://www.w3schools.com/jsref/jsref_replace.asp).
@@ -173,3 +177,5 @@ Finally, I inserted the JavaScript into a Toolset content template, which only l
 [^function]: Refs&Docs: [Declaring a Function](http://emilyserven.net/ref-docs/js-ref-functions.html#declaring-a-function).
 [^domquery]: Refs&Docs: [Caching DOM Queries](http://emilyserven.net/ref-docs/js-ref-dom.html#caching-dom-queries)
 [^forloop]: Refs&Docs: [For Loops](http://emilyserven.net/ref-docs/js-ref-loops.html#for-loops)
+[^method]: Refs&Docs: [Objects](http://emilyserven.net/ref-docs/js-ref-objects.html#objects)
+[^scope]: Refs&Docs: [Scope](http://emilyserven.net/ref-docs/js-ref-structure.html#scope)

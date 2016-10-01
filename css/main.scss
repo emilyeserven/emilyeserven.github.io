@@ -758,6 +758,20 @@ img.portfolio-image {
         background-color:darken($grey-color-light, 10%);
     }
 }
+.highlighter-rouge {
+    td.gutter.gl {
+        border-right: $grey-color-dark solid 2px;
+    }
+    .highlight, pre {
+        background-color: $grey-color-light;
+    }
+    pre {
+        margin-bottom: 0;
+    }
+}
+code {
+    background-color: #eee;
+}
 
 // SECTION 7: DISPLAY NONES
 .post-header.no-title {

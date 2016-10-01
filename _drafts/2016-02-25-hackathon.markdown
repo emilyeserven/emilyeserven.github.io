@@ -20,16 +20,22 @@ buttons:
 
 ## Origin & Goals
 
-???
+The base goal of this project was to make something that involved sensors and the building the hackathon was hosted in. We achieved this goal as well as an extra layer that gave the sensors a specific purpose. Specifically, I was thinking of [...] We certainly did not think we would win our category.
 
-## Functionality & Design
+## Development
 
-???
+- The JS wasn't handled by me, although I did write some jQuery to change DOM nodes
+
+## Design
+
+- I led this part, idea was that the project could be accessed on a walk over to the Center so it was designed to be very mobile friendly
 
 ## Improvements to be Made
 
-???
+- It doesn't work right now, because the sensors were taken down
+- The site used Twitter Bootstrap to begin with, but now we see that's excess
+- More time and we'd just code from scratch
 
 ## What I Learned
 
-???
+- There's actually whole posts dedicated to this, so I'll just leave you with a link to it:

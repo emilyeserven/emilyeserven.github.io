@@ -21,11 +21,18 @@ buttons:
 
 ## Origin & Goals
 
-Originally for an in-class assignment. Took bare HTML and added CSS styling to it. Most students had this as their first exposure to a larger project involving cSS.
+This project was originally for an in-class assignment. We were provided with bare HTML and were to add CSS styling to it. Most students had this as their first exposure to a larger project involving CSS, and were able to see how flexible CSS is. I personally wanted to explore colors and CSS I don't typically use, since this project was not client-related.
 
-## Functionality & Design
+## Development
 
-Yellow and black because I wanted to experiment with a color scheme I don't usually use. (I skew heavily towards blue.)
+This was developed without legacy browsers and mobile styling at first, since I wanted to just explore the CSS without much limitations.
+
+## Design
+
+Since most of my designs tend to use blue or another "cool" color, I decided to work with yellow and black for this assignment.
+
+- Yellow and black because I wanted to experiment with a color scheme I don't usually use. (I skew heavily towards blue.)
+- Slightly tilted labels because I thought it looked cool
 
 ## Improvements to be Made
 

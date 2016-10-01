@@ -18,12 +18,9 @@ buttons:
 
 ## Origin & Goals
 
-- Assignment for class
-- make a website based on a box's content
+Originally, this project was made as a class project using [these specifications](https://dmd1070.com/lessons/box-project.html). I decided to use the box for my 'gaming' motherboard because I thought it would present the opportunity to experiment with different design.
 
-## Functionality & Design
-
-### Development
+## Development
 
 - First site coded from scratch for quite a while
 - Fixed headings plus anchor links are a special challenge

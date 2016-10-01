@@ -22,7 +22,7 @@ This is an exploration of a problem that would be considered extremely basic by 
 
 The website used a [plugin](https://wordpress.org/plugins/wp-user-frontend/) that would allow you to create forms, and then generate posts based on those forms. Unfortunately, it's extremely inflexible plugin and there was too much time already sunk into it. The generated posts wouldn't let you control how the fields displayed. This meant the form field titles were added in, and also didn't have the colons inside the `<label>` tag (so that even if the label was hidden with CSS, the colon would still show).
 
-<p data-height="300" data-theme-id="25744" data-slug-hash="YGAzEG" data-default-tab="html,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/YGAzEG/">Colon JS Problem, Before</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="25744" data-slug-hash="YGAzEG" data-default-tab="result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/YGAzEG/">Colon JS Problem, Before</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Possible Solutions without JavaScript?
@@ -144,13 +144,13 @@ function memberList() {
 memberList();
 ```
 
-`innerHTML` solved a lot of problems, thereby creating unneeded code. I removed the `label` query selector, the item in the `for` loop that removed the actual `<label>`, and all the `console.log`s that were used for debugging.
+`innerHTML` solved a lot of problems, thereby creating unneeded code (although it should be noted that its use is a last resort, as interacting with DOM elements in that was is bad practice). I removed the `label` query selector, the item in the `for` loop that removed the actual `<label>`, and all the `console.log`s that were used for debugging.
 
-Finally, I wanted to optimize loading times. Since this script was only needed on a specific category of pages, I inserted the JavaScript into a Toolset content template, which only loaded on the needed pages. 
+Finally, I wanted to optimize loading times. Since this script was only needed on a specific category of pages, I inserted the JavaScript into a Toolset content template, which only loaded on the needed pages.
 
 ## Final Product
 
-<p data-height="300" data-theme-id="25744" data-slug-hash="ZpXEjN" data-default-tab="css,result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/ZpXEjN/">Colon JS Problem, After</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="25744" data-slug-hash="ZpXEjN" data-default-tab="result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/ZpXEjN/">Colon JS Problem, After</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Some Notes on Research and Asking for Help

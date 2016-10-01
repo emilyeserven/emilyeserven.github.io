@@ -758,6 +758,9 @@ img.portfolio-image {
         background-color:darken($grey-color-light, 10%);
     }
 }
+.language-js.highlighter-rouge {
+    overflow: scroll;
+}
 .highlighter-rouge {
     td.gutter.gl {
         border-right: $grey-color-dark solid 2px;

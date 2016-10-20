@@ -36,3 +36,7 @@ Despite being technically being in the Fine Arts school, I don't like art museum
 * The API makes my developer self very happy
 
 * One floor was closed as they prepared an exhibit
+
+## My Expectations
+
+What I saw was different from my expectations, since I come from a graphic design and digital design background.

@@ -726,6 +726,12 @@ img.portfolio-image {
 .form-title {
     margin-top: 10px;
 }
+.g-recaptcha {
+    margin-top: 5px;
+    &> div {
+        width: 100% !important;
+    }
+}
 
 // SECTION 6: SPECIFIC ELEMENTS
 .icon-holder {

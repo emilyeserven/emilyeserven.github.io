@@ -13,11 +13,11 @@ img:
 pageimg:
     - img-name: The Stamford Woman's Club website on all main devices.
       feat-image: ../../assets/images/swc/aoi.png
-    - img-name: The Stamford Woman's Club website on all main devices.
+    - img-name: The Stamford Woman's Club website's homepage.
       feat-image: ../../assets/images/swc/homepage.png
-    - img-name: The Stamford Woman's Club website on all main devices.
+    - img-name: The Stamford Woman's Club website's contact page.
       feat-image: ../../assets/images/swc/contact.png
-    - img-name: The Stamford Woman's Club website on all main devices.
+    - img-name: The Stamford Woman's Club website's custom management panel. Created so the client would not need to log into the WordPress back-end. Made with WP Toolset.
       feat-image: ../../assets/images/swc/managepanel.png
 
 ---

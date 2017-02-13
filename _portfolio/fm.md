@@ -13,7 +13,7 @@ img:
 pageimg:
     - img-name: The Mary Wathen website on all main devices.
       feat-image: ../../assets/images/mw/aoi.png
-    - img-name: The Mary Wathen website on all main devices.
+    - img-name: The Mary Wathen website's homepage.
       feat-image: ../../assets/images/mw/homepage.png
 
 

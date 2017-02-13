@@ -13,7 +13,7 @@ img:
 pageimg:
     - img-name: The Mary Wathen website on all main devices.
       feat-image: ../../assets/images/mw/aoi.png
-    - img-name: The Mary Wathen website on all main devices.
+    - img-name: The Mary Wathen website's homepage. Big photos featuring the client's work were prominent, as the client's service is to create visually appealing interior designs.
       feat-image: ../../assets/images/mw/homepage.png
 ---
 

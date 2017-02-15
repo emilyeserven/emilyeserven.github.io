@@ -11,7 +11,7 @@ textcolor: white
 col1-content: <i class="jolly hdg-console"></i>
 col2-content: <i class="busy hdg-calendar4"></i>
 ---
-[Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - **Post-Hackathon**
+[Index](../../../../2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../2016/02/18/hackathon-day-0.html) - [Day 1](../../../../2016/02/19/hackathon-day-1.html) - [Day 2](../../../../2016/02/20/hackathon-day-2.html) - [Day 3](../../../../2016/02/21/hackathon-day-3.html) - **Post-Hackathon**
 
 ## Who Are You, Anyway?
 In case you’re just jumping into these blogs now, let me give you some context about myself.

@@ -11,7 +11,7 @@ textcolor: white
 col1-content: <i class="jolly hdg-console"></i>
 col2-content: <i class="brainy hdg-clock"></i>
 ---
-[Index](../../../../hackathon/2016/02/23/hackathon-index.html) - **Pre-Hackathon** - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../hackathon/2016/02/21/hackathon-day-3.html) - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
+[Index](../../../../2016/02/23/hackathon-index.html) - **Pre-Hackathon** - [Day 1](../../../../2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - [Day 3](../../../../2016/02/21/hackathon-day-3.html) - [Post-Hackathon](../../../../2016/02/23/hackathon-post.html)
 
 Before I actually start the hackathon, I wanted to write my expectations and hopes.
 

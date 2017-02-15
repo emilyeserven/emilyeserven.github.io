@@ -9,7 +9,7 @@ categories: Business
 platform: WordPress
 proj-link: http://www.marywatheninteriors.com
 img:
-    teaser: ../assets/images/placeholder.png
+    teaser: ../assets/images/mw/sized.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.
       feat-image: ../../assets/images/mw/aoi.png

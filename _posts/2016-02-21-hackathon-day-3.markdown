@@ -11,7 +11,7 @@ textcolor: white
 col1-content: <i class="jolly hdg-console"></i>
 col2-content: <span class="media-text">3</span>
 ---
-[Index](../../../../hackathon/2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../hackathon/2016/02/18/hackathon-day-0.html) - [Day 1](../../../../hackathon/2016/02/19/hackathon-day-1.html) - [Day 2](../../../../hackathon/2016/02/20/hackathon-day-2.html) - **Day 3** - [Post-Hackathon](../../../../hackathon/2016/02/23/hackathon-post.html)
+[Index](../../../../2016/02/23/hackathon-index.html) - [Pre-Hackathon](../../../../2016/02/18/hackathon-day-0.html) - [Day 1](../../../../2016/02/19/hackathon-day-1.html) - [Day 2](../../../../2016/02/20/hackathon-day-2.html) - **Day 3** - [Post-Hackathon](../../../../2016/02/23/hackathon-post.html)
 
 (This post is on the selfish side because I’m mostly going to be talking about the project I was involved in. Overall thoughts about the hackathon as a whole will be in a post tomorrow!)
 

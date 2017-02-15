@@ -643,7 +643,6 @@ img.portfolio-image {
 // 3.50 - SKILLS LOOP
 .skills-block {
     @include blkstruc(30%);
-    margin-bottom:1em;
     &:nth-of-type(1) {
         float:left;
     }
@@ -678,7 +677,10 @@ img.portfolio-image {
     }
 }
 .skills-img {
-    text-align:center;
+    text-align:left;
+
+    margin-bottom:.5em;
+    margin-top: .5em;
     /* border-bottom: 3px #eee solid; */
 }
 .skill-items {
@@ -688,7 +690,6 @@ img.portfolio-image {
     display:inline-block;
     position:relative;
     &.ico-size-tri {
-        top:-1.25em;
         i {
             font-size: 2.25em;
             margin-top:-1em;

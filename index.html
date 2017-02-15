@@ -18,7 +18,7 @@ layout: default
     </div>
   </div>
   <div class="portfolio-holder">
-    {% for portfolio in site.portfolio %}
+    {% for portfolio in site.portfolio limit:4 %}
       <div class="portfolio-block">
         <div class="portfolio-title">
           <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>

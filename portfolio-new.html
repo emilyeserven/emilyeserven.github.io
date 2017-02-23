@@ -1,15 +1,19 @@
 ---
-
+layout: default
 ---
-<div class="portfolio-holder standalone">
-{% for portfolio in site.portfolio %}
-<div class="portfolio-block testpage">
-    <div class="portfolio-img bg-{{portfolio.code}}">
-      <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
+<header class="post-header fullwidth">
+    <h1 class="post-title">New Portfolio</h1>
+</header>
+<div class="wrapper">
+    <div class="portfolio-holder standalone">
+    {% for portfolio in site.portfolio %}
+    <div class="portfolio-block testpage">
+        <div class="portfolio-img testing bg-{{portfolio.code}}">
+          <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
+        </div>
+        <div class="portfolio-overlay bg-{{portfolio.code}} transp">
+            <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
+        </div>
     </div>
-    <div class="portfolio-overlay bg-{{portfolio.code}} transp">
-        <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
+    {% endfor %}
     </div>
-</div>
-{% endfor %}
-</div>

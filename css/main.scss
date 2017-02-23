@@ -261,6 +261,7 @@ a .textcolor- {
 @include brand-color('mw', #000);
 @include brand-color('fm', #01EFFF);
 @include brand-color('white', #FFFFFF);
+@include brand-color('darkgrey', #333333);
 
 // 2.30 - HEADER
 // 2.31 -- Logo Area
@@ -584,7 +585,10 @@ ul.tag-box.inline {
         }
     }
     .portfolio-img {
-        height: 11em;
+        height: 8.5em;
+        &.testing {
+            height: 11em;
+        }
         overflow: hidden;
         img {
             height: auto;
@@ -601,13 +605,15 @@ ul.tag-box.inline {
         height: 11em;
         a {
             display:table;
-            padding-top:3em;
             height:11em;
             width:100%;
             color: #fff;
-            text-align:center;
-            font-family: $secondary-font;
-            font-size:1.5em;
+            h3 {
+                padding-top:3em;
+                text-align:center;
+                font-family: $secondary-font;
+                font-size:1.5em;
+            }
         }
     }
     &:hover .portfolio-overlay {
@@ -623,7 +629,10 @@ ul.tag-box.inline {
 }
 .portfolio-holder.standalone {
     .portfolio-img {
-        height:18em !important;
+        height: 12em !important;
+        &.testing {
+            height:18em !important;
+        }
         img {
             height:auto;
         }

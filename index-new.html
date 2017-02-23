@@ -28,7 +28,7 @@ layout: default
   <div class="homepage portfolio-holder">
     {% for portfolio in site.portfolio limit:4 %}
       <div class="portfolio-block testpage">
-        <div class="portfolio-img bg-{{portfolio.code}}">
+        <div class="portfolio-img testing bg-{{portfolio.code}}">
           <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
         </div>
         <div class="portfolio-overlay bg-{{portfolio.code}} transp">

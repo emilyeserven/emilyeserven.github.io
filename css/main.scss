@@ -14,7 +14,8 @@
 SECTION 1: SETUP
 1.10 - VARIABLES
 1.11 -- Fonts and Colors
-1.12 -- Content Width
+1.12 -- Client Colors
+1.13 -- Content Width
 1.20 - MIXINS
 1.21 -- Media Queries
 1.22 -- Layout Rules
@@ -83,9 +84,14 @@ $grey-color:       #828282;
 $grey-color-light: #eee;
 $grey-color-dark:  #333;
 
+$transp-val:       0.75;
+
 $bg-image:         url(../assets/images/bg.png);
 
-// 1.12 -- Content Width
+// 1.12 -- Brand Colors
+//?
+
+// 1.13 -- Content Width
 $content-width:    800px;
 
 $on-palm:          600px;
@@ -115,6 +121,20 @@ $on-laptop:        800px;
     width: $width;
 }
 
+// 1.23 -- Color Rules
+@mixin background-opacity($color, $opacity) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin brand-color($code, $color) {
+    .bg-#{$code} {
+        background-color: $color;
+        &.transp {
+            @include background-opacity($color, $transp-val);
+        }
+    }
+}
 // 1.30 - IMPORT STYLESHEETS
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -231,41 +251,16 @@ a .textcolor- {
         color:#fff;
     }
 }
-.bg- {
-    &hack-blue {
-        background-color: #64AADB;
-    }
-    &twitter {
-        background-color: #A2DAFD;
-    }
-    &black {
-        background-color:#000;
-    }
-    &epm {
-        background-color:#CE171F;
-    }
-    &rc {
-        background-color:#4B181F;
-    }
-    &swc {
-        background-color:#01407D;
-    }
-    &mw {
-        background-color:#000;
-    }
-    &fm {
-        background-color:#01EFFF;
-    }
-    &white {
-        background-color: #fff;
-    }
-    &lightgrey {
-        background-color:#eee;
-    }
-    &darkgrey {
-        background-color:#333;
-    }
-}
+
+@include brand-color('hack-blue', #64AADB);
+@include brand-color('twitter', #A2DAFD);
+@include brand-color('black', #000);
+@include brand-color('epm', #CE171F);
+@include brand-color('rc', #4B181F);
+@include brand-color('swc', #01407D);
+@include brand-color('mw', #000);
+@include brand-color('fm', #01EFFF);
+@include brand-color('white', #FFFFFF);
 
 // 2.30 - HEADER
 // 2.31 -- Logo Area
@@ -367,7 +362,7 @@ h2.section-heading {
     }
     .slider-block {
         /*border: 2px #333 solid;*/
-        height: 22.5em;
+        height: 18.5em;
     }
     .slider-description {
         background-color:$grey-color-light;
@@ -589,7 +584,7 @@ ul.tag-box.inline {
         }
     }
     .portfolio-img {
-        height: 8.5em;
+        height: 11em;
         overflow: hidden;
         img {
             height: auto;
@@ -599,15 +594,47 @@ ul.tag-box.inline {
             width: auto;
         }
     }
+    .portfolio-overlay {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -11em;
+        height: 11em;
+        a {
+            display:table;
+            padding-top:3em;
+            height:11em;
+            width:100%;
+            color: #fff;
+            text-align:center;
+            font-family: $secondary-font;
+            font-size:1.5em;
+        }
+    }
+    &:hover .portfolio-overlay {
+        z-index: 10;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+    }
     .portfolio-excerpt {
         background-color:$grey-color-light;
         padding:5px;
     }
 }
-.portfolio-holder.standalone .portfolio-img {
-    height:12em !important;
-    img {
-        height:auto;
+.portfolio-holder.standalone {
+    .portfolio-img {
+        height:18em !important;
+        img {
+            height:auto;
+        }
+    }
+    .portfolio-overlay {
+        margin-top:-18em;
+        height: 18em;
+        a {
+            height: 18em;
+            padding-top:5em;
+        }
     }
 }
 img.portfolio-image {
@@ -724,6 +751,10 @@ img.portfolio-image {
 .skills-holder h3 {
     font-family: $secondary-font;
     font-size:1.5em;
+}
+.statement-holder {
+    padding:40px 0;
+    font-size: 2em;
 }
 
 // 5.20 - CONTACT FORM

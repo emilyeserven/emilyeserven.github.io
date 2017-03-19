@@ -17,6 +17,9 @@ buttons:
       text: "View Forked Code Page"
 ---
 
+* POST: Modular design?
+
+
 This project reminded me of my early days writing code. I would go to various websites, copy some code, and then modify it to my needs. After transitioning to working with WordPress, however, I had less time where I was working with the code directly.
 
 While making a website for a client, I was faced with the need to create an item with a specific look and feel. However, this could only be achieved through HTML coding. Asking the client to work with HTML was not an option, so I decided to look into creating custom elements for the builder. Luckily, the [documentation was very clear](https://community.theme.co/kb/cornerstone-custom-elements/) and even included a completed sample plugin. Another thing that helped with this project was a larger knowledge of programming principles. I was working on completing the CodeSchool JavaScript course and had some knowledge of PHP as well, so I was more familiar with the concepts referenced in the documentation.

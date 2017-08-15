@@ -29,11 +29,11 @@ This was developed without legacy browsers and mobile styling, since I wanted to
 
 ## Design
 
-Since most of my designs tend to use blue or another "cool" color, I decided to work with yellow and black as the primary colors for this assignment. I also used tilted headers with a typewriter-like font to evoke a more vintage style, despite the sectioning of the website being like a modern one.
+Since most of my designs tend to use blue or another "cool" color, I decided to work with yellow and black as the primary colors for this assignment. I also used tilted headers with a typewriter-like font to evoke a more vintage style, despite the sectioning of the website following along with modern trends.
 
-In retrospect, I would have done some more tests with the placement of content relative to the "Track Listing" and "Personnel" headings.
+In retrospect, I would have done some more tests with the placement of content relative to the "Track Listing" and "Personnel" headings. The flow of content is inconsistent with the "Free Jazz" heading, which has no content wrapping on the side. Additionally, the right side of the table within "Track Listing" is not aligned with the right of the "Right Channel" part of the "Personnel" section. It could be argued that the amount of content doesn't warrant giving the table and channel sections their own full rows, which was my original thinking when setting the current placements.
 
-## Nitpicky Improvements
+## Other Nitpicky Improvements
 
 * The units of measurement should have been relative (`em`) instead of just `px`.
 * The black background of the "Ornette Coleman" main header is a different black than the rest of the top section.

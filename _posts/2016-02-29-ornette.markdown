@@ -3,7 +3,7 @@ layout: post
 title:  "The Ornette Site"
 date:   2016-02-29 16:53:50 -0500
 tags: [design, projects]
-excerpt: <b>A CSS challenge.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+excerpt: <b>A CSS challenge.</b> - <i>"We were provided with bare HTML and were to add CSS styling to it. It's difficult to visualize without a clear before and after, but there's a large impact CSS makes on the visual appeal and layout of  websites!"</i>
 media-bgcolor: black
 show-default-image: false
 media: ../../../../assets/images/feat-media/ornette.jpg

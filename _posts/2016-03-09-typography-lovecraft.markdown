@@ -3,7 +3,7 @@ layout: post
 title:  "Typography Experiments - Lovecraft"
 date:   2016-03-09 16:53:50 -0500
 tags: [design, projects]
-excerpt: <b>A Lovecraftian experiment with typography</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
+excerpt: <b>A Lovecraftian experiment with typography</b> - <i>"The subject of this page was a serious quote by H.P. Lovecraft; an author who influenced a large amount of my favorite horror-based shows and books."</i>
 show-default-image: false
 media-bgcolor: black
 media: ../../../../assets/images/feat-media/lcquote.jpg

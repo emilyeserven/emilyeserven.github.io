@@ -6,8 +6,8 @@ tags: [development, projects]
 excerpt: <b>A CSS challenge.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
 media-bgcolor: black
 show-default-image: false
-media: ../../../../assets/images/feat-media/ornette.jpg
-alt-cover: ../../../../assets/images/blog/ornette.png
+media: ../../../../assets/images/blog/cornerstone-icons-full.png
+alt-cover: ../../../../assets/blog/cornerstone-icons-full.png
 alt-class: cover img-width-75
 buttons:
 

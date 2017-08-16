@@ -2,7 +2,7 @@
 layout: post
 title:  "From Here to There - New Haven Hackathon 2016"
 date:   2016-10-19 23:17:09 -0500
-tags: [events, development]
+tags: [events, development, projects]
 excerpt: <b>A reflection on the project I assisted with at the New Haven Hackathon.</b> - <i>"From Here to There is a trip planning tool that allows users to easily plan and coordinate group activities."</i>
 media-bgcolor: lightgrey
 show-default-image: false

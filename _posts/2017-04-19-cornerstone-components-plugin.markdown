@@ -7,7 +7,7 @@ excerpt: <b>A CSS challenge.</b> - <i>"My hope for these little blog posts is to
 media-bgcolor: black
 show-default-image: false
 media: ../../../../assets/images/blog/cornerstone-icons-full.png
-alt-cover: ../../../../assets/blog/cornerstone-icons-full.png
+alt-cover: ../../../../assets/images/blog/cornerstone-icons-full.png
 alt-class: cover img-width-75
 buttons:
 

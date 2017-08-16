@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Cornerstone Components Plugin"
-date:   2017-02-20 10:53:50 -0500
-tags: [design, projects]
+date:   2017-04-19 10:53:50 -0500
+tags: [development, projects]
 excerpt: <b>A CSS challenge.</b> - <i>"My hope for these little blog posts is to document my process and hopefully be able to learn from it in retrospect when I do another portfolio."</i>
 media-bgcolor: black
 show-default-image: false
@@ -17,12 +17,11 @@ buttons:
       text: "View Forked Code Page"
 ---
 
-* POST: Modular design?
-
-
 This project reminded me of my early days writing code. I would go to various websites, copy some code, and then modify it to my needs. After transitioning to working with WordPress, however, I had less time where I was working with the code directly.
 
 While making a website for a client, I was faced with the need to create an item with a specific look and feel. However, this could only be achieved through HTML coding. Asking the client to work with HTML was not an option, so I decided to look into creating custom elements for the builder. Luckily, the [documentation was very clear](https://community.theme.co/kb/cornerstone-custom-elements/) and even included a completed sample plugin. Another thing that helped with this project was a larger knowledge of programming principles. I was working on completing the CodeSchool JavaScript course and had some knowledge of PHP as well, so I was more familiar with the concepts referenced in the documentation.
+
+This project was built for the [X Theme](https://themeforest.net/item/x-the-theme/5871901) and [Cornerstone](https://theme.co/cornerstone/).
 
 ## The Overall Plugin
 
@@ -49,10 +48,3 @@ While making a website for a client, I was faced with the need to create an item
 <img src="../../../../assets/images/blog/cornerstone-iconbox-short.png" alt="The icon box element with fitted text." style="max-width: 375px;" />
 
 *An iconbox with less text more fitted to the icon height.*
-
-* Something of a callback to my earlier coding days
-* Working with X theme and Cornerstone
-* Documentation was really great
-* I have more formal knowledge of code in general, plus PHP
-* Was able to recycle the starter code to make something
-* Balancing scalability and user-friendliness with simplicity

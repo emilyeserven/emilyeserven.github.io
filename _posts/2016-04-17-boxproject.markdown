@@ -30,7 +30,7 @@ The slanted elements of the design were actually created with empty elements tha
 
 Working with these techniques was a valuable experience. I had only worked with the jump link feature before within WordPress themes that did all the heavy work for me. The CSS slant trick gave me a chance to work with CSS on a deeper level than usual, and I've been able to use similar strategies for client websites ever since.
 
-### Design
+## Design
 
 Much of the design was dictated by the design of the original box, which already had an "edgy" design with aesthetic flourishes (such as the headers with slanted backgrounds). The red color was sampled from the official website. I personally think it's too bright, but decided to stick with it for authenticity's sake.
 

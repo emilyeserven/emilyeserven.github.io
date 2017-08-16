@@ -91,9 +91,3 @@ Overall, I'm just looking to have a great experience, and I think
 The HTML/CSS and JS were developed concurrently. As the JS was being initially researched and written, the HTML layout with all the necessary elements was built out. Development moved from the 'Organizer' screen and then to the 'Participant' screen.
 
 The biggest initial block in development was the CORS permissions. Since the localhost testing environment wasn't allowed, initial testing showed nothing being returned from scriptr.
-
-## Design
-
-One of the key features of the app is the fact that it lacks visual clutter and has a good user experience. While we don't have time to do testing of this user interface, we do plan to make improvements as we continue to develop this project.
-
-The three organizer fields were featured the most prominently, as they will be the only thing a returning user needs to use. This is the same rationale for the single participant field.

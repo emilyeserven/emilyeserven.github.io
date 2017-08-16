@@ -27,11 +27,7 @@ If I had to describe it in a few words, I would call the Cooper Hewitt "a museum
 
 Note the distinction, *functional* art. The Cooper Hewitt
 
-
-Despite being technically being in the Fine Arts school, I don't like art museums. (The patience to analyze an art piece and move on to the next one for 2-3 hours is not with me. I much prefer something like the Natural History Museum.) However, the Cooper Hewitt allows for
-
 * There were pieces that were aesthetic, and pieces that were functional. But all of them served a purpose.
-* Normal art museums I avoid, since I feel it's more abstract than I would prefer to see.
 * The pen added a whole dimension to the experience, being able to view the collection post-visit is a hugely cool feature
 * The API makes my developer self very happy
 

@@ -30,6 +30,25 @@ There's a bunch of things to fix, such as a better user experience and the exten
 
 The slides we used for our presentation at the hackathon are here: [https://docs.google.com/presentation/d/1gzuCubRaOQYThq2Z6GLYX9FpUaGOzx5r6JIKfxzWpLA/edit#slide=id.gd9c453428_0_16](https://docs.google.com/presentation/d/1gzuCubRaOQYThq2Z6GLYX9FpUaGOzx5r6JIKfxzWpLA/edit#slide=id.gd9c453428_0_16)
 
+## Development
+
+The web app was built using AngularJS, HTML, CSS, [Scriptr](https://www.scriptr.io/), and Google Maps Directions API. The HTML/CSS and JS were developed concurrently. As the JS was being initially researched and written, the HTML layout with all the necessary elements was built out. Development moved from the 'Organizer' screen and then to the 'Participant' screen.
+
+The biggest initial block in development was the CORS permissions. Since the localhost testing environment wasn't allowed, initial testing showed nothing being returned from scriptr.
+
+***Note:*** *If the app does not work, it is due to the Maps API token expiring.*
+
+## Design
+
+One of the key features of the app is the fact that it lacks visual clutter and has a good user experience.
+
+**Organizer Screen** - The three organizer fields were featured the most prominently, as they will be the only thing a returning user needs to use. We added icons to the right side of each field, although it seems this actually confused users more (they thought the icons were clickable).
+
+**Participant Screen** - Since the sole input need from the participant is their location, the input area for that information is emphasized in a blue box, separating it visually from the rest of the content. The changing information (train terminal, time, and date) is bold to allow the user to scan it more easily.
+
+
+Since this application was only tested in Chrome, there are definite differences in how the input fields are handled between browsers. Some contain specific structure for how dates and time are formatted while others do not. Due to lack of time, we were not able to make accommodations for the differences.
+
 ## The People
 
 ![NewHavenHack2](../../../../assets/images/blog/nhvhack-2.jpg "Our hackathon-end photo.")
@@ -41,12 +60,10 @@ The slides we used for our presentation at the hackathon are here: [https://docs
 * Gabe (far left) helped with research support, copy editing, and did most of the presentation at the event. He's a sophomore concentrating in digital media strategies for business within UConn's DMD program.
 * Mike (not pictured) helped us with figuring out the API to use.
 
-## Technical Stuff
-
-The web app was built using AngularJS, HTML, and CSS as far as languages go. For other technologies, we used the Scriptr service and Google's Maps Directions API. Shifting my midterm, I will be documenting the app as fully as I can (since I didn't do any direct work with Angular) and then will be attempting to fix the temporary patches made during the hackathon for my final. Hopefully, once those are finished, I can offer a much better explanation for how it works!
-
 ## Finally, a Word on Hackathons
 
 Despite what the name would suggest, a hackathon isn't about literal (colloquial) security-related hacking. Rather, it's about hurriedly making (hacking together) a project using technologies and having something you can say you did after a weekend. Seeing what technology is available and what can be made in a *single weekend* is also a huge benefit to attending these events. (Prizes may be made available depending on the hackathon, but winning one isn't the point of participating.)
 
 Whenever the Stamford hackathon comes back, I would highly encourage everyone to have a look and consider just observing. You don't need to be a developer to contribute. In fact, having someone dedicated to research and presenting is extremely helpful so that the developers can concentrate on those pesky bugs (um, I mean, "features") that never seem to stop popping up. Designers are also important for the project if usability is an important 'selling point'. This ended up being relevant for both hackathons I have participated in and won a prize in.
+
+*Edited on 8/15/2017, added more technical details about the application.*

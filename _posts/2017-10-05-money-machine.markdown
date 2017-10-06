@@ -50,8 +50,8 @@ The cardboard box aesthetic was initially brought up by me, inspired by my readi
 
 ## Footnotes/Resources
 
-[^dev01]: [https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick](`onclick` documentation)
-[^dev02]: [https://developer.mozilla.org/en-US/docs/Web/API/Element/className](`className` documentation)
-[^sbux]: [https://www.starbucks.com/menu/drinks/espresso/caffe-americano](One of Matt's coffees of choice. I personally prefer hot chocolates.)
-[^api]: [https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82](A more in-depth explanations of APIs.)
-[^dev03]: [https://api.jquery.com/jquery.ajax/](`$.ajax` documentation)
+[^dev01]: [`onclick` documentation](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick)
+[^dev02]: [`className` documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+[^sbux]: [One of Matt's coffees of choice. I personally prefer hot chocolates.](https://www.starbucks.com/menu/drinks/espresso/caffe-americano)
+[^api]: [A more in-depth explanations of APIs.](https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82)
+[^dev03]: [`$.ajax` documentation](https://api.jquery.com/jquery.ajax/)

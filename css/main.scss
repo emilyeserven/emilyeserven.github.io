@@ -777,6 +777,17 @@ img.portfolio-image {
 .photo-block {
     margin-bottom: 15px;
 }
+
+.portfolio-square {
+  display:inline-block;
+  &.port-width-1 {
+    width: 24%;
+  }
+  &.port-height-1 {
+    height: 5em;
+  }
+}
+
 // 3.40 - SOCIAL LOOP
 .social-row {
     text-align:center;

@@ -437,7 +437,7 @@ h2.section-heading {
       border-bottom: $brand-color 2px solid;
       margin-bottom: -2px;
       line-height: .95em;
-      text-shadow: 1px 1px white, 1px -1px white, -1px 1px white, -1px 1px white, 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
+      text-shadow: 1px 1px white, 1px -1px white, -1px 1px white, -1px 1px white, 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white, 0 2px white, -1px 2px white, 1px 2px white;
     }
   }
   .headshot {

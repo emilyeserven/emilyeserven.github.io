@@ -794,6 +794,9 @@ img.portfolio-image {
     &2 {
       width: 48.5%;
     }
+    &4 {
+      width: 100%;
+    }
   }
   &.port-height- {
     &1 {
@@ -803,7 +806,12 @@ img.portfolio-image {
       height: 25em;
     }
   }
-
+  &-group {
+    display:inline-block;
+    &-2-2 {
+      width: 50%;
+    }
+  }
 }
 
 // 3.40 - SOCIAL LOOP

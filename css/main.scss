@@ -426,7 +426,13 @@ h2.section-heading {
 
 // 3.13 -- Info Block
 
-.info-block {
+.home-section.info {
+  .headshot {
+    max-width: 150px;
+    float:right;
+    border-radius: 75px;
+    margin-left: 20px;
+  }
   .info-section {
     margin: 30px 0 20px;
     h2 {
@@ -460,12 +466,7 @@ h2.section-heading {
       }
     }
   }
-  .headshot {
-    max-width: 150px;
-    float:right;
-    border-radius: 75px;
-    margin-left: 20px;
-  }
+
 
 }
 

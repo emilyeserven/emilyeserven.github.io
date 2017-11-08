@@ -786,12 +786,13 @@ img.portfolio-image {
 
 .portfolio-square {
   display:inline-block;
+  margin-bottom: 1em;
   &.port-width- {
     &1 {
       width: 24%;
     }
     &2 {
-      width: 50%;
+      width: 48.5%;
     }
   }
   &.port-height- {

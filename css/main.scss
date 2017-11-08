@@ -414,14 +414,15 @@ h2.section-heading {
       font-family: $secondary-font;
     }
   }
-  .home-section a.button-link {
-    display:inline-block;
-    padding: 8px 20px 4px;
-    font-family: $secondary-font;
-    background-color: $brand-color;
-    color: #fff;
-    @include box-shadow(4px, 4px, 0px, $brand-color-sec);
-  }
+}
+
+a.button-link {
+  display:inline-block;
+  padding: 8px 20px 4px;
+  font-family: $secondary-font;
+  background-color: $brand-color;
+  color: #fff;
+  @include box-shadow(4px, 4px, 0px, $brand-color-sec);
 }
 
 // 3.13 -- Info Block

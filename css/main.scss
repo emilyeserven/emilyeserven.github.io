@@ -781,16 +781,28 @@ img.portfolio-image {
 .portfolio-holder.new {
   margin-bottom: 2em;
   margin-left: 0 !important;
+  margin-top: 2em;
 }
 
 .portfolio-square {
   display:inline-block;
-  &.port-width-1 {
-    width: 24%;
+  &.port-width- {
+    &1 {
+      width: 24%;
+    }
+    &2 {
+      width: 50%;
+    }
   }
-  &.port-height-1 {
-    height: 12em;
+  &.port-height-
+    &1 {
+      height: 12em;
+    }
+    &2 {
+      height: 25em;
+    }
   }
+
 }
 
 // 3.40 - SOCIAL LOOP

@@ -79,6 +79,7 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
+$brand-color-sec:  #074AA0;
 
 $grey-color:       #828282;
 $grey-color-light: #eee;
@@ -135,6 +136,19 @@ $on-laptop:        800px;
         }
     }
 }
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
 // 1.30 - IMPORT STYLESHEETS
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -389,18 +403,22 @@ h2.section-heading {
 
 .home-section.header {
   background-image: url('/assets/images/header.jpg');
-  height: 30vh;
+  height: 40vh;
   .header-box {
     background-color: rgba(255,255,255,0.7);
     width: 70%;
+    padding: 10px 25px 5px;
+    margin: 20px 0;
+    display:inline-block;
     h2 {
       font-family: $secondary-font;
     }
   }
-  .header-button button {
+  .header-button a.button-link {
     display:inline-block;
     padding: 8px 10px;
     font-family: $secondary-font;
+    @include box-shadow(10px, 10px, 0px, $brand-color-sec);
   }
 }
 

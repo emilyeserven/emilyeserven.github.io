@@ -9,7 +9,7 @@
         <a href="/topics/{{ tag }}" class="active">{{ tag | capitalize }}</a>,
       {% endif %}
     {% endfor %}
-  </span> | <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </span>
   <h3>
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </h3>

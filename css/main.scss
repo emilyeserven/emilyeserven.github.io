@@ -485,10 +485,12 @@ h2.section-heading {
 .post-list h2 {
     margin-bottom: -5px;
 }
-
+.blog-loop {
+  margin-top: 20px;
+}
 .blog-thirds {
   width: 30%;
-  margin-right: 1%;
+  margin-right: 0%;
   background-color: #eee;
   padding: 4px 10px;
   display: inline-block;
@@ -496,6 +498,11 @@ h2.section-heading {
   vertical-align: top;
   h3 a {
     font-family: $secondary-font;
+    line-height: 1.25em;
+    font-size: 22px;
+  }
+  .post-image .media-holder.post-img {
+    padding: 10px 4px 0;
   }
 }
 

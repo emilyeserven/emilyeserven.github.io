@@ -875,11 +875,14 @@ img.portfolio-image {
 
 .form-holder.new {
   @include blkstruc(100%);
-  padding: 30px 0 20px;
 }
 
 .home-section.contact {
   background-color: $grey-color-dark;
+  padding: 30px 0 20px;
+  h2 {
+    font-family: $brand-font;
+  }
   .form-title {
     color: #fff;
   }

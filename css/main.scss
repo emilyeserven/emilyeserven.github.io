@@ -384,6 +384,26 @@ h2.section-heading {
         border-right: #eee 1px solid;
     }
 }
+
+// 3.12 -- Hero Header
+
+.home-section.header {
+  background-image: url('/assets/images/header.jpg');
+  height: 30vh;
+  .header-box {
+    background-color: rgba(255,255,255,0.7);
+    width: 70%;
+    h2 {
+      font-family: $secondary-font;
+    }
+  }
+  .header-button button {
+    display:inline-block;
+    padding: 8px 10px;
+    font-family: $secondary-font;
+  }
+}
+
 // 3.20 - BLOG LOOP
 .post-list h2 {
     margin-bottom: -5px;

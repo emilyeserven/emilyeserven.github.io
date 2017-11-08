@@ -432,16 +432,16 @@ h2.section-heading {
     h2 {
       font-family: $brand-font;
     }
-    p a {
+    p a.underline-link {
       color: #000;
       border-bottom: $brand-color 2px solid;
       margin-bottom: -2px;
     }
   }
   .headshot {
-    max-width: 250px;
+    max-width: 150px;
     float:right;
-    border-radius: 50px;
+    border-radius: 75px;
   }
 
 }

@@ -490,7 +490,13 @@ h2.section-heading {
   width: 31%;
   margin-right: 1%;
   background-color: #eee;
-  padding: 8px 10px;
+  padding: 4px 13px;
+  display: inline-block;
+  margin-left: 0;
+  vertical-align: top;
+  h3 a {
+    font-family: $secondary-font;
+  }
 }
 
 // 3.21 -- Post Image

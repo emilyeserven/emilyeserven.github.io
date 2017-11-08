@@ -405,10 +405,10 @@ h2.section-heading {
   background-image: url('/assets/images/header.jpg');
   height: 40vh;
   .header-box {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.75);
     width: 70%;
-    padding: 10px 25px 5px;
-    margin: 20px 0;
+    padding: 8px 20px 1px;
+    margin: 5vh 0 1vh;
     display:inline-block;
     h2 {
       font-family: $secondary-font;
@@ -418,7 +418,9 @@ h2.section-heading {
     display:inline-block;
     padding: 8px 10px;
     font-family: $secondary-font;
-    @include box-shadow(10px, 10px, 0px, $brand-color-sec);
+    background-color: $brand-color;
+    color: #fff;
+    @include box-shadow(4px, 4px, 0px, $brand-color-sec);
   }
 }
 

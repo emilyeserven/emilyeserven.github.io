@@ -1,0 +1,18 @@
+<div class="blog-thirds">
+  {% include blog-media.html %}
+  <span class="post-cat">
+    {% assign tags_list = post.tags | sort %}
+    {% for tag in tags_list %}
+      {% if forloop.last == true %}
+        <a href="/topics/{{ tag }}" class="active">{{ tag | capitalize }}</a>
+      {% else %}
+        <a href="/topics/{{ tag }}" class="active">{{ tag | capitalize }}</a>,
+      {% endif %}
+    {% endfor %}
+  </span> | <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <h3>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </h3>
+  <div class="clearfix">
+  </div>
+</li>

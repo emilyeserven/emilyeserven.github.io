@@ -778,13 +778,17 @@ img.portfolio-image {
     margin-bottom: 15px;
 }
 
+.portfolio-holder.new {
+  margin-bottom: 2em;
+}
+
 .portfolio-square {
   display:inline-block;
   &.port-width-1 {
     width: 24%;
   }
   &.port-height-1 {
-    height: 5em;
+    height: 12em;
   }
 }
 

@@ -452,6 +452,7 @@ h2.section-heading {
       &:hover {
         border-bottom: $brand-color-sec 2px solid;
         color: $brand-color;
+        text-decoration: none;
       }
     }
   }

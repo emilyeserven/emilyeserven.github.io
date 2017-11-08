@@ -842,6 +842,14 @@ img.portfolio-image {
     float:right;
 }
 
+.form-holder.new {
+  @include blkstruc(100%);
+}
+
+.home-section.contact {
+  background-color: $grey-color;
+}
+
 // SECTION 5: PAGE SPECIFIC RULES
 // 5.10 - ABOUT PAGE
 .skills-holder h3 {

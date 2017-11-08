@@ -847,7 +847,10 @@ img.portfolio-image {
 }
 
 .home-section.contact {
-  background-color: $grey-color;
+  background-color: $grey-color-dark;
+  .form-title {
+    color: #fff;
+  }
 }
 
 // SECTION 5: PAGE SPECIFIC RULES

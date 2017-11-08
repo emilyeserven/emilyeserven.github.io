@@ -423,6 +423,9 @@ h2.section-heading {
   background-color: $brand-color;
   color: #fff;
   @include box-shadow(4px, 4px, 0px, $brand-color-sec);
+  font-size: 1.25em;
+  margin-right: .25em;
+  cursor:pointer;
 }
 
 // 3.13 -- Info Block
@@ -436,7 +439,13 @@ h2.section-heading {
     float:right;
   }
   .info-section {
-    margin: 30px 0 20px;
+    margin: 80px 0 60px;
+    &:first-of-type {
+      margin-top:40px;
+    }
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
     h2 {
       font-family: $brand-font;
     }
@@ -845,6 +854,7 @@ img.portfolio-image {
 
 .form-holder.new {
   @include blkstruc(100%);
+  padding: 30px 0 20px;
 }
 
 .home-section.contact {

@@ -1006,8 +1006,8 @@ img.portfolio-image {
 .grid-photo {
   background-size: cover;
   background-position: 50%;
+  margin-bottom: 1em;
   &.photo-content {
-    padding-top: 1em;
   }
   &.photo-height- {
     &1 {
@@ -1019,13 +1019,13 @@ img.portfolio-image {
   }
   &.photo-width- {
     &1 {
-      flex-basis: 25%;
+      flex-basis: 24%;
     }
     &2 {
-      flex-basis: 50%;
+      flex-basis: 49%;
     }
     &3 {
-      flex-basis: 75%;
+      flex-basis: 74%;
     }
     &4 {
       flex-basis: 100%;

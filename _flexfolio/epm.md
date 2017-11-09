@@ -29,4 +29,4 @@ features:
       feat-image: ../../assets/images/epm/aoi.png
       feat-format: half-right
 ---
-EPM Channel is an interactive business-to-business multi channel brand focused on the information needs of Senior Finance, FP&A, Strategy, Decision Support, BI, and Compensation executives, with an emphasis on gaining widespread EPM adoption and engagement throughout the organization.
+EPM Channel is an interactive business-to-business multi channel brand.

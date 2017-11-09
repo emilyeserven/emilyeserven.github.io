@@ -13,7 +13,7 @@ projlink:
 flex:
     - width: 1
     - height: 1
-img:
+images:
     - horiz: ../assets/images/placeholder.png
     - vert: ../assets/images/placeholder.png
     - square: ../assets/images/placeholder.png

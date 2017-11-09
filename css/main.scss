@@ -942,6 +942,23 @@ img.portfolio-image {
   margin: 60px 0;
 }
 
+.folio-banner {
+  height: 400px;
+}
+
+.folio-new {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  .content-left {
+    flex-basis: 2;
+  }
+  .content-right {
+    flex-basis: 1;
+  }
+}
+
 .feature-image {
   &.spacing- {
     &none {

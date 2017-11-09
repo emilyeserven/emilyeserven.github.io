@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header silent">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <div class="folio-banner" style="background-image: url("{{page.img.main}}"); background-size: cover; background-position: 50%;"></div>
+  <div class="post-content">
+    <div class="content-left">
+      <strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
+      <strong>Responsibilities</strong>: {{page.responsibilities}}
+      {{ content }}
+    </div>
+    <div class="content-right">
+      {% if page.proj-link > 1 %}
+        <strong>Project Links</strong>:
+      {% endif %}
+      {% if page.proj-link == 1 %}
+        <strong>Project Link</strong>:
+      {% endif %}
+      {% for link in page.proj-link %}
+        <br /><a href="{{link.url}}">{{link.name}}</a>
+      {% endfor %}
+      <strong>Type</strong>: {{page.category}}
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+</article>

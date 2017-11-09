@@ -20,6 +20,9 @@ collections:
     permalink: /portfolio/:path/
   skills:
     output: false
+  flexfolio:
+    output: true
+    permalink: /flexfolio/:path/
 
 # Build settings
 markdown: kramdown

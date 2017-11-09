@@ -996,6 +996,7 @@ img.portfolio-image {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .photo-header {
   background-size:cover;

@@ -489,9 +489,9 @@ h2.section-heading {
 .blog-loop.new {
   margin-top: 20px;
   display:flex;
-  direction:row;
+  flex-direction:row;
   justify-content: flex-start;
-  align-items: space-between;
+  align-content: space-between;
 }
 .blog-thirds {
   flex-basis: 30%;

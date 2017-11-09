@@ -486,17 +486,19 @@ h2.section-heading {
 .post-list h2 {
     margin-bottom: -5px;
 }
-.blog-loop {
+.blog-loop.new {
   margin-top: 20px;
+  display:flex;
+  direction:row;
+  justify-content: flex-start;
+  align-items: space-between;
 }
 .blog-thirds {
-  width: 30%;
-  margin-right: 0%;
+  flex-basis: 30%;
   background-color: #eee;
-  padding: 4px 10px;
-  display: inline-block;
-  margin-left: 0;
-  vertical-align: top;
+  .blog-third-container {
+    padding: 4px 10px;
+  }
   h3 a {
     font-family: $secondary-font;
     line-height: 1.25em;
@@ -793,8 +795,11 @@ img.portfolio-image {
 }
 
 .portfolio-square {
-  display:inline-block;
+  display: flex;
   margin-bottom: 1em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   &.port-width- {
     &1 {
       width: 24%;

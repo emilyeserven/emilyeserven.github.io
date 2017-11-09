@@ -942,12 +942,34 @@ img.portfolio-image {
   margin: 60px 0;
 }
 
-.feature-image.feature-half {
-  display:flex;
-  direction:row;
-  align-content: space-between;
-  div {
-    flex-basis: 49%;
+.feature-image {
+  &.spacing- {
+    &none {
+      margin-top: 0;
+    }
+    &small {
+      margin-top: 10px;
+    }
+    &default {
+      margin-top: 20px;
+    }
+    &mid {
+      margin-top: 30px;
+    }
+    &large {
+      margin-top: 40px;
+    }
+  }
+  &.feature-half {
+    display:flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    div {
+      flex-basis: 49%;
+      align-self: center;
+    }
   }
 }
 

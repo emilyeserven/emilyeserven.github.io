@@ -19,14 +19,17 @@ img:
     - square: ../assets/images/placeholder.png
     - main: ../assets/images/placeholder.png
 features:
-    - feat-descrip: The EPM Channel website on all main devices.
-      feat-image: ../../assets/images/epm/aoi.png
-      feat-format: full
-    - feat-descrip: The EPM Channel website on all main devices.
-      feat-image: ../../assets/images/epm/aoi.png
-      feat-format: half-left
-    - feat-descrip: The EPM Channel website on all main devices.
-      feat-image: ../../assets/images/epm/aoi.png
-      feat-format: half-right
+    - descrip: The EPM Channel website on all main devices.
+      image: ../../assets/images/epm/aoi.png
+      format: full
+      spacing: large
+    - descrip: The EPM Channel website on all main devices.
+      image: ../../assets/images/epm/aoi.png
+      format: half-left
+      spacing: default
+    - descrip: The EPM Channel website on all main devices.
+      image: ../../assets/images/epm/aoi.png
+      format: half-right
+      spacing: default
 ---
 EPM Channel is an interactive business-to-business multi channel brand.

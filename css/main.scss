@@ -997,7 +997,11 @@ img.portfolio-image {
   flex-direction: row;
   justify-content: space-between;
 }
-
+.photo-header {
+  background-size:cover;
+  background-position:50%;
+  height: 300px;
+}
 .grid-photo {
   background-size: cover;
   background-position: 50%;

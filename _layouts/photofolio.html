@@ -3,12 +3,12 @@ layout: default-nowrap
 ---
 <article class="post">
 
-  <header class="photo-header">
+  <header class="photo-header" style="background-image: url({{page.banner}})">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   <div class="post-content photofolio">
-    <div class="photo-content photo-width-2 photo-height-1">
+    <div class="grid-photo photo-content photo-width-2 photo-height-1">
       {{content}}
     </div>
     {% for photo in page.photogrid %}

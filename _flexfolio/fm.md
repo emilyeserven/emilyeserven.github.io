@@ -10,7 +10,7 @@ img:
   - horiz:
   - vert:
   - square:
-  - main: ../../assets/images/placeholder.png
+banner: ../../assets/images/placeholder.png
 photogrid:
   - name: sample
     thumb: ../../assets/images/placeholder.png

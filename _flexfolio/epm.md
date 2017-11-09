@@ -7,7 +7,7 @@ time: January 2012 - Present
 stack: [WordPress.org, WP Toolset]
 responsibilities:  Front-end Development, design, graphics, tutorials, server management
 category: Commercial
-proj-link:
+projlink:
     - name: EPM Channel
       url: http://www.epmchannel.com
 flex:

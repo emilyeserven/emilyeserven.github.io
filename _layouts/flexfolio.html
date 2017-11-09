@@ -14,16 +14,17 @@ layout: default
       {{ content }}
     </div>
     <div class="content-right">
-      {% if page.proj-link > 1 %}
-        <strong>Project Links</strong>:
+      {% if page.projlink.size > 1 %}
+        <p><strong>Project Links</strong>:
       {% endif %}
-      {% if page.proj-link == 1 %}
-        <strong>Project Link</strong>:
+      {% if page.projlink.size == 1 %}
+        <p><strong>Project Link</strong>:
       {% endif %}
       {% for link in page.proj-link %}
-        <br /><a href="{{link.url}}">{{link.name}}</a>
+        <a href="{{link.url}}">{{link.name}}</a><br />
       {% endfor %}
-      <strong>Type</strong>: {{page.category}}
+      </p>
+      <p><strong>Type</strong>: {{page.category}}</p>
     </div>
     <div class="clearfix"></div>
   </div>

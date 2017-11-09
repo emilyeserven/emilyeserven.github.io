@@ -21,15 +21,15 @@ img:
 features:
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png
-      format: full
-      spacing: large
-    - descrip: The EPM Channel website on all main devices.
-      image: ../../assets/images/epm/aoi.png
       format: half-left
-      spacing: default
+      spacing: none
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png
       format: half-right
       spacing: default
+    - descrip: The EPM Channel website on all main devices.
+      image: ../../assets/images/epm/aoi.png
+      format: full
+      spacing: large
 ---
 EPM Channel is an interactive business-to-business multi channel brand.

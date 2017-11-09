@@ -17,7 +17,7 @@ images:
     - horiz: ../assets/images/placeholder.png
     - vert: ../assets/images/placeholder.png
     - square: ../assets/images/placeholder.png
-    - main: ../assets/images/placeholder.png
+banner: ../assets/images/placeholder.png
 features:
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png

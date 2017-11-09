@@ -9,12 +9,12 @@ layout: default
   <div class="folio-banner" style="background-image: url("{{page.img.main}}"); background-size: cover; background-position: 50%;"></div>
   <div class="post-content">
     <div class="main-notes">
-      <div class="content-left">
+      <div class="notes-left">
         <p><strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
         <strong>Responsibilities</strong>: {{page.responsibilities}}</p>
         <p>{{ content }}</p>
       </div>
-      <div class="content-right">
+      <div class="notes-right">
         {% if page.projlink.size > 1 %}
           <p><strong>Project Links</strong>:
         {% endif %}

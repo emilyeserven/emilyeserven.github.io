@@ -1006,6 +1006,9 @@ img.portfolio-image {
 .grid-photo {
   background-size: cover;
   background-position: 50%;
+  &.photo-content {
+    padding-top: 1em;
+  }
   &.photo-height- {
     &1 {
       height: 12em;

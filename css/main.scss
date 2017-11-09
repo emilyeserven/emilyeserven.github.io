@@ -946,16 +946,16 @@ img.portfolio-image {
   height: 400px;
 }
 
-.folio-new {
+.post-content .main-notes {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  .content-left {
-    flex-basis: 2;
+  .notes-left {
+    flex-basis: 66%;
   }
-  .content-right {
-    flex-basis: 1;
+  .notes-right {
+    flex-basis: 33%;
   }
 }
 

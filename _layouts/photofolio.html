@@ -1,33 +1,18 @@
 ---
-layout: default
+layout: default-nowrap
 ---
 <article class="post">
 
-  <header class="post-header silent">
+  <header class="photo-header">
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  <div class="post-content">
-    <div class="content-left">
-        {{ content }}
+  <div class="post-content photofolio">
+    <div class="photo-content photo-width-2 photo-height-1">
+      {{content}}
     </div>
-    <div class="content-right">
-      <b>Services Provided</b>:
-        {{ page.tags | join: ', ' }}
-      <p><b>Time of Project</b>: {{ page.time }}<br />
-      <b>Platform</b>: {{ page.platform }}<br />
-      <b>Category</b>: {{ page.categories }}<br />
-      <b><a href="{{ page.proj-link }}">Visit the Site</a></b></p>
-    </div>
-  <div class="clearfix"></div>
-    {% for photo in page.pageimg %}
-      <div class="photo-block">
-        <img src="{{ photo.feat-image }}" alt="{{ photo.img-name }}" class="portfolio-image bg-{{page.code}}"/>
-        <div class="photo-caption">
-          {{ photo.img-name }}
-        </div>
-        <br />
-      </div>
+    {% for photo in page.photogrid %}
+      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});"></div>
     {% endfor %}
   </div>
 

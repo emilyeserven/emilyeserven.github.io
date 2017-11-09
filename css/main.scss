@@ -990,6 +990,41 @@ img.portfolio-image {
   }
 }
 
+// 3.80 - PHOTO FOLIO LAYOUT
+
+.photofolio {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grid-photo {
+  background-size: cover;
+  background-position: 50%;
+  &.photo-height- {
+    &1 {
+      height: 12em;
+    }
+    &2 {
+      height: 25em;
+    }
+  }
+  &.photo-width- {
+    &1 {
+      flex-basis: 25%;
+    }
+    &2 {
+      flex-basis: 50%;
+    }
+    &3 {
+      flex-basis: 75%;
+    }
+    &4 {
+      flex-basis: 100%;
+    }
+  }
+}
+
 // SECTION 5: PAGE SPECIFIC RULES
 // 5.10 - ABOUT PAGE
 .skills-holder h3 {

@@ -10,13 +10,38 @@ img:
   - horiz:
   - vert:
   - square:
-  - main:
+  - main: ../../assets/images/placeholder.png
 photogrid:
-    - name:
-      thumb:
-      full:
-      width:
-      height:
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 2
+    height: 1
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 2
+    height: 1
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 1
+    height: 1
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 1
+    height: 1
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 3
+    height: 2
+  - name: sample
+    thumb: ../../assets/images/placeholder.png
+    full: ../../assets/images/placeholder.png
+    width: 1
+    height: 2
 ---
 
-Feyer is a singer/songwriter/composer/producer and multi-instrumentalist with diverse musical experience spanning many genres and styles. Feyer constructs his unique sound combining personal lyrics with his classically influenced melodic and instrumental style, and Electronic/Rock production.
+Something snappy about photography.

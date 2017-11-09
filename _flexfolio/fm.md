@@ -1,5 +1,5 @@
 ---
-layout: flexfolio
+layout: photofolio
 title: Feyer Music
 headline: New York City-based musician.
 orig-post: June 2014 - Present

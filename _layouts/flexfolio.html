@@ -29,31 +29,31 @@ layout: default
     <div class="clearfix"></div>
     <div class="folio-features">
       {% for feature in page.features %}
-        {% if feature.feat-format == 'full' %}
+        {% if feature.format == 'full' %}
           <div class="feature-image full spacing-{{feature.spacing}}">
             <div class="image-holder">
-              <img src="{{feature.feat-image}}" />
+              <img src="{{feature.image}}" />
             </div>
-            <div class="caption-holder">{{feature.feat-descrip}}</div>
+            <div class="caption-holder">{{feature.descrip}}</div>
           </div>
         {% endif %}
-        {% if feature.feat-format == 'half-left' %}
+        {% if feature.format == 'half-left' %}
           <div class="feature-image feature-half spacing-{{feature.spacing}}">
             <div class="image-holder">
-              <img src="{{feature.feat-image}}" />
+              <img src="{{feature.image}}" />
             </div>
             <div class="caption-holder">
-              {{feature.feat-descrip}}
+              {{feature.descrip}}
             </div>
           </div>
         {% endif %}
-        {% if feature.feat-format == 'half-right' %}
+        {% if feature.format == 'half-right' %}
           <div class="feature-image feature-half spacing-{{feature.spacing}}">
             <div class="caption-holder">
-              {{feature.feat-descrip}}
+              {{feature.descrip}}
             </div>
             <div class="image-holder">
-              <img src="{{feature.feat-image}}" />
+              <img src="{{feature.image}}" />
             </div>
           </div>
         {% endif %}

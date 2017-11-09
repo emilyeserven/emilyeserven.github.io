@@ -936,6 +936,21 @@ img.portfolio-image {
   }
 }
 
+// 3.70 - PROJECT FOLIO LAYOUT
+
+.folio-features {
+  margin: 60px 0;
+}
+
+.feature-image.feature-half {
+  display:flex;
+  direction:row;
+  align-content: space-between;
+  div {
+    flex-basis: 49%;
+  }
+}
+
 // SECTION 5: PAGE SPECIFIC RULES
 // 5.10 - ABOUT PAGE
 .skills-holder h3 {

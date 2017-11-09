@@ -782,6 +782,9 @@ img.portfolio-image {
   margin-bottom: 2em;
   margin-left: 0 !important;
   margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .portfolio-square {
@@ -804,12 +807,6 @@ img.portfolio-image {
     }
     &2 {
       height: 25em;
-    }
-  }
-  &-group {
-    display:inline-block;
-    &-2-2 {
-      width: 50%;
     }
   }
 }

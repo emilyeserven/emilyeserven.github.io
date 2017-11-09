@@ -783,8 +783,9 @@ img.portfolio-image {
   margin-left: 0 !important;
   margin-top: 2em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .portfolio-square {

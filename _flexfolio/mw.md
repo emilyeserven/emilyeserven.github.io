@@ -8,8 +8,11 @@ tags: [Design]
 categories: Business
 platform: WordPress
 proj-link: http://www.marywatheninteriors.com
-img:
-    teaser: ../assets/images/mw/sized.png
+flex:
+    - width: 1
+    - height: 2
+    - order: 2
+project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.
       feat-image: ../../assets/images/mw/aoi.png

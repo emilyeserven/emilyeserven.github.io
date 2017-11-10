@@ -11,12 +11,10 @@ projlink:
     - name: EPM Channel
       url: http://www.epmchannel.com
 flex:
-    - width: 1
+    - width: 2
     - height: 1
-images:
-    - horiz: ../assets/images/placeholder.png
-    - vert: ../assets/images/placeholder.png
-    - square: ../assets/images/placeholder.png
+    - order: 1
+project-img: ../assets/images/placeholder.png
 banner: ../../assets/images/placeholder.png
 features:
     - descrip: The EPM Channel website on all main devices.

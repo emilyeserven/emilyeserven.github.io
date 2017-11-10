@@ -1,0 +1,13 @@
+---
+layout: default
+permalink: /portfolio-new3/
+---
+<div class="wrapper">
+  <div class="portfolio-holder new standalone">
+    {% for project in site.flexfolio %}
+      <div class="portfolio-square port-width-{{project.flex.width}} port-height-{{project.flex.height}}" style="background-image: url("{{project.project-img}}");">
+
+      </div>
+    {% endfor %}
+  </div>
+</div>

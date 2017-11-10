@@ -6,10 +6,11 @@ orig-post: June 2014 - Present
 last-update: ???
 location: ???
 categories: Photography
-img:
-  - horiz:
-  - vert:
-  - square:
+flex:
+    - width: 1
+    - height: 1
+    - order: 1
+project-img: ../assets/images/placeholder.png
 banner: ../../assets/images/placeholder.png
 photogrid:
   - name: sample

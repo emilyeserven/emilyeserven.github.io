@@ -8,8 +8,11 @@ tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Non-Profit
 platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
-img:
-    teaser: ../assets/images/placeholder.png
+flex:
+    - width: 1
+    - height: 2
+    - order: 2
+project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Stamford Woman's Club website on all main devices.
       feat-image: ../../assets/images/swc/aoi.png

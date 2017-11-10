@@ -427,6 +427,14 @@ h2.section-heading {
   margin-right: .25em;
   cursor:pointer;
   border: none;
+  transition: box-shadow ease 0.05s, background-color ease 0.05s;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #074AA0;
+    box-shadow: 0 0 0 #074AA0;
+    transition: box-shadow ease 0.05s, background-color ease 0.05s;
+  }
 }
 
 // 3.13 -- Info Block

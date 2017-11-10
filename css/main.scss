@@ -479,10 +479,14 @@ h2.section-heading {
         0 2px white,
         -1px 2px white,
         1px 2px white;
+      transition: text-shadow ease 0.15s, background-color ease 0.15s;
       &:hover {
         border-bottom: $brand-color-sec 2px solid;
-        color: $brand-color;
+        color: #fff;
         text-decoration: none;
+        background-color: $brand-color-sec;
+        text-shadow: none;
+        transition: text-shadow ease 0.15s, background-color ease 0.15s;
       }
     }
   }
@@ -810,6 +814,7 @@ img.portfolio-image {
   justify-content: center;
   background-size: cover;
   background-position: 50%;
+  transition: background-color ease 0.15s;
   &.port-width- {
     &1 {
       width: 24%;
@@ -835,6 +840,10 @@ img.portfolio-image {
   a {
       width:100%;
       height:100%;
+      &:hover {
+        background-color: rgba(0,0,0,0.5);
+        transition: background-color ease 0.15s;
+      }
   }
 }
 

@@ -6,7 +6,7 @@ orig-post: June 2014 - Present
 last-update: ???
 location: ???
 categories: Photography
-flexwidth: 1
+flexwidth: 2
 flexheight: 1
 flexorder: 1
 project-img: ../assets/images/placeholder.png

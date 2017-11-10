@@ -6,10 +6,9 @@ orig-post: June 2014 - Present
 last-update: ???
 location: ???
 categories: Photography
-flex:
-    - width: 1
-    - height: 1
-    - order: 1
+flexwidth: 1
+flexheight: 1
+flexorder: 1
 project-img: ../assets/images/placeholder.png
 banner: ../../assets/images/placeholder.png
 photogrid:

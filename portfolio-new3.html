@@ -5,7 +5,7 @@ permalink: /portfolio-new3/
 <div class="wrapper">
   <div class="portfolio-holder new standalone">
     {% for project in site.flexfolio %}
-      <div class="portfolio-square port-width-{{project.flex.width}} port-height-{{project.flex.height}} port-order-{{project.flex.order}}" style="background-image: url({{project.project-img}});">
+      <div class="portfolio-square port-width-{{project.flexwidth}} port-height-{{project.flexheight}} port-order-{{project.flexorder}}" style="background-image: url({{project.project-img}});">
 
       </div>
     {% endfor %}

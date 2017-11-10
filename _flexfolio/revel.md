@@ -8,10 +8,9 @@ tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Business
 platform: WordPress
 proj-link: http://www.revelcellars.com
-flex:
-    - width: 2
-    - height: 2
-    - order: 2
+flexwidth: 2
+flexheight: 2
+flexorder: 2
 project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Revel Cellars website on all main devices.

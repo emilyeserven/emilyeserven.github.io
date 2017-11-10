@@ -800,6 +800,8 @@ img.portfolio-image {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: 50%;
   &.port-width- {
     &1 {
       width: 24%;

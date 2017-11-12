@@ -846,11 +846,23 @@ img.portfolio-image {
       }
   }
 }
-
 .portfolio-link {
-  text-align:center;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  .link-content {
+    text-align:center;
+    display:none;
+    flex-direction: column;
+    height:100%;
+    max-height: 150px;
+    justify-content: space-around;
+    color: #fff;
+  }
+  &:hover .link-content {
+    display:flex;
+  }
 }
 
 // 3.40 - SOCIAL LOOP

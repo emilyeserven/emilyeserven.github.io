@@ -5,7 +5,7 @@ permalink: /portfolio-new3/
 <div class="wrapper">
   <div class="portfolio-holder new standalone">
     {% for project in site.flexfolio %}
-      <div class="portfolio-square port-width-{{project.flexwidth}} port-height-{{project.flexheight}} port-order-{{project.flexorder}}" style="background-image: url({{project.project-img}});">
+      <div class="portfolio-square port-width-{{project.flexwidth}} port-height-{{project.flexheight}}" style="background-image: url({{project.project-img}}); order: {{project.flexorder}}">
         <a href="/" class="portfolio-link">
           <div class="link-content">
             <p>{{project.title}}<br />{{project.category}}</p>

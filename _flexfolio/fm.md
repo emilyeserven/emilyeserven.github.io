@@ -9,8 +9,8 @@ categories: Photography
 flexwidth: 2
 flexheight: 1
 flexorder: 1
-project-img: ../assets/flexfolio/banner.jpg
-banner: ../../assets/flexfolio/pgbanner.jpg
+project-img: ../assets/flexfolio/fm/banner.jpg
+banner: ../../assets/flexfolio/fm/pgbanner.jpg
 photogrid:
   - name: sample
     thumb: ../../assets/images/placeholder.png

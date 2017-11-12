@@ -847,6 +847,12 @@ img.portfolio-image {
   }
 }
 
+.portfolio-link {
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+}
+
 // 3.40 - SOCIAL LOOP
 .social-row {
     text-align:center;

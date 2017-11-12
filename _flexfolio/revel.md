@@ -11,6 +11,7 @@ proj-link: http://www.revelcellars.com
 flexwidth: 1
 flexheight: 2
 flexorder: 2
+listview: false
 project-img: ../assets/flexfolio/rc/banner.jpg
 banner: ../../assets/flexfolio/rc/pgbanner.jpg
 pageimg:

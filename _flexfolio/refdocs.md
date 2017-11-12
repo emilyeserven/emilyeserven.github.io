@@ -13,6 +13,7 @@ projlink:
 flexwidth: 2
 flexheight: 1
 flexorder: 1
+listview: false
 project-img: ../assets/flexfolio/refdocs/banner.jpg
 banner: ../../assets/flexfolio/refdocs/pgbanner.jpg
 features:

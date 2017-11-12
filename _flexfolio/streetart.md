@@ -9,6 +9,7 @@ categories: Photography
 flexwidth: 1
 flexheight: 2
 flexorder: 4
+listview: false
 project-img: ../assets/flexfolio/streetart/banner.jpg
 banner: ../../assets/flexfolio/streetart/pgbanner.jpg
 photogrid:

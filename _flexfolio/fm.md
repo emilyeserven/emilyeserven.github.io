@@ -8,6 +8,7 @@ categories: Commercial
 flexwidth: 2
 flexheight: 1
 flexorder: 1
+listview: false
 project-img: ../assets/flexfolio/fm/banner.jpg
 banner: ../../assets/flexfolio/fm/pgbanner.jpg
 features:

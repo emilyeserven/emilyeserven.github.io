@@ -11,6 +11,7 @@ proj-link: http://www.stamfordwomansclub.org
 flexwidth: 1
 flexheight: 1
 flexorder: 3
+listview: false
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 banner: ../../assets/flexfolio/fhtt/pgbanner.jpg
 pageimg:

@@ -9,6 +9,7 @@ categories: Photography
 flexwidth: 2
 flexheight: 2
 flexorder: 4
+listview: false
 project-img: ../assets/flexfolio/cityscapes/banner.jpg
 banner: ../../assets/flexfolio/cityscapes/pgbanner.jpg
 photogrid:

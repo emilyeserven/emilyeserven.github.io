@@ -9,6 +9,7 @@ categories: Photography
 flexwidth: 3
 flexheight: 2
 flexorder: 2
+listview: false
 project-img: ../assets/flexfolio/nyc-bw-people/banner.jpg
 banner: ../../assets/flexfolio/nyc-bw-people/pgbanner.jpg
 photogrid:

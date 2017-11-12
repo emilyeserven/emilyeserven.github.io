@@ -10,11 +10,8 @@ category: Commercial
 projlink:
     - name: EPM Channel
       url: http://www.epmchannel.com
-flexwidth: 2
-flexheight: 1
-flexorder: 7
+listview: true
 project-img: ../assets/images/placeholder.png
-banner: ../../assets/images/placeholder.png
 features:
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png

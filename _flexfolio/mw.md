@@ -5,12 +5,10 @@ excerpt: Full service residential design.
 code: mw
 time: June 2014 - Present
 tags: [Design]
-categories: Business
+category: Commercial
 platform: WordPress
 proj-link: http://www.marywatheninteriors.com
-flexwidth: 1
-flexheight: 2
-flexorder: 7
+listview: true
 project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.

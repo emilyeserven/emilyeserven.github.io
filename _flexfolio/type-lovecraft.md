@@ -11,7 +11,8 @@ proj-link: http://www.stamfordwomansclub.org
 flexwidth: 1
 flexheight: 1
 flexorder: 3
-project-img: ../assets/images/placeholder.png
+project-img: ../assets/flexfolio/quote-lc/banner.jpg
+banner: ../../assets/flexfolio/quote-lc/pgbanner.jpg
 pageimg:
     - img-name: The Stamford Woman's Club website on all main devices.
       feat-image: ../../assets/images/swc/aoi.png

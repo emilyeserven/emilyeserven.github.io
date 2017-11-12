@@ -13,8 +13,8 @@ projlink:
 flexwidth: 2
 flexheight: 1
 flexorder: 1
-project-img: ../assets/flexfolio/refsdocs/banner.jpg
-banner: ../../assets/flexfolio/refsdocs/pgbanner.jpg
+project-img: ../assets/flexfolio/refdocs/banner.jpg
+banner: ../../assets/flexfolio/refdocs/pgbanner.jpg
 features:
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png

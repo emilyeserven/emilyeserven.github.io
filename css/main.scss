@@ -843,6 +843,7 @@ img.portfolio-image {
       &:hover {
         background-color: rgba(0,0,0,0.5);
         transition: background-color ease 0.15s;
+        text-decoration: none;
       }
   }
 }

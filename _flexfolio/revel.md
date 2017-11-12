@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: flexfolio
 title: Revel Cellars
 excerpt: Custom wine cellar cabinetry.
 code: rc

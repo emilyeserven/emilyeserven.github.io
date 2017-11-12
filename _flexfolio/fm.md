@@ -2,46 +2,23 @@
 layout: flexfolio
 title: Feyer Music
 headline: New York City-based musician.
-orig-post: June 2014 - Present
-last-update: ???
+time: ???
 location: ???
-categories: Photography
+categories: Commercial
 flexwidth: 2
 flexheight: 1
 flexorder: 1
 project-img: ../assets/flexfolio/fm/banner.jpg
 banner: ../../assets/flexfolio/fm/pgbanner.jpg
-photogrid:
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 2
-    height: 1
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 2
-    height: 1
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 1
-    height: 1
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 1
-    height: 1
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 3
-    height: 2
-  - name: sample
-    thumb: ../../assets/images/placeholder.png
-    full: ../../assets/images/placeholder.png
-    width: 1
-    height: 2
+features:
+    - descrip: Music page
+      image: ../../assets/flexfolio/fm/feat1.jpg
+      format: half-left
+      spacing: none
+    - descrip: Press page
+      image: ../../assets/flexfolio/fm/feat2.jpg
+      format: half-right
+      spacing: default
 ---
 
 Something snappy about photography.

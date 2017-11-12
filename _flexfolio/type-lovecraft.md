@@ -8,7 +8,7 @@ tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Non-Profit
 platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
-flexwidth: 1
+flexwidth: 2
 flexheight: 1
 flexorder: 3
 project-img: ../assets/flexfolio/quote-lc/banner.jpg

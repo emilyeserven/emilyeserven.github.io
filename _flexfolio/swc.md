@@ -10,7 +10,7 @@ platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
 flexwidth: 1
 flexheight: 1
-flexorder: 3
+flexorder: 7
 project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Stamford Woman's Club website on all main devices.

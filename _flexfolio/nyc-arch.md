@@ -1,6 +1,6 @@
 ---
 layout: photofolio
-title: NYC in Monochrome | Architecture
+title: NYC Architecture
 headline: New York City-based musician.
 orig-post: June 2014 - Present
 last-update: ???
@@ -9,8 +9,8 @@ categories: Photography
 flexwidth: 1
 flexheight: 2
 flexorder: 4
-project-img: ../assets/flexfolio/nyc-bw-people/banner.jpg
-banner: ../../assets/flexfolio/nyc-bw-people/pgbanner.jpg
+project-img: ../assets/flexfolio/nyc-arch/banner.jpg
+banner: ../../assets/flexfolio/nyc-arch/pgbanner.jpg
 photogrid:
   - name: sample
     thumb: ../../assets/images/placeholder.png

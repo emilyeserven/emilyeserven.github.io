@@ -9,8 +9,8 @@ categories: Photography
 flexwidth: 1
 flexheight: 2
 flexorder: 4
-project-img: ../assets/flexfolio/nyc-bw-people/banner.jpg
-banner: ../../assets/flexfolio/nyc-bw-people/pgbanner.jpg
+project-img: ../assets/flexfolio/streetart/banner.jpg
+banner: ../../assets/flexfolio/streetart/pgbanner.jpg
 photogrid:
   - name: sample
     thumb: ../../assets/images/placeholder.png

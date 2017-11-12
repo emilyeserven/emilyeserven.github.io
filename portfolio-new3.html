@@ -10,7 +10,7 @@ permalink: /portfolio-new3/
           <div class="link-content">
             <p>{{project.title}}<br />{{project.category}}</p>
             {% if project.layout == 'photofolio' %}
-              <p>Posted: {{project.orig-post}}<br />Updated: {{project.last-update}}</p>
+              <p>Posted: {{project.orig-post}} | Updated: {{project.last-update}}</p>
             {% endif %}
             {% if project.layout == 'flexfolio' %}
               <p>Active: {{project.time}}</p>

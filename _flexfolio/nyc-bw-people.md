@@ -1,16 +1,16 @@
 ---
-layout: flexfolio
-title: Feyer Music
+layout: photofolio
+title: NYC in Monochrome | People
 headline: New York City-based musician.
 orig-post: June 2014 - Present
 last-update: ???
 location: ???
 categories: Photography
-flexwidth: 2
-flexheight: 1
-flexorder: 1
-project-img: ../assets/flexfolio/fm/banner.jpg
-banner: ../../assets/flexfolio/fm/pgbanner.jpg
+flexwidth: 3
+flexheight: 2
+flexorder: 2
+project-img: ../assets/flexfolio/nyc-bw-people/banner.jpg
+banner: ../../assets/flexfolio/nyc-bw-people/pgbanner.jpg
 photogrid:
   - name: sample
     thumb: ../../assets/images/placeholder.png

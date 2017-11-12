@@ -1,20 +1,20 @@
 ---
 layout: flexfolio
-title: EPM Channel
+title: Refs & Docs
 excerpt: Business article aggregation.
 code: epm
 time: January 2012 - Present
 stack: [WordPress.org, WP Toolset]
 responsibilities:  Front-end Development, design, graphics, tutorials, server management
-category: Commercial
+category: Project
 projlink:
     - name: EPM Channel
       url: http://www.epmchannel.com
 flexwidth: 2
 flexheight: 1
-flexorder: 7
-project-img: ../assets/images/placeholder.png
-banner: ../../assets/images/placeholder.png
+flexorder: 1
+project-img: ../assets/flexfolio/refsdocs/banner.jpg
+banner: ../../assets/flexfolio/refsdocs/pgbanner.jpg
 features:
     - descrip: The EPM Channel website on all main devices.
       image: ../../assets/images/epm/aoi.png

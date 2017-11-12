@@ -1,6 +1,6 @@
 ---
 layout: flexfolio
-title: Stamford Women's Club
+title: The Money Machine
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present

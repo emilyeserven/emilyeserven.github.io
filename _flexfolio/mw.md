@@ -10,7 +10,7 @@ platform: WordPress
 proj-link: http://www.marywatheninteriors.com
 flexwidth: 1
 flexheight: 2
-flexorder: 2
+flexorder: 7
 project-img: ../assets/images/placeholder.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.

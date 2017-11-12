@@ -8,7 +8,7 @@ tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
 categories: Business
 platform: WordPress
 proj-link: http://www.revelcellars.com
-flexwidth: 2
+flexwidth: 1
 flexheight: 2
 flexorder: 2
 project-img: ../assets/images/placeholder.png

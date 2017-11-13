@@ -1,17 +1,14 @@
 ---
 layout: flexfolio
-title: Typography - Lovecraft
+title: Ornette
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
-category: Project
+categories: Non-Profit
 platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
-flexwidth: 2
-flexheight: 1
-flexorder: 3
-listview: false
+listview: true
 project-img: ../assets/flexfolio/quote-lc/banner.jpg
 banner: ../../assets/flexfolio/quote-lc/pgbanner.jpg
 pageimg:

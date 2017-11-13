@@ -5,7 +5,7 @@ headline: New York City-based musician.
 orig-post: June 2014 - Present
 last-update: ???
 location: ???
-categories: Photography
+category: Photography
 flexwidth: 2
 flexheight: 2
 flexorder: 4

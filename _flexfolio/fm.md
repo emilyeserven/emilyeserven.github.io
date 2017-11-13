@@ -4,7 +4,7 @@ title: Feyer Music
 headline: New York City-based musician.
 time: ???
 location: ???
-categories: Commercial
+category: Commercial
 flexwidth: 2
 flexheight: 1
 flexorder: 1

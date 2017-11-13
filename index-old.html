@@ -1,0 +1,73 @@
+---
+layout: default
+---
+</div>
+<div class="heading-wrap">
+  <h2 class="section-heading">Portfolio</h2>
+</div>
+<div class="wrapper">
+  <div class="slider-holder">
+    <div class="slider-title">
+      Featured Sample
+    </div>
+    <div class="slider-block bg-white">
+    <a href="../portfolio/epm"><img src="../assets/images/epm/logo.jpg" /></a>
+    </div>
+    <div class="slider-description">
+      Logo Design - EPM Channel
+    </div>
+  </div>
+  <div class="portfolio-holder">
+    {% for portfolio in site.portfolio limit:4 %}
+      <div class="portfolio-block">
+        <div class="portfolio-title">
+          <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
+        </div>
+        <div class="portfolio-img bg-{{portfolio.code}}">
+          <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
+        </div>
+        <div class="portfolio-excerpt">
+          {{ portfolio.excerpt }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="heading-wrap">
+  <h2 class="section-heading">About Me</h2>
+</div>
+<div class="wrapper">
+  <div class="info-block">
+    <p>
+      I'm a web developer with 4 years of professional experience crafting websites for a wide range of clients.<!-- Beginning with simple 'no code required' websites in 4th grade, I moved on to basic coding, and then WordPress development after that. I also enjoy designing the user experiences and exploring everything else that makes a website tick.--> Currently, I'm a student at the University of Connecticut as a Digital Media and Design major.
+    </p>
+    <p>
+      In addition to development, I also can do graphic design and user experience design work. I believe an overwhelmingly functional website is still nothing without a good and usable design.
+    </p>
+    <!-- TODO: Add a section of the about page here. -->
+    <div class="info-buttons">
+      <a class="button-link" href="../assets/emily_serven_cv.pdf">Download My CV</a>
+      <a class="button-link" href="../about/">Learn More About Me</a>
+      <a class="button-link" href="../blog/">Read My Blog</a>
+    </div>
+  </div>
+  <div class="avatar-block">
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/emilyserven" class="icon-holder"><i class="friendly hdg-linkedin"></i></a>
+      <a href="https://github.com/emilyeserven" class="icon-holder"><i class="friendly hdg-github2"></i></a>
+      <a href="http://emilyserven.net/blog/" class="icon-holder"><i class="brainy hdg-pencil"></i></a>
+      <a href="https://twitter.com/emilyeserven" class="icon-holder"><i class="friendly hdg-twitter"></i></a>
+      <!-- TODO: Social buttons here. -->
+    </div>
+    <div class="avatar">
+      <!-- TODO: Avatar here. -->
+      <img src="../assets/images/emilyavi.png" />
+    </div>
+  </div>
+</div>
+<div class="heading-wrap">
+  <h2 class="section-heading">Contact Me</h2>
+</div>
+<div class="wrapper">
+  {% include contact.html %}
+</div>

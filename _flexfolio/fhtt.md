@@ -5,7 +5,7 @@ excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
-categories: Non-Profit
+category: Project
 platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
 flexwidth: 1

@@ -9,12 +9,12 @@ permalink: /portfolio-new3/
         <div class="portfolio-square port-width-{{project.flexwidth}} port-height-{{project.flexheight}}" style="background-image: url({{project.project-img}}); order: {{project.flexorder}}">
           <a href="{{project.url}}" class="portfolio-link">
             <div class="link-content">
-              <p>{{project.title}}<br />{{project.category}}</p>
+              <h3>{{project.title}}</h3><p><span class="category-link">{{project.category}}</span></p>
               {% if project.layout == 'photofolio' %}
-                <p>Posted: {{project.orig-post}} | Updated: {{project.last-update}}</p>
+                <p><b>Posted</b>: {{project.orig-post}}<br /><b>Updated</b>: {{project.last-update}}</p>
               {% endif %}
               {% if project.layout == 'flexfolio' %}
-                <p>Active: {{project.time}}</p>
+                <p><b>Active</b>: {{project.time}}</p>
               {% endif %}
             </div>
           </a>
@@ -23,6 +23,7 @@ permalink: /portfolio-new3/
     {% endfor %}
     </div>
     <div class="portfolio-list">
+      <h2>Other Projects</h2>
       <ul>
         {% for project in site.flexfolio %}
           {% if project.listview == true %}

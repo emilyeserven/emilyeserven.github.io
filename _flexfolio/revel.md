@@ -5,7 +5,7 @@ excerpt: Custom wine cellar cabinetry.
 code: rc
 time: April 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
-categories: Business
+category: Commercial
 platform: WordPress
 proj-link: http://www.revelcellars.com
 flexwidth: 1

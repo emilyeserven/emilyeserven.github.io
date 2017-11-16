@@ -1,5 +1,5 @@
 ---
-layout: default-nowrap
+layout: default-photo
 ---
 <article class="post">
 
@@ -12,7 +12,7 @@ layout: default-nowrap
       {{content}}
     </div>
     {% for photo in page.photogrid %}
-      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});"></div>
+      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});"><a data-featherlight="{{photo.full}}"></a></div>
     {% endfor %}
   </div>
 </div>

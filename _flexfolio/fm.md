@@ -24,6 +24,9 @@ features:
       image: ../../assets/flexfolio/fm/feat3.jpg
       format: half-left
       spacing: default
+    - image: ../../assets/flexfolio/fm/fullfeat.jpg
+      format: full
+      spacing: default
 ---
 
 Something snappy about photography.

@@ -14,9 +14,15 @@ flexorder: 2
 listview: false
 project-img: ../assets/flexfolio/rc/banner.jpg
 banner: ../../assets/flexfolio/rc/pgbanner.jpg
-pageimg:
-    - img-name: The Revel Cellars website on all main devices.
-      feat-image: ../../assets/images/rc/aoi.png
+features:
+    - descrip: Music page
+      image: ../../assets/flexfolio/rc/feat1.jpg
+      format: half-left
+      spacing: none
+    - descrip: Press page
+      image: ../../assets/flexfolio/rc/feat2.jpg
+      format: half-right
+      spacing: default
 ---
 
 Revel introduces intelligent custom wine cellar cabinetry inspired by and designed for the discerning wine collector - the revolutionary way to showcase, access and protect your wine collection.

@@ -17,17 +17,13 @@ listview: false
 project-img: ../assets/flexfolio/refdocs/banner.jpg
 banner: ../../assets/flexfolio/refdocs/pgbanner.jpg
 features:
-    - descrip: The EPM Channel website on all main devices.
-      image: ../../assets/images/epm/aoi.png
+    - descrip: Music page
+      image: ../../assets/flexfolio/refdocs/feat1.jpg
       format: half-left
       spacing: none
-    - descrip: The EPM Channel website on all main devices.
-      image: ../../assets/images/epm/aoi.png
+    - descrip: Press page
+      image: ../../assets/flexfolio/refdocs/feat2.jpg
       format: half-right
       spacing: default
-    - descrip: The EPM Channel website on all main devices.
-      image: ../../assets/images/epm/aoi.png
-      format: full
-      spacing: large
 ---
 EPM Channel is an interactive business-to-business multi channel brand.

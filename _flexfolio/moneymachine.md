@@ -14,15 +14,22 @@ flexorder: 3
 listview: false
 project-img: ../assets/flexfolio/moneymach/banner.jpg
 banner: ../../assets/flexfolio/moneymach/pgbanner.jpg
-pageimg:
-    - img-name: The Stamford Woman's Club website on all main devices.
-      feat-image: ../../assets/images/swc/aoi.png
-    - img-name: The Stamford Woman's Club website's homepage.
-      feat-image: ../../assets/images/swc/homepage.png
-    - img-name: The Stamford Woman's Club website's contact page.
-      feat-image: ../../assets/images/swc/contact.png
-    - img-name: The Stamford Woman's Club website's custom management panel. Created so the client would not need to log into the WordPress back-end. Made with WP Toolset.
-      feat-image: ../../assets/images/swc/managepanel.png
+features:
+    - descrip: Music page
+      image: ../../assets/flexfolio/moneymach/feat1.jpg
+      format: half-left
+      spacing: none
+    - descrip: Press page
+      image: ../../assets/flexfolio/moneymach/feat2.jpg
+      format: half-right
+      spacing: default
+    - descrip: Social feed
+      image: ../../assets/flexfolio/moneymach/feat3.jpg
+      format: half-left
+      spacing: default
+    - image: ../../assets/flexfolio/moneymach/fullfeat.jpg
+      format: full
+      spacing: large
 
 ---
 The Stamford Woman’s Club (SWC) was started by a small group of civic minded women in 1905. The focus of the Club is leadership development and community service.

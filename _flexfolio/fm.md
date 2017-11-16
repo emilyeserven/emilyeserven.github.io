@@ -20,6 +20,10 @@ features:
       image: ../../assets/flexfolio/fm/feat2.jpg
       format: half-right
       spacing: default
+    - descrip: Social feed
+      image: ../../assets/flexfolio/fm/feat3.jpg
+      format: half-left
+      spacing: default
 ---
 
 Something snappy about photography.

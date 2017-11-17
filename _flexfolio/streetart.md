@@ -19,8 +19,8 @@ photogrid:
     width: 2
     height: 1
   - name: sample
-    thumb: ../../assets/flexfolio/streetart/photo02.jpg
-    full: ../../assets/flexfolio/streetart/photo02full.jpg
+    thumb: ../../assets/flexfolio/streetart/photo13.jpg
+    full: ../../assets/flexfolio/streetart/photo13full.jpg
     width: 1
     height: 2
   - name: sample
@@ -34,6 +34,11 @@ photogrid:
     width: 1
     height: 2
   - name: sample
+    thumb: ../../assets/flexfolio/streetart/photo02.jpg
+    full: ../../assets/flexfolio/streetart/photo02full.jpg
+    width: 2
+    height: 2
+  - name: sample
     thumb: ../../assets/flexfolio/streetart/photo05.jpg
     full: ../../assets/flexfolio/streetart/photo05full.jpg
     width: 2
@@ -41,8 +46,8 @@ photogrid:
   - name: sample
     thumb: ../../assets/flexfolio/streetart/photo06.jpg
     full: ../../assets/flexfolio/streetart/photo06full.jpg
-    width: 2
-    height: 2
+    width: 1
+    height: 1
   - name: sample
     thumb: ../../assets/flexfolio/streetart/photo07.jpg
     full: ../../assets/flexfolio/streetart/photo07full.jpg
@@ -62,26 +67,26 @@ photogrid:
     thumb: ../../assets/flexfolio/streetart/photo10.jpg
     full: ../../assets/flexfolio/streetart/photo10full.jpg
     width: 1
-    height: 1
-  - name: sample
-    thumb: ../../assets/flexfolio/streetart/photo11.jpg
-    full: ../../assets/flexfolio/streetart/photo11full.jpg
-    width: 2
-    height: 2
-  - name: sample
-    thumb: ../../assets/flexfolio/streetart/photo12.jpg
-    full: ../../assets/flexfolio/streetart/photo12full.jpg
-    width: 2
-    height: 2
-  - name: sample
-    thumb: ../../assets/flexfolio/streetart/photo13.jpg
-    full: ../../assets/flexfolio/streetart/photo13full.jpg
-    width: 2
     height: 2
   - name: sample
     thumb: ../../assets/flexfolio/streetart/photo14.jpg
     full: ../../assets/flexfolio/streetart/photo14full.jpg
     width: 2
+    height: 2
+  - name: sample
+    thumb: ../../assets/flexfolio/streetart/photo11.jpg
+    full: ../../assets/flexfolio/streetart/photo11full.jpg
+    width: 1
+    height: 2
+  - name: sample
+    thumb: ../../assets/flexfolio/streetart/photo12.jpg
+    full: ../../assets/flexfolio/streetart/photo12full.jpg
+    width: 3
+    height: 2
+  - name: sample
+    thumb: ../../assets/flexfolio/streetart/photo15.jpg
+    full: ../../assets/flexfolio/streetart/photo15full.jpg
+    width: 1
     height: 2
 ---
 

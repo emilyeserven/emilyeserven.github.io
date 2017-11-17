@@ -9,7 +9,7 @@ category: Photography
 flexwidth: 1
 flexheight: 2
 flexorder: 4
-listview: false
+listview: true
 project-img: ../assets/flexfolio/nyc-arch/banner.jpg
 banner: ../../assets/flexfolio/nyc-arch/pgbanner.jpg
 photogrid:

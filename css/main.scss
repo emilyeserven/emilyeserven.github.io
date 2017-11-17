@@ -66,6 +66,7 @@ SECTION 8: MOBILE STYLES
 // 1.10 - VARIABLES
 // 1.11 -- Fonts and Colors
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$base-font-family: "CorporativeSansRd", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -73,6 +74,10 @@ $base-line-height: 1.5;
 
 $brand-font:       "CabinSketch";
 $secondary-font:   "Neucha";
+/*
+$brand-font:       "Bw Modelica";
+$secondary-font:   "Quasimoda";
+*/
 
 $spacing-unit:     30px;
 
@@ -176,7 +181,22 @@ h2 {
     font-size:2em;
     margin-bottom:-5px;
 }
-
+// DEACTIVATE UNTIL CLOSE TO LAUNCH
+/*
+.site-subtitle {
+    line-height: 1em !important;
+    font-size: 1.75em;
+    margin-left:5px;
+    font-weight:400;
+}
+.site-title {
+    //font-size:3.5em;
+    margin-bottom:.25em;
+    span {
+        font-weight: 700;
+    }
+}
+*/
 // 2.20 - PAGE LAYOUT
 // 2.21 -- Page Overall
 .wrapper {

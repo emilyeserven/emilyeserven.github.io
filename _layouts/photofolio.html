@@ -9,10 +9,24 @@ layout: default-photo
 <div class="wrapper">
   <div class="post-content photofolio">
     <div class="grid-photo photo-content photo-width-2 photo-height-1">
-      {{content}}
+      <p>
+        {{content}}
+      </p>
+      <p>
+        <strong>Locations:</strong> {{page.location}}<br />
+        <strong>First Capture:</strong> {{page.orig-post}}<br />
+        <strong>Latest Update:</strong> {{page.last-update}}
+      </p>
     </div>
     {% for photo in page.photogrid %}
-      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});"><a data-featherlight="{{photo.full}}"></a></div>
+      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});">
+        <a data-featherlight="{{photo.full}}">
+          <h3>{{photo.name}}</h3>
+          <p>
+            <em>captured:<br />{{photo.capture}}</em>
+          </p>
+        </a>
+      </div>
     {% endfor %}
   </div>
 </div>

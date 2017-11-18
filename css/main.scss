@@ -65,16 +65,21 @@ SECTION 8: MOBILE STYLES
 // SECTION 1: SETUP
 // 1.10 - VARIABLES
 // 1.11 -- Fonts and Colors
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//$base-font-family: "CorporativeSansRd", Helvetica, Arial, sans-serif;
+
+$new-fonts: false;
+
+
+
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $brand-font:       "CabinSketch";
 $secondary-font:   "Neucha";
 /*
+$base-font-family: "CorporativeSansRd", Helvetica, Arial, sans-serif;
 $brand-font:       "Bw Modelica";
 $secondary-font:   "Quasimoda";
 */
@@ -178,25 +183,15 @@ html.with-featherlight {
 }
 h2 {
     font-family: $secondary-font;
-    font-size:2em;
-    margin-bottom:-5px;
-}
-// DEACTIVATE UNTIL CLOSE TO LAUNCH
-/*
-.site-subtitle {
-    line-height: 1em !important;
-    font-size: 1.75em;
-    margin-left:5px;
-    font-weight:400;
-}
-.site-title {
-    //font-size:3.5em;
-    margin-bottom:.25em;
-    span {
-        font-weight: 700;
+    @if $new-fonts {
+        font-size:1.75em;
+        margin-bottom:5px;
+    } @else {
+        font-size:2em;
+        margin-bottom:-5px;
     }
 }
-*/
+
 // 2.20 - PAGE LAYOUT
 // 2.21 -- Page Overall
 .wrapper {
@@ -310,21 +305,86 @@ a .textcolor- {
 // 2.31 -- Logo Area
 .site- {
     &title {
-        font-family:$brand-font;
-        font-size:4.5em;
         line-height:1em;
         margin-top:.2em;
+        font-family:$brand-font;
+        @if $new-fonts {
+            font-size: 3.75em;
+            margin-bottom: .25em;
+            span {
+                font-weight: 700;
+            }
+        } @else {
+            font-size:4.5em;
+        }
     }
     &subtitle {
         font-family:$secondary-font;
-        font-size:2em;
-        line-height:2em;
+        @if $new-fonts {
+            line-height: 1em;
+            font-size: 1.5em;
+            margin-left: 5px;
+            font-weight: 400;
+        } @else {
+            font-size:2em;
+            line-height:2em;
+        }
     }
 }
 .site-title, .site-subtitle {
     width:100%;
 }
 // 2.32 -- Main Menu
+.site-header {
+    @if $new-fonts {
+        .site-nav-new {
+            display:flex;
+        }
+        .navigation {
+            display:none;
+        }
+    } @else {
+        .site-nav.new {
+            display:none !important;
+        }
+        .navigation {
+            display: block;
+        }
+    }
+}
+.site-head-new {
+    display:flex;
+    flex-direction: row;
+    .title {
+        flex-basis: 55%;
+    }
+    .site-nav.new {
+        flex-basis: 45%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-content:center;
+        .trigger {
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            align-content:center;
+            .page-link {
+                font-size: 0.7em;
+                padding: .4rem .75rem;
+                width: initial;
+                font-family: $base-font-family;
+                transition: background-color ease 0.05s, color ease 0.05s;
+                &:hover {
+                    background-color: $brand-color;
+                    color: #fff;
+                    transition: background-color ease 0.05s, color ease 0.05s;
+                }
+            }
+        }
+    }
+}
+
 .navigation {
     background-color:#eee;
     display:block;
@@ -385,7 +445,11 @@ h2.section-heading {
     margin-bottom:10px;
 }
 .site-header {
-    background-image: $bg-image;
+    @if $new-fonts {
+        background-color: #fefefe;
+    } @else {
+        background-image: $bg-image;
+    }
     background-repeat: repeat;
     background-position: center;
 }
@@ -435,7 +499,8 @@ h2.section-heading {
 
 .home-section.header {
   background-image: url('/assets/images/header.jpg');
-  height: 40vh;
+  height: 20em;
+  background-position:center;
   .header-box {
     background-color: rgba(255,255,255,0.75);
     width: 70%;
@@ -450,7 +515,7 @@ h2.section-heading {
 
 .button-link-new {
   display:inline-block;
-  padding: 8px 20px 4px;
+  padding: 4px 20px 4px;
   font-family: $secondary-font;
   background-color: $brand-color;
   color: #fff;
@@ -460,6 +525,7 @@ h2.section-heading {
   cursor:pointer;
   border: none;
   transition: box-shadow ease 0.05s, background-color ease 0.05s;
+  margin-top:0.5em;
   &:hover {
     color: #fff;
     text-decoration: none;
@@ -486,10 +552,10 @@ h2.section-heading {
     }
     &:last-of-type {
       margin-bottom: 40px;
-    }
+  } /*
     h2 {
       font-family: $brand-font;
-    }
+  } */
     .description {
       width:70%;
       display:inline-block;
@@ -544,15 +610,20 @@ h2.section-heading {
     padding: 4px 10px;
   }
   h3 a {
-    font-family: $secondary-font;
+    font-family: $base-font-family;
     line-height: 1.25em;
-    font-size: 22px;
+    font-size: .65em;
   }
   .post-image .media-holder.post-img {
     padding: 10px 4px 0;
   }
 }
-
+.post-link {
+    @if $new-fonts {
+        font-size: .8em;
+        line-height: 1.5;
+    } @else {}
+}
 // 3.21 -- Post Image
 .post-image {
     float:left;
@@ -662,12 +733,17 @@ h2.section-heading {
     }
 }
 .post-title {
-    font-size: 2.5em;
+    @if $new-fonts {
+        font-size: 1.75em;
+        line-height: 1.25;
+    } @else {
+        font-size: 2.5em;
+        line-height: 1;
+    }
     letter-spacing: 0px;
-    line-height: 1;
-    max-width: calc(1000px - 60px) !important;
+    max-width: calc(1000px - 130px) !important;
     margin: 0 auto;
-    font-family: "CabinSketch";
+    font-family: $brand-font;
     color: #fff;
     display:block;
 }
@@ -1181,7 +1257,7 @@ img.portfolio-image {
     color:$grey-color-dark;
     font-family:$secondary-font;
     font-size: 1.3em;
-    padding: 8px 20px 5px;
+    padding: 5px 20px 5px;
     display:inline-block;
     transition: background-color ease-in-out 200ms;
     &:nth-of-type(odd) {

@@ -22,7 +22,7 @@ collections:
     output: false
   flexfolio:
     output: true
-    permalink: /flexfolio/:path/
+    permalink: /work/:path/
 
 # Build settings
 markdown: kramdown

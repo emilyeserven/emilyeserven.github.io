@@ -2,72 +2,53 @@
 layout: default
 ---
 </div>
-<div class="heading-wrap">
-  <h2 class="section-heading">Portfolio</h2>
-</div>
-<div class="wrapper">
-  <div class="slider-holder">
-    <div class="slider-title">
-      Featured Sample
+<div class="home-section header">
+  <div class="wrapper">
+    <div class="header-box">
+      <h2>I develop scalable and usable experiences.</h2>
+      <p>(as well as some other fun things)</p>
     </div>
-    <div class="slider-block bg-white">
-    <a href="../portfolio/epm"><img src="../assets/images/epm/logo.jpg" /></a>
-    </div>
-    <div class="slider-description">
-      Logo Design - EPM Channel
+    <div class="header-button">
+      <a href="/work/" class="button-link-new">See my Work&nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </div>
   </div>
-  <div class="portfolio-holder">
-    {% for portfolio in site.portfolio limit:4 %}
-      <div class="portfolio-block">
-        <div class="portfolio-title">
-          <a href="{{ portfolio.url }}"><h3>{{ portfolio.title }}</h3></a>
-        </div>
-        <div class="portfolio-img bg-{{portfolio.code}}">
-          <a href="{{ portfolio.url }}"><img src="../assets/images/{{portfolio.code}}/sized.png" /></a>
-        </div>
-        <div class="portfolio-excerpt">
-          {{ portfolio.excerpt }}
+</div>
+<div class="wrapper">
+  <div class="home-section info">
+    <div class="info-section">
+      <div class="description">
+        <h2>Hi, I'm Emily.</h2>
+        <p>
+            I am a front-end web developer with a diverse skillset and a passion for crafting scalable and usable experiences.
+        <p>
+            Currently, I'm an intern at NBC Sports Group and a senior at the University of Connecticut as a Digital Media and Design major.
+        </p>
+        <p>
+            I'm always eager to learn, work effectively in a team, and lead. In addition to being a developer, I'm also a designer, photographer, and foreign music enthusiast.
+        </p>
+        <div class="info-buttons">
+          <a class="button-link-new" href="../assets/emily_serven_cv.pdf">Download my CV</a>
+          <a class="button-link-new" href="../about/">Download my Resume</a>
         </div>
       </div>
-    {% endfor %}
-  </div>
-</div>
-<div class="heading-wrap">
-  <h2 class="section-heading">About Me</h2>
-</div>
-<div class="wrapper">
-  <div class="info-block">
-    <p>
-      I'm a web developer with 4 years of professional experience crafting websites for a wide range of clients.<!-- Beginning with simple 'no code required' websites in 4th grade, I moved on to basic coding, and then WordPress development after that. I also enjoy designing the user experiences and exploring everything else that makes a website tick.--> Currently, I'm a student at the University of Connecticut as a Digital Media and Design major.
-    </p>
-    <p>
-      In addition to development, I also can do graphic design and user experience design work. I believe an overwhelmingly functional website is still nothing without a good and usable design.
-    </p>
-    <!-- TODO: Add a section of the about page here. -->
-    <div class="info-buttons">
-      <a class="button-link" href="../assets/emily_serven_cv.pdf">Download My CV</a>
-      <a class="button-link" href="../about/">Learn More About Me</a>
-      <a class="button-link" href="../blog/">Read My Blog</a>
+      <img class="headshot" src="/assets/images/emiheadshot.jpg" />
     </div>
-  </div>
-  <div class="avatar-block">
-    <div class="social-row">
-      <a href="https://www.linkedin.com/in/emilyserven" class="icon-holder"><i class="friendly hdg-linkedin"></i></a>
-      <a href="https://github.com/emilyeserven" class="icon-holder"><i class="friendly hdg-github2"></i></a>
-      <a href="http://emilyserven.net/blog/" class="icon-holder"><i class="brainy hdg-pencil"></i></a>
-      <a href="https://twitter.com/emilyeserven" class="icon-holder"><i class="friendly hdg-twitter"></i></a>
-      <!-- TODO: Social buttons here. -->
+    <div class="info-section">
+      <h2>I believe in...</h2>
+      <p><a href="/work/" class="underline-link">crafting experiences</a> that exceed expectations for my clients.</p>
+      <p><a href="/work/" class="underline-link">experimenting and developing new things</a> by stepping out of my comfort zone.</p>
+      <p><a href="/work/" class="underline-link">capturing moments and small details</a> through my explorations and photography.</p>
     </div>
-    <div class="avatar">
-      <!-- TODO: Avatar here. -->
-      <img src="../assets/images/emilyavi.png" />
+    <!--
+    <div class="info-section">
+      <h2>Things I've written...</h2>
+      <div class="blog-loop new">
+        {% for post in site.posts limit:3 %}
+          {% include blog-loop-new.html %}
+        {% endfor %}
+      </div>
+      <a href="/blog/" class="button-link-new">More Posts </a>
     </div>
+  -->
   </div>
-</div>
-<div class="heading-wrap">
-  <h2 class="section-heading">Contact Me</h2>
-</div>
-<div class="wrapper">
-  {% include contact.html %}
 </div>

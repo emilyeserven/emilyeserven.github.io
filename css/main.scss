@@ -10,6 +10,37 @@
     font-family:'Neucha';
     src: url('../Neucha.ttf');
 }
+
+@font-face {
+    font-family:'Bw Modelica';
+    src: url('../BwModelica-Regular.woff');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Bw Modelica';
+    src: url('../BwModelica-Bold.woff');
+    font-weight:700;
+}
+@font-face {
+    font-family:'Quasimoda';
+    src: url('../Quasimoda-Regular.woff');
+    font-weight:400;
+}
+@font-face {
+    font-family:'Quasimoda';
+    src: url('../Quasimoda-Bold.woff');
+    font-weight:700;
+}
+@font-face {
+    font-family:'CorporativeSansRd';
+    src: url('../corporativesansrd-regular-webfont.woff');
+    font-weight:400;
+}
+@font-face {
+    font-family:'CorporativeSansRd';
+    src: url('../corporativesansrd-bold-webfont.woff');
+    font-weight:700;
+}
 /* TABLE OF CONTENTS
 SECTION 1: SETUP
 1.10 - VARIABLES
@@ -90,6 +121,7 @@ $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 $brand-color-sec:  #074AA0;
+$brand-color-ter:  #4F92E7;
 
 $grey-color:       #828282;
 $grey-color-light: #eee;
@@ -384,10 +416,10 @@ a .textcolor- {
     display:flex;
     flex-direction: row;
     .title {
-        flex-basis: 55%;
+        flex-basis: 65%;
     }
     .site-nav.new {
-        flex-basis: 45%;
+        flex-basis: 35%;
         display:flex;
         flex-direction:column;
         justify-content: center;
@@ -554,6 +586,9 @@ h2.section-heading {
   border: none;
   transition: box-shadow ease 0.05s, background-color ease 0.05s;
   margin-top:0.5em;
+  &:visited {
+      color: #fff;
+  }
   &:hover {
     color: #fff;
     text-decoration: none;
@@ -775,6 +810,11 @@ h2.section-heading {
     color: $text-color;
     display:block;
 }
+
+header > .post-title {
+    color: #fff;
+}
+
 .post-image .media-holder.post-img {
     width: 275px;
     height: 125px;
@@ -1146,9 +1186,13 @@ img.portfolio-image {
     color: #fff;
   }
 }
-.footer-section.contact {
+.site-footer {
     background-color: #333;
+    padding: 0;
+}
+.footer-section.contact {
     padding: 30px 0 30px;
+    color: #fff;
     .wrapper {
         display: flex;
         flex-direction: row;
@@ -1161,6 +1205,16 @@ img.portfolio-image {
             flex-basis: 66%;
         }
     }
+    a {
+        &:visited {
+            color: $brand-color;
+        }
+        &:hover {
+            color: $brand-color-ter;
+            text-decoration: none;
+            border-bottom: 2px solid $brand-color-ter;
+        }
+    }
 }
 .contact-section {
     &.new {
@@ -1168,13 +1222,21 @@ img.portfolio-image {
         .button-link-new {
             box-shadow:none;
             margin-top:0;
+            &:hover {
+                background-color: $brand-color-ter;
+                color: #fff;
+                border-bottom: 0;
+            }
         }
     }
 }
 
 .social-section.new {
     text-align:left;
-    margin-top: 10px;
+    margin-top: 20px;
+    a:hover {
+        border-bottom: 0;
+    }
 }
 
 // 3.70 - PROJECT FOLIO LAYOUT

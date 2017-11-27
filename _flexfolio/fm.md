@@ -21,7 +21,7 @@ features:
       image: ../../assets/flexfolio/fm/feat1.jpg
       format: half-left
       spacing: none
-    - descrip: <strong>Press page</strong><br />???
+    - descrip: <strong>Press page</strong><br />With modularity and flexibility in mind, the Press page has a front-end design that works with any content thrown into it. It also has a simplified and specialized backend workflow, making it easy for Feyer to edit.
       image: ../../assets/flexfolio/fm/feat2.jpg
       format: half-left
       spacing: default

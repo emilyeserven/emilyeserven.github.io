@@ -604,9 +604,9 @@ h2.section-heading {
 .home-section.info {
   .headshot {
     width:150px;
+    height:150px;
     display:inline-block;
     border-radius: 75px;
-    margin-left: 5%;
     float:right;
   }
   .info-section {
@@ -616,13 +616,18 @@ h2.section-heading {
     }
     &:last-of-type {
       margin-bottom: 40px;
-  } /*
-    h2 {
-      font-family: $brand-font;
-  } */
+    } /*
+      h2 {
+        font-family: $brand-font;
+    } */
+    &.first-one {
+        display:flex;
+    }
     .description {
-      width:70%;
-      display:inline-block;
+      flex-basis:70%;
+    }
+    .headshot-holder {
+        flex-basis:30%;
     }
     p a.underline-link {
       color: #000;
@@ -1564,7 +1569,7 @@ input.buttons {
     .site-head-new {
         flex-wrap: wrap;
         .title, .site-navi.new {
-            flex-basis: 100%;
+            flex-basis: 100% !important;
         }
         .site-navi.new {
             padding: 10px 0 30px !important;
@@ -1572,6 +1577,36 @@ input.buttons {
     }
     .home-section.header {
         height: 15em;
+        .header-box {
+            width:100%;
+        }
+    }
+    .info-section.first-one {
+        flex-wrap: wrap;
+        .description, .headshot-holder {
+            flex-basis: 100% !important;
+        }
+        .description {
+            order: 2;
+        }
+        .headshot-holder {
+            text-align:center;
+            order: 1;
+            margin-bottom: 20px;
+            img {
+                float:none;
+                margin:0;
+            }
+        }
+    }
+    .footer-section.contact .wrapper {
+        flex-wrap: wrap;
+        .section-third, .section-twothird {
+            flex-basis: 100%;
+        }
+        .section-third {
+            margin-bottom: 20px;
+        }
     }
 }
 

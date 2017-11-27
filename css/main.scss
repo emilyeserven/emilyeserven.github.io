@@ -66,7 +66,7 @@ SECTION 8: MOBILE STYLES
 // 1.10 - VARIABLES
 // 1.11 -- Fonts and Colors
 
-$new-fonts: false;
+$new-fonts: true;
 
 
 
@@ -74,15 +74,15 @@ $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
-
+/*
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $brand-font:       "CabinSketch";
 $secondary-font:   "Neucha";
-/*
+*/
 $base-font-family: "CorporativeSansRd", Helvetica, Arial, sans-serif;
 $brand-font:       "Bw Modelica";
 $secondary-font:   "Quasimoda";
-*/
+
 
 $spacing-unit:     30px;
 
@@ -189,6 +189,34 @@ h2 {
     } @else {
         font-size:2em;
         margin-bottom:-5px;
+    }
+}
+h3 {
+    font-family: $secondary-font;
+    @if $new-fonts {
+        font-size: 1.25em;
+        margin-bottom:-2px;
+        font-weight:500;
+    } @else {
+        font-size: 1.5em;
+        margin-bottom: -5px;
+    }
+    .nomargin {
+        margin:0;
+    }
+}
+
+.backlink {
+    font-family: $secondary-font;
+    font-variant: small-caps;
+    a {
+        border-bottom: 1px solid $brand-color;
+        line-height: .75em;
+        display:inline-block;
+        &:hover {
+            text-decoration: none;
+            border-bottom: 2px solid $grey-color-dark;
+        }
     }
 }
 
@@ -741,10 +769,10 @@ h2.section-heading {
         line-height: 1;
     }
     letter-spacing: 0px;
-    max-width: calc(1000px - 130px) !important;
-    margin: 0 auto;
+    max-width: calc(1000px - 120px) !important;
+    margin: 0 auto 10px;
     font-family: $brand-font;
-    color: #fff;
+    color: $text-color;
     display:block;
 }
 .post-image .media-holder.post-img {
@@ -949,7 +977,7 @@ img.portfolio-image {
       width:100%;
       height:100%;
       &:hover {
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.75);
         transition: background-color ease 0.15s;
         text-decoration: none;
         cursor: pointer;
@@ -966,7 +994,7 @@ img.portfolio-image {
     display:none;
     flex-direction: column;
     height:100%;
-    max-height: 175px;
+    max-height: 125px;
     justify-content: space-around;
   }
   &:hover .link-content {
@@ -980,6 +1008,32 @@ img.portfolio-image {
   }
 }
 
+.portfolio-list {
+    .flex-wrapper {
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        .list-column {
+            flex-basis:25%;
+            ul {
+                margin-left:0;
+                list-style-type: none;
+            }
+            i {
+                margin-bottom:5px;
+            }
+        }
+    }
+}
+
+.nohead-spacer {
+    display:block;
+    height: 5px;
+    background-color: $grey-color-dark;
+    width:100%;
+    margin-bottom:10px;
+}
 
 // 3.40 - SOCIAL LOOP
 .social-row {
@@ -1091,6 +1145,36 @@ img.portfolio-image {
   .form-title {
     color: #fff;
   }
+}
+.footer-section.contact {
+    background-color: #333;
+    padding: 30px 0 30px;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        .section-third {
+            flex-basis:33%;
+        }
+        .section-twothird {
+            flex-basis: 66%;
+        }
+    }
+}
+.contact-section {
+    &.new {
+        text-align:left;
+        .button-link-new {
+            box-shadow:none;
+            margin-top:0;
+        }
+    }
+}
+
+.social-section.new {
+    text-align:left;
+    margin-top: 10px;
 }
 
 // 3.70 - PROJECT FOLIO LAYOUT

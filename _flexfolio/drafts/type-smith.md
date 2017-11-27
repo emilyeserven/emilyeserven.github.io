@@ -1,6 +1,6 @@
----
+
 layout: flexfolio
-title: The Box Project
+title: Typography - Jaden Smith
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present

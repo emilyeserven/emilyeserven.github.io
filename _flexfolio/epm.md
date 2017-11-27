@@ -1,5 +1,5 @@
----
-layout: flexfolio
+
+layout: flexfolio-nohead
 title: EPM Channel
 excerpt: Business article aggregation.
 code: epm

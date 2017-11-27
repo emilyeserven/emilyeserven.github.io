@@ -1,4 +1,4 @@
----
+
 layout: photofolio
 title: NYC Architecture
 headline: New York City-based musician.

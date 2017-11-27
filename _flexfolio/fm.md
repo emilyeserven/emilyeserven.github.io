@@ -2,9 +2,14 @@
 layout: flexfolio
 title: Feyer Music
 headline: New York City-based musician.
-time: ???
-location: ???
+code: fm
+time: January 2012 - Present
+stack: [WordPress.org, WP Toolset]
+responsibilities:  Front-End Development, Design, Tutorials, Server Management
 category: Commercial
+projlink:
+    - name: Feyer Music
+      url: http://www.feyermusic.com
 flexwidth: 2
 flexheight: 1
 flexorder: 1
@@ -16,7 +21,7 @@ features:
       image: ../../assets/flexfolio/fm/feat1.jpg
       format: half-left
       spacing: none
-    - descrip: Press page
+    - descrip: <strong>Press page</strong><br />???
       image: ../../assets/flexfolio/fm/feat2.jpg
       format: half-left
       spacing: default
@@ -29,4 +34,4 @@ features:
       spacing: large
 ---
 
-Something snappy about photography.
+Feyer is a musician based in New York City. He needed a new website to coincide with the release of his first full album.

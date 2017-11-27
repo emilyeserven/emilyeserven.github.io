@@ -1,6 +1,6 @@
----
+
 layout: flexfolio
-title: Ornette
+title: Typography - Jaden Smith
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present

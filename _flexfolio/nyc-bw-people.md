@@ -1,6 +1,6 @@
 ---
 layout: photofolio
-title: NYC in Monochrome | People
+title: NYC in Mono | People
 headline: New York City-based musician.
 orig-post: 09.23.2017
 last-update: 10.28.2017
@@ -94,26 +94,26 @@ photogrid:
   - name: sketch
     thumb: ../../assets/flexfolio/nyc-bw-people/photo14.jpg
     full: ../../assets/flexfolio/nyc-bw-people/photo14full.jpg
-    width: 2
-    height: 2
+    width: 1
+    height: 1
     capture: 09.23.2017
   - name: sidewalk art
     thumb: ../../assets/flexfolio/nyc-bw-people/photo15.jpg
     full: ../../assets/flexfolio/nyc-bw-people/photo15full.jpg
-    width: 2
-    height: 2
+    width: 1
+    height: 1
     capture: 10.21.2017
   - name: sculptor
     thumb: ../../assets/flexfolio/nyc-bw-people/photo16.jpg
     full: ../../assets/flexfolio/nyc-bw-people/photo16full.jpg
-    width: 2
-    height: 2
+    width: 1
+    height: 1
     capture: 10.28.2017
   - name: sketchy situation
     thumb: ../../assets/flexfolio/nyc-bw-people/photo17.jpg
     full: ../../assets/flexfolio/nyc-bw-people/photo17full.jpg
-    width: 2
-    height: 2
+    width: 1
+    height: 1
     capture: 09.30.2017
   - name: the chase
     thumb: ../../assets/flexfolio/nyc-bw-people/photo18.jpg

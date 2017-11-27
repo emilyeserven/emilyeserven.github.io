@@ -1,6 +1,6 @@
----
+
 layout: flexfolio
-title: Key Rush
+title: The Box Project
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present

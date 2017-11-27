@@ -2,6 +2,7 @@
 layout: default
 permalink: /portfolio-new3/
 ---
+<div class="nohead-spacer"></div>
 <div class="wrapper">
   <div class="portfolio-holder new standalone">
     {% for project in site.flexfolio %}
@@ -22,15 +23,63 @@ permalink: /portfolio-new3/
       {% endif %}
     {% endfor %}
     </div>
+
     <div class="portfolio-list">
-      <h2>Other Projects</h2>
-      <ul>
-        {% for project in site.flexfolio %}
-          {% if project.listview == true %}
-            <li><a href="{{project.url}}">{{project.title}}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      <h2 style="margin-bottom: 10px;">Everything</h2>
+      <div class="flex-wrapper">
+        <div class="list-column">
+          <h3 class="nomargin">Commercial</h3>
+          <p>
+            <i>Work for clients</i>
+          </p>
+          <ul>
+            {% for project in site.flexfolio %}
+                {% if project.category == "Commercial" %}
+                <li><a href="{{project.url}}">{{project.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="list-column">
+          <h3 class="nomargin">Projects</h3>
+          <p>
+            <i>Larger non-client work</i>
+          </p>
+          <ul>
+            {% for project in site.flexfolio %}
+                {% if project.category == "Project" %}
+                <li><a href="{{project.url}}">{{project.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="list-column">
+          <h3 class="nomargin">Lab</h3>
+          <p>
+            <i>Smaller experiments</i>
+          </p>
+          <ul>
+            {% for project in site.flexfolio %}
+                {% if project.category == "Lab" %}
+                <li><a href="{{project.url}}">{{project.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="list-column">
+          <h3 class="nomargin">Photography</h3>
+          <p>
+            <i>Captured moments</i>
+          </p>
+          <ul>
+            {% for project in site.flexfolio %}
+                {% if project.category == "Photography" %}
+                <li><a href="{{project.url}}">{{project.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

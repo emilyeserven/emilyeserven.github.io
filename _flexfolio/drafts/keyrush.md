@@ -1,6 +1,6 @@
----
+
 layout: flexfolio
-title: Typography - Jaden Smith
+title: Key Rush
 excerpt: Community service and scholarships.
 code: swc
 time: October 2014 - Present

@@ -2,7 +2,7 @@
 layout: default-nowrap
 ---
 <article class="post">
-  <div class="folio-banner" style="background-image: url({{page.banner}}); background-size: cover; background-position: 50%;"></div>
+  <div class="nohead-spacer"></div>
   <div class="wrapper">
     <div class="post-content">
       <p class="backlink">
@@ -11,9 +11,11 @@ layout: default-nowrap
       <h1 class="post-title">{{ page.title }}</h1>
       <div class="main-notes">
         <div class="notes-left">
-          <p><strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
-          <strong>Responsibilities</strong>: {{page.responsibilities}}<br />
-        <strong>Type</strong>: {{page.category}}</p>
+          <p>
+            <strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
+            <strong>Responsibilities</strong>: {{page.responsibilities}}<br />
+            <strong>Type</strong>: {{page.category}}
+          </p>
           <p>{{ content }}</p>
         </div>
         <div class="notes-right">

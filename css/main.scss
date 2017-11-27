@@ -1628,8 +1628,38 @@ input.buttons {
             }
         }
     }
-    .folio-banner {
+    .folio-banner, .photo-header {
         height: 8em;
+    }
+    .grid-photo {
+        margin-bottom: 0.5em;
+        &.photo-height- {
+            &1 {
+                height: 8em;
+            }
+            &2 {
+                height: 12.5em;
+            }
+        }
+    }
+    .tag-box li {
+        margin-bottom: 5px;
+    }
+    .post-content .main-notes {
+        flex-wrap:wrap;
+        .notes-left, .notes-right {
+            flex-basis: 100%;
+        }
+    }
+    .feature-image.feature-half {
+        flex-wrap: wrap;
+        margin-bottom:50px;
+        .image-holder, .caption-holder {
+            flex-basis: 100%;
+        }
+        .image-holder {
+            margin-bottom:15px;
+        }
     }
 }
 
@@ -1733,7 +1763,7 @@ input.buttons {
         font-size:3.25em;
         margin-bottom:.25em;
     }
-    h1.post-title {
+    header > h1.post-title {
         padding: 0 15px;
         margin-top:.15em;
         margin-bottom: 5px;

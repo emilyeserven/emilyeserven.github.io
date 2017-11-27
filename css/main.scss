@@ -1608,6 +1608,29 @@ input.buttons {
             margin-bottom: 20px;
         }
     }
+    .portfolio-square {
+        &.port-height- {
+            &1 {
+                height: 6em;
+            }
+            &2 {
+                height: 12.5em;
+            }
+        }
+    }
+    .portfolio-list .flex-wrapper {
+        flex-wrap: wrap;
+        .list-column {
+            flex-basis: 100%;
+            margin-bottom:20px;
+            p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .folio-banner {
+        height: 8em;
+    }
 }
 
 // 8.50 Between 601-767
@@ -1701,13 +1724,13 @@ input.buttons {
     }
     .site-subtitle {
         line-height: 1.25em;
-        font-size: 1.75em;
+        font-size: 1.35em;
     }
     .post-header.fullwidth {
         margin-bottom: 15px;
     }
     .site-title {
-        font-size:3.5em;
+        font-size:3.25em;
         margin-bottom:.25em;
     }
     h1.post-title {
@@ -1728,6 +1751,7 @@ input.buttons {
         height:120px;
         padding: 10px 25px 0;
     }
+
     .skills- {
         &block, &block:nth-of-type(2) {
             margin-bottom: 2em;

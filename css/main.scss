@@ -397,14 +397,14 @@ a .textcolor- {
 // 2.32 -- Main Menu
 .site-header {
     @if $new-fonts {
-        .site-nav-new {
+        .site-navi-new {
             display:flex;
         }
         .navigation {
             display:none;
         }
     } @else {
-        .site-nav.new {
+        .site-navi.new {
             display:none !important;
         }
         .navigation {
@@ -418,13 +418,13 @@ a .textcolor- {
     .title {
         flex-basis: 65%;
     }
-    .site-nav.new {
+    .site-navi.new {
         flex-basis: 35%;
         display:flex;
         flex-direction:column;
         justify-content: center;
         align-content:center;
-        .trigger {
+        .menu-holder {
             display:flex;
             flex-direction:row;
             justify-content:space-between;
@@ -451,7 +451,7 @@ a .textcolor- {
     width:100%;
 }
 
-nav.site-nav {
+nav.site-navi {
     @extend .wrapper;
     width: calc(100% - 0px);
     margin: 0 auto;
@@ -465,7 +465,7 @@ nav.site-nav {
     background-color: #eee;
 }
 // 2.33 -- Mobile Menu
-.trigger {
+.menu-holder {
     a.page-link {
         width: 24%;
         display:inline-block;
@@ -561,6 +561,7 @@ h2.section-heading {
   background-image: url('/assets/images/header.jpg');
   height: 20em;
   background-position:center;
+  background-size:cover;
   .header-box {
     background-color: rgba(255,255,255,0.75);
     width: 70%;
@@ -1555,10 +1556,22 @@ input.buttons {
 // 8.40 Below 600
 @include media-query(600px) {
     .title {
-        margin-top: 50px;
+        margin-top: 0px;
     }
     .avatar-block {
         margin-top: -15px;
+    }
+    .site-head-new {
+        flex-wrap: wrap;
+        .title, .site-navi.new {
+            flex-basis: 100%;
+        }
+        .site-navi.new {
+            padding: 10px 0 30px !important;
+        }
+    }
+    .home-section.header {
+        height: 15em;
     }
 }
 
@@ -1586,7 +1599,7 @@ input.buttons {
 
 // 8.70 Below 600
 @include media-query(600px) {
-    .trigger a.page-link {
+    .menu-holder a.page-link {
         width: initial;
         text-align: left;
         font-size: .75em;
@@ -1595,7 +1608,7 @@ input.buttons {
 
 // 8.80 Below 470
 @include media-query(470px) {
-    .trigger a.page-link {
+    .menu-holder a.page-link {
         font-size:.8em;
     }
     .slider-holder {
@@ -1670,7 +1683,7 @@ input.buttons {
     img.portfolio-image {
         max-height:200px;
     }
-    .site-nav .page-link {
+    .site-navi .page-link {
         margin-left: 0px;
     }
     .photo-caption {

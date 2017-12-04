@@ -415,6 +415,7 @@ a .textcolor- {
 .site-head-new {
     display:flex;
     flex-direction: row;
+    margin: 20px auto;
     .title {
         flex-basis: 60%;
     }
@@ -818,7 +819,7 @@ h2.section-heading {
     }
     letter-spacing: 0px;
     max-width: calc(1000px - 120px) !important;
-    margin: 0 auto 10px;
+    margin: 15px auto 15px;
     font-family: $brand-font;
     color: $text-color;
     display:block;
@@ -1233,7 +1234,6 @@ img.portfolio-image {
     &.new {
         text-align:left;
         .button-link-new {
-            box-shadow:none;
             margin-top:0;
             &:hover {
                 background-color: $brand-color-ter;

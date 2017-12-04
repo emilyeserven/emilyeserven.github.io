@@ -585,6 +585,7 @@ h2.section-heading {
   margin-right: .25em;
   cursor:pointer;
   border: none;
+  transform: translate(4px 4px);
   transition:
     box-shadow ease 0.05s,
     background-color ease 0.05s,

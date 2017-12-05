@@ -415,11 +415,12 @@ a .textcolor- {
 .site-head-new {
     display:flex;
     flex-direction: row;
+    margin: 20px auto;
     .title {
-        flex-basis: 65%;
+        flex-basis: 60%;
     }
     .site-navi.new {
-        flex-basis: 35%;
+        flex-basis: 40%;
         display:flex;
         flex-direction:column;
         justify-content: center;
@@ -585,7 +586,10 @@ h2.section-heading {
   margin-right: .25em;
   cursor:pointer;
   border: none;
-  transition: box-shadow ease 0.05s, background-color ease 0.05s;
+  transition:
+    box-shadow ease 0.05s,
+    background-color ease 0.05s,
+    transform ease 0.05s;
   margin-top:0.5em;
   &:visited {
       color: #fff;
@@ -595,7 +599,11 @@ h2.section-heading {
     text-decoration: none;
     background-color: #074AA0;
     box-shadow: 0 0 0 #074AA0;
-    transition: box-shadow ease 0.05s, background-color ease 0.05s;
+    transform: translate(4px, 4px);
+    transition:
+        box-shadow ease 0.05s,
+        background-color ease 0.05s,
+        transform ease 0.05s;
   }
 }
 
@@ -811,7 +819,7 @@ h2.section-heading {
     }
     letter-spacing: 0px;
     max-width: calc(1000px - 120px) !important;
-    margin: 0 auto 10px;
+    margin: 15px auto 15px;
     font-family: $brand-font;
     color: $text-color;
     display:block;
@@ -1226,7 +1234,6 @@ img.portfolio-image {
     &.new {
         text-align:left;
         .button-link-new {
-            box-shadow:none;
             margin-top:0;
             &:hover {
                 background-color: $brand-color-ter;
@@ -1489,6 +1496,16 @@ pre.lineno {
 }
 // 8.30 Below 767
 @include media-query(767px) {
+    .site-head-new {
+        flex-wrap: wrap;
+        .title, .site-navi.new {
+            flex-basis: 100% !important;
+        }
+        .site-navi.new {
+            padding: 10px 0 30px !important;
+        }
+    }
+
     .slider-holder, .portfolio-holder, .content-left, .content-right, .contact-holder, .form-holder, .skills-block {
         width: 100%;
         display:block;
@@ -1568,15 +1585,6 @@ input.buttons {
     }
     .avatar-block {
         margin-top: -15px;
-    }
-    .site-head-new {
-        flex-wrap: wrap;
-        .title, .site-navi.new {
-            flex-basis: 100% !important;
-        }
-        .site-navi.new {
-            padding: 10px 0 30px !important;
-        }
     }
     .home-section.header {
         height: 15em;

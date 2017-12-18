@@ -28,18 +28,11 @@ Originally, this whole redesign was done to satisfy requirements for a professio
 
 ## Design
 
-* Getting older and wanting to reflect my utilitarian-skewing design style, I went for something more minimalistic in tone
-* Added accent color of blue to make it not completely black and white (but didn't want to have work conflict with an accent color)
+In my last redesign, I had expressed the desire to keep a portfolio design that would give visitors an accurate representation of my design style. This design attitude is something I kept going into this redesign while adding another element: increased professionalism and a more modern design. 
 
-**Minimalism** -
+**Typography** - Initially when starting this rebranding, I wanted to keep the handdrawn aesthetic that had existed since I first got a portfolio. Once I applied a minimalist aesthetic to the rest of the website, it didn't make sense to keep the handdrawn styled typography, so I decided to switch fonts. I avoided google fonts because I think many are starting to look overused, and I wanted something distinct to my brand. Having bought some font packs from DesignCuts, I decided to use fonts from those packs and built a grid of options.
 
-**Typography** - Initially when starting this rebranding, I wanted to keep the handdrawn aesthetic that had existed since I first got a portfolio. Once I applied a minimalist aesthetic to the rest of the website, it didn't make sense to keep the handdrawn styled typography, so I decided to switch fonts. I avoided google fonts because I think many are starting to look overused, and I wanted something distinct to my brand. Having bought some font packs from DesignCuts, I decided to use fonts from those packs and built a grid of options. 
-* shoutout to designcuts
-
-**Collateral** - Since the new design abandoned the handdrawn theme of my previous iterations of branding, I was able to match my stationary and business cards with my website more closely.
-
-* lended itself to professional resume more easily
-* prominent nyc architecture as common element (instead of a personal photo)
+**Collateral** - Since the new design abandoned the handdrawn theme of my previous iterations of branding, I was able to match my resume and business cards with my website more closely. I also used the image of the Fulton Center ceiling throughout all materials to have a common design thread (that was not a headshot or specific project photo).
 
 ## Refocusing Content
 

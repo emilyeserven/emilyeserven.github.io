@@ -5,12 +5,16 @@ layout: default-photo
 
   <header class="photo-header" style="background-image: url({{page.banner}})"></header>
 <div class="wrapper">
-  <p class="backlink">
-    <a href="/work"><small>Back to Portfolio</small></a>
-  </p>
-  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="col-12">
+    <p class="backlink">
+      <a href="/work"><small>Back to Portfolio</small></a>
+    </p>
+  </div>
+  <div class="col-12">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </div>
   <div class="post-content photofolio">
-    <div class="grid-photo photo-content photo-width-2 photo-height-1">
+    <div class="grid-photo photo-content col-6 photo-height-1">
         {{content}}
       </p>
       <p>
@@ -18,13 +22,15 @@ layout: default-photo
       </p>
     </div>
     {% for photo in page.photogrid %}
-      <div class="grid-photo photo-width-{{photo.width}} photo-height-{{photo.height}}" style="background-image:url({{photo.thumb}});">
-        <a data-featherlight="{{photo.full}}">
-          <h3>{{photo.name}}</h3>
-          <p>
-            <em>captured:<br />{{photo.capture}}</em>
-          </p>
-        </a>
+      <div class="grid-photo {{photo.width}} port-height-{{photo.height}}">
+        <div class="block-image" style="background-image: url({{photo.thumb}});">
+          <a data-featherlight="{{photo.full}}">
+            <h3>{{photo.name}}</h3>
+            <p>
+              <em>captured:<br />{{photo.capture}}</em>
+            </p>
+          </a>
+        </div>
       </div>
     {% endfor %}
   </div>

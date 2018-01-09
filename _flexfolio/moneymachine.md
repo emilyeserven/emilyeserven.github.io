@@ -14,7 +14,7 @@ projlink:
       url: https://github.com/emilyeserven/most-beautiful-website-ever
     - name: Blog Post
       url: /2017/10/05/money-machine.html
-flexwidth: 1
+flexwidth: col-3
 flexheight: 1
 flexorder: 3
 listview: false

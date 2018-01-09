@@ -14,7 +14,7 @@ projlink:
       url: https://github.com/emilyeserven/ref-docs
     - name: Blog Post
       url: /2016/07/29/refdocs.html
-flexwidth: 2
+flexwidth: col-6
 flexheight: 1
 flexorder: 1
 listview: false

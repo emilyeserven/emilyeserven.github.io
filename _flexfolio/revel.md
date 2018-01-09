@@ -10,7 +10,7 @@ category: Commercial
 projlink:
     - name: Revel Cellars
       url: http://www.revelcellars.com
-flexwidth: 1
+flexwidth: col-3
 flexheight: 2
 flexorder: 2
 listview: false

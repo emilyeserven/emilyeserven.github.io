@@ -4,24 +4,29 @@ layout: default-nowrap
 <article class="post">
   <div class="folio-banner" style="background-image: url({{page.banner}}); background-size: cover; background-position: 50%;"></div>
   <div class="wrapper">
-    <div class="post-content">
+    <div class="col-12">
       <p class="backlink">
         <a href="/work"><small>Back to Portfolio</small></a>
       </p>
+    </div>
+    <div class="col-12">
       <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    <div class="post-content">
       <div class="main-notes">
-        <div class="notes-left">
+        <div class="col-9">
           <p><strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
           <strong>Responsibilities</strong>: {{page.responsibilities}}<br />
         <strong>Type</strong>: {{page.category}}</p>
           <p>{{ content }}</p>
         </div>
-        <div class="notes-right">
-          {% if page.projlink.size > 1 %}
-            <p><strong>Project Links</strong>:
+        <div class="col-3 project-box">
+          <p>
+            {% if page.projlink.size > 1 %}
+            <strong>Project Links</strong>:
           {% endif %}
           {% if page.projlink.size == 1 %}
-            <p><strong>Project Link</strong>:
+            <strong>Project Link</strong>:
           {% endif %}
           {% for link in page.projlink %}
             <br /><a href="{{link.url}}">{{link.name}}</a>
@@ -30,10 +35,10 @@ layout: default-nowrap
         </div>
       </div>
       <div class="clearfix"></div>
-      <div class="folio-features">
+      <div class="folio-features col-12">
         {% for feature in page.features %}
           {% if feature.format == 'full' %}
-            <div class="feature-image full spacing-{{feature.spacing}}">
+            <div class="feature-image col-12 spacing-{{feature.spacing}}">
               <div class="image-holder">
                 <img src="{{feature.image}}" />
               </div>
@@ -41,17 +46,17 @@ layout: default-nowrap
             </div>
           {% endif %}
           {% if feature.format == 'half-left' %}
-            <div class="feature-image feature-half spacing-{{feature.spacing}}">
-              <div class="image-holder">
+            <div class="feature-image row spacing-{{feature.spacing}}">
+              <div class="image-holder col-md-6 col-12">
                 <img src="{{feature.image}}" />
               </div>
-              <div class="caption-holder">
+              <div class="caption-holder col-md-6 col-12">
                 {{feature.descrip}}
               </div>
             </div>
           {% endif %}
           {% if feature.format == 'half-right' %}
-            <div class="feature-image feature-half spacing-{{feature.spacing}}">
+            <div class="feature-image col-md-6 col-12 spacing-{{feature.spacing}}">
               <div class="caption-holder">
                 {{feature.descrip}}
               </div>

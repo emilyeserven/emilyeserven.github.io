@@ -1,15 +1,15 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper site-head-new">
-    <div class="title">
+    <div class="title col-md-7 col-12 align-self-start">
       <a class="site-title" href="{{ site.baseurl }}/">Emily <span>Serven</span></a><br />
       <p class="site-subtitle">Front-End Web Developer</p>
     </div>
-    <nav class="site-navi new">
+    <nav class="site-navi new col-md-5 col-12 justify-content-between align-self-center">
 
-      <div class="menu-holder">
+      <div class="menu-holder justify-content-between">
         <!-- SORTED MENU: https://stackoverflow.com/questions/9053066/sorted-navigation-menu-with-jekyll-and-liquid -->
-        {% assign all_pages = site.pages | sort:"weight" %}
+        {% assign all_pages = site.pages | sort:"order" %}
         {% for my_page in all_pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>

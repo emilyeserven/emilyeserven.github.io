@@ -10,7 +10,7 @@ category: Commercial
 projlink:
     - name: Feyer Music
       url: http://www.feyermusic.com
-flexwidth: 2
+flexwidth: col-6
 flexheight: 1
 flexorder: 1
 listview: false

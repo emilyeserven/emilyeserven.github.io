@@ -14,7 +14,7 @@ projlink:
       url : https://github.com/emilyeserven/nhvhackathon-itinerary/tree/frontend
     - name: Blog Post
       url: /2016/10/20/new-haven-hackathon-2016-pre.html
-flexwidth: 1
+flexwidth: col-3
 flexheight: 1
 flexorder: 3
 listview: false

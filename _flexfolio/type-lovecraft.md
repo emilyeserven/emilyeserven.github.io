@@ -14,7 +14,7 @@ projlink:
       url: https://github.com/emilyeserven/testwebsites/tree/master/typography
     - name: Blog Post
       url: /2016/03/09/typography-lovecraft.html
-flexwidth: 2
+flexwidth: col-6
 flexheight: 1
 flexorder: 3
 listview: false

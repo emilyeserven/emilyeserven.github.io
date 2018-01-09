@@ -2,17 +2,22 @@
 layout: default
 title: Work
 permalink: /work/
+order: 2
 ---
 
-  <div class="portfolio-holder new standalone">
+  <div class="portfolio-holder new standalone row">
     {% for project in site.flexfolio %}
       {% if project.listview == false %}
-        <div class="portfolio-square port-width-{{project.flexwidth}} port-height-{{project.flexheight}}" style="background-image: url({{project.project-img}}); order: {{project.flexorder}}">
-          <a href="{{project.url}}" class="portfolio-link">
-            <div class="link-content">
-              <h3>{{project.title}}</h3><p><span class="category-link">{{project.category}}</span></p>
-            </div>
-          </a>
+        <div class="portfolio-square {{project.flexwidth}} port-height-{{project.flexheight}}" style="order: {{project.flexorder}};">
+          <div class="block-image" style="background-image: url({{project.project-img}});">
+            <a href="{{project.url}}" class="portfolio-link">
+              <div class="link-content-holder">
+                <div class="link-content">
+                  <h3>{{project.title}}</h3><p><span class="category-link">{{project.category}}</span></p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       {% endif %}
     {% endfor %}

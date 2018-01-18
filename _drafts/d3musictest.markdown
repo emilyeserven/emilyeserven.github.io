@@ -23,14 +23,14 @@ buttons:
 
 Learning D3.js has been on my general list of things to do for quite a while now, but only recently have I made the push to actually start trying it out.
 
-The weekend I made
-
 Since one of the things I like to do when exploring unfamiliar territory is get exposed to existing code, the main goal of these experiments wasn't to make heavy edits from the original examples. Instead, I wanted to try and modify code that existed already 
 
-## Development
+* listening to classic rock lately and want to make something to help me get familiar with the artists
+* Been meaning to go and catalog my music
+* why not make it more dynamic?
 
+* piggybacked off of existing code
+* modified input data
+* relatively simple use of the tech, but i like to see complicated examples when i have some basic familiarity so i know what's possible
 
-
-## Improvements
-
-## In Conclusion...
+* improvements, ref to github list

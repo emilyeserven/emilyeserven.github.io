@@ -1,0 +1,12 @@
+<div class="work-block {{project.workall-size}}" style="order:{{project.workall-order}}">
+  <img src="../assets/flexfolio/{{project.code}}/all-banner.jpg" />
+  <p class="workall-info">
+    <b>{{project.title}}</b><br />
+    {% if project.casestudy == true %}
+      <a href="{{project.url}}" alt="Case Study"><i class="fa fa-archive"></i></a>&nbsp;&nbsp;
+    {% endif %}
+    {% for link in project.projlink %}
+      <a href="{{link.url}}" alt="{{link.name}}"><i class="fa {{link.icon}}"></i></a>&nbsp;&nbsp;
+    {% endfor %}
+  </p>
+</div>

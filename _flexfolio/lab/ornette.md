@@ -1,20 +1,19 @@
-
+---
 layout: flexfolio
-title: Key Rush
+title: Ornette
+code: ornette
 category: Lab
 casestudy: false
 projlink:
     - name: Github Repository
       icon: fa-github-square
-      url: http://#
-    - name: Box Project
+      url: https://github.com/emilyeserven/testwebsites/tree/master/ornette
+    - name: Ornette Page
       icon: fa-link
-      url: http://#
+      url: https://rawgit.com/emilyeserven/testwebsites/master/ornette/index.html
 showcaseview: false
 workall-view: true
 workall-order: 3
 workall-size: col-3
 project-img: ../assets/flexfolio/quote-lc/banner.jpg
-workall-img: ../placeholder.png
-banner: ../../assets/flexfolio/quote-lc/pgbanner.jpg
 ---

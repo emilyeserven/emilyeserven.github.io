@@ -7,7 +7,7 @@ order: 2
 
   <div class="portfolio-holder new standalone row">
     {% for project in site.flexfolio %}
-      {% if project.listview == false %}
+      {% if project.showcaseview == true %}
         <div class="portfolio-square {{project.flexwidth}} port-height-{{project.flexheight}}" style="order: {{project.flexorder}};">
           <div class="block-image" style="background-image: url({{project.project-img}});">
             <a href="{{project.url}}" class="portfolio-link">
@@ -22,62 +22,9 @@ order: 2
       {% endif %}
     {% endfor %}
     </div>
-
-    <div class="portfolio-list">
-      <h2 style="margin-bottom: 10px;">Everything</h2>
-      <div class="flex-wrapper">
-        <div class="list-column">
-          <h3 class="nomargin">Commercial</h3>
-          <p>
-            <i>Work for clients</i>
-          </p>
-          <ul>
-            {% for project in site.flexfolio %}
-                {% if project.category == "Commercial" %}
-                <li><a href="{{project.url}}">{{project.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="list-column">
-          <h3 class="nomargin">Projects</h3>
-          <p>
-            <i>Larger non-client work</i>
-          </p>
-          <ul>
-            {% for project in site.flexfolio %}
-                {% if project.category == "Project" %}
-                <li><a href="{{project.url}}">{{project.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="list-column">
-          <h3 class="nomargin">Lab</h3>
-          <p>
-            <i>Smaller experiments</i>
-          </p>
-          <ul>
-            {% for project in site.flexfolio %}
-                {% if project.category == "Lab" %}
-                <li><a href="{{project.url}}">{{project.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="list-column">
-          <h3 class="nomargin">Photography</h3>
-          <p>
-            <i>Captured moments</i>
-          </p>
-          <ul>
-            {% for project in site.flexfolio %}
-                {% if project.category == "Photography" %}
-                <li><a href="{{project.url}}">{{project.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
+    <div class="col-12">
+        <p class="portfolio-right-link">
+          <a href="/work-all" class="underline-link">All Work →</a>
+        </p>
     </div>
   </div>

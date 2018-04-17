@@ -2,37 +2,37 @@
 layout: default-photo
 ---
 <article class="post">
-
-  <header class="photo-header" style="background-image: url({{page.banner}})"></header>
-<div class="wrapper">
-  <div class="col-12">
-    <p class="backlink">
-      <a href="/work"><small>Back to Portfolio</small></a>
-    </p>
-  </div>
-  <div class="col-12">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </div>
-  <div class="post-content photofolio">
-    <div class="grid-photo photo-content col-6 photo-height-1">
-        {{content}}
-      </p>
-      <p>
-        <strong>Locations:</strong> {{page.location}}
+  <header class="photo-header" style="background-image: url({{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/pgbanner.jpg'}})"></header>
+  <div class="wrapper">
+    <div class="col-12">
+      <p class="backlink">
+        <a href="/work"><small>Back to Portfolio</small></a>
       </p>
     </div>
-    {% for photo in page.photogrid %}
-      <div class="grid-photo {{photo.width}} port-height-{{photo.height}}">
-        <div class="block-image" style="background-image: url({{photo.thumb}});">
-          <a data-featherlight="{{photo.full}}">
-            <h3>{{photo.name}}</h3>
-            <p>
-              <em>captured:<br />{{photo.capture}}</em>
-            </p>
-          </a>
-        </div>
+    <div class="col-12">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    <div class="post-content photofolio">
+      <div class="grid-photo photo-content col-6 photo-height-1">
+        <p>
+          {{page.description}}
+        </p>
+        <p>
+          <strong>Locations:</strong> {{page.location}}
+        </p>
       </div>
-    {% endfor %}
+      {% for photo in page.photogrid %}
+        <div class="grid-photo {{photo.width}} port-height-{{photo.height}}">
+          <div class="block-image" style="background-image: url({{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: photo.thumb }});">
+            <a data-featherlight="{{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: photo.full}}">
+              <h3>{{photo.name}}</h3>
+              <p>
+                <em>captured:<br />{{photo.capture}}</em>
+              </p>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
-</div>
 </article>

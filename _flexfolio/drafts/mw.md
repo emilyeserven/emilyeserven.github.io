@@ -6,10 +6,18 @@ code: mw
 time: June 2014 - Present
 tags: [Design]
 category: Commercial
+casestudy: false
 platform: WordPress
-proj-link: http://www.marywatheninteriors.com
-listview: true
+projlink:
+    - name: Mary Wathen
+      icon: fa-link
+      url: http://www.marywatheninteriors.com
+showcaseview: false
+workall-view: true
+workall-order: 3
+workall-size: col-3
 project-img: ../assets/images/placeholder.png
+workall-img: ../placeholder.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.
       feat-image: ../../assets/images/mw/aoi.png

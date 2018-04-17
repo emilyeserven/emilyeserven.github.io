@@ -1,0 +1,95 @@
+---
+layout: default
+title: All Work
+permalink: /work-all/
+order: 2
+exclude: true
+---
+<div class="col-12">
+    <div class="all-work-categories row">
+      Categories:
+      <ul>
+        <li><a href="#commercial">Commercial</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#photography">Photography</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <!--<li><a href="#">Media</a></li>-->
+      </ul>
+    </div>
+</div>
+<!--
+<p>
+  This page contains a directory of all recent or relevant work.
+</p> -->
+<br />
+<div class="all-work-category">
+  <h2 id="commercial">Commercial</h2>
+  <!--
+    <p>
+      Work with clients and agencies.
+    </p>
+  -->
+  <div class="all-work-holder row">
+    {% for project in site.flexfolio %}
+      {% if project.workall-view == true %}
+        {% if project.category == "Commercial" %}
+          {% include work-block.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="all-work-category">
+  <h2 id="projects">Projects</h2>
+  <!--
+    <p>
+      Work with clients and agencies.
+    </p>
+  -->
+  <div class="all-work-holder row">
+    {% for project in site.flexfolio %}
+      {% if project.workall-view == true %}
+        {% if project.category == "Project" %}
+          {% include work-block.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="all-work-category">
+  <h2 id="photography">Photography</h2>
+  <!--
+    <p>
+      Work with clients and agencies.
+    </p>
+  -->
+  <div class="all-work-holder row">
+    {% for project in site.flexfolio %}
+      {% if project.workall-view == true %}
+        {% if project.category == "Photography" %}
+          {% include work-block.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="all-work-category">
+  <h2 id="labs">Labs</h2>
+  <!--
+    <p>
+      Work with clients and agencies.
+    </p>
+  -->
+  <div class="all-work-holder row">
+    {% for project in site.flexfolio %}
+      {% if project.workall-view == true %}
+        {% if project.category == "Lab" %}
+          {% include work-block.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

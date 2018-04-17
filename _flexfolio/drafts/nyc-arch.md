@@ -44,5 +44,3 @@ photogrid:
     width: 1
     height: 2
 ---
-
-Something snappy about photography.

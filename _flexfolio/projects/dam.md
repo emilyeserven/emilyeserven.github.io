@@ -73,7 +73,7 @@ Routing involves assigning specific components to URL patterns. This can be stat
 1. Someone might want to link to a specific resource they want to keep track of
 2. Someone might want to navigate the app using their browser's native forward and back buttons
 
-Adding them in a way that was scalable was not difficult, although there are certainly ways that the current solution could be optimized.
+Adding them in a way that was scalable was not difficult, although there are certainly ways that the current solution could be optimized. For instance, the URL for individual assets will use a unique identifier to pull information relating to that specific asset. Right now, that unique identifier is the asset's array index in the JSON file that all the app data is held. Since array indices are only numbers, it doesn't allow for easily human-readable URLs to be used. I see this as a serious UX weak point, and would like URLs to be generated from a string that uses information in the asset name instead.
 
 ## Higher Complexity (Wishlist)
 

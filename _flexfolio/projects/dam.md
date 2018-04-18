@@ -1,13 +1,13 @@
 ---
-layout: flexfolio
+layout: flexfolio-nohead
 title: Digital Asset Manager (Concept)
-description: From Here to There is a trip planning tool and category-winning web app built during the 2016 New Haven Hackathon. It that allows users to easily plan and coordinate group activities (as long as the travel origin and destinations are train stations).
+description: 
 code: dam
 time: October 2016
-stack: [HTML, CSS, AngularJS, bower]
-responsibilities: Original Concept, Front-End Development, Design, Project Management
+stack: [HTML, CSS, ReactJS, React Router]
+responsibilities: Original Concept, Front-End Development
 category: Project
-casestudy: false
+casestudy: true
 projlink:
     - name: GitHub Repository
       icon: fa-github-square
@@ -24,19 +24,6 @@ workall-order: 2
 workall-size: col-6
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
-features:
-    - descrip: <strong>Hub Screen</strong><br />Gotta write this stuff still.
-      image: feat1.jpg
-      format: half-left
-      spacing: none
-    - descrip: <strong>All Assets, At A Glance</strong><br />Gotta write this stuff still.
-      image: feat2.jpg
-      format: half-left
-      spacing: default
-    - descrip: <strong>Key Info for All Individual Assets</strong><br />Gotta write this stuff still.
-      image: feat3.jpg
-      format: half-left
-      spacing: default
 
 ---
 

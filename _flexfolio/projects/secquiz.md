@@ -1,11 +1,11 @@
 ---
-layout: flexfolio
+layout: flexfolio-nohead
 title: React Security Quiz
-description: From Here to There is a trip planning tool and category-winning web app built during the 2016 New Haven Hackathon. It that allows users to easily plan and coordinate group activities (as long as the travel origin and destinations are train stations).
+description: 
 code: secquiz
 time: October 2016
-stack: [HTML, CSS, AngularJS, bower]
-responsibilities: Original Concept, Front-End Development, Design, Project Management
+stack: [HTML, CSS, ReactJS]
+responsibilities: Original Concept, Front-End Development, Design
 category: Project
 casestudy: true
 projlink:
@@ -24,15 +24,6 @@ workall-order: 2
 workall-size: col-6
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
-features:
-    - descrip: <strong>Question Screen</strong><br />The organizer answers three questions about the event they're planning. These answers generate a URL that can be passed to any participant.
-      image: feat1.jpg
-      format: half-left
-      spacing: none
-    - descrip: <strong>Results Screen</strong><br />Event participants get the link to a customized screen from the organizer. All they need to do is specify what train station they're coming from, and they'll get a short list of the best trains they can use to get to the event on time.
-      image: feat2.jpg
-      format: half-left
-      spacing: default
 
 ---
 
@@ -73,11 +64,11 @@ The focus of the project itself kept going through various iterations until it w
 
 The current app's interactivity mostly just extends to clicking buttons. Originally, the plan was to be more immersive and have the user experience th results of a data breach. However, this proved to be too difficult to achieve with the timeframe and manpower available. Writing an entire script and potentially even storyboard would have been required, and I simply don't have much experience in either of those departments. Additionally, I was using this project as an excuse to focus on developing my development skills, and an interactive experience with that scope would have forced time to be distributed away from development.
 
-### Target audience
+### Target Audience
 
 The current app is targeted towards someone who regularly uses technology, but doesn't make conscious choices about their usage. Target audience shapes much of how the app is crafted. From size of targets to click, to how questions are worded, even reaching into development with the proportion of time spent on accomodating assistive technology. The original plan was to exclusively target populations of people who were older and only started using technology later in life. However, due to my desire for slightly more complex questions and feelings that a more tech savvy audience would create a larger impact, I opted to shift that focus.
 
-### Quiz style and question types
+### Quiz Style and Question Types
 
 The current app uses a linear 10 question quiz with multiple choice questions. Other considerations have included...
 

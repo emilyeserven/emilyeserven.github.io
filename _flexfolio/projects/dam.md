@@ -29,7 +29,7 @@ workall-img: ../placeholder.png
 
 ## Original Concept
 
-I originally thought of creating a digital asset manager (DAM) when running into my own organizational problems. The asset licenses I have were starting to grow in quantity, and it was easy to forget what I had and where it was stored. When looking for a more professional solution to organize my assets, I kept running into services that were at a scale I simply didn't need...
+I originally thought of creating a digital asset manager (DAM) when running into my own organizational problems. The asset licenses I acquired were starting to grow in quantity, and it was easy to forget what I had and where it was stored. When looking for a more professional solution to organize my assets, I kept running into services that were at a scale I simply didn't need...
 
 1. Most DAM's are designed for corporate or team use.
 2. Most DAM's are designed so that your files are hosted on their servers.
@@ -37,9 +37,10 @@ I originally thought of creating a digital asset manager (DAM) when running into
 
 I have something of a prototype[^proto] created by extending a WordPress installation with the Toolset suite of plugins, but I wanted to make a version that could be more general use than "dev ware". After keeping the idea in my back pocket for a long time, the opportunity to execute it finally came up in the form of 2 other students with compatible skill sets and the need for additional credits to secure graduation.
 
+
 ## Responsibilities
 
-This project had three people involved, including me. The other students ([Jon](https://www.instagram.com/jonathantaylr/) and [Stephen](http://stephenrozo.com/)) worked on user experience research and design, and I was involved in the development of the application.
+This project had three people involved, including myself. The other students ([Jon](https://www.instagram.com/jonathantaylr/) and [Stephen](http://stephenrozo.com/)) worked on user experience research and design, and I was involved in the development of the application itself.
 
 ## Process
 
@@ -59,7 +60,7 @@ Choosing a programming language to use for a project isn't always straightforwar
 2. The structure of the app lent itself to React's usage of components.
 3. Due to the popularity of React, there's been a surge of resources dedicated to learning it.
 
-For those who aren't aware of how React works, I'd also like to talk more specifically about the concept of components. At a high level, you can just think of components as sections of code. They are supposed to be self contained, and may also be reusable, saving the developer time and possible frustrations relating to not adhering to Don't Repeat Yourself[^dry] best practices. Components are so important to how React works, that the "Component-Based" nature of it is prominently advertised on the framework's homepage[^react].
+For those who aren't aware of how React works, I'd like to talk more specifically about the concept of components. At a high level, you can just think of components as sections of code. They are supposed to be self contained, and may also be reusable, saving the developer time and possible frustrations relating to not adhering to Don't Repeat Yourself[^dry] best practices. Components are so important to how React works, that the "Component-Based" nature of it is prominently advertised on the framework's homepage[^react].
 
 ### Routing
 
@@ -99,7 +100,7 @@ Automating experiences is something I like to do if possible, as it reduces user
 
 Working in a team was a great experience, and I ended up learning a lot from going through this development cycle. Being able to focus on the development allowed me to experiment more and take better care crafting the code. I also had time to work on development for another project that was to debut at the same time, which was completely different but relied on React as well. Doing both projects at once helped reinforce concepts needed for each, and provided breaths of fresh air from one project if I had spent too much time on it.
 
-I definitely want to keep on developing this project and using it as a base. Hopefully, it will eventually be solid enough to be a worthy contribution to the communities that would value it most.
+I definitely want to keep on developing this project and using it as a base. In time, it will be solid enough to be a worthy contribution to the communities that would value it most.
 
 ## Additional Links
 

@@ -29,7 +29,7 @@ workall-img: ../placeholder.png
 
 ## Background Information
 
-Technology has found itself in every aspect of life. Everything from work to play to family, and beyond has been affected both positively and negatively. But despite this integration, it's surprising how many people have no idea what is running underneath the surface to make these technologies work[^skilldistro]. The general public needs to learn about the technologies we use, how they will affect people in the long run, and how to develop habits that secure more privacy in the long run.
+We have found technology embedded in every facet of our lives.. Everything from work to play to family and beyond has been affected both positively and negatively by technology's influence. But despite this massive and personal integration, it's surprising how many people have no idea what is running underneath the surface to make these technologies function[^skilldistro]. The general public needs to learn about the technologies we use, how they will affect people in the long run, and how to develop habits that secure more privacy in our futures.
 
 One of the largest problems I find to be present when explaining the importance of safeguarding your personal data is a large sense of apathy. After all, billions of people use the internet. So why should someone care if the chances of being personally examined are low?
 
@@ -62,13 +62,13 @@ The focus of the project itself kept going through various iterations until it w
 
 ### Interactivity
 
-The current app's interactivity mostly just extends to clicking buttons. Originally, the plan was to be more immersive and have the user experience th results of a data breach. However, this proved to be too difficult to achieve with the timeframe and manpower available. Writing an entire script and potentially even storyboard would have been required, and I simply don't have much experience in either of those departments. Additionally, I was using this project as an excuse to focus on developing my development skills, and an interactive experience with that scope would have forced time to be distributed away from development.
+The current app's interactivity mostly just extends to clicking buttons. Originally, the plan was to be more immersive and have the user experience results of a data breach. However, this proved to be too difficult to achieve with the timeframe and manpower available. Writing an entire script and potentially even storyboard would have been required, and I simply don't have much experience in either of those departments. Additionally, I was using this project as an excuse to focus on developing my development skills, and an interactive experience with that scope would have forced time to be distributed away from development.
 
-### Target Audience
+### Target audience
 
-The current app is targeted towards someone who regularly uses technology, but doesn't make conscious choices about their usage. Target audience shapes much of how the app is crafted. From size of targets to click, to how questions are worded, even reaching into development with the proportion of time spent on accomodating assistive technology. The original plan was to exclusively target populations of people who were older and only started using technology later in life. However, due to my desire for slightly more complex questions and feelings that a more tech savvy audience would create a larger impact, I opted to shift that focus.
+The current app is targeted towards someone who regularly uses technology, but doesn't make conscious choices about their usage. Target audience shapes much of how the app is crafted. From size of targets to click, to how questions are worded, even reaching into development with the proportion of time spent on accommodating assistive technology. The original plan was to exclusively target populations of people who were older and only started using technology later in life. However, due to my desire for slightly more complex questions and feelings that a more tech savvy audience would create a larger impact, I opted to shift that focus.
 
-### Quiz Style and Question Types
+### Quiz style and question types
 
 The current app uses a linear 10 question quiz with multiple choice questions. Other considerations have included...
 
@@ -96,7 +96,7 @@ The app has been structured to be scalable when adding additional questions, and
 
 ## Going Further
 
-Something as simple as a quiz can have many ways to expand upon, and I am certainly looking to use this project as a base to improve my React skills. Some ways to improve this app specifically include...
+Something as simple as a quiz functionally expanded upon in many ways, and I am certainly looking to use this project as a base to improve my React skills. Some ways to improve this app specifically include...
 
 * *"In-depth" Option*, allowing the user to pick between a simple questionnaire and a more comprehensive questionnaire will allow the app to serve both casual and more advanced users.
 * *More UX Animations*, giving the user a deeper experience and more visual cues for using the interface. Also, they're built into the visual theme provider.
@@ -104,8 +104,4 @@ Something as simple as a quiz can have many ways to expand upon, and I am certai
 
 ## Conclusion
 
-I'm very proud of how this turned out as a solo project. While writing this case study, I realized how my experience with development and design complement each other and how many design choices I made along the way. Working on this project also allowed me to get back into my learning method in which I jump into something that's beyond my comfort zone, and then working to become more proficient. I'm not 100% there yet, but I intend to keep iterating on this project to reach that goal.
-
-## Footnotes
-
-[^skilldistro]: [Nielsen Norman Group: The Distribution of Users’ Computer Skills: Worse Than You Think](https://www.nngroup.com/articles/computer-skill-levels/)
+I'm very proud of how this turned out as a solo project. While writing this case study, I realized how my experience with development and design complement each other and how many design choices I made along the way. Working on this project also allowed me to get back into my learning method in which I jump into something that's beyond my comfort zone, and then work to become more proficient. I'm not 100% there yet, but I intend to keep iterating on this project to reach that goal.

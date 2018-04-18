@@ -42,13 +42,13 @@ features:
 
 ## Responsibilities
 
-This project had three people involved, including me. The other students ([Jon](https://www.instagram.com/jonathantaylr/) and [Stephen](http://stephenrozo.com/)) worked on user experience research and design, and I only was involved in the development of the application.
+This project had three people involved, including me. The other students ([Jon](https://www.instagram.com/jonathantaylr/) and [Stephen](http://stephenrozo.com/)) worked on user experience research and design, and I was involved in the development of the application.
 
 ## Process
 
-My part of the project once I received a wireframe from Stephen. The original plan was to just adapt that to a static HTML & CSS prototype, but I ended up doing a basic ReactJS app. This prototype used React concepts such as state[^state], components and props[^props], and even integrating another package (`react-popup`).
+My part of the project began once I received the wireframe from Stephen. The original plan was to adapt that to a static HTML & CSS prototype, but I ended up doing a basic ReactJS app. This prototype used React concepts such as state[^state], components and props[^props], and even integrating another package called `react-popup`.
 
-The next phase was adding the real design. This included aesthetic updates like icons (using `react-icons`) and colors, but also more structural updates. I took the time to introduce routing through React Router and added slots where content from a temporary `json` file could be inserted according to those React Router routes. (More details lower in this case study.)
+The next phase was adding the full design. This included aesthetic updates like icons (using `react-icons`) and colors, but also more structural updates. I took the time to introduce routing through React Router and added slots where content from a temporary `json` file could be inserted according to those React Router routes. (More details lower in this case study.)
 
 While I have not yet had time to add database integration (using a MERN stack), the application is in a good place where it would not take too much time to integrate.
 
@@ -56,8 +56,13 @@ While I have not yet had time to add database integration (using a MERN stack), 
 
 ### React
 
-* wanted to learn it
-* the "directory"nature lends itself to components
+Choosing a programming language to use for a project isn't always straightforward, and the decision relating to a specific framework can be difficult to downright frustrating. My recommendation and implementation of React was caused by three main factors.
+
+1. I had some experience working with it for another project and wanted to keep working with it in another use case.
+2. The structure of the app lent itself to React's usage of components.
+3. Due to the popularity of React, there's been a surge of resources dedicated to learning it.
+
+For those who aren't aware of how React works, I'd also like to talk more specifically about the concept of components. At a high level, you can just think of components as sections of code. They are supposed to be self contained, and may also be reusable, saving the developer time and possible frustrations relating to not adhering to Don't Repeat Yourself[^dry] best practices. Components are so important to how React works, that the "Component-Based" nature of it is prominently advertised on the framework's [homepage](https://reactjs.org/).
 
 ### Routing
 
@@ -76,8 +81,9 @@ Adding them in a way that was scalable was not difficult, although there are cer
 
 ### Self-Install Version
 
-## Footer
+## Additional Links
 
 [^state]: [ReactJS Official Documentation: State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 [^props]: [ReactJS Official Documentation: Components and Props](https://reactjs.org/docs/components-and-props.html)
 [^spa]: [Kirupa: React Introduction](https://www.kirupa.com/react/introducing_react.htm)
+[^dry]: [O'Reilly: Don't Repeat Yourself](http://programmer.97things.oreilly.com/wiki/index.php/Don't_Repeat_Yourself)

@@ -35,3 +35,55 @@ features:
       spacing: default
 
 ---
+
+## Original Concept
+
+### Technology & Our Society
+
+* Technology has found itself in every aspect of life
+* Work, play, family, everything has been affected both positively and negatively
+* at this point, things won't stop progressing
+* I believe we need to take actioable steps to protect ourselves and think critically of how we operate in this digital culture
+
+### Why Should You Care?
+
+* Being one in a crowd of billions is abstract
+* "Why would someone care about me out of everyone else?"
+* They don't, they can automate all that
+* You can get incited to do something, echo chambers can be created, you can be incentivized to buy things, etc.
+
+### Awareness is Powerful
+
+* knowing is half the battle
+* it's hard to get convinced when you know someone is trying
+* give yourself the tools to choose
+
+## Scope and Focus
+
+* one person project
+* unfamiliarity with the framework
+
+### The Value of Actionable Steps
+
+* small things that can create huge change
+
+## Visual Theme
+
+* cyberpunk theme is perfect for this
+* thinking critically about digital culture
+
+## UX Choices
+
+* only 10 questions, keep accessible
+
+## Development Choices
+
+* no database, no routing
+
+## How to go further?
+
+* Conditional questions
+* "In-depth" option
+* More animations
+* More robust Results
+* Connections tied to results

@@ -35,3 +35,49 @@ features:
       spacing: default
 
 ---
+
+## Original Concept
+
+*
+
+## Responsibilities
+
+This project had three people involved, including me. The other students ([Jon](https://www.instagram.com/jonathantaylr/) and [Stephen](http://stephenrozo.com/)) worked on user experience research and design, and I only was involved in the development of the application.
+
+## Process
+
+My part of the project once I received a wireframe from Stephen. The original plan was to just adapt that to a static HTML & CSS prototype, but I ended up doing a basic ReactJS app. This prototype used React concepts such as state[^state], components and props[^props], and even integrating another package (`react-popup`).
+
+The next phase was adding the real design. This included aesthetic updates like icons (using `react-icons`) and colors, but also more structural updates. I took the time to introduce routing through React Router and added slots where content from a temporary `json` file could be inserted according to those React Router routes. (More details lower in this case study.)
+
+While I have not yet had time to add database integration (using a MERN stack), the application is in a good place where it would not take too much time to integrate.
+
+## Technical Choices
+
+### React
+
+* wanted to learn it
+* the "directory"nature lends itself to components
+
+### Routing
+
+React is commonly used to create "single page web apps"[^spa], meaning that it loads common assets needed for what would be individual pages (and separate loads) all at once. Imitating a traditional website with React is relatively simple (all you need to do is swap components out), but a bigger way to blur the lines is by introducing routing.
+
+Routing involves assigning specific components to URL patterns. This can be statically (in the case of the Hub and Tree screens) or dynamically (in the case of the individual asset pages). Combining these methods creates an experience that is both performant and familiar to users, but routing as a technical feature is not always necessary. There were a few reasons I chose to add routing to this project.
+
+1. Someone might want to link to a specific resource they want to keep track of
+2. Someone might want to navigate the app using their browser's native forward and back buttons
+
+Adding them in a way that was scalable was not difficult, although there are certainly ways that the current solution could be optimized.
+
+## Higher Complexity (Wishlist)
+
+### MERN Stack
+
+### Self-Install Version
+
+## Footer
+
+[^state]: [ReactJS Official Documentation: State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+[^props]: [ReactJS Official Documentation: Components and Props](https://reactjs.org/docs/components-and-props.html)
+[^spa]: [Kirupa: React Introduction](https://www.kirupa.com/react/introducing_react.htm)

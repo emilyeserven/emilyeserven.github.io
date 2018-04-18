@@ -42,7 +42,7 @@ features:
 
 ## Original Concept
 
-I originally thought of creating a digital asset manager (DAM) when running into my own organizational problems. The asset license I have were starting to grow in quantity, and it was easy to forget what I had and where it was stored. When looking for a more professional solution to organize my assets, I kept running into services that were at a scale I simply didn't need...
+I originally thought of creating a digital asset manager (DAM) when running into my own organizational problems. The asset licenses I have were starting to grow in quantity, and it was easy to forget what I had and where it was stored. When looking for a more professional solution to organize my assets, I kept running into services that were at a scale I simply didn't need...
 
 1. Most DAM's are designed for corporate or team use.
 2. Most DAM's are designed so that your files are hosted on their servers.

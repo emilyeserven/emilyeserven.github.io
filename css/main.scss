@@ -696,6 +696,12 @@ h2.section-heading {
 
 // 3.13 -- Info Block
 
+.home-section.announce {
+    background-color: $brand-color;
+    padding: 10px 0;
+    color: #fff;
+}
+
 .home-section.info {
   .headshot {
     width:150px;

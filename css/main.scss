@@ -563,38 +563,36 @@ h2.section-heading {
     padding: 2em;
 }
 
-.contact-ribbon, .announce {
-    p a.underline-link {
-      color: #fff;
-      border-bottom: #fff 2px solid;
-      margin-bottom: -2px;
-      line-height: .95em;
-      text-shadow:
-        2px 2px #2a7ae2,
-        2px -2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        2px 2px #2a7ae2,
-        2px -2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        -2px -2px #2A7AE2,
-        0 2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        0px 3px #2a7ae2,
-        1px 3px #2a7ae2,
-        -1px 3px #2a7ae2,
-        2px 3px #2a7ae2,
-        -2px 3px #2a7ae2;
-      transition: text-shadow ease 0.15s, background-color ease 0.15s;
-      &:hover {
-        border-bottom: $brand-color-sec 2px solid;
-        color: #fff;
-        text-decoration: none;
-        background-color: $brand-color-sec;
-        text-shadow: none;
-        transition: text-shadow ease 0.15s, background-color ease 0.15s;
-      }
-    }
+.contact-ribbon p a.underline-link, .announce p a.underline-link {
+  color: #fff;
+  border-bottom: #fff 2px solid;
+  margin-bottom: -2px;
+  line-height: .95em;
+  text-shadow:
+    2px 2px #2a7ae2,
+    2px -2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    2px 2px #2a7ae2,
+    2px -2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    -2px -2px #2A7AE2,
+    0 2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    0px 3px #2a7ae2,
+    1px 3px #2a7ae2,
+    -1px 3px #2a7ae2,
+    2px 3px #2a7ae2,
+    -2px 3px #2a7ae2;
+  transition: text-shadow ease 0.15s, background-color ease 0.15s;
+  &:hover {
+    border-bottom: $brand-color-sec 2px solid;
+    color: #fff;
+    text-decoration: none;
+    background-color: $brand-color-sec;
+    text-shadow: none;
+    transition: text-shadow ease 0.15s, background-color ease 0.15s;
+  }
 }
 // 3.11 -- Slider
 .slider-holder {

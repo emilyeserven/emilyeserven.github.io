@@ -561,6 +561,9 @@ h2.section-heading {
     font-family: $secondary-font;
     font-size: 1.25em;
     padding: 2em;
+}
+
+.contact-ribbon, .announce {
     p a.underline-link {
       color: #fff;
       border-bottom: #fff 2px solid;
@@ -593,7 +596,6 @@ h2.section-heading {
       }
     }
 }
-
 // 3.11 -- Slider
 .slider-holder {
     @include blkstruc(32%);

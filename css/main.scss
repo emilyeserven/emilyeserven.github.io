@@ -573,7 +573,6 @@ h2.section-heading {
     2px -2px #2a7ae2,
     -2px 2px #2a7ae2,
     -2px 2px #2a7ae2,
-    2px 2px #2a7ae2,
     2px -2px #2a7ae2,
     -2px 2px #2a7ae2,
     -2px -2px #2A7AE2,
@@ -651,7 +650,7 @@ h2.section-heading {
     }
   }
   .row {
-      padding: 0 0 0 20px;
+      padding: 0 20px 0 20px;
   }
 }
 .header-button {
@@ -1611,7 +1610,7 @@ pre.lineno {
         }
         */
         .site-navi.new {
-            padding: 10px 0 30px !important;
+            padding: 10px 0 0 !important;
         }
     }
 
@@ -1921,5 +1920,16 @@ input.buttons {
             display:block;
             vertical-align:top;
         }
+    }
+}
+@include media-query(320px) {
+    
+    .home-section.header {
+        height: 18em;
+        /*
+        .header-box {
+            width:100%;
+        }
+        */
     }
 }

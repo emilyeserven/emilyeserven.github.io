@@ -561,39 +561,38 @@ h2.section-heading {
     font-family: $secondary-font;
     font-size: 1.25em;
     padding: 2em;
-    p a.underline-link {
-      color: #fff;
-      border-bottom: #fff 2px solid;
-      margin-bottom: -2px;
-      line-height: .95em;
-      text-shadow:
-        2px 2px #2a7ae2,
-        2px -2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        2px 2px #2a7ae2,
-        2px -2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        -2px -2px #2A7AE2,
-        0 2px #2a7ae2,
-        -2px 2px #2a7ae2,
-        0px 3px #2a7ae2,
-        1px 3px #2a7ae2,
-        -1px 3px #2a7ae2,
-        2px 3px #2a7ae2,
-        -2px 3px #2a7ae2;
-      transition: text-shadow ease 0.15s, background-color ease 0.15s;
-      &:hover {
-        border-bottom: $brand-color-sec 2px solid;
-        color: #fff;
-        text-decoration: none;
-        background-color: $brand-color-sec;
-        text-shadow: none;
-        transition: text-shadow ease 0.15s, background-color ease 0.15s;
-      }
-    }
 }
 
+.contact-ribbon p a.underline-link, .announce p a.underline-link {
+  color: #fff;
+  border-bottom: #fff 2px solid;
+  margin-bottom: -2px;
+  line-height: .95em;
+  text-shadow:
+    2px 2px #2a7ae2,
+    2px -2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    2px -2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    -2px -2px #2A7AE2,
+    0 2px #2a7ae2,
+    -2px 2px #2a7ae2,
+    0px 3px #2a7ae2,
+    1px 3px #2a7ae2,
+    -1px 3px #2a7ae2,
+    2px 3px #2a7ae2,
+    -2px 3px #2a7ae2;
+  transition: text-shadow ease 0.15s, background-color ease 0.15s;
+  &:hover {
+    border-bottom: $brand-color-sec 2px solid;
+    color: #fff;
+    text-decoration: none;
+    background-color: $brand-color-sec;
+    text-shadow: none;
+    transition: text-shadow ease 0.15s, background-color ease 0.15s;
+  }
+}
 // 3.11 -- Slider
 .slider-holder {
     @include blkstruc(32%);
@@ -651,7 +650,7 @@ h2.section-heading {
     }
   }
   .row {
-      padding: 0 0 0 20px;
+      padding: 0 20px 0 20px;
   }
 }
 .header-button {
@@ -695,6 +694,12 @@ h2.section-heading {
 }
 
 // 3.13 -- Info Block
+
+.home-section.announce {
+    background-color: $brand-color;
+    padding: 10px 0;
+    color: #fff;
+}
 
 .home-section.info {
   .headshot {
@@ -1605,7 +1610,7 @@ pre.lineno {
         }
         */
         .site-navi.new {
-            padding: 10px 0 30px !important;
+            padding: 10px 0 0 !important;
         }
     }
 
@@ -1915,5 +1920,16 @@ input.buttons {
             display:block;
             vertical-align:top;
         }
+    }
+}
+@include media-query(320px) {
+    
+    .home-section.header {
+        height: 18em;
+        /*
+        .header-box {
+            width:100%;
+        }
+        */
     }
 }

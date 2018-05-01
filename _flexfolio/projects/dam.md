@@ -1,5 +1,5 @@
 ---
-layout: flexfolio-nohead
+layout: flexfolio
 title: Digital Asset Manager (Concept)
 description: 
 code: dam
@@ -24,6 +24,19 @@ workall-order: 2
 workall-size: col-6
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
+features:
+    - descrip: <strong>All Assets in One Place</strong><br />The overall directory screen  is linked to the JSON file containing asset information. This information dynamically populates the areas in the React component (template).
+      image: tree.jpg
+      format: half-left
+      spacing: none
+    - descrip: <strong>Detailed Asset Information</strong><br />Each asset is linked to the JSON file and pulls the asset's information into fields on the sidebar. This allows for consistent design and less confusion.
+      image: info.jpg
+      format: half-left
+      spacing: default
+    - descrip: <strong>Quick Additions Allowed</strong><br />A 1-step process has been conceptualized to quickly add new assets to the user's personal catalog.
+      image: uploads.jpg
+      format: half-left
+      spacing: default
 
 ---
 

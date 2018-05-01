@@ -1,7 +1,7 @@
 ---
-layout: flexfolio-nohead
+layout: flexfolio
 title: React Security Quiz
-description: 
+description: A quiz whose goal is to make users think about digital security habits introspectively, then give them information to change weak habits.
 code: secquiz
 time: October 2016
 stack: [HTML, CSS, ReactJS]
@@ -24,6 +24,19 @@ workall-order: 2
 workall-size: col-6
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
+features:
+    - descrip: <strong>Introspective Questions</strong><br />The quiz contains questions that ask users about their online habits. This forces more introspection, instead of just telling them if they do or don't know something. Questions are scored according to how much of a security risk they are introducing into their lives.
+      image: question.jpg
+      format: half-left
+      spacing: none
+    - descrip: <strong>Breakdown of Results</strong><br />Results are broken down into categories so that users can see what areas they need to improve the most. A larger number means the user has higher security risks that are introduced through their digital habits.
+      image: results.jpg
+      format: half-left
+      spacing: default
+    - descrip: <strong>Actionable Lessons</strong><br />Lessons for each category break up subjects into quick bite-sized lessons. Each lesson contains links to other websites where users can take action and improve their digital habits.
+      image: lessoncontent.jpg
+      format: half-left
+      spacing: default
 
 ---
 
@@ -105,3 +118,5 @@ Something as simple as a quiz functionally expanded upon in many ways, and I am 
 ## Conclusion
 
 I'm very proud of how this turned out as a solo project. While writing this case study, I realized how my experience with development and design complement each other and how many design choices I made along the way. Working on this project also allowed me to get back into my learning method in which I jump into something that's beyond my comfort zone, and then work to become more proficient. I'm not 100% there yet, but I intend to keep iterating on this project to reach that goal.
+
+[^skilldistro]: [The Distribution of Users’ Computer Skills: Worse Than You Think](https://www.nngroup.com/articles/computer-skill-levels/), Nielsen Norman Group

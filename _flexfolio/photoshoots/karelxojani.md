@@ -1,11 +1,11 @@
 ---
 layout: photofolio
 title: Karel and XoJani
-description: New Yorkers using the city as their canvas.
+description: Billboard Dance chart-topping EDM duo.
 code: karelxojani
-orig-post: 09.30.2017
-last-update: 11.04.2017
-location: Chelsea, Lower East Side
+orig-post: 10.14.2017
+last-update: 08.25.2018
+location: Lower East Side, Industry City
 category: Photography
 casestudy: true
 flexwidth: col-6
@@ -14,7 +14,7 @@ flexorder: 4
 showcaseview: false
 workall-view: true
 workall-order: 1
-workall-size: col-3
+workall-size: col-6
 project-img: ../assets/flexfolio/karelxojani/allbanner.jpg
 workall-img: ../placeholder.png
 photogrid:

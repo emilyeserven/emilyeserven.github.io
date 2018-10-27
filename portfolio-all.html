@@ -11,6 +11,7 @@ exclude: true
       <ul>
         <li><a href="#commercial">Commercial</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#photoshoots">Photoshoots</a></li>
         <li><a href="#photography">Photography</a></li>
         <li><a href="#lab">Lab</a></li>
         <!--<li><a href="#">Media</a></li>-->
@@ -69,6 +70,24 @@ exclude: true
     {% for project in site.flexfolio %}
       {% if project.workall-view == true %}
         {% if project.category == "Photography" %}
+          {% include work-block.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div class="all-work-category">
+  <h2 id="photography">Photoshoots</h2>
+  <!--
+    <p>
+      Work with clients and agencies.
+    </p>
+  -->
+  <div class="all-work-holder row">
+    {% for project in site.flexfolio %}
+      {% if project.workall-view == true %}
+        {% if project.category == "Photoshoots" %}
           {% include work-block.html %}
         {% endif %}
       {% endif %}

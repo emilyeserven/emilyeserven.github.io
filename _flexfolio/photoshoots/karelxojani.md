@@ -10,7 +10,7 @@ category: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2
-flexorder: 4
+flexorder: 2
 showcaseview: false
 workall-view: true
 workall-order: 1

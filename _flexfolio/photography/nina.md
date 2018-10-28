@@ -1,7 +1,7 @@
 ---
 layout: photofolio
 title: Nina
-description: Cosplay photos at AnimeNYC.
+description: Greater NYC area-based cosplayer.
 code: nina
 orig-post: 11.18.2017
 last-update: 11.18.2017

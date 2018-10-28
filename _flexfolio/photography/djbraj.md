@@ -1,7 +1,7 @@
 ---
 layout: photofolio
 title: DJ Braj
-description: Billboard Dance chart-topping EDM duo.
+description: Twitch Streamer, DJ, and Dance Music Producer.
 code: djbraj
 orig-post: 08.12.2018
 last-update: 08.12.2018

@@ -13,7 +13,7 @@ flexheight: 2
 flexorder: 2
 showcaseview: true
 workall-view: true
-workall-order: 1
+workall-order: 3
 workall-size: col-3
 project-img: ../assets/flexfolio/nyc-bw-people/banner.jpg
 workall-img: ../placeholder.png

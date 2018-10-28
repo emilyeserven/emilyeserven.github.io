@@ -13,8 +13,8 @@ flexheight: 2
 flexorder: 4
 showcaseview: true
 workall-view: true
-workall-order: 1
-workall-size: col-6
+workall-order: 4
+workall-size: col-3
 project-img: ../assets/flexfolio/cityscapes/banner.jpg
 workall-img: ../placeholder.png
 photogrid:

@@ -14,7 +14,7 @@ flexorder: 2
 showcaseview: false
 workall-view: true
 workall-order: 1
-workall-size: col-6
+workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/karelxojani/allbanner.jpg
 workall-img: ../placeholder.png
 photogrid:

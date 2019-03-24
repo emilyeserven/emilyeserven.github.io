@@ -18,5 +18,5 @@ flexorder: 3
 showcaseview: false
 workall-view: true
 workall-order: 4
-workall-size: col-3
+workall-size: col-sm-3 col-6
 ---

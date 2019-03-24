@@ -1834,14 +1834,36 @@ input.buttons {
         }
     }
 
+    /*
+    .all-work-holder .work-block {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    */
+    .photofolio {
+        .grid-photo {
+            max-width: 100%;
+            flex: 0 0 100%;
+            &.port-height-1 {
+                height: 12.5em;
+            }
+        }
+    }
+
     .portfolio-holder {
         margin-left: 0;
         &.standalone .portfolio-img {
             height:8.5em !important;
         }
+        .portfolio-square {
+            max-width: 100%;
+            flex: 0 0 100%;
+            &.port-height-1 {
+                height: 12.5em;
+            }
+        }
     }
     .portfolio-block {
-        width: 100%;
         .portfolio-title {
             font-size:1.5em;
         }

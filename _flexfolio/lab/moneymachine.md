@@ -21,7 +21,7 @@ flexorder: 3
 showcaseview: false
 workall-view: true
 workall-order: 1
-workall-size: col-6
+workall-size: col-sm-6 col-12
 project-img: ../assets/flexfolio/moneymach/banner.jpg
 workall-img: ../placeholder.png
 features:

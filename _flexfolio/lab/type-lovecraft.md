@@ -21,7 +21,7 @@ flexorder: 3
 showcaseview: false
 workall-view: true
 workall-order: 2
-workall-size: col-3
+workall-size: col-sm-3 col-6
 project-img: ../assets/flexfolio/quote-lc/banner.jpg
 workall-img: ../placeholder.png
 ---

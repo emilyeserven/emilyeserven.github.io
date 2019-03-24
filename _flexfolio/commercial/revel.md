@@ -18,7 +18,7 @@ flexorder: 2
 showcaseview: true
 workall-view: true
 workall-order: 1
-workall-size: col-6
+workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/rc/banner.jpg
 workall-img: ../assets/flexfolio/rc/all-banner.jpg
 features:

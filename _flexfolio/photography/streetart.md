@@ -14,7 +14,7 @@ flexorder: 4
 showcaseview: true
 workall-view: true
 workall-order: 2
-workall-size: col-6
+workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/streetart/banner.jpg
 workall-img: ../placeholder.png
 photogrid:

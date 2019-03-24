@@ -14,7 +14,7 @@ flexorder: 2
 showcaseview: false
 workall-view: true
 workall-order: 5
-workall-size: col-3
+workall-size: col-sm-3 col-6
 project-img: ../assets/flexfolio/nina/allbanner.jpg
 workall-img: ../placeholder.png
 photogrid:

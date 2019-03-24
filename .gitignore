@@ -1,3 +1,13 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+assets/\.DS_Store
+
+assets/flexfolio/\.DS_Store
+
+assets/flexfolio/djbraj/\.DS_Store
+
+assets/flexfolio/karelxojani/\.DS_Store
+
+\.DS_Store

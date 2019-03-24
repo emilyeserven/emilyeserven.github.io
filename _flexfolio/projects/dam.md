@@ -21,7 +21,7 @@ flexorder: 3
 showcaseview: false
 workall-view: true
 workall-order: 2
-workall-size: col-6
+workall-size: col-sm-6 col-12
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
 features:

@@ -15,15 +15,15 @@ projlink:
     - name: Web App
       icon: fa-link
       url: https://rawgit.com/emilyeserven/react-quiz/master/public/index.html
-flexwidth: col-3
+flexwidth: col-6
 flexheight: 1
-flexorder: 3
-showcaseview: false
+flexorder: 1
+showcaseview: true
 workall-view: true
 workall-order: 2
 workall-size: col-sm-6 col-12
-project-img: ../assets/flexfolio/fhtt/banner.jpg
-workall-img: ../placeholder.png
+project-img: ../assets/flexfolio/secquiz/banner.jpg
+workall-img: ../assets/flexfolio/secquiz/banner.jpg
 features:
     - descrip: <strong>Introspective Questions</strong><br />The quiz contains questions that ask users about their online habits. This forces more introspection, instead of just telling them if they do or don't know something. Questions are scored according to how much of a security risk they are introducing into their lives.
       image: question.jpg

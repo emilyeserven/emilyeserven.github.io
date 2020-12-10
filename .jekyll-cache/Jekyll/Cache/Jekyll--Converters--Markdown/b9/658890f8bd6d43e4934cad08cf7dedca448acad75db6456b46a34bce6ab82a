@@ -1,0 +1,12 @@
+I"I<h2 id="origin--goals">Origin &amp; Goals</h2>
+
+<p>This project stemmed from a project in a web development class: “Choose two quotes or song lyrics and create two web pages that display the quotes in different styles.” The quote selected for this assignment is a (now infamous) tweet by Jaden Smith. Since I had picked a more serious subject for the other webpage (see the Lovecraft Typography post), I decided to go with a more humorous example for this round.</p>
+
+<h2 id="functionality--design">Functionality &amp; Design</h2>
+
+<p>The colors are all based around Twitter’s branding, with some others picked using <a href="http://paletton.com/">Paletton</a>.</p>
+
+<p>The typography for the main tweet (<a href="https://www.fontsquirrel.com/fonts/comic-zine-ot">ComicZine</a>) was chosen because of it’s slightly whimsical (but still readable) qualities, while the attribution/credit text was an italicized serif font (<a href="https://www.fontsquirrel.com/fonts/lora">Lora</a>) to attempt to balance out the sans serif above.</p>
+
+<p>I’m not sure I did the best job with font matching in this case, it probably would have been better to make the attribution text sans serif and have the main text to be more whimsical, but in a different way. Something that feels more “philosophical”, despite the quote being more faux-philosophy.</p>
+:ET

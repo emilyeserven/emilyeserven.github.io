@@ -1,0 +1,28 @@
+I"7<h2 id="origin--goals">Origin &amp; Goals</h2>
+
+<p>This project was done as part of the problem set for lesson 0 of Harvard’s CS50 online course. The assignment requirements dictated that the project contained at least two sprites, three scripts total, one condition, one loop, and one variable, and one sound.</p>
+
+<p>When planning the project, I had difficulty deciding what to do initially, eventually settling on a simple ‘chase for points’ game. In it, you collect keys (using your mouse) while avoiding the lightning. At the end of 15 seconds, the game tells you your score.</p>
+
+<p>Eventually, the project ended up exceeding the requirements! There were 3 sprites in constant use during the main game, and several loops, variables, and conditionals were used.</p>
+
+<h2 id="functionality--design">Functionality &amp; Design</h2>
+
+<p>There are 3 “backdrops” that are supposed to trigger certain events. The first change in backdrops will trigger hiding of the opening screen material and showing of the cat sprite, key, and lightning sprites. The cat sprite is meant to follow the cursor then add 1 point if it hits keys while subtracting 2 if it hits the bolt. To keep things interesting, a new clone of keys is added at 5, 10, and 13 seconds. Once 15 seconds hit, the next backdrop will appear with the cat in a fixed position telling the player the score. If you press the space bar, the amount of on-screen keys doubles (a trick alluded to on the home screen). Additionally, there’s a strategic element to when someone decides to be pressing the space bar. Is activating the easter egg earlier more advantageous to let future key cloning easier, or is it best to wait for there to be more keys on the board? It’s up to the player to figure out!</p>
+
+<p><img src="../../../../assets/images/blog/scratch-blocks.png" alt="A sample of code blocks used in place of written code." width="350px" /></p>
+
+<p><em>An example of the blocks used.</em></p>
+
+<h2 id="improvements-to-be-made">Improvements to be Made</h2>
+
+<p>Currently, the objects don’t all disappear at the end of the game, and the score doesn’t stay displayed permanently. The game achieved its primary objective and I wanted to move on, so I decided not to fix them. If I were to use Scratch for other projects, I’d work harder to solve them, but I don’t want to spend too much time on a platform I won’t be using much. I also just noticed that there’s no limit to how many times you can use the Space bar easter egg, so it can certainly skew results!</p>
+
+<p><img src="../../../../assets/images/blog/keyrush-keys.png" alt="Overuse of the Space bar easter egg hack leads to the game canvas being covered with keys." width="350px" /></p>
+
+<p><em>Overuse of the Space bar easter egg hack leads to the game canvas being covered with keys.</em></p>
+
+<h2 id="in-conclusion">In Conclusion…</h2>
+
+<p>When teaching classes at my local library or talking to parents, I’m often asked about Scratch. “Should my kid use it?” is the most frequently asked question. After taking part in this exercise that forced me to try it out, I feel I can safely say that it’s a better platform for very young kids. However, they shouldn’t use it for too long, especially if they are serious about programming. This kind of visual coding isn’t used in a normal real-world scenario, so it only should be used as a temporary crutch. If someone doesn’t have much experience with typing and don’t have the patience to check their code line-by-line (for missing semicolons or misspelled variables), then Scratch is a good introduction to programming. The interface prevents someone from making those mistakes while getting someone used to how programmers think. Also, like any visual builder, one must spend the time required to learn the interface before being able to learn the concepts it is meant to teach. Because of this, I would not recommend that someone with previous programming experience uses it unless they need to use it to teach another. I don’t think this project was a waste, however. Being able to gain this insight was a valuable takeaway overall.</p>
+:ET

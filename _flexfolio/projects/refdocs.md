@@ -18,10 +18,10 @@ projlink:
 flexwidth: col-6
 flexheight: 1
 flexorder: 1
-showcaseview: true
+showcaseview: false
 workall-view: true
-workall-order: 2
-workall-size: col-sm-6 col-12
+workall-order: 4
+workall-size: col-sm-3 col-6
 project-img: ../assets/flexfolio/refdocs/banner.jpg
 workall-img: ../assets/flexfolio/refdocs/banner.jpg
 features:

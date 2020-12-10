@@ -1,0 +1,263 @@
+I"�p<h2 id="warnings-and-upfront-disclaimers">Warnings and Upfront Disclaimers</h2>
+
+<p>This is an exploration of a problem that would be considered extremely basic by someone experienced with JavaScript. However, I wanted to write something showing the trial and error that goes into solving a development problem, especially when inexperienced with the language and jargon. There aren’t many of those articles around the internet (that I’m aware of), so hopefully this can help other learning developers that not always having a quick and easy fix is normal!</p>
+
+<p>(To that end, there’s a bunch of footnotes to help people understand my research process and other general.)</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>The website used a <a href="https://wordpress.org/plugins/wp-user-frontend/">plugin</a> that would allow you to create forms, and then generate posts based on those forms. Unfortunately, it’s extremely inflexible plugin and there was too much time already sunk into it. The generated posts wouldn’t let you control how the fields displayed. This meant the form field titles were added in, and also didn’t have the colons inside the <code class="highlighter-rouge">&lt;label&gt;</code> tag (so that even if the label was hidden with CSS, the colon would still show).</p>
+
+<p data-height="300" data-theme-id="25744" data-slug-hash="YGAzEG" data-default-tab="result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/YGAzEG/">Colon JS Problem, Before</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="possible-solutions-without-javascript">Possible Solutions without JavaScript?</h2>
+
+<p>Some very hacky CSS was attempted to fix this problem, but in the end, nothing worked out.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nc">.wpuf-customs</span> <span class="p">{</span>
+<span class="nl">margin-left</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span>
+<span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Another option was to edit the PHP file in the actual plugin. However, I couldn’t find where to make the edit, and this solution would require re-editing the hack in every time the plugin was updated.</p>
+
+<p>Finally, the last option was to try using a different plugin on top of the currently existing one. The <a href="https://wp-types.com/">WP Toolset</a> content template system is used insert information into a post, and usually it will override the rest of the content, regardless of any other settings. However, the problem plugin overrode the content template to the point that it stripped all the HTML out.</p>
+
+<p>With all those options exhausted, it was time to resort to JavaScript.</p>
+
+<h2 id="the-plan">The Plan</h2>
+
+<p>I needed to write a function<sup id="fnref:function"><a href="#fn:function" class="footnote">1</a></sup> that would iterate<sup id="fnref:nodelistrepeat"><a href="#fn:nodelistrepeat" class="footnote">2</a></sup> through a list<sup id="fnref:JSselector"><a href="#fn:JSselector" class="footnote">3</a></sup> and replace the colons with empty spaces, either through a <code class="highlighter-rouge">replace()</code><sup id="fnref:JSreplace"><a href="#fn:JSreplace" class="footnote">4</a></sup> method<sup id="fnref:method"><a href="#fn:method" class="footnote">5</a></sup> or a regular expression<sup id="fnref:MOZregex"><a href="#fn:MOZregex" class="footnote">6</a></sup>. I checked out regular expressions first (and did find a tool<sup id="fnref:regex"><a href="#fn:regex" class="footnote">7</a></sup> to make sure I wrote a valid expression), but decided that just using <code class="highlighter-rouge">replace()</code> would be easier.</p>
+
+<h2 id="trial-and-error-1-i-used-a-string-method-on-an-object">Trial and Error 1: I Used a String Method on an Object</h2>
+
+<p>The original code I figured out for the problem was as follows:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">memberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">memberListItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">memberListItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span> <span class="c1">//for debugging, ensuring loop is iterating correctly.</span>
+        <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">replace</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">memberList</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A function called <code class="highlighter-rouge">memberList()</code> that had a local<sup id="fnref:scope"><a href="#fn:scope" class="footnote">8</a></sup> variable <code class="highlighter-rouge">memberListItems</code>. This variable kept the DOM query<sup id="fnref:domquery"><a href="#fn:domquery" class="footnote">9</a></sup> and allowed me to use it in a <code class="highlighter-rouge">for</code> loop<sup id="fnref:forloop"><a href="#fn:forloop" class="footnote">10</a></sup>. However, I kept getting an error that I wasn’t working with a string.</p>
+
+<p>After further investigation, I found out that I was trying to use a string method on an object. Which leads us into the next part…</p>
+
+<h2 id="trial-and-error-2-i-removed-the-colon-but-added-everything-else-back-in">Trial and Error 2: I Removed the Colon, but Added Everything Else Back in</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">memberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">memberListItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">memberListItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">memberList</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By using the <code class="highlighter-rouge">textContent</code> property, I was able to convert the objects to a string<sup id="fnref:fiddleColonRemoval"><a href="#fn:fiddleColonRemoval" class="footnote">11</a></sup>, but I also stripped out all the HTML. Because of this, links, images, and labels came back and I ended off worse than when I started.</p>
+
+<h2 id="trial-and-error-3-i-tried-removing-labels-while-keeping-the-image">Trial and Error 3: I Tried Removing Labels While Keeping the Image</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">memberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">memberListItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">memberListLabel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li label</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">memberListItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">memberListLabel</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">);</span>
+            <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">: Replaced</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Image.</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">memberList</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Before removing the colon (and stripping the HTML), I used the <code class="highlighter-rouge">includes()</code><sup id="fnref:includes"><a href="#fn:includes" class="footnote">12</a></sup> method to remove the <code class="highlighter-rouge">&lt;label&gt;</code> tag and all of its content<sup id="fnref:removetagviaJS"><a href="#fn:removetagviaJS" class="footnote">13</a></sup>. To protect the area with the image (which had a colon inside its <code class="highlighter-rouge">&lt;label&gt;</code> tag, for some reason…) I added an <code class="highlighter-rouge">if</code> statement checking to see if a selected object included a <code class="highlighter-rouge">:</code> character.</p>
+
+<p>(I had experimented with testing<sup id="fnref:fiddleIfContainingElement"><a href="#fn:fiddleIfContainingElement" class="footnote">14</a></sup> if an element contains a class<sup id="fnref:ifcontainclass"><a href="#fn:ifcontainclass" class="footnote">15</a></sup> and removing nodes<sup id="fnref:removenodes"><a href="#fn:removenodes" class="footnote">16</a></sup>, but neither of those solutions worked.)</p>
+
+<p>At the end of this, however, there was still a problem because the <code class="highlighter-rouge">&lt;a&gt;</code> tag was being stripped out. So instead of using <code class="highlighter-rouge">textContent</code>, I decided to switch over to a different solution.</p>
+
+<h2 id="trial-and-error-4-i-decided-to-use-innerhtml-instead-of-textcontent">Trial and Error 4: I Decided to Use innerHTML Instead of textContent</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">memberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">memberListItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">memberListLabel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li label</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">memberListItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">memberListLabel</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">);</span>
+            <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">: Replaced</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Image.</span><span class="dl">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">memberList</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>There’s a definite<sup id="fnref:innerTextinnerHTML2"><a href="#fn:innerTextinnerHTML2" class="footnote">17</a></sup> difference<sup id="fnref:innerTextinnerHTML1"><a href="#fn:innerTextinnerHTML1" class="footnote">18</a></sup> between the <code class="highlighter-rouge">textContent</code> and <code class="highlighter-rouge">innerHTML</code> methods. Most importantly, <code class="highlighter-rouge">innerHTML</code> will make changes to the DOM while also keeping the HTML intact. Because of this, I was able to keep all the links and images.</p>
+
+<h2 id="at-the-end-i-made-further-simplifications">At the End… I Made Further Simplifications</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">memberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">memberListItems</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="dl">'</span><span class="s1">ul.wpuf_customs li</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">memberListItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">memberListItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">"</span><span class="s2">:</span><span class="dl">"</span><span class="p">,</span> <span class="dl">""</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">memberList</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><code class="highlighter-rouge">innerHTML</code> solved a lot of problems, thereby creating unneeded code (although it should be noted that its use is a last resort, as interacting with DOM elements in that was is bad practice). I removed the <code class="highlighter-rouge">label</code> query selector, the item in the <code class="highlighter-rouge">for</code> loop that removed the actual <code class="highlighter-rouge">&lt;label&gt;</code>, and all the <code class="highlighter-rouge">console.log</code>s that were used for debugging.</p>
+
+<p>Finally, I wanted to optimize loading times. Since this script was only needed on a specific category of pages, I inserted the JavaScript into a Toolset content template, which only loaded on the needed pages.</p>
+
+<h2 id="final-product">Final Product</h2>
+
+<p data-height="300" data-theme-id="25744" data-slug-hash="ZpXEjN" data-default-tab="result" data-user="emilyeserven" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/emilyeserven/pen/ZpXEjN/">Colon JS Problem, After</a> by Emily Serven (<a href="http://codepen.io/emilyeserven">@emilyeserven</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="some-notes-on-research-and-asking-for-help">Some Notes on Research and Asking for Help</h2>
+
+<p>Knowing how to efficiently Google and being familiar with StackOverflow are essential for this job/hobby. However, I can’t emphasize enough how nice it is to have other people to ask for help, especially if you don’t have as much experience in the language you’re working on. On that front, I had some support via some Slack channels since this was a time-sensitive problem. The people here did not outright solve the problem for me, but definitely pointed out places for me to investigate. This would have taken another hour or so if I did not have that help! (I was using <a href="http://frontenddevelopers.org/">frontenddevelopers</a> and <a href="http://www.codenewbie.org/">CodeNewbie</a> for this project specifically, since more people were online at the time.)</p>
+
+<h2 id="footnotes--references">Footnotes / References</h2>
+
+<p>Refs&amp;Docs is my own personal documentation site, and is included in these footnotes to try and explain fundamentals. Other links are part of the research process. They were Googled unless noted.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:function">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-functions.html#declaring-a-function">Declaring a Function</a>. <a href="#fnref:function" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:nodelistrepeat">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-dom.html#repeating-actions-for-an-entire-nodelist">Repeating Actions for an Entire NodeList</a>. <a href="#fnref:nodelistrepeat" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:JSselector">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/14061554/how-to-select-all-li-in-an-ul-with-a-classname-nav">How to Select all in a UL with a Classname</a>. <a href="#fnref:JSselector" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:JSreplace">
+      <p>w3Schools: <a href="http://www.w3schools.com/jsref/jsref_replace.asp">JS Reference, <code class="highlighter-rouge">replace()</code></a>. <a href="#fnref:JSreplace" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:method">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-objects.html#objects">Objects</a> <a href="#fnref:method" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:MOZregex">
+      <p>Mozilla Developer: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a>. <a href="#fnref:MOZregex" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:regex">
+      <p>Tool: <a href="https://regex101.com/">Regular Expression Checker</a>. <a href="#fnref:regex" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:scope">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-structure.html#scope">Scope</a> <a href="#fnref:scope" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:domquery">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-dom.html#caching-dom-queries">Caching DOM Queries</a> <a href="#fnref:domquery" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:forloop">
+      <p>Refs&amp;Docs: <a href="http://emilyserven.net/ref-docs/js-ref-loops.html#for-loops">For Loops</a> <a href="#fnref:forloop" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:fiddleColonRemoval">
+      <p>JSFiddle, found via a Slack friend: <a href="https://jsfiddle.net/qbwqtc32/">Untitled Fiddle with Colon Removal Demo</a>. <a href="#fnref:fiddleColonRemoval" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:includes">
+      <p>w3Schools: <a href="http://www.w3schools.com/jsref/jsref_includes.asp">JS Reference, <code class="highlighter-rouge">includes()</code></a>. <a href="#fnref:includes" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:removetagviaJS">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/4755546/remove-div-tag-using-javascript-or-jquery">Removing a Div Tag using JS or jQuery</a>. <a href="#fnref:removetagviaJS" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:fiddleIfContainingElement">
+      <p>JSFiddle, found via a Slack friend: <a href="http://jsfiddle.net/qLPJC/">Untitled Fiddle with Element Containing Demo</a>. <a href="#fnref:fiddleIfContainingElement" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:ifcontainclass">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/5898656/test-if-an-element-contains-a-class">Test if an Element Contains a Class</a>. <a href="#fnref:ifcontainclass" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:removenodes">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/6545379/can-we-directly-remove-nodes-from-a-nodelist">Can we Directly Remove Nodes from a NodeList</a>. <a href="#fnref:removenodes" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:innerTextinnerHTML2">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/21311299/nodevalue-vs-innerhtml-and-textcontent-how-to-choose">nodeValue vs innerHTML and textContent</a>. <a href="#fnref:innerTextinnerHTML2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:innerTextinnerHTML1">
+      <p>StackOverflow: <a href="http://stackoverflow.com/questions/19030742/difference-between-innertext-and-innerhtml-in-javascript">The Difference Between innerText and innerHTML in JS</a>. <a href="#fnref:innerTextinnerHTML1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

@@ -1,4 +1,4 @@
----
+
 layout: flexfolio
 title: Refs & Docs
 description: A project that grew out of the need to seriously absorb and learn new programming concepts. Refs & Docs is my personal collection of reference articles and slimmed-down documentation, primarily for development work.

@@ -26,6 +26,8 @@ project-img: ../assets/flexfolio/quote-lc/banner.jpg
 workall-img: ../placeholder.png
 ---
 
+{% include portfolio/dev-descrip.html %}
+
 ## Origin & Goals
 
 This project stemmed from a project in a web development class: "Choose two quotes or song lyrics and create two web pages that display the quotes in different styles." The subject of this page was a serious quote by H.P. Lovecraft; an author who influenced a large amount of my favorite horror-based shows and books.

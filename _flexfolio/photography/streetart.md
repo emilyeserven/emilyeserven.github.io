@@ -17,95 +17,112 @@ workall-order: 2
 workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/streetart/banner.jpg
 workall-img: ../placeholder.png
-photogrid:
-  - name: verticals
-    thumb: photo01.jpg
-    full: photo01full.jpg
-    width: col-6
-    height: 1
-    capture: 09.30.2017
-  - name: drip drop
-    thumb: photo13.jpg
-    full: photo13full.jpg
-    width: col-3
-    height: 2
-    capture: 11.04.2017
-  - name: blondie
-    thumb: photo03.jpg
-    full: photo03full.jpg
-    width: col-6
-    height: 2
-    capture: 11.04.2017
-  - name: door
-    thumb: photo04.jpg
-    full: photo04full.jpg
-    width: col-3
-    height: 2
-    capture: 10.07.2017
-  - name: with love
-    thumb: photo02.jpg
-    full: photo02full.jpg
-    width: col-6
-    height: 2
-    capture: 10.21.2017
-  - name: arrivals
-    thumb: photo05.jpg
-    full: photo05full.jpg
-    width: col-6
-    height: 2
-    capture: 10.21.2017
-  - name: wall
-    thumb: photo06.jpg
-    full: photo06full.jpg
-    width: col-3
-    height: 1
-    capture: 11.04.2017
-  - name: wall
-    thumb: photo07.jpg
-    full: photo07full.jpg
-    width: col-3
-    height: 1
-    capture: 11.04.2017
-  - name: wall
-    thumb: photo08.jpg
-    full: photo08full.jpg
-    width: col-3
-    height: 1
-    capture: 11.04.2017
-  - name: scream
-    thumb: photo09.jpg
-    full: photo09full.jpg
-    width: col-3
-    height: 1
-    capture: 11.04.2017
-  - name: neighbor
-    thumb: photo10.jpg
-    full: photo10full.jpg
-    width: col-3
-    height: 2
-    capture: 11.04.2017
-  - name: art not ads
-    thumb: photo14.jpg
-    full: photo14full.jpg
-    width: col-6
-    height: 2
-    capture: 11.04.2017
-  - name: bar
-    thumb: photo11.jpg
-    full: photo11full.jpg
-    width: col-3
-    height: 2
-    capture: 11.04.2017
-  - name: saturated
-    thumb: photo12.jpg
-    full: photo12full.jpg
-    width: col-9
-    height: 2
-    capture: 11.04.2017
-  - name: end the conflict
-    thumb: photo15.jpg
-    full: photo15full.jpg
-    width: col-3
-    height: 2
-    capture: 10.21.2017
 ---
+
+{% include portfolio/photo-half-descrip.html %}
+
+{% include gridblocks/photo-block.html
+    name="verticals"
+    id="verticals"
+    capture="09.30.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+    name="drip drop"
+    id="dripdrop"
+    width="col-3"
+    height=2
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="blondie"
+    id="blondie"
+    width="col-6"
+    height=2
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="door"
+    id="door"
+    width="col-3"
+    height=2
+    capture="10.07.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+    name="with love"
+    id="withlove"
+    height=2
+    capture="10.21.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="arrivals"
+    id="arrivals"
+    height=2
+    capture="10.21.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+    name="wall"
+    id="wall1"
+    width="col-3"
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="wall"
+    id="wall2"
+    width="col-3"
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="wall"
+    id="wall3"
+    width="col-3"
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="scream"
+    id="scream"
+    width="col-3"
+    capture="11.04.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+    name="neighbor"
+    id="neighbor"
+    width="col-3"
+    height=2
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="art not ads"
+    id="artnotads"
+    height=2
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="bar"
+    id="bar"
+    width="col-3"
+    height=2
+    capture="11.04.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+    name="saturated"
+    id="saturated"
+    width="col-9"
+    height=2
+    capture="11.04.2017" %}
+
+{% include gridblocks/photo-block.html
+    name="end the conflict"
+    id="endconflict"
+    width="col-3"
+    height=2
+    capture="10.21.2017" %}

@@ -1,0 +1,13 @@
+<div class="project-box">
+    <p>
+        {% if page.projlink.size > 1 %}
+        <strong>Project Links</strong>:
+        {% endif %}
+        {% if page.projlink.size == 1 %}
+        <strong>Project Link</strong>:
+        {% endif %}
+        {% for link in page.projlink %}
+        <br /><a href="{{link.url}}">{{link.name}}</a>
+        {% endfor %}
+    </p>
+</div>

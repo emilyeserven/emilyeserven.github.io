@@ -1,0 +1,20 @@
+{% comment %}
+    Use `spacing` parameter if passed to the include,
+    otherwise default to "default".
+{% endcomment %}
+{% if include.spacing %}
+    {% assign spacing = include.spacing %}
+{% else %}
+    {% assign spacing = "default" %}
+{% endif %}
+
+{% assign featureimage-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image }} %}
+
+<div class="feature-image row spacing-{{spacing}}">
+    <div class="image-holder col-md-6 col-12">
+        <img src="{{featureimage-url}}" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        {{include.descrip}}
+    </div>
+</div>

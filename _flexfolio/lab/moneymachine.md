@@ -6,6 +6,10 @@ code: moneymach
 time: October 2017
 stack: HTML, CSS, JavaScript, jQuery
 responsibilities: Front-End Development, Design, Concept
+team:
+    - name: Matt Gagliano
+      role: Front-End Development, Design, Concept
+      url: https://www.mattgagliano.com/
 category: Lab
 casestudy: true
 projlink:
@@ -24,21 +28,26 @@ workall-order: 1
 workall-size: col-sm-6 col-12
 project-img: ../assets/flexfolio/moneymach/banner.jpg
 workall-img: ../placeholder.png
-features:
-    - descrip: <strong>Button and Display</strong><br />Clicking the button will cause the display to get updated with the new amount of "money" the user has collected.
-      image: feat1.jpg
-      format: half-left
-      spacing: none
-    - descrip: <strong>Conversion Displays</strong><br />Pieces on the page that were modified upon the click of the 💸 button. The amount of venti-sized Starbucks Americano beverages and the amount of bitcoins that can be afforded are displayed.
-      image: feat2.jpg
-      format: half-left
-      spacing: default
-    - descrip: <strong>Money Multipliers</strong><br />Fulfilled the need to have buttons that affected the rest of the page somehow. Clicking on a multiplier multiplies the amount of money the button generates.
-      image: feat3.jpg
-      format: half-left
-      spacing: default
-
 ---
+
+{% include portfolio/dev-descrip.html %}
+
+<h3>Highlighted Features</h3>
+
+{% include portfolio/feature-left.html
+    image="feat1.jpg"
+    spacing="none"
+    descrip="<strong>Button and Display</strong><br />Clicking the button will cause the display to get updated with the new amount of 'money' the user has collected." %}
+
+{% include portfolio/feature-left.html
+    image="feat2.jpg"
+    descrip="<strong>Conversion Displays</strong><br />Pieces on the page that were modified upon the click of the 💸 button. The amount of venti-sized Starbucks Americano beverages and the amount of bitcoins that can be afforded are displayed." %}
+
+{% include portfolio/feature-left.html
+    image="feat3.jpg"
+    descrip="<strong>Money Multipliers</strong><br />Fulfilled the need to have buttons that affected the rest of the page somehow. Clicking on a multiplier multiplies the amount of money the button generates." %}
+
+<br />
 
 ## Origin & Goals
 

@@ -17,77 +17,108 @@ workall-order: 1
 workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/karelxojani/allbanner.jpg
 workall-img: ../placeholder.png
-photogrid:
-  - name: XoJani - Red
-    thumb: photo01.jpg
-    full: photo01full.jpg
-    width: col-6
-    height: 1
-    capture: 03.17.2018
-  - name: Guitar
-    thumb: photo02.jpg
-    full: photo02full.jpg
-    width: col-3
-    height: 2
-    capture: 10.14.2017
-  - name: Making Adjustments
-    thumb: photo03.jpg
-    full: photo03full.jpg
-    width: col-9
-    height: 2
-    capture: 10.14.2017
-  - name: Pass the Mic
-    thumb: photo04.jpg
-    full: photo04full.jpg
-    width: col-3
-    height: 2
-    capture: 03.17.2018
-  - name: Dancing
-    thumb: photo05.jpg
-    full: photo05full.jpg
-    width: col-6
-    height: 2
-    capture: 10.14.2017
-  - name: XoJani - Blue
-    thumb: photo06.jpg
-    full: photo06full.jpg
-    width: col-3
-    height: 2
-    capture: 10.14.2017
-  - name: Outlines
-    thumb: photo07.jpg
-    full: photo07full.jpg
-    width: col-12
-    height: 1
-    capture: 10.14.2017
-  - name: Red Crowd
-    thumb: photo08.jpg
-    full: photo08full.jpg
-    width: col-6
-    height: 1
-    capture: 03.17.2018
-  - name: Karel - Red
-    thumb: photo09.jpg
-    full: photo09full.jpg
-    width: col-6
-    height: 1
-    capture: 03.17.2018
-  - name: Blue and Yellow
-    thumb: photo10.jpg
-    full: photo10full.jpg
-    width: col-12
-    height: 1
-    capture: 08.25.2018
-  - name: Money Shot
-    thumb: photo11.jpg
-    full: photo11full.jpg
-    width: col-6
-    height: 2
-    capture: 03.17.2018
-  - name: Red Wall
-    thumb: photo12.jpg
-    full: photo12full.jpg
-    width: col-6
-    height: 2
-    capture: 08.25.2018
 ---
+
+{% include portfolio/photo-half-descrip.html %}
+
+{% include gridblocks/photo-block.html
+      name="XoJani - Red"
+      id="janired"
+      img-base="201803"
+      capture="03.17.2018" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Guitar"
+      id="guitar"
+      img-base="201710"
+      width="col-3"
+      height=2
+      capture="10.14.2017" %}
+
+{% include gridblocks/photo-block.html
+      name="Making Adjustments"
+      id="kareladjust"
+      img-base="201710"
+      width="col-9"
+      height=2
+      capture="10.14.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Pass the Mic"
+      id="karelmic"
+      img-base="201803"
+      width="col-3"
+      height=2
+      capture="03.17.2018" %}
+
+{% include gridblocks/photo-block.html
+      name="Dancing"
+      id="auddance"
+      img-base="201710"
+      width="col-6"
+      height=2
+      capture="10.14.2017" %}
+
+{% include gridblocks/photo-block.html
+      name="XoJani - Blue"
+      id="janiblue"
+      img-base="201710"
+      width="col-3"
+      height=2
+      capture="10.14.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Outlines"
+      id="silhouette"
+      img-base="201710"
+      width="col-12"
+      height=1
+      capture="10.14.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Red Crowd"
+      id="crowdred"
+      img-base="201803"
+      capture="03.17.2018" %}
+
+{% include gridblocks/photo-block.html
+      name="Karel - Red"
+      id="crowdred2"
+      img-base="201803"
+      capture="03.17.2018" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Blue and Yellow"
+      id="karelby"
+      img-base="201808"
+      width="col-12"
+      height=1
+      capture="08.25.2018" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Money Shot"
+      id="moneyfloor"
+      img-base="201803"
+      height=2
+      capture="03.17.2018" %}
+
+{% include gridblocks/photo-block.html
+      name="Red Wall"
+      id="karelred"
+      img-base="201808"
+      height=2
+      capture="08.25.2018" %}
+
+{% comment %} NEW ROW {% endcomment %}

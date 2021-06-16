@@ -1,0 +1,12 @@
+<div class="grid-photo photo-content col-6 photo-height-1">
+    {% if page.description %}
+      <p>
+        {{page.description}}
+      </p>
+    {% endif %}
+    {% if page.location %}
+      <p>
+        <strong>Locations:</strong> {{page.location}}
+      </p>
+    {% endif %}
+</div>

@@ -1,0 +1,18 @@
+{% capture category %}{{ include.category }}{% endcapture %}
+<div class="all-work-category">
+    <h2 id="{{ category | downcase }}">{{ category }}</h2>
+    <!--
+      <p>
+        Work with clients and agencies.
+      </p>
+    -->
+    <div class="all-work-holder row">
+      {% for project in site.flexfolio %}
+        {% if project.workall-view == true %}
+            {% if {{category}} == {{project.category}} %}
+                {% include gridblocks/work-block.html %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+</div>

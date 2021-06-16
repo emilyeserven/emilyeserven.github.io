@@ -21,13 +21,17 @@ workall-order: 1
 workall-size:  col-sm-6 col-12
 project-img: ../assets/flexfolio/rc/banner.jpg
 workall-img: ../assets/flexfolio/rc/all-banner.jpg
-features:
-    - descrip: <strong>Product Portfolio</strong><br />Revel develops specialty cabinetry and furniture to help customers show off their wine collections in the best way possible. I designed pages that would show off each of these products while also linking users to other relevant information.
-      image: feat1.jpg
-      format: half-left
-      spacing: none
-    - descrip: <strong>Wine Galleries</strong><br />Each gallery displays thumbnails and full sized images of completed cellars. The back-end workflow was optimized for the client, making it so images were automatically resized and all items had a standard format.
-      image: feat2.jpg
-      format: half-left
-      spacing: default
 ---
+
+{% include portfolio/dev-descrip.html %}
+
+<h3>Highlighted Features</h3>
+
+{% include portfolio/feature-left.html
+    image="feat1.jpg"
+    spacing="none"
+    descrip="<strong>Product Portfolio</strong><br />Revel develops specialty cabinetry and furniture to help customers show off their wine collections in the best way possible. I designed pages that would show off each of these products while also linking users to other relevant information." %}
+
+{% include portfolio/feature-left.html
+    image="feat2.jpg"
+    descrip="<strong>Wine Galleries</strong><br />Each gallery displays thumbnails and full sized images of completed cellars. The back-end workflow was optimized for the client, making it so images were automatically resized and all items had a standard format." %}

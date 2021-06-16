@@ -1,0 +1,97 @@
+{% comment %}
+TEMPLATE:
+{% include gridblocks/photo-block.html
+    name="?"
+    id="?"
+    img-base="?"
+    width="col-9"
+    height=2
+    capture="10.14.2017" %}
+{% endcomment %}
+
+{% comment %}
+    Use `ext` YAML variable if it exists, otherwise
+    use the `ext` parameter if passed to the include,
+    otherwise default to "jpg".
+    The `ext` variable controls the image extensions.
+    It should be jpg (lowercase) for compression and
+    consistency's sake, generally.
+{% endcomment %}
+{% if page.extension %}
+    {% assign ext = page.extension %}
+{% else %}
+    {% if include.ext %}
+        {% assign ext = include.ext %}
+    {% else %}
+        {% assign ext = "jpg" %}
+    {% endif %}
+{% endif %}
+
+{% comment %}
+    Use page's `img-base` YAML variable if it exists,
+    otherwise use the `img-base` parameter passed to
+    th include.
+    Otherwise, default to "photo".
+{% endcomment %}
+{% if page.img-base %}
+    {% assign filename-base = page.img-base %}
+{% else %}
+    {% if include.img-base %}
+        {% assign filename-base = include.img-base %}
+    {% else %}
+        {% assign filename-base = "photo" %}
+    {% endif %}
+{% endif %}
+
+{% comment %}
+    Use `width` parameter if passed to the include,
+    otherwise default to "col-6".
+    The `width` variable controls the image block's
+    width. It uses bootstrap columns, but usually
+    col-3, col-6, col-9, and col-12 are the values.
+{% endcomment %}
+{% if include.width %}
+    {% assign width = include.width %}
+{% else %}
+    {% assign width = "col-6" %}
+{% endif %}
+
+{% comment %}
+    Use `height` parameter if passed to the include,
+    otherwise default to "1".
+    The `height` variable controls the image block's
+    height. Usually 1 and 2 are the values.
+{% endcomment %}
+{% if include.height %}
+    {% assign height = include.height %}
+{% else %}
+    {% assign height = 1 %}
+{% endif %}
+
+{% comment %}
+    If the include was passed an id, use the ID
+    with page's img-base pre-pended to it.
+    The ID should just be pre-pended with a `-`.
+    input ex: "01", "10", "100", "-ex", "-test"
+    output ex: "photo-01", "photo-ex", "photo-test"
+{% endcomment %}
+{% if include.id %}
+    {% assign filename = {{filename-base}} | append: "-" | append: include.id %}
+{% else %}
+    {% assign filename = "missing.jpg" %}
+{% endif %}
+
+{% assign bgimg-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '.' | append: ext }} %}
+{% assign featherlight-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '-full.' | append: ext}} %}
+
+
+<div class="grid-photo {{width}} port-height-{{height}}">
+    <div class="block-image" style="background-image: url({{bgimg-url}});">
+    <a data-featherlight="{{featherlight-url}}">
+        <h3>{{include.name}}</h3>
+        <p>
+        <em>{{include.capture}}</em>
+        </p>
+    </a>
+    </div>
+</div>

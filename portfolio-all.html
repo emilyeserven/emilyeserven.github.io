@@ -8,86 +8,126 @@ exclude: true
 <div class="col-12">
     <div class="all-work-categories row">
       <span class="category-label">Categories:</span>
-        <a class="category-button" href="#commercial">Commercial</a>
-        <a class="category-button" href="#projects">Projects</a>
-        <a class="category-button" href="#photography">Photography</a>
-        <a class="category-button" href="#lab">Lab</a>
+        {% include layout/category-btn.html name="Commercial" %}
+        {% include layout/category-btn.html name="Projects" %}
+        {% include layout/category-btn.html name="Photography" %}
+        {% include layout/category-btn.html name="Labs" %}
         <!--<li><a href="#">Media</a></li>-->
     </div>
 </div>
-<!--
-<p>
-  This page contains a directory of all recent or relevant work.
-</p> -->
 <br />
-<div class="all-work-category">
-  <h2 id="commercial">Commercial</h2>
-  <!--
-    <p>
-      Work with clients and agencies.
-    </p>
-  -->
-  <div class="all-work-holder row">
-    {% for project in site.flexfolio %}
-      {% if project.workall-view == true %}
-        {% if project.category == "Commercial" %}
-          {% include work-block.html %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
 
-<div class="all-work-category">
-  <h2 id="projects">Projects</h2>
-  <!--
-    <p>
-      Work with clients and agencies.
-    </p>
-  -->
-  <div class="all-work-holder row">
-    {% for project in site.flexfolio %}
-      {% if project.workall-view == true %}
-        {% if project.category == "Project" %}
-          {% include work-block.html %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+{% comment %} COMMERCIAL SECTION {% endcomment %}
 
-<div class="all-work-category">
-  <h2 id="photography">Photography</h2>
-  <!--
-    <p>
-      Work with clients and agencies.
-    </p>
-  -->
-  <div class="all-work-holder row">
-    {% for project in site.flexfolio %}
-      {% if project.workall-view == true %}
-        {% if project.category == "Photography" %}
-          {% include work-block.html %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+{% include layout/work-block-start.html
+    name="Commercial" %}
 
-<div class="all-work-category">
-  <h2 id="labs">Labs</h2>
-  <!--
-    <p>
-      Work with clients and agencies.
-    </p>
-  -->
-  <div class="all-work-holder row">
-    {% for project in site.flexfolio %}
-      {% if project.workall-view == true %}
-        {% if project.category == "Lab" %}
-          {% include work-block.html %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    {% include gridblocks/work-block.html
+        code="fm"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="rc"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="tmp"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="swg"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="nbm"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="td"
+        size="col-3" %}
+
+{% include layout/work-block-end.html %}
+
+{% comment %} PROJECTS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Projects" %}
+
+    {% include gridblocks/work-block.html
+        code="secquiz"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="dam"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="fhtt"
+        size="col-3" %}
+
+{% include layout/work-block-end.html %}
+
+{% comment %} PHOTOGRAPHY SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Photography" %}
+
+    {% include gridblocks/work-block.html
+        code="karelxojani"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="streetart"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="nyc-bw-people"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="cityscapes"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="djbraj"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="nina"
+        size="col-3" %}
+
+
+{% include layout/work-block-end.html %}
+
+{% comment %} LABS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Labs" %}
+
+    {% include gridblocks/work-block.html
+        code="moneymach"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="nyexcelsior"
+        size="col-6" %}
+
+    {% include gridblocks/work-block.html
+        code="quote-lc"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="d3"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="ornette"
+        size="col-3" %}
+
+    {% include gridblocks/work-block.html
+        code="rockpaperscissors"
+        size="col-3" %}
+
+
+
+{% include layout/work-block-end.html %}

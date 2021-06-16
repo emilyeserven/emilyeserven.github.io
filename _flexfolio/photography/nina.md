@@ -3,6 +3,7 @@ layout: photofolio
 title: Nina
 description: Greater NYC area-based cosplayer.
 code: nina
+img-base: rei
 orig-post: 11.18.2017
 last-update: 11.18.2017
 location: Jacob Javits Center
@@ -17,47 +18,59 @@ workall-order: 5
 workall-size: col-sm-3 col-6
 project-img: ../assets/flexfolio/nina/allbanner.jpg
 workall-img: ../placeholder.png
-photogrid:
-  - name: Rei, I
-    thumb: photo01.jpg
-    full: photo01full.jpg
-    width: col-6
-    height: 1
-    capture: 11.18.2017
-  - name: Rei, II
-    thumb: photo02.jpg
-    full: photo02full.jpg
-    width: col-12
-    height: 1
-    capture: 11.18.2017
-  - name: Rei, III
-    thumb: photo03.jpg
-    full: photo03full.jpg
-    width: col-3
-    height: 2
-    capture: 11.18.2017
-  - name: Rei RED, I
-    thumb: photo04.jpg
-    full: photo04full.jpg
-    width: col-9
-    height: 2
-    capture: 11.18.2017
-  - name: Rei, IV
-    thumb: photo05.jpg
-    full: photo05full.jpg
-    width: col-6
-    height: 2
-    capture: 11.18.2017
-  - name: Rei, V
-    thumb: photo06.jpg
-    full: photo06full.jpg
-    width: col-6
-    height: 2
-    capture: 11.18.2017
-  - name: Rei RED, II
-    thumb: photo07.jpg
-    full: photo07full.jpg
-    width: col-12
-    height: 1
-    capture: 11.18.2017
 ---
+
+{% include portfolio/photo-half-descrip.html %}
+
+{% include gridblocks/photo-block.html
+      name="Rei, I"
+      id="01"
+      capture="11.18.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Rei, II"
+      id="02"
+      width="col-12"
+      capture="11.18.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Rei, III"
+      id="03"
+      width="col-3"
+      height=2
+      capture="11.18.2017" %}
+
+{% include gridblocks/photo-block.html
+      name="Rei RED, I"
+      id="red01"
+      width="col-9"
+      height=2
+      capture="11.18.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Rei, IV"
+      id="04"
+      height=2
+      capture="11.18.2017" %}
+
+{% include gridblocks/photo-block.html
+      name="Rei, V"
+      id="05"
+      height=2
+      capture="11.18.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="Rei RED, II"
+      id="red02"
+      width="col-12"
+      capture="11.18.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}

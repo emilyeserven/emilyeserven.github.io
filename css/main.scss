@@ -230,6 +230,7 @@ h3 {
         font-size: 1.25em;
         margin-bottom:-2px;
         font-weight:500;
+        line-height: 1.5em;
     } @else {
         font-size: 1.5em;
         margin-bottom: -5px;
@@ -1139,6 +1140,7 @@ img.portfolio-image {
       color: #fff;
       padding: 2px 10px 4px;
       display:inline-block;
+      scroll-behavior: smooth;
   }
 }
 
@@ -1371,7 +1373,7 @@ img.portfolio-image {
 // 3.70 - PROJECT FOLIO LAYOUT
 
 .folio-features {
-  margin: 60px 0;
+  margin: 0;
 }
 
 .folio-banner {
@@ -1379,10 +1381,14 @@ img.portfolio-image {
 }
 
 .post-content .main-notes {
+  margin-bottom: 30px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  & > div {
+      padding: 0;
+  }
   .notes-left {
     flex-basis: 66%;
   }
@@ -1508,6 +1514,7 @@ input.button-link-new {
 }
 
 // SECTION 6: SPECIFIC ELEMENTS
+// 6.03 - Icon Holder
 .icon-holder {
     // class for the `a` tag, parent of `i` class of an icon
     display:block;
@@ -1517,6 +1524,7 @@ input.button-link-new {
     }
 }
 
+// 6.02 - General Button Styling
 .info-buttons {
     margin-top:20px;
     display:block;
@@ -1538,12 +1546,17 @@ input.button-link-new {
         background-color:darken($grey-color-light, 10%);
     }
 }
+
+// 6.03 - Code Block Styling
+
 .language-js.highlighter-rouge {
     overflow: scroll;
 }
 .highlighter-rouge {
     td.gutter.gl {
         border-right: $grey-color-dark solid 2px;
+        padding: 0;
+        border-radius: 0;
     }
     .highlight, pre {
         background-color: $grey-color-light;
@@ -1563,10 +1576,32 @@ pre.lineno {
     /* margin-top: 0; */
     padding: 10px;
 }
-.highlighter-rouge td.gutter.gl {
-    border-right: #333 solid 2px;
-    padding: 0;
-    border-radius: 0;
+
+// 6.04 - Top Link Styling
+
+.toplink {
+    border-top: #f2f2f2 solid 2px;
+    margin-top: 10px;
+    display: block;
+    transition: all ease 0.15s;
+    scroll-behavior: smooth;
+    &:hover {
+        border-top-color: #ddd;
+        color: #000;
+        transition: all ease 0.15s;
+        scroll-behavior: smooth;
+        small {
+            background-color: #ddd;
+        }
+    }
+    small {
+        background-color: #f2f2f2;
+        padding: 4px 8px;
+        top: -3px;
+        position: relative;
+        transition: all ease 0.15s;
+        scroll-behavior: smooth;
+    }
 }
 
 // SECTION 7: DISPLAY NONES

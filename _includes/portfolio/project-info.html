@@ -1,0 +1,36 @@
+{% if page.description %}
+    <p>{{ page.description }}</p>
+{% endif %}
+
+<p>
+    {% if page.stack %}
+        <strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
+    {% endif %}
+
+    {% if page.responsibilities %}
+        <strong>Responsibilities</strong>: {{page.responsibilities}}<br />
+    {% endif %}
+
+    {% if page.category %}
+        <strong>Type</strong>: {{page.category}}<br />
+    {% endif %}
+
+    {% if page.team %}
+        <strong>Team</strong>:
+        {% for person in page.team %}
+            {% if forloop.last == true %}
+                {% if person.url %}
+                    <a href="{{person.url}}" target="_blank">{{person.name}}</a> ({{person.role}})
+                {% else %}
+                    {{person.name}} ({{person.role}})
+                {% endif %}
+            {% else %}
+                {% if person.url %}
+                    <a href="{{person.url}}" target="_blank">{{person.name}}</a> ({{person.role}}), 
+                {% else %}
+                    {{person.name}} ({{person.role}}), 
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</p>

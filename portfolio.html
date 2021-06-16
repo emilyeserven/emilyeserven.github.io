@@ -6,22 +6,25 @@ order: 2
 ---
 
   <div class="portfolio-holder new standalone row">
-    {% for project in site.flexfolio %}
-      {% if project.showcaseview == true %}
-        <div class="portfolio-square {{project.flexwidth}} port-height-{{project.flexheight}}" style="order: {{project.flexorder}};">
-          <div class="block-image" style="background-image: url({{project.project-img}});">
-            <a href="{{project.url}}" class="portfolio-link">
-              <div class="link-content-holder">
-                <div class="link-content">
-                  <h3>{{project.title}}</h3><p><span class="category-link">{{project.category}}</span></p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-    </div>
+
+    {% include gridblocks/showcase-block.html
+        code="fm" %}
+
+    {% include gridblocks/showcase-block.html
+        code="secquiz" %}
+
+    {% include gridblocks/showcase-block.html
+        code="rc" %}
+
+    {% include gridblocks/showcase-block.html
+        code="nyc-bw-people" %}
+
+    {% include gridblocks/showcase-block.html
+        code="cityscapes" %}
+
+    {% include gridblocks/showcase-block.html
+        code="streetart" %}
+
     <div class="col-12">
         <p class="portfolio-right-link">
           <a href="/work-all" class="underline-link">&nbsp;All Work →&nbsp;</a>

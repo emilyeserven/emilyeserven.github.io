@@ -1,0 +1,36 @@
+{% assign project = site.flexfolio | where:"code", include.code | first %}
+{% if {{project.flexwidth}} %}
+    {% assign flexwidth = {{project.flexwidth}} %}
+{% else %}
+    Nothing
+{% endif %}
+
+{% if {{project.flexheight}} %}
+    {% assign flexheight = {{project.flexheight}} %}
+{% else %}
+    Nothing
+{% endif %}
+
+{% if {{project.url}} %}
+    {% assign url = {{project.url}} %}
+{% else %}
+    Nothing
+{% endif %}
+
+{% if {{project.project-img}} %}
+    {% assign project-img = {{project.project-img}} %}
+{% else %}
+    Nothing
+{% endif %}
+
+<div class="portfolio-square {{flexwidth}} port-height-{{flexheight}}">
+    <div class="block-image" style="background-image: url({{project-img}});">
+    <a href="{{url}}" class="portfolio-link">
+        <div class="link-content-holder">
+        <div class="link-content">
+            <h3>{{project.title}}</h3><p><span class="category-link">{{project.category}}</span></p>
+        </div>
+        </div>
+    </a>
+    </div>
+</div>

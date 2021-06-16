@@ -1,0 +1,63 @@
+I"�<div class="main-notes">
+    <div class="col-sm-8 col-12">
+        
+
+<p>
+    
+
+    
+
+    
+        <strong>Type</strong>: Lab<br />
+    
+
+    
+</p>
+    </div>
+    <div class="col-sm-1 col-12"></div>
+    <div class="col-sm-3 col-12">
+        <div class="project-box">
+    <p>
+        
+        <strong>Project Links</strong>:
+        
+        
+        
+        <br /><a href="https://github.com/emilyeserven/testwebsites/tree/master/ornette">Github Repository</a>
+        
+        <br /><a href="https://rawgit.com/emilyeserven/testwebsites/master/ornette/index.html">Ornette Page</a>
+        
+    </p>
+</div>
+    </div>
+  </div>
+<div class="clearfix"></div>
+
+<h2 id="origin--goals">Origin &amp; Goals</h2>
+
+<p>This project was originally for an in-class assignment. We were provided with bare HTML and were to add CSS styling to it. Most students had this as their first exposure to a larger project involving CSS, and were able to see how flexible CSS is. I personally wanted to explore colors and CSS I don’t typically use, since this project was not client-related.</p>
+
+<h2 id="development">Development</h2>
+
+<p>This was developed without legacy browsers and mobile styling, since I wanted to just explore the CSS without much limitations.</p>
+
+<h2 id="design">Design</h2>
+
+<p>Since most of my designs tend to use blue or another “cool” color, I decided to work with yellow and black as the primary colors for this assignment. I also used tilted headers with a typewriter-like font to evoke a more vintage style, despite the sectioning of the website following along with modern trends.</p>
+
+<p>In retrospect, I would have done some more tests with the placement of content relative to the “Track Listing” and “Personnel” headings. The flow of content is inconsistent with the “Free Jazz” heading, which has no content wrapping on the side. Additionally, the right side of the table within “Track Listing” is not aligned with the right of the “Right Channel” part of the “Personnel” section. It could be argued that the amount of content doesn’t warrant giving the table and channel sections their own full rows, which was my original thinking when setting the current placements.</p>
+
+<h2 id="other-nitpicky-improvements">Other Nitpicky Improvements</h2>
+
+<ul>
+  <li>The units of measurement should have been relative (<code class="highlighter-rouge">em</code>) instead of just <code class="highlighter-rouge">px</code>.</li>
+  <li>The black background of the “Ornette Coleman” main header is a different black than the rest of the top section.</li>
+  <li>The copyright line at the last section doesn’t have a font specified, and looks out of place from the rest.</li>
+  <li>Increase line height for easier readability</li>
+  <li>The link in the “Free Jazz” section should stand out more obviously as a link, perhaps adding a bold font weight would have improved scanability.</li>
+</ul>
+
+<h2 id="in-conclusion">In Conclusion…</h2>
+
+<p>Beginners don’t realize how much of an impact CSS makes on the visual appeal and layout of their websites! By adding 153 lines of CSS, I was able to change a rather mundane page into a more stylistically interesting and easier to read experience.</p>
+:ET

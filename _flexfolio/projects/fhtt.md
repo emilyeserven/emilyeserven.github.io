@@ -6,6 +6,13 @@ code: fhtt
 time: October 2016
 stack: [HTML, CSS, AngularJS, bower]
 responsibilities: Original Concept, Front-End Development, Design, Project Management
+team:
+    - name: Gabriel Ortiz
+      role: Design and Research
+    - name: Victor
+      role: Front-End Development
+    - name: Mike
+      role: API Research
 category: Project
 casestudy: true
 projlink:
@@ -24,14 +31,18 @@ workall-order: 3
 workall-size: col-sm-3 col-6
 project-img: ../assets/flexfolio/fhtt/banner.jpg
 workall-img: ../placeholder.png
-features:
-    - descrip: <strong>Organizer Screen</strong><br />The organizer answers three questions about the event they're planning. These answers generate a URL that can be passed to any participant.
-      image: feat1.jpg
-      format: half-left
-      spacing: none
-    - descrip: <strong>Participant Screen</strong><br />Event participants get the link to a customized screen from the organizer. All they need to do is specify what train station they're coming from, and they'll get a short list of the best trains they can use to get to the event on time.
-      image: feat2.jpg
-      format: half-left
-      spacing: default
-
 ---
+
+{% include portfolio/dev-descrip.html %}
+
+<h3>Highlighted Features</h3>
+
+{% include portfolio/feature-left.html
+    image="feat1.jpg"
+    spacing="none"
+    descrip="<strong>Organizer Screen</strong><br />The organizer answers three questions about the event they're planning. These answers generate a URL that can be passed to any participant." %}
+
+{% include portfolio/feature-left.html
+    image="feat2.jpg"
+    spacing="default"
+    descrip="<strong>Participant Screen</strong><br />Event participants get the link to a customized screen from the organizer. All they need to do is specify what train station they're coming from, and they'll get a short list of the best trains they can use to get to the event on time." %}

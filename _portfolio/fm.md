@@ -3,9 +3,10 @@ layout: portfolio
 title: Feyer Music
 excerpt: New York City-based musician.
 code: fm
+category: webdev
 time: June 2014 - Present
 tags: [Design]
-categories: Entertainment
+subcategory: Entertainment
 platform: WordPress
 proj-link: http://www.feyermusic.com
 img:

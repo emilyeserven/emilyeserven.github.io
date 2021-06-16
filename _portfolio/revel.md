@@ -3,9 +3,10 @@ layout: portfolio
 title: Revel Cellars
 excerpt: Custom wine cellar cabinetry.
 code: rc
+category: webdev
 time: April 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
-categories: Business
+subcategory: Business
 platform: WordPress
 proj-link: http://www.revelcellars.com
 img:

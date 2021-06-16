@@ -3,10 +3,11 @@ layout: photofolio
 title: NYC in Mono | People
 description: Life in the city.
 code: nyc-bw-people
+category: photo
 orig-post: 09.23.2017
 last-update: 10.28.2017
 location: Washington Square Park, Bethesda Terrace
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-9
 flexheight: 2

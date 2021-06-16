@@ -1,7 +1,7 @@
 
 layout: flexfolio
 title: Typography - Smith
-category: Lab
+subcategory: Lab
 casestudy: true
 projlink:
     - name: Github Repository

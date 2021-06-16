@@ -3,10 +3,11 @@ layout: photofolio
 title: Street Art
 description: New Yorkers using the city as their canvas.
 code: streetart
+category: photo
 orig-post: 09.30.2017
 last-update: 11.04.2017
 location: Chelsea, Lower East Side
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2

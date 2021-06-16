@@ -3,10 +3,11 @@ layout: flexfolio
 title: Taylor Design
 description: ...
 code: td
+category: webdev
 time: Early 2017
 stack: [WordPress.org]
 responsibilities: Development, Animation
-category: Commercial
+subcategory: Commercial
 casestudy: false
 projlink:
     - name: Taylor Design

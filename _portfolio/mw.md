@@ -3,9 +3,10 @@ layout: portfolio
 title: Mary Wathen
 excerpt: Full service residential design.
 code: mw
+category: webdev
 time: June 2014 - Present
 tags: [Design]
-categories: Business
+subcategory: Business
 platform: WordPress
 proj-link: http://www.marywatheninteriors.com
 img:

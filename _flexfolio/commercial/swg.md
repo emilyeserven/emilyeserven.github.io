@@ -3,10 +3,11 @@ layout: flexfolio
 title: SquareWheel Group
 description: ...
 code: swg
+category: webdev
 time: September 2016 - June 2017
 stack: [WordPress.org]
 responsibilities: Development, Design
-category: Commercial
+subcategory: Commercial
 casestudy: false
 projlink:
     - name: SquareWheel Group

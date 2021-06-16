@@ -3,6 +3,7 @@ layout: flexfolio
 title: Digital Asset Manager (Concept)
 description: A concept and prototype for a digital asset manager.
 code: dam
+category: webdev
 time: October 2016
 stack: [HTML, CSS, ReactJS, React Router]
 responsibilities: Original Concept, Front-End Development
@@ -13,7 +14,7 @@ team:
     - name: Jon Harrington
       role: Graphic Design
       url: https://justaskjonathan.com/
-category: Project
+subcategory: Project
 casestudy: true
 projlink:
     - name: GitHub Repository

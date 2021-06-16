@@ -3,6 +3,7 @@ layout: flexfolio
 title: The Money Machine
 description: A collaboration with Matt to creatively fulfill project objectives for a required class.
 code: moneymach
+category: webdev
 time: October 2017
 stack: HTML, CSS, JavaScript, jQuery
 responsibilities: Front-End Development, Design, Concept
@@ -10,7 +11,7 @@ team:
     - name: Matt Gagliano
       role: Front-End Development, Design, Concept
       url: https://www.mattgagliano.com/
-category: Lab
+subcategory: Lab
 casestudy: true
 projlink:
     - name: GitHub Repository

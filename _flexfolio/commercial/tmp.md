@@ -3,10 +3,11 @@ layout: flexfolio
 title: The Midtown Practice
 description: ...
 code: tmp
+category: webdev
 time: August 2017 - Present
 stack: [WordPress.org]
 responsibilities: Development
-category: Commercial
+subcategory: Commercial
 casestudy: false
 projlink:
     - name: Midtown Practice

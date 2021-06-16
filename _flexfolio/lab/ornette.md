@@ -2,7 +2,8 @@
 layout: flexfolio
 title: Ornette
 code: ornette
-category: Lab
+category: webdev
+subcategory: Lab
 casestudy: true
 projlink:
     - name: Github Repository

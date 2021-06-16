@@ -1,7 +1,7 @@
 
 layout: flexfolio
 title: The Box Project
-category: Lab
+subcategory: Lab
 casestudy: false
 projlink:
     - name: Github Repository

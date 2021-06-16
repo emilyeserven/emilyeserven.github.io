@@ -2,7 +2,8 @@
 layout: flexfolio
 title: Rock Paper Scissors
 code: rockpaperscissors
-category: Lab
+category: webdev
+subcategory: Lab
 casestudy: false
 projlink:
     - name: Github Repository

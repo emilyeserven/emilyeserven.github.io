@@ -1,4 +1,4 @@
-{% capture category %}{{ include.category }}{% endcapture %}
+{% capture category %}{{ include.subcategory }}{% endcapture %}
 <div class="all-work-category">
     <h2 id="{{ category | downcase }}">{{ category }}</h2>
     <!--
@@ -9,7 +9,7 @@
     <div class="all-work-holder row">
       {% for project in site.flexfolio %}
         {% if project.workall-view == true %}
-            {% if {{category}} == {{project.category}} %}
+            {% if {{category}} == {{project.subcategory}} %}
                 {% include gridblocks/work-block.html %}
             {% endif %}
         {% endif %}

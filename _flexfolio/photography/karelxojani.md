@@ -3,10 +3,11 @@ layout: photofolio
 title: Karel and XoJani
 description: Billboard Dance chart-topping EDM duo.
 code: karelxojani
+category: photo
 orig-post: 10.14.2017
 last-update: 08.25.2018
 location: Lower East Side, Industry City
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2

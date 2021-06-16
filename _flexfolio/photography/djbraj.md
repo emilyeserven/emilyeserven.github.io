@@ -3,11 +3,12 @@ layout: photofolio
 title: DJ Braj
 description: Twitch Streamer, DJ, and Dance Music Producer.
 code: djbraj
+category: photo
 img-base: photo
 orig-post: 08.12.2018
 last-update: 08.12.2018
 location: Lower East Side, Industry City
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2

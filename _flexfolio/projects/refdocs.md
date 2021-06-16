@@ -6,7 +6,7 @@ code: refdocs
 time: January 2012 - Present
 stack: [Jekyll]
 responsibilities:  Front-End Development, Content, Design
-category: Project
+subcategory: Project
 casestudy: true
 projlink:
     - name: GitHub Repository

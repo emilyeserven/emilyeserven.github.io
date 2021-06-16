@@ -3,6 +3,7 @@ layout: flexfolio
 title: From Here to There
 description: From Here to There is a trip planning tool and category-winning web app built during the 2016 New Haven Hackathon. It that allows users to easily plan and coordinate group activities (as long as the travel origin and destinations are train stations).
 code: fhtt
+category: webdev
 time: October 2016
 stack: [HTML, CSS, AngularJS, bower]
 responsibilities: Original Concept, Front-End Development, Design, Project Management
@@ -13,7 +14,7 @@ team:
       role: Front-End Development
     - name: Mike
       role: API Research
-category: Project
+subcategory: Project
 casestudy: true
 projlink:
     - name: GitHub Repository

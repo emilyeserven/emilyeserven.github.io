@@ -1,8 +1,9 @@
 ---
 layout: flexfolio
 title: New York Excelsior Concept Site
-category: Lab
 code: nyexcelsior
+category: webdev
+subcategory: Lab
 casestudy: false
 projlink:
     - name: Github Repository

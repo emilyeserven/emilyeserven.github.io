@@ -3,9 +3,10 @@ layout: portfolio
 title: Stamford Women's Club
 excerpt: Community service and scholarships.
 code: swc
+category: webdev
 time: October 2014 - Present
 tags: [Custom Backend, Mobile Advisory, Tutoring, Design]
-categories: Non-Profit
+subcategory: Non-Profit
 platform: WordPress
 proj-link: http://www.stamfordwomansclub.org
 img:

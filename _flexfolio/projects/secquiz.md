@@ -3,10 +3,11 @@ layout: flexfolio
 title: React Security Quiz
 description: A quiz whose goal is to make users think about digital security habits introspectively, then give them information to change weak habits.
 code: secquiz
+category: webdev
 time: October 2016
 stack: [HTML, CSS, ReactJS]
 responsibilities: Original Concept, Front-End Development, Design
-category: Project
+subcategory: Project
 casestudy: true
 projlink:
     - name: GitHub Repository

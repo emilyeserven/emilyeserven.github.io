@@ -6,7 +6,7 @@ code: epm
 time: January 2012 - Present
 stack: [WordPress.org, WP Toolset]
 responsibilities:  Front-end Development, design, graphics, tutorials, server management
-category: Commercial
+subcategory: Commercial
 casestudy: false
 projlink:
     - name: EPM Channel

@@ -5,7 +5,7 @@ excerpt: Business article aggregation.
 code: epm
 time: January 2012 - Present
 tags: [Custom Backend, Graphics, Mobile Advisory, SEO, Tutoring, Design]
-categories: Business
+subcategory: Business
 platform: WordPress
 proj-link: http://www.epmchannel.com
 img:

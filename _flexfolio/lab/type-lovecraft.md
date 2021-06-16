@@ -3,10 +3,11 @@ layout: flexfolio
 title: Typography - Lovecraft
 description: A quick project to create a single page that featured a quote and design to support a mood. I decided to work with a blackletter font and match it with a horror quote and atmosphere.
 code: quote-lc
+category: webdev
+subcategory: Lab
 time: October 2014 - Present
 stack: [HTML, CSS]
 responsibilities: Front-End Development, Design
-category: Lab
 casestudy: true
 projlink:
     - name: GitHub Repository

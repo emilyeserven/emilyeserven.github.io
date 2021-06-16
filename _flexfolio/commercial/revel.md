@@ -3,10 +3,11 @@ layout: flexfolio
 title: Revel Cellars
 description: Revel Cellars designs custom wine cellars. They originally needed an update to their non-responsive website in 2014. Afterwards, I continued to assist with updating the design and back-end workflow.
 code: rc
+category: webdev
 time: April 2014 - Present
 stack: [WordPress.org, WP Toolset]
 responsibilities: Custom Backend, Mobile Advisory, Tutoring, Design
-category: Commercial
+subcategory: Commercial
 casestudy: true
 projlink:
     - name: Revel Cellars

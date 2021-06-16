@@ -3,11 +3,12 @@ layout: photofolio
 title: Cityscapes
 description: Views of the greatest city in the world.
 code: cityscapes
+category: photo
 img-base: photo
 orig-post: 10.14.2017
 last-update: 11.11.2017
 location: Brooklyn, Queens, Manhattan
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2

@@ -3,11 +3,12 @@ layout: photofolio
 title: Nina
 description: Greater NYC area-based cosplayer.
 code: nina
+category: photo
 img-base: rei
 orig-post: 11.18.2017
 last-update: 11.18.2017
 location: Jacob Javits Center
-category: Photography
+subcategory: Photography
 casestudy: true
 flexwidth: col-6
 flexheight: 2

@@ -3,10 +3,11 @@ layout: flexfolio
 title: Feyer Music
 description: Feyer is a musician based in New York City. He needed a new website to coincide with the release of his first full album.
 code: fm
+category: webdev
 time: January 2012 - Present
 stack: [WordPress.org, WP Toolset]
 responsibilities:  Front-End Development, Design, Tutorials, Server Management
-category: Commercial
+subcategory: Commercial
 casestudy: true
 projlink:
     - name: Feyer Music

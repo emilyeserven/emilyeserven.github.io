@@ -1,7 +1,7 @@
 
 layout: flexfolio
 title: Key Rush
-category: Lab
+subcategory: Lab
 casestudy: false
 projlink:
     - name: Github Repository

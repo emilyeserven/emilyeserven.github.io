@@ -1433,6 +1433,22 @@ img.portfolio-image {
     background-color: $grey-color-light;
     padding: 10px 15px;
     position:relative;
+    a {
+        border-bottom: 2px #eee solid;
+        transition: background-color ease 0.15s, border ease 0.15s, color ease 0.15s;
+        background-color: transparent;
+        &:hover {
+            background-color: transparent;
+            color: $brand-color-sec;
+            border-bottom: 2px solid $brand-color-sec;
+        }
+        &:visited {
+            color: $brand-color-ter;
+            &:hover {
+                color: $brand-color-sec;
+            }
+        }
+    }
 }
 .feature-image {
   &.border-enabled {

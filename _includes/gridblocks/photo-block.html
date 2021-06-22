@@ -79,16 +79,16 @@ TEMPLATE:
 
 {% elsif include.gridtype == "3333-left" %}
     {% assign padding = "pr-2 pr-sm-3" %}
-    {% assign width = "col-3" %}
+    {% assign width = "col-md-3 col-6" %}
 {% elsif include.gridtype == "3333-midleft" %}
-    {% assign padding = "pr-1 pr-sm-2 pl-0" %}
-    {% assign width = "col-3" %}
+    {% assign padding = "pr-3 pr-sm-2 pl-0" %}
+    {% assign width = "col-md-3 col-6" %}
 {% elsif include.gridtype == "3333-midright" %}
-    {% assign padding = "pr-0 pl-1 pl-sm-2" %}
-    {% assign width = "col-3" %}
+    {% assign padding = "pr-2 pr-sm-0 pl-3 pl-sm-2" %}
+    {% assign width = "col-md-3 col-6" %}
 {% elsif include.gridtype == "3333-right" %}
-    {% assign padding = "pl-2 pl-sm-3" %}
-    {% assign width = "col-3" %}
+    {% assign padding = "pl-0 pl-sm-3" %}
+    {% assign width = "col-md-3 col-6" %}
     {% comment %} THIRDS DONE {% endcomment %}
 
 {% elsif include.gridtype == "39-left" %}
@@ -103,7 +103,7 @@ TEMPLATE:
     {% assign padding = "pr-0" %}
     {% assign width = "col-9" %}
 {% elsif include.gridtype == "93-right" %}
-    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign padding = "pl-2 pl-sm-3 pr-3" %}
     {% assign width = "col-3" %}
     {% comment %} 3QTR-QTR DONE {% endcomment %}
 

@@ -1,0 +1,135 @@
+I"ñ<div class="grid-photo photo-content col-md-6 col-12 port-height-1">
+    
+      <p>
+        Views of the greatest city in the world.
+      </p>
+    
+    
+      <p>
+        <strong>Locations:</strong> Brooklyn, Queens, Manhattan
+      </p>
+    
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3 pr-md-3 pl-md-2 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-reservoir.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-reservoir-full.jpg">
+        <h3>reflection</h3>
+        <p>
+        <em>10.14.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-9 pr-0 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-copper.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-copper-full.jpg">
+        <h3>fade into the distance</h3>
+        <p>
+        <em>10.15.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-3 pl-2 pl-sm-3 pr-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-bbp.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-bbp-full.jpg">
+        <h3>photographing the city</h3>
+        <p>
+        <em>10.21.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pr-3 pl-3 pl-md-3 pr-md-2 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-greenwich.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-greenwich-full.jpg">
+        <h3>the village</h3>
+        <p>
+        <em>10.15.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3 pr-md-3 pl-md-2 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-manhattan.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-manhattan-full.jpg">
+        <h3>midtown</h3>
+        <p>
+        <em>10.15.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-3 pr-2 pr-sm-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-bbp2.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-bbp2-full.jpg">
+        <h3>towards manhattan</h3>
+        <p>
+        <em>10.21.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-6 px-0 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-bbp-fidi.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-bbp-fidi-full.jpg">
+        <h3>look across</h3>
+        <p>
+        <em>10.28.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-3 pl-2 pl-sm-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-unionsq-bway.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-unionsq-bway-full.jpg">
+        <h3>heading downtown</h3>
+        <p>
+        <em>11.04.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-12 pl-3 pr-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-7train.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-7train-full.jpg">
+        <h3>the 7 line</h3>
+        <p>
+        <em>11.11.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pr-3 pl-3 pl-md-3 pr-md-2 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-brookfield.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-brookfield-full.jpg">
+        <h3>marina</h3>
+        <p>
+        <em>11.11.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3 pr-md-3 pl-md-2 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/cityscapes/photo-bbp-night.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/cityscapes/photo-bbp-night-full.jpg">
+        <h3>lower manhattan night</h3>
+        <p>
+        <em>10.28.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+:ET

@@ -16,6 +16,7 @@ casestudy: true
 
 {% include gridblocks/photo-block.html
       name="reflection"
+      gridtype="66-right"
       id="reservoir"
       capture="10.14.2017" %}
 

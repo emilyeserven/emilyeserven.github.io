@@ -16,20 +16,11 @@ projlink:
     - name: Web App
       icon: fa-link
       url: https://rawgit.com/emilyeserven/react-quiz/master/public/index.html
-flexwidth: col-6
-flexheight: 1
-flexorder: 1
-showcaseview: true
-workall-view: true
-workall-order: 2
-workall-size: col-sm-6 col-12
-project-img: ../assets/flexfolio/secquiz/banner.jpg
-workall-img: ../assets/flexfolio/secquiz/banner.jpg
 ---
 
 {% include portfolio/dev-descrip.html %}
 
-<h3>Highlighted Features</h3>
+<h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
     image="question.jpg"

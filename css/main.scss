@@ -244,6 +244,7 @@ h3 {
     font-family: $secondary-font;
     font-variant: small-caps;
     display:block;
+    margin-left:15px;
     a {
         border-bottom: 1px solid $brand-color;
         line-height: .75em;
@@ -456,6 +457,7 @@ a .textcolor- {
     .site-navi.new {
         /*flex-basis: 40%;*/
         display:flex;
+        padding-left: 1em;
         flex-direction:column;
         justify-content: center;
         align-content:center;
@@ -465,6 +467,7 @@ a .textcolor- {
             justify-content:space-between;
             align-content:center;
             .page-link {
+                margin: 0 4px;
                 font-size: 0.7em;
                 padding: .4rem .75rem;
                 width: initial;
@@ -474,6 +477,12 @@ a .textcolor- {
                     background-color: $brand-color;
                     color: #fff;
                     transition: background-color ease 0.05s, color ease 0.05s;
+                }
+                &:last-of-type {
+                    margin: 0 0 0 4px;
+                }
+                &:first-of-type {
+                    margin: 0 4px 0 0;
                 }
             }
         }
@@ -506,7 +515,7 @@ nav.site-navi {
         width: 24%;
         display:inline-block;
         text-align:center;
-        margin-right: 0 !important;
+        //margin-right: 0 !important;
         &:first-child {
             text-align:left;
         }
@@ -562,6 +571,13 @@ h2.section-heading {
     font-family: $secondary-font;
     font-size: 1.25em;
     padding: 2em;
+    p {
+        margin-bottom: 24px;
+        line-height: 1.25;
+        &:last-of-type {
+            margin-bottom: 8px;
+        }
+    }
 }
 
 .contact-ribbon p a.underline-link, .announce p a.underline-link {
@@ -887,12 +903,16 @@ h2.section-heading {
         line-height: 1;
     }
     letter-spacing: 0px;
+    margin-left:15px;
     /*
     max-width: calc(1000px - 120px) !important;
     margin: 15px auto 15px; */
     font-family: $brand-font;
     color: $text-color;
     display:block;
+}
+.page-web-dev .post-title, .page-photography .post-title, .page-contact .post-title {
+    margin-left: 0;
 }
 
 header > .post-title {
@@ -1171,17 +1191,24 @@ img.portfolio-image {
     margin-bottom:10px;
 }
 
+.folio-header {
+    width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 // 3.40 - ALL WORK LOOP
 
 .all-work-category {
     margin-bottom: 4em;
+    padding: 0 16px;
 }
 
 .all-work-categories {
     .category-label {
         display: inline-block;
         padding: 8px 15px 8px 0;
-        margin: 5px 5px 5px 5px;
+        margin: 5px 5px 5px 0;
     }
     .category-button {
         display:inline-block;
@@ -1342,6 +1369,7 @@ img.portfolio-image {
             color: $brand-color-ter;
             text-decoration: none;
             border-bottom: 2px solid $brand-color-ter;
+            background-color: transparent;
         }
     }
 }
@@ -1378,9 +1406,12 @@ img.portfolio-image {
 
 .folio-banner {
   height: 20em;
+  border-bottom: #eee 5px solid;
+  border-top: #333 2px solid;
+  margin-bottom: 8px;
 }
 
-.post-content .main-notes {
+.folio-content .main-notes {
   margin-bottom: 30px;
   display:flex;
   flex-direction: row;
@@ -1499,7 +1530,13 @@ img.portfolio-image {
     font-size: 2em;
 }
 
-// 5.20 - CONTACT FORM
+// 5.20 - CONTACT
+
+.page-contact .contact-ribbon {
+    margin-top: -30px;
+}
+
+/*
 .form-title {
     margin-top: 10px;
 }
@@ -1512,6 +1549,7 @@ img.portfolio-image {
 input.button-link-new {
     border-radius: 0;
 }
+*/
 
 // SECTION 6: SPECIFIC ELEMENTS
 // 6.03 - Icon Holder
@@ -1616,7 +1654,7 @@ pre.lineno {
 // 8.10 - Between 799-1005
 @include media-query-maxmin(1005px,799px) {
     h1.post-title {
-        margin-left:30px;
+        //margin-left:30px;
     }
 }
 
@@ -1820,10 +1858,19 @@ input.buttons {
 @include media-query-maxmin(767px,601px) {
     h1.post-title {
         margin-bottom: 0px;
-        margin-left:15px;
+        //margin-left:15px;
     }
     .skills-img {
         text-align: left;
+    }
+    .port-height-2 {
+        height: 17.5em;
+    }
+    .port-height-1 {
+        height: 9em;
+    }
+    .site-head-new .site-navi.new .menu-holder {
+        padding-left: 15px;
     }
 }
 
@@ -1844,6 +1891,12 @@ input.buttons {
         width: initial;
         text-align: left;
         font-size: .75em;
+    }
+    .port-height-2 {
+        height: 14.5em;
+    }
+    .port-height-1 {
+        height: 9em;
     }
 }
 
@@ -1978,8 +2031,15 @@ input.buttons {
         }
     }
 }
+
+@include media-query(410px) {
+    .site-head-new .site-navi.new .menu-holder a.page-link {
+        width: 47%;
+        text-align: center;
+        margin: 3px 3px !important;
+    }
+}
 @include media-query(320px) {
-    
     .home-section.header {
         height: 18em;
         /*

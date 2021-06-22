@@ -1,5 +1,5 @@
 ---
-layout: photofolio
+layout: flexfolio
 title: Street Art
 description: New Yorkers using the city as their canvas.
 code: streetart
@@ -9,15 +9,6 @@ last-update: 11.04.2017
 location: Chelsea, Lower East Side
 subcategory: Photography
 casestudy: true
-flexwidth: col-6
-flexheight: 2
-flexorder: 4
-showcaseview: true
-workall-view: true
-workall-order: 2
-workall-size:  col-sm-6 col-12
-project-img: ../assets/flexfolio/streetart/banner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/photo-half-descrip.html %}
@@ -25,6 +16,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="verticals"
     id="verticals"
+    gridtype="66-right"
     capture="09.30.2017" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -32,21 +24,21 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="drip drop"
     id="dripdrop"
-    width="col-3"
+    gridtype="363-left"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="blondie"
     id="blondie"
-    width="col-6"
+    gridtype="363-mid"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="door"
     id="door"
-    width="col-3"
+    gridtype="363-right"
     height=2
     capture="10.07.2017" %}
 
@@ -55,12 +47,14 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="with love"
     id="withlove"
+    gridtype="66-left"
     height=2
     capture="10.21.2017" %}
 
 {% include gridblocks/photo-block.html
     name="arrivals"
     id="arrivals"
+    gridtype="66-right"
     height=2
     capture="10.21.2017" %}
 
@@ -69,25 +63,25 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="wall"
     id="wall1"
-    width="col-3"
+    gridtype="3333-left"
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="wall"
     id="wall2"
-    width="col-3"
+    gridtype="3333-midleft"
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="wall"
     id="wall3"
-    width="col-3"
+    gridtype="3333-midright"
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="scream"
     id="scream"
-    width="col-3"
+    gridtype="3333-right"
     capture="11.04.2017" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -95,20 +89,21 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="neighbor"
     id="neighbor"
-    width="col-3"
+    gridtype="363-left"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="art not ads"
     id="artnotads"
+    gridtype="363-mid"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="bar"
     id="bar"
-    width="col-3"
+    gridtype="363-right"
     height=2
     capture="11.04.2017" %}
 
@@ -117,13 +112,13 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
     name="saturated"
     id="saturated"
-    width="col-9"
+    gridtype="93-left"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="end the conflict"
     id="endconflict"
-    width="col-3"
+    gridtype="93-right"
     height=2
     capture="10.21.2017" %}

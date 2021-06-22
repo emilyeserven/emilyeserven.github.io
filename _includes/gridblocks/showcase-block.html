@@ -1,14 +1,29 @@
+{% comment %}
+This block is to link to other projects using an image with
+text that overlays.
+
+{% endcomment %}
+
+
+
 {% assign project = site.flexfolio | where:"code", include.code | first %}
-{% if {{project.flexwidth}} %}
-    {% assign flexwidth = {{project.flexwidth}} %}
+
+{% if {{include.width}} %}
+    {% assign width = {{include.width}} %}
+{% elsif {{project.flexwidth}} %}
+    {% comment %} OLD Method. Delete when all items don't have it anymore. {% endcomment %}
+    {% assign width = {{project.flexwidth}} %}
 {% else %}
-    Nothing
+    {% assign width = "col-6" %}
 {% endif %}
 
-{% if {{project.flexheight}} %}
-    {% assign flexheight = {{project.flexheight}} %}
+{% if {{include.height}} %}
+    {% assign height = {{include.height}} %}
+{% elsif {{project.flexheight}} %}
+    {% comment %} OLD Method. Delete when all items don't have it anymore. {% endcomment %}
+    {% assign height = {{project.flexheight}} %}
 {% else %}
-    Nothing
+    {% assign height = 1 %}
 {% endif %}
 
 {% if {{project.url}} %}
@@ -17,14 +32,20 @@
     Nothing
 {% endif %}
 
-{% if {{project.project-img}} %}
-    {% assign project-img = {{project.project-img}} %}
+{% if {{include.banner-img}} %}
+    {% assign banner-img = {{include.banner-img}} %}
+{% elsif {{project.showcase-img}} %}
+    {% comment %} NEW Method. {% endcomment %}
+    {% assign showcase-img = {{project.showcase-img}} %}
+{% elsif {{project.showcase-img}} %}
+    {% comment %} OLD Method. Delete when all items don't have it anymore. {% endcomment %}
+    {% assign showcase-img = {{project.showcase-img}} %}
 {% else %}
-    Nothing
+    {% assign banner-img = {{ "" | append: "../assets/flexfolio/" | append: {{code}} | append: "/banner-sc.jpg" }} %}
 {% endif %}
 
-<div class="portfolio-square {{flexwidth}} port-height-{{flexheight}}">
-    <div class="block-image" style="background-image: url({{project-img}});">
+<div class="portfolio-square {{width}} port-height-{{height}}">
+    <div class="block-image" style="background-image: url({{showcase-img}});">
     <a href="{{url}}" class="portfolio-link">
         <div class="link-content-holder">
         <div class="link-content">

@@ -1,13 +1,15 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper site-head-new">
-    <div class="title col-md-7 col-12 align-self-start">
-      <a class="site-title" href="{{ site.baseurl }}/">Emily <span>Serven</span></a><br />
-      <p class="site-subtitle">Web Application Developer</p>
+    <div class="title col-md-6 col-12 align-self-start justify-content-center justify-content-sm-start justify-content-md-start d-flex">
+      <div class="align-self-center flex-column d-inline-flex">
+        <a class="site-title" href="{{ site.baseurl }}/">Emily <span>Serven</span></a>
+        <p class="site-subtitle">Web Application Developer</p>
+      </div>
     </div>
-    <nav class="site-navi new col-md-5 col-12 justify-content-between align-self-center">
+    <nav class="site-navi new col-md-6 col-12 justify-content-center justify-content-md-end align-self-center">
 
-      <div class="menu-holder justify-content-between">
+      <div class="menu-holder justify-content-center justify-content-sm-start justify-content-md-end flex-wrap flex-md-nowrap">
         <!-- SORTED MENU: https://stackoverflow.com/questions/9053066/sorted-navigation-menu-with-jekyll-and-liquid -->
         {% assign all_pages = site.pages | sort:"order" %}
         {% for my_page in all_pages %}

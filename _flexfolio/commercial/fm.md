@@ -13,20 +13,13 @@ projlink:
     - name: Feyer Music
       icon: fa-link
       url: http://www.feyermusic.com
-flexwidth: col-6
-flexheight: 1
-flexorder: 1
-showcaseview: true
-workall-view: true
-workall-order: 1
-workall-size:  col-sm-6 col-12
-project-img: ../assets/flexfolio/fm/banner.jpg
-workall-img: ../assets/flexfolio/fm/banner.jpg
 ---
 
 {% include portfolio/dev-descrip.html %}
 
-<h3>Highlighted Features</h3>
+<div class="row">
+<div class="col-12">
+<h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
     image="feat1.jpg"
@@ -44,3 +37,8 @@ workall-img: ../assets/flexfolio/fm/banner.jpg
 {% include portfolio/feature-full.html
     image="fullfeat.jpg"
     spacing="large" %}
+
+<br />
+
+</div>
+</div>

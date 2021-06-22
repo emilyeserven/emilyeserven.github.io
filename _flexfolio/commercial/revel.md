@@ -13,20 +13,11 @@ projlink:
     - name: Revel Cellars
       icon: fa-link
       url: http://www.revelcellars.com
-flexwidth: col-3
-flexheight: 2
-flexorder: 2
-showcaseview: true
-workall-view: true
-workall-order: 1
-workall-size:  col-sm-6 col-12
-project-img: ../assets/flexfolio/rc/banner.jpg
-workall-img: ../assets/flexfolio/rc/all-banner.jpg
 ---
 
 {% include portfolio/dev-descrip.html %}
 
-<h3>Highlighted Features</h3>
+<h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
     image="feat1.jpg"

@@ -1,5 +1,5 @@
 ---
-layout: photofolio
+layout: flexfolio
 title: DJ Braj
 description: Twitch Streamer, DJ, and Dance Music Producer.
 code: djbraj
@@ -10,15 +10,6 @@ last-update: 08.12.2018
 location: Lower East Side, Industry City
 subcategory: Photography
 casestudy: true
-flexwidth: col-6
-flexheight: 2
-flexorder: 2
-showcaseview: false
-workall-view: true
-workall-order: 5
-workall-size: col-sm-3 col-6
-project-img: ../assets/flexfolio/djbraj/allbanner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/photo-half-descrip.html %}
@@ -26,6 +17,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Braj"
       id="braj"
+      gridtype="66-right"
       capture="08.12.2018" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -33,7 +25,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Turntable, I"
       id="tt1"
-      width="col-12"
+      gridtype="12-full"
       capture="08.12.2018" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -41,14 +33,14 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Working"
       id="working"
-      width="col-3"
+      gridtype="39-left"
       height=2
       capture="08.12.2018" %}
 
 {% include gridblocks/photo-block.html
       name="Turntable, II"
       id="tt2"
-      width="col-9"
+      gridtype="39-right"
       height=2
       capture="08.12.2018" %}
 

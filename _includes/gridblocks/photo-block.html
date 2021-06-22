@@ -19,12 +19,10 @@ TEMPLATE:
 {% endcomment %}
 {% if page.extension %}
     {% assign ext = page.extension %}
+{% elsif include.ext %}
+    {% assign ext = include.ext %}
 {% else %}
-    {% if include.ext %}
-        {% assign ext = include.ext %}
-    {% else %}
-        {% assign ext = "jpg" %}
-    {% endif %}
+    {% assign ext = "jpg" %}
 {% endif %}
 
 {% comment %}
@@ -49,11 +47,70 @@ TEMPLATE:
     The `width` variable controls the image block's
     width. It uses bootstrap columns, but usually
     col-3, col-6, col-9, and col-12 are the values.
-{% endcomment %}
+
 {% if include.width %}
     {% assign width = include.width %}
 {% else %}
     {% assign width = "col-6" %}
+{% endif %}
+{% endcomment %}
+
+{% if include.gridtype == "12-full" %}
+    {% assign padding = "pl-3 pr-3" %}
+    {% assign width = "col-12" %}
+{% elsif include.gridtype == "66-left" %}
+    {% assign padding = "pr-1 pr-sm-2" %}
+    {% assign width = "col-6" %}
+{% elsif include.gridtype == "66-right" %}
+    {% assign padding = "pl-1 pl-sm-2" %}
+    {% assign width = "col-6" %}
+    {% comment %} HALVES DONE {% endcomment %}
+
+{% elsif include.gridtype == "363-left" %}
+    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign width = "col-3" %}
+{% elsif include.gridtype == "363-mid" %}
+    {% assign padding = "px-0" %}
+    {% assign width = "col-6" %}
+{% elsif include.gridtype == "363-right" %}
+    {% assign padding = "pl-2 pl-sm-3" %}
+    {% assign width = "col-3" %}
+    {% comment %} THIRDS DONE {% endcomment %}
+
+{% elsif include.gridtype == "3333-left" %}
+    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign width = "col-3" %}
+{% elsif include.gridtype == "3333-midleft" %}
+    {% assign padding = "pr-1 pr-sm-2 pl-0" %}
+    {% assign width = "col-3" %}
+{% elsif include.gridtype == "3333-midright" %}
+    {% assign padding = "pr-0 pl-1 pl-sm-2" %}
+    {% assign width = "col-3" %}
+{% elsif include.gridtype == "3333-right" %}
+    {% assign padding = "pl-2 pl-sm-3" %}
+    {% assign width = "col-3" %}
+    {% comment %} THIRDS DONE {% endcomment %}
+
+{% elsif include.gridtype == "39-left" %}
+    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign width = "col-3" %}
+{% elsif include.gridtype == "39-right" %}
+    {% assign padding = "pl-0" %}
+    {% assign width = "col-9" %}
+    {% comment %} QTR-3QTR DONE {% endcomment %}
+
+{% elsif include.gridtype == "93-left" %}
+    {% assign padding = "pr-0" %}
+    {% assign width = "col-9" %}
+{% elsif include.gridtype == "93-right" %}
+    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign width = "col-3" %}
+    {% comment %} 3QTR-QTR DONE {% endcomment %}
+
+{% elsif include.padding %}
+    {% assign padding = include.padding %}
+{% else %}
+    {% assign padding = "" %}
 {% endif %}
 
 {% comment %}
@@ -85,9 +142,9 @@ TEMPLATE:
 {% assign featherlight-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '-full.' | append: ext}} %}
 
 
-<div class="grid-photo {{width}} port-height-{{height}}">
+<div class="grid-photo {{width}} {{padding}} port-height-{{height}}">
     <div class="block-image" style="background-image: url({{bgimg-url}});">
-    <a data-featherlight="{{featherlight-url}}">
+    <a class="fl-gallery-item" data-featherlight="{{featherlight-url}}">
         <h3>{{include.name}}</h3>
         <p>
         <em>{{include.capture}}</em>

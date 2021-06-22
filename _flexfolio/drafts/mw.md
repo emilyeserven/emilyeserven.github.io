@@ -16,7 +16,7 @@ showcaseview: false
 workall-view: true
 workall-order: 3
 workall-size: col-3
-project-img: ../assets/images/placeholder.png
+showcase-img: ../assets/images/placeholder.png
 workall-img: ../placeholder.png
 pageimg:
     - img-name: The Mary Wathen website on all main devices.

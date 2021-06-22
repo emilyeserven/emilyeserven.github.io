@@ -16,15 +16,6 @@ projlink:
     - name: Live Page
       icon: fa-link
       url: https://rawgit.com/emilyeserven/testwebsites/master/typography/lovecraft.html
-flexwidth: col-6
-flexheight: 1
-flexorder: 3
-showcaseview: false
-workall-view: true
-workall-order: 2
-workall-size: col-sm-3 col-6
-project-img: ../assets/flexfolio/quote-lc/banner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/dev-descrip.html %}

@@ -12,11 +12,6 @@ projlink:
     - name: Ornette Page
       icon: fa-link
       url: https://rawgit.com/emilyeserven/testwebsites/master/ornette/index.html
-showcaseview: false
-workall-view: true
-workall-order: 3
-workall-size: col-sm-3 col-6
-project-img: ../assets/flexfolio/quote-lc/banner.jpg
 ---
 
 ## Origin & Goals

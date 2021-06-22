@@ -1,74 +1,47 @@
 ---
 layout: default-nowrap
 ---
+{% if page.bgsize %}
+    {% assign bgsize = "" | append: "background-size: " | append: page.bgsize | append: ";" %}
+{% else %}
+    {% assign bgsize = "background-size: cover;" %}
+{% endif %}
+
+{% if page.bgpos %}
+    {% assign bgpos = "" | append: "background-position: " | append: page.bgpos | append: ";" %}
+{% else %}
+    {% assign bgpos = "background-position: 50%;" %}
+{% endif %}
+
 <article class="post">
-  <div class="folio-banner" style="background-image: url({{ site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/pgbanner.jpg'}}); background-size: cover; background-position: 50%;"></div>
+  <div class="folio-banner" style="background-image: url({{ site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/banner-pg.jpg'}}); {{bgsize}} {{bgpos}}"></div>
   <div class="wrapper">
-    <div class="col-12">
-      <p class="backlink">
-        <a href="/work"><small>Back to Portfolio</small></a>
-      </p>
-    </div>
-    <div class="col-12">
-      <h1 class="post-title">{{ page.title }}</h1>
-    </div>
-    <div class="post-content">
-      <!--
-      <div class="main-notes">
-        <div class="col-sm-9 col-12">
-          <p><strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
-          <strong>Responsibilities</strong>: {{page.responsibilities}}<br />
-        <strong>Type</strong>: {{page.subcategory}}</p>
-          <p>{{ page.description }}</p>
+    <div class="row">
+      <div class="folio-header">
+        <div class="col-12">
+          <p class="backlink">
+            {% if page.category == "webdev" %}
+              <a href="/webdev"><small>Back to Web Dev Portfolio</small></a>
+            {% elsif page.category == "photo" %}
+              <a href="/photography"><small>Back to Photography Portfolio</small></a>
+            {% endif %}
+          </p>
         </div>
-        <div class="col-sm-3 col-12">
-          <div class="project-box">
-            <p>
-              {% if page.projlink.size > 1 %}
-              <strong>Project Links</strong>:
-              {% endif %}
-              {% if page.projlink.size == 1 %}
-                <strong>Project Link</strong>:
-              {% endif %}
-              {% for link in page.projlink %}
-                <br /><a href="{{link.url}}">{{link.name}}</a>
-              {% endfor %}
-            </p>
-          </div>
+        <div class="col-12">
+          <h1 class="post-title">{{ page.title }}</h1>
         </div>
       </div>
-      <div class="clearfix"></div>
-      -->
-      <div class="folio-features col-12">
-        {% for feature in page.features %}
-          {% if feature.format == 'half-left' %}
-            <div class="feature-image row spacing-{{feature.spacing}}">
-              <div class="image-holder col-md-6 col-12">
-                <img src="{{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: feature.image }}" />
-              </div>
-              <div class="caption-holder col-md-6 col-12">
-                {{feature.descrip}}
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      {% if content %}
-      <br />
-        <div class="folio-content">
+      <!-- END folio-header -->
+      <div class="container-fluid">
+        {% if page.category == "photo" %}
+          <div class="row fl-gallery">
+            {{ content }}
+          </div>
+        {% else %}
           {{ content }}
-        </div>
-      {% endif %}
-        {% for feature in page.features %}
-          {% if feature.format == 'full' %}
-            <div class="feature-image col-12 spacing-{{feature.spacing}}">
-              <div class="image-holder">
-                <img src="{{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: feature.image }}" />
-              </div>
-              <div class="caption-holder">{{feature.descrip}}</div>
-            </div>
-          {% endif %}
-        {% endfor %}
+        {% endif %}
       </div>
     </div>
   </div>
+  <!-- END row -->
 </article>

@@ -14,7 +14,7 @@ showcaseview: false
 workall-view: true
 workall-order: 3
 workall-size: col-3
-project-img: ../assets/flexfolio/quote-lc/banner.jpg
+showcase-img: ../assets/flexfolio/quote-lc/banner.jpg
 workall-img: ../placeholder.png
 banner: ../../assets/flexfolio/quote-lc/pgbanner.jpg
 ---

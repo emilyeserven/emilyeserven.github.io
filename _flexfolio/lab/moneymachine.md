@@ -20,20 +20,11 @@ projlink:
     - name: The Money Machine
       icon: fa-link
       url: https://rawgit.com/emilyeserven/most-beautiful-website-ever/master/surprise.html
-flexwidth: col-3
-flexheight: 1
-flexorder: 3
-showcaseview: false
-workall-view: true
-workall-order: 1
-workall-size: col-sm-6 col-12
-project-img: ../assets/flexfolio/moneymach/banner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/dev-descrip.html %}
 
-<h3>Highlighted Features</h3>
+<h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
     image="feat1.jpg"

@@ -23,20 +23,11 @@ projlink:
     - name: Web App
       icon: fa-link
       url: https://rawgit.com/emilyeserven/digital-asset-manager/master/build/index.html
-flexwidth: col-3
-flexheight: 1
-flexorder: 3
-showcaseview: false
-workall-view: true
-workall-order: 2
-workall-size: col-sm-6 col-12
-project-img: ../assets/flexfolio/fhtt/banner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/dev-descrip.html %}
 
-<h3>Highlighted Features</h3>
+<h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
     image="tree.jpg"

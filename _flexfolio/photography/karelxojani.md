@@ -1,5 +1,5 @@
 ---
-layout: photofolio
+layout: flexfolio
 title: Karel and XoJani
 description: Billboard Dance chart-topping EDM duo.
 code: karelxojani
@@ -9,15 +9,6 @@ last-update: 08.25.2018
 location: Lower East Side, Industry City
 subcategory: Photography
 casestudy: true
-flexwidth: col-6
-flexheight: 2
-flexorder: 2
-showcaseview: false
-workall-view: true
-workall-order: 1
-workall-size:  col-sm-6 col-12
-project-img: ../assets/flexfolio/karelxojani/allbanner.jpg
-workall-img: ../placeholder.png
 ---
 
 {% include portfolio/photo-half-descrip.html %}
@@ -25,6 +16,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="XoJani - Red"
       id="janired"
+      gridtype="66-right"
       img-base="201803"
       capture="03.17.2018" %}
 
@@ -34,7 +26,7 @@ workall-img: ../placeholder.png
       name="Guitar"
       id="guitar"
       img-base="201710"
-      width="col-3"
+      gridtype="39-left"
       height=2
       capture="10.14.2017" %}
 
@@ -42,7 +34,7 @@ workall-img: ../placeholder.png
       name="Making Adjustments"
       id="kareladjust"
       img-base="201710"
-      width="col-9"
+      gridtype="39-right"
       height=2
       capture="10.14.2017" %}
 
@@ -52,7 +44,7 @@ workall-img: ../placeholder.png
       name="Pass the Mic"
       id="karelmic"
       img-base="201803"
-      width="col-3"
+      gridtype="363-left"
       height=2
       capture="03.17.2018" %}
 
@@ -60,7 +52,7 @@ workall-img: ../placeholder.png
       name="Dancing"
       id="auddance"
       img-base="201710"
-      width="col-6"
+      gridtype="363-mid"
       height=2
       capture="10.14.2017" %}
 
@@ -68,7 +60,7 @@ workall-img: ../placeholder.png
       name="XoJani - Blue"
       id="janiblue"
       img-base="201710"
-      width="col-3"
+      gridtype="363-right"
       height=2
       capture="10.14.2017" %}
 
@@ -78,7 +70,7 @@ workall-img: ../placeholder.png
       name="Outlines"
       id="silhouette"
       img-base="201710"
-      width="col-12"
+      gridtype="12-full"
       height=1
       capture="10.14.2017" %}
 
@@ -87,12 +79,14 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Red Crowd"
       id="crowdred"
+      gridtype="66-left"
       img-base="201803"
       capture="03.17.2018" %}
 
 {% include gridblocks/photo-block.html
       name="Karel - Red"
       id="crowdred2"
+      gridtype="66-right"
       img-base="201803"
       capture="03.17.2018" %}
 
@@ -102,7 +96,7 @@ workall-img: ../placeholder.png
       name="Blue and Yellow"
       id="karelby"
       img-base="201808"
-      width="col-12"
+      gridtype="12-full"
       height=1
       capture="08.25.2018" %}
 
@@ -111,6 +105,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Money Shot"
       id="moneyfloor"
+      gridtype="66-left"
       img-base="201803"
       height=2
       capture="03.17.2018" %}
@@ -118,6 +113,7 @@ workall-img: ../placeholder.png
 {% include gridblocks/photo-block.html
       name="Red Wall"
       id="karelred"
+      gridtype="66-right"
       img-base="201808"
       height=2
       capture="08.25.2018" %}

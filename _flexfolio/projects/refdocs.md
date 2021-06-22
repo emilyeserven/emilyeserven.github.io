@@ -22,7 +22,7 @@ showcaseview: false
 workall-view: true
 workall-order: 4
 workall-size: col-sm-3 col-6
-project-img: ../assets/flexfolio/refdocs/banner.jpg
+showcase-img: ../assets/flexfolio/refdocs/banner.jpg
 workall-img: ../assets/flexfolio/refdocs/banner.jpg
 features:
     - descrip: <strong>Detailed Documentation</strong><br />I try to write explanations of concepts with as little jargon as possible and integrate information from multiple sources. Non-disruptive footnotes are included for people who are curious and want to read more.

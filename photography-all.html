@@ -1,33 +1,64 @@
-
+---
 layout: default
-title: Photos
+title: Photography
 permalink: /photography/
 order: 3
 ---
-
-  <div class="portfolio-holder new standalone row">
-
-    {% include gridblocks/showcase-block.html
-        code="fm" %}
-
-    {% include gridblocks/showcase-block.html
-        code="secquiz" %}
-
-    {% include gridblocks/showcase-block.html
-        code="rc" %}
-
-    {% include gridblocks/showcase-block.html
-        code="nyc-bw-people" %}
-
-    {% include gridblocks/showcase-block.html
-        code="cityscapes" %}
-
-    {% include gridblocks/showcase-block.html
-        code="streetart" %}
-
-    <div class="col-12">
-        <p class="portfolio-right-link">
-          <a href="/work-all" class="underline-link">&nbsp;All Work →&nbsp;</a>
-        </p>
+<div class="col-12">
+    <div class="all-work-categories">
+      <span class="category-label">Categories:</span>
+      {% include layout/category-btn.html name="Events" %}
+      {% include layout/category-btn.html name="Creative Portraits" %}
+      {% include layout/category-btn.html name="Creative" %}
+        <!--<li><a href="#">Media</a></li>-->
     </div>
-  </div>
+</div>
+<br />
+
+{% comment %} EVENTS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Events" %}
+
+    {% include gridblocks/work-block.html
+        code="karelxojani"
+        size=6 %}
+
+
+{% include layout/work-block-end.html %}
+
+{% comment %} CREATIVE PORTRAITS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Creative Portraits" %}
+
+    {% include gridblocks/work-block.html
+        code="djbraj"
+        size=3 %}
+
+    {% include gridblocks/work-block.html
+        code="nina"
+        size=3 %}
+
+
+{% include layout/work-block-end.html %}
+
+{% comment %} CREATIVE SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Creative" %}
+
+    {% include gridblocks/work-block.html
+        code="streetart"
+        size=6 %}
+
+    {% include gridblocks/work-block.html
+        code="nyc-bw-people"
+        size=3 %}
+
+    {% include gridblocks/work-block.html
+        code="cityscapes"
+        size=3 %}
+
+
+{% include layout/work-block-end.html %}

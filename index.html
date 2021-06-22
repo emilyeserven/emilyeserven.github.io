@@ -14,22 +14,18 @@ order: 1
       </div>
       <div class="row">
         <div class="header-button">
-          <a href="/work/" class="button-link-new">See my Work&nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;</a>
+          <a href="/webdev/" class="button-link-new">See my Work&nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;</a>
         </div>
       </div>
   </div>
 </div>
-<div class="home-section announce">
-  <div class="wrapper">
-    <div class="row px-3">
-      <div class="col-12">
-        <p class="mb-0">
-          Check out the case studies for my latest projects, <a href="/work/projects/dam/" class="underline-link">DAM</a> and the <a href="/work/projects/secquiz/" class="underline-link">React Security Quiz</a>!
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+{% capture announce %}
+  {% comment %} Add content for the announcement here! {% endcomment %}
+  Check out the case studies for my latest projects, <a href="/work/projects/dam/" class="underline-link">DAM</a> and the <a href="/work/projects/secquiz/" class="underline-link">React Security Quiz</a>!
+{% endcapture %}
+
+{% include announcebar.html announceshow=false %}
+
 <div class="wrapper">
   <div class="home-section info">
     <div class="info-section first-one">
@@ -38,10 +34,10 @@ order: 1
         <p>
             I am a web application developer with a diverse skillset and a passion for crafting scalable and usable experiences.
         <p>
-            Currently, I'm a developer at <a class="underline-link" href="http://aimediagroup.com/" target="_blank">Ai Media Group</a>. I am also a graduate of the University of Connecticut (I earned a B.A. in Digital Media and Design with a concentration in website development and design).
+            Most recently, I was a front-end developer at <a class="underline-link" href="http://aimediagroup.com/" target="_blank">Ai Media Group</a>. I am also an alumni of the University of Connecticut's Digital Media and Design program (with a concentration in Web Development and Design). Currently, I am seeking opportunities where I may continue developing web applications.
         </p>
         <p>
-            I'm always eager to learn, work effectively in a team, and lead. In addition to being a developer, I'm also a designer, photographer, and <a class="underline-link" target="blank" href="https://open.spotify.com/user/emilyeserven/playlist/7mzJwNP3egxUiAY6i1DOMs">foreign music</a> enthusiast.
+            Much of my free time is spent learning and honing my skills as a designer, <a photographer href="/photography" class="underline-link">photographer</a>, and (since quarantine) a learner of 日本語 (Japanese).
         </p>
         <div class="info-buttons">
           <!-- <a class="button-link-new" href="../assets/emily_serven_cv.pdf">Download my CV</a> -->
@@ -54,24 +50,10 @@ order: 1
     </div>
     <div class="info-section col-md-12">
       <h2>I believe in...</h2>
-      <p><a href="/work/" class="underline-link">crafting experiences</a> that exceed expectations for my clients.</p>
-      <p><a href="/work/" class="underline-link">experimenting and developing new things</a> by stepping out of my comfort zone.</p>
-      <p><a href="/work/" class="underline-link">capturing moments and small details</a> through my explorations and photography.</p>
+      <p><a href="/webdev#commercial" class="underline-link">crafting experiences</a> that exceed expectations for my clients.</p>
+      <p><a href="/webdev#labs" class="underline-link">experimenting and developing new things</a> by stepping out of my comfort zone.</p>
+      <p><a href="/photography" class="underline-link">capturing moments and small details</a> through my explorations and photography.</p>
     </div>
   </div>
 </div>
-<div class="container-fluid contact-ribbon">
-    <div class="wrapper px-0 px-md-4">
-      <div class="col-12 px-0 px-md-4">
-        <p>
-          I am <b>available</b> for collaborations and other <b>non-commercial</b> website development projects!
-        </p>
-        <p>
-          If you are in need of web development consulting, I may be able to direct you to others who can help.
-        </p>
-        <p>
-          Please email me at <a class="underline-link" href="mailto:emily@emilyserven.net">emily@emilyserven.net</a> and I'll get right back to you.
-        </p>
-      </div>
-    </div>
-</div>
+{% include contact.html %}

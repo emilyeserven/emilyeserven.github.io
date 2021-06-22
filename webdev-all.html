@@ -1,33 +1,93 @@
-
+---
 layout: default
 title: Web Dev
 permalink: /webdev/
 order: 3
 ---
+<div class="col-12">
+    <div class="all-work-categories">
+      <span class="category-label">Categories:</span>
+        {% include layout/category-btn.html name="Commercial" %}
+        {% include layout/category-btn.html name="Projects" %}
+        {% include layout/category-btn.html name="Labs" %}
+    </div>
+</div>
+<br />
 
-  <div class="portfolio-holder new standalone row">
+{% comment %} COMMERCIAL SECTION {% endcomment %}
 
-    {% include gridblocks/showcase-block.html
+{% include layout/work-block-start.html
+    name="Commercial" %}
+
+    {% include gridblocks/work-block.html
         code="fm" %}
 
-    {% include gridblocks/showcase-block.html
-        code="secquiz" %}
-
-    {% include gridblocks/showcase-block.html
+    {% include gridblocks/work-block.html
         code="rc" %}
 
-    {% include gridblocks/showcase-block.html
-        code="nyc-bw-people" %}
+    {% include gridblocks/work-block.html
+        code="tmp"
+        size=3 %}
 
-    {% include gridblocks/showcase-block.html
-        code="cityscapes" %}
+    {% include gridblocks/work-block.html
+        code="swg"
+        size=3 %}
 
-    {% include gridblocks/showcase-block.html
-        code="streetart" %}
+    {% include gridblocks/work-block.html
+        code="nbm"
+        size=3 %}
 
-    <div class="col-12">
-        <p class="portfolio-right-link">
-          <a href="/work-all" class="underline-link">&nbsp;All Work →&nbsp;</a>
-        </p>
-    </div>
-  </div>
+    {% include gridblocks/work-block.html
+        code="td"
+        size=3 %}
+
+{% include layout/work-block-end.html %}
+
+{% comment %} PROJECTS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Projects" %}
+
+    {% include gridblocks/work-block.html
+        code="secquiz" %}
+
+    {% include gridblocks/work-block.html
+        code="dam"
+        size=6 %}
+
+    {% include gridblocks/work-block.html
+        code="fhtt"
+        size=3 %}
+
+{% include layout/work-block-end.html %}
+
+{% comment %} LABS SECTION {% endcomment %}
+
+{% include layout/work-block-start.html
+    name="Labs" %}
+
+    {% include gridblocks/work-block.html
+        code="moneymach" %}
+
+    {% include gridblocks/work-block.html
+        code="nyexcelsior" %}
+
+    {% include gridblocks/work-block.html
+        code="quote-lc"
+        size=3 %}
+
+    {% include gridblocks/work-block.html
+        code="d3"
+        size=3 %}
+
+    {% include gridblocks/work-block.html
+        code="ornette"
+        size=3 %}
+
+    {% include gridblocks/work-block.html
+        code="rockpaperscissors"
+        size=3 %}
+
+
+
+{% include layout/work-block-end.html %}

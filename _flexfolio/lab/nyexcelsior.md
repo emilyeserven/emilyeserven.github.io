@@ -12,9 +12,4 @@ projlink:
     - name: New York Excelsior Concept Site
       icon: fa-link
       url: https://rawgit.com/emilyeserven/octagon-challenge/master/index.html
-showcaseview: false
-workall-view: true
-workall-order: 1
-workall-size:  col-sm-6 col-12
-project-img: ../assets/flexfolio/quote-lc/banner.jpg
 ---

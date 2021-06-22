@@ -1,21 +1,48 @@
 {% assign project = site.flexfolio | where:"code", include.code | first %}
+{% assign code = {{project.code}} %}
 
-{% if {{include.workall-size}} %}
-    {% assign workall-size = {{include.workall-size}} %}
+{% if {{include.size}} %}
+    {% if {{include.size}} == 3 %}
+      {% comment %} 03/12 - 1/4 Fourths {% endcomment %}
+      {% assign size = "col-sm-3 col-6" %}
+    {% elsif {{include.size}} == 4 %}
+      {% comment %} 04/12 - 1/3 Thirds {% endcomment %}
+      {% assign size = "col-sm-4 col-12" %}
+    {% elsif {{include.size}} == 6 %}
+      {% comment %} 06/12 - 1/2 Halfs {% endcomment %}
+      {% assign size = "col-sm-6 col-12" %}
+    {% elsif {{include.size}} == 12 %}
+      {% comment %} 12/12 - 1/1 Fulls {% endcomment %}
+      {% assign size = "col-sm-12 col-12" %}
+    {% else %}
+      {% comment %} 06/12 - 1/2 Halfs {% endcomment %}
+      {% assign size = "col-sm-6 col-12" %}
+    {% endif %}
 {% elsif {{project.workall-size}} %}
-    {% assign workall-size = {{project.workall-size}} %}
+    {% assign size = {{project.workall-size}} %}
+{% else %}
+  Else
+    {% assign size = "col-sm-6 col-12" %}
 {% endif %}
 
 {% if {{include.casestudy}} == true %}
     {% assign casestudy = true %}
 {% elsif {{project.casestudy}} == true %}
     {% assign casestudy = true %}
+{% else %}
+    {% assign casestudy = false %}
 {% endif %}
 
-{% assign code = {{project.code}} %}
+{% if {{include.banner-img}} %}
+    {% assign banner-img = {{ "" | append: "../assets/flexfolio/" | append: {{code}} | append: "/" | append: {{include.banner-img}} }} %}
+{% elsif {{project.workall-img}} %}
+    {% assign banner-img = {{project.workall-img}} %}
+{% else %}
+    {% assign banner-img = {{ "" | append: "../assets/flexfolio/" | append: {{code}} | append: "/banner.jpg" }} %}
+{% endif %}
 
-<div class="work-block {{workall-size}}">
-  <img src="../assets/flexfolio/{{code}}/all-banner.jpg" />
+<div class="work-block {{size}}">
+  <img src="{{banner-img}}" />
   <p class="workall-info">
     <b>{{project.title}}</b><br />
     {% if casestudy == true %}

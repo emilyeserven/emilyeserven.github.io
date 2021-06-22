@@ -17,11 +17,9 @@ projlink:
 
 {% include portfolio/dev-descrip.html %}
 
-<h2>Highlighted Features</h2>
-
 {% include portfolio/feature-left.html
     image="feat1.jpg"
-    spacing="none"
+    border=true
     descrip="<strong>Product Portfolio</strong><br />Revel develops specialty cabinetry and furniture to help customers show off their wine collections in the best way possible. I designed pages that would show off each of these products while also linking users to other relevant information." %}
 
 {% include portfolio/feature-left.html

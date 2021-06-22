@@ -4,6 +4,7 @@ title: New York Excelsior Concept Site
 code: nyexcelsior
 category: webdev
 subcategory: Lab
+time: 02-18-2018
 casestudy: false
 projlink:
     - name: Github Repository

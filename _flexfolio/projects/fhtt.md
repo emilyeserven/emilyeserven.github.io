@@ -4,7 +4,7 @@ title: From Here to There
 description: From Here to There is a trip planning tool and category-winning web app built during the 2016 New Haven Hackathon. It that allows users to easily plan and coordinate group activities (as long as the travel origin and destinations are train stations).
 code: fhtt
 category: webdev
-time: October 2016
+time: 10-01-2016
 stack: [HTML, CSS, AngularJS, bower]
 responsibilities: Original Concept, Front-End Development, Design, Project Management
 team:
@@ -27,21 +27,15 @@ projlink:
 
 {% include portfolio/dev-descrip.html %}
 
-<h2>Highlighted Features</h2>
-
 {% include portfolio/feature-left.html
     image="feat1.jpg"
-    spacing="none"
+    border=true
     descrip="<strong>Organizer Screen</strong><br />The organizer answers three questions about the event they're planning. These answers generate a URL that can be passed to any participant." %}
 
 {% include portfolio/feature-left.html
     image="feat2.jpg"
-    spacing="default"
+    border="thick"
     descrip="<strong>Participant Screen</strong><br />Event participants get the link to a customized screen from the organizer. All they need to do is specify what train station they're coming from, and they'll get a short list of the best trains they can use to get to the event on time." %}
-
-<br />
-<hr />
-<br />
 
 ## The Project
 

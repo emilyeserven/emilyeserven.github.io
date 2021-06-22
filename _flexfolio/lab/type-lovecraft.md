@@ -5,7 +5,7 @@ description: A quick project to create a single page that featured a quote and d
 code: quote-lc
 category: webdev
 subcategory: Lab
-time: October 2014 - Present
+time: 10-01-2014
 stack: [HTML, CSS]
 responsibilities: Front-End Development, Design
 casestudy: true

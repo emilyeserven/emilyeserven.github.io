@@ -275,6 +275,9 @@ h3 {
          height: 0;
      }
  }
+.page-content.page-cat-webdev, .page-content.page-cat-photo {
+    margin-bottom: 50px;
+}
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
@@ -1411,15 +1414,14 @@ img.portfolio-image {
   margin-bottom: 8px;
 }
 
-.folio-content .main-notes {
-  margin-bottom: 30px;
+.main-notes {
+  margin-bottom: 40px;
+  padding-bottom:10px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
-  & > div {
-      padding: 0;
-  }
+  border-bottom: #eee 5px solid;
   .notes-left {
     flex-basis: 66%;
   }
@@ -1430,8 +1432,18 @@ img.portfolio-image {
 .project-box {
     background-color: $grey-color-light;
     padding: 10px 15px;
+    position:relative;
 }
 .feature-image {
+  &.border-enabled {
+    padding-bottom: 20px;
+    border-bottom: #eee 2px solid;
+    &--thick {
+        padding-bottom: 28px;
+        margin-bottom: 24px;
+        border-bottom: #eee 5px solid;
+    }
+  }
   &.spacing- {
     &none {
       margin-top: 0;

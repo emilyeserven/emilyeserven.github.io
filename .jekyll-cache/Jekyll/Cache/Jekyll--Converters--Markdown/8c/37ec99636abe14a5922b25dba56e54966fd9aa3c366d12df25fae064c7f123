@@ -1,0 +1,92 @@
+I"Ç
+<div class="grid-photo photo-content col-6 port-height-1">
+    
+      <p>
+        Greater NYC area-based cosplayer.
+      </p>
+    
+    
+      <p>
+        <strong>Locations:</strong> Jacob Javits Center
+      </p>
+    
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3 pr-sm-3 pl-sm-2 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-01.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-01-full.jpg">
+        <h3>Rei, I</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-12 pl-3 pr-3 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-02.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-02-full.jpg">
+        <h3>Rei, II</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-3 pr-2 pr-sm-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-03.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-03-full.jpg">
+        <h3>Rei, III</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-9 pl-0 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-red01.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-red01-full.jpg">
+        <h3>Rei RED, I</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pr-3 pl-3 pl-sm-3 pr-sm-2 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-04.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-04-full.jpg">
+        <h3>Rei, IV</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3 pr-sm-3 pl-sm-2 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-05.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-05-full.jpg">
+        <h3>Rei, V</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-12 pl-3 pr-3 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/nina/rei-red02.jpg);">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/nina/rei-red02-full.jpg">
+        <h3>Rei RED, II</h3>
+        <p>
+        <em>11.18.2017</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+:ET

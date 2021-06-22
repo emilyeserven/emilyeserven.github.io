@@ -4,7 +4,7 @@ title: Digital Asset Manager (Concept)
 description: A concept and prototype for a digital asset manager.
 code: dam
 category: webdev
-time: October 2016
+time: 10-01-2016
 stack: [HTML, CSS, ReactJS, React Router]
 responsibilities: Original Concept, Front-End Development
 team:
@@ -27,24 +27,20 @@ projlink:
 
 {% include portfolio/dev-descrip.html %}
 
-<h2>Highlighted Features</h2>
-
 {% include portfolio/feature-left.html
     image="tree.jpg"
-    spacing="none"
+    border=true
     descrip="<strong>All Assets in One Place</strong><br />The overall directory screen  is linked to the JSON file containing asset information. This information dynamically populates the areas in the React component (template)." %}
 
 {% include portfolio/feature-left.html
     image="info.jpg"
-    spacing="default"
+    border=true
     descrip="<strong>Detailed Asset Information</strong><br />Each asset is linked to the JSON file and pulls the asset's information into fields on the sidebar. This allows for consistent design and less confusion." %}
 
 {% include portfolio/feature-left.html
     image="uploads.jpg"
-    spacing="default"
+    border="thick"
     descrip="<strong>Quick Additions Allowed</strong><br />A 1-step process has been conceptualized to quickly add new assets to the user's personal catalog." %}
-
-<br />
 
 ## Original Concept
 

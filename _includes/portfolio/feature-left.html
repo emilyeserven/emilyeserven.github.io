@@ -2,15 +2,24 @@
     Use `spacing` parameter if passed to the include,
     otherwise default to "default".
 {% endcomment %}
+
 {% if include.spacing %}
     {% assign spacing = include.spacing %}
 {% else %}
     {% assign spacing = "default" %}
 {% endif %}
 
+{% if include.border == true %}
+    {% assign border = "border-enabled" %}
+{% elsif include.border == "thick" %}
+    {% assign border = "border-enabled--thick" %}
+{% else %}
+    {% assign border = "" %}
+{% endif %}
+
 {% assign featureimage-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image }} %}
 
-<div class="feature-image row spacing-{{spacing}}">
+<div class="feature-image row spacing-{{spacing}} {{border}}">
     <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
         <img src="{{featureimage-url}}" />
     </div>

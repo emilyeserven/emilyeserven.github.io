@@ -3,6 +3,10 @@
 {% endif %}
 
 <p>
+    {% if page.time %}
+        <strong>Date</strong>: {{page.time | date: "%B %Y"}}<br />
+    {% endif %}
+
     {% if page.stack %}
         <strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
     {% endif %}

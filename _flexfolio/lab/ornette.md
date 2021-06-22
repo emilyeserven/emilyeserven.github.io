@@ -2,6 +2,7 @@
 layout: flexfolio
 title: Ornette
 code: ornette
+time: 02-29-2016
 category: webdev
 subcategory: Lab
 casestudy: true

@@ -1,0 +1,63 @@
+I"ó<div class="main-notes row mb-5 mb-md-4">
+    <div class="col-sm-8 col-12">
+        
+    <p>Revel Cellars designs custom wine cellars. They originally needed an update to their non-responsive website in 2014. Afterwards, I continued to assist with updating the design and back-end workflow.</p>
+
+
+<p>
+    
+        <strong>Date</strong>: 2021-06-21 22:34:11 -0400<br />
+    
+
+    
+        <strong>Tech Stack</strong>: WordPress.org, WP Toolset<br />
+    
+
+    
+        <strong>Responsibilities</strong>: Custom Backend, Mobile Advisory, Tutoring, Design<br />
+    
+
+    
+        <strong>Type</strong>: Commercial<br />
+    
+
+    
+</p>
+    </div>
+    <div class="col-sm-1 col-12"></div>
+    <div class="col-sm-3 col-12">
+        <div class="project-box">
+    <p>
+        
+        
+        <strong>Project Link</strong>:
+        
+        
+        <br /><a href="http://www.revelcellars.com">Revel Cellars</a>
+        
+    </p>
+</div>
+    </div>
+  </div>
+<div class="clearfix"></div>
+
+<h2>Highlighted Features</h2>
+
+<div class="feature-image row spacing-none">
+    <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
+        <img src="/assets/flexfolio/rc/feat1.jpg" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        <strong>Product Portfolio</strong><br />Revel develops specialty cabinetry and furniture to help customers show off their wine collections in the best way possible. I designed pages that would show off each of these products while also linking users to other relevant information.
+    </div>
+</div>
+
+<div class="feature-image row spacing-default">
+    <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
+        <img src="/assets/flexfolio/rc/feat2.jpg" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        <strong>Wine Galleries</strong><br />Each gallery displays thumbnails and full sized images of completed cellars. The back-end workflow was optimized for the client, making it so images were automatically resized and all items had a standard format.
+    </div>
+</div>
+:ET

@@ -4,8 +4,9 @@ title: Rock Paper Scissors
 code: rockpaperscissors
 category: webdev
 subcategory: Lab
-date: 2016-08-07
+time: "2016-08-07"
 casestudy: true
+description: "Simple website to practice DOM manupulation, inspired by an exercise on Codecademy."
 banner-img: ../../../../assets/images/feat-media/ropasci.jpg
 projlink:
     - name: Github Repository
@@ -16,7 +17,7 @@ projlink:
       url: https://rawgit.com/emilyeserven/testwebsites/master/js/codeacademy/rock-paper-scissors.html
 ---
 
-_Originally Written: August 7, 2016_
+{% include portfolio/dev-descrip.html %}
 
 ## Origin & Goals
 

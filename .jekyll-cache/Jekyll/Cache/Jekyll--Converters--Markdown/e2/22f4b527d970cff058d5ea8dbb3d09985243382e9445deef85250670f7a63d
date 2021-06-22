@@ -1,0 +1,71 @@
+I"0<div class="main-notes row mb-5 mb-md-4">
+    <div class="col-sm-8 col-12">
+        
+    <p>Simple website to practice DOM manupulation, inspired by an exercise on Codecademy.</p>
+
+
+<p>
+    
+        <strong>Date</strong>: Aug 07, 16<br />
+    
+
+    
+
+    
+
+    
+        <strong>Type</strong>: Lab<br />
+    
+
+    
+</p>
+    </div>
+    <div class="col-sm-1 col-12"></div>
+    <div class="col-sm-3 col-12">
+        <div class="project-box">
+    <p>
+        
+        <strong>Project Links</strong>:
+        
+        
+        
+        <br /><a href="https://github.com/emilyeserven/testwebsites/tree/master/js/codeacademy">Github Repository</a>
+        
+        <br /><a href="https://rawgit.com/emilyeserven/testwebsites/master/js/codeacademy/rock-paper-scissors.html">Rock Paper Scissors</a>
+        
+    </p>
+</div>
+    </div>
+  </div>
+<div class="clearfix"></div>
+
+<h2 id="origin--goals">Origin &amp; Goals</h2>
+
+<p>This project was started after I had documented 8 chapters of a JavaScript book without doing real exercises. To get more experience typing JavaScript, I began some exercises on Codecademy and stumbled upon one that made students create a rock paper scissors game. The game was limited to text only interaction, so I got the idea to make a graphical version. I’m very familiar with HTML, CSS, and basic website development, so I was really able to focus on the JavaScript after getting the visuals tightened up. I tried to incorporate as many elements that I learned from the book as possible.</p>
+
+<h2 id="development">Development</h2>
+
+<p>The development for this project included the use of DOM manipulation techniques, event listeners, and loops/iteration. These topics had come up in the book I was reading, and I wanted a chance to use them for real.</p>
+
+<p>The <a href="https://github.com/emilyeserven/testwebsites/blob/master/js/codeacademy/js/rock-paper-scissors.js">actual JavaScript file</a> has comments describing what is happening, but essentially this is what happens in the background:</p>
+
+<ol>
+  <li>One of the 3 (Rock, Paper, Scissor) buttons is clicked.</li>
+  <li>The computer then generates a random number that is assigned to Rock, Paper, or Scissors.</li>
+  <li>The user’s choice and computer’s choice are checked.</li>
+  <li>The user’s score or the computer’s score is increased by one… or no one’s score (a tie) is raised.</li>
+  <li>Update all the page’s results so the user is aware of what happened.</li>
+</ol>
+
+<h2 id="design">Design</h2>
+
+<p>The main game area has a border around it so the user can feel confident that is the only area they need to look at. The three main clickable buttons all have their areas shaded with grey, and hovering over them adds a solid blue border to further indicate they can be clicked. The below area contains results and score information for the player to glance at.</p>
+
+<h2 id="improvements-to-be-made">Improvements to be Made</h2>
+
+<p>Further development of this project is limited, as it was intended to just be a quicker experiment project. However,in any future versions, I do plan to make some changes. First, I want to have a graphical version of what the user and computer each chose, as well as a visual cue as to who won. There should be more of an indication that there was a change to the results area the first time someone clicks on a button as well. If I wanted to go completely overboard, I could try to practice some PHP by adding a database to store game results.</p>
+
+<h2 id="in-conclusion">In Conclusion…</h2>
+
+<p>I should have done a small experiment after each chapter in the book, but as far as first real JavaScript projects go, I’m very satisfied with this one! Having the chance to put everything I read about together was very helpful, especially after I was able to work from <a href="../../07/29/refdocs.html">documentation I previously wrote up</a>.</p>
+:ET

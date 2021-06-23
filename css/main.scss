@@ -1420,7 +1420,7 @@ img.portfolio-image {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: nowrap;
+  /*flex-wrap: nowrap;*/
   border-bottom: #eee 5px solid;
   .notes-left {
     flex-basis: 66%;

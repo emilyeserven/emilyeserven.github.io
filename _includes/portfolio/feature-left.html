@@ -18,12 +18,24 @@
 {% endif %}
 
 {% assign featureimage-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image }} %}
+{% assign technicalID = include.technicalID %}
 
 <div class="feature-image row spacing-{{spacing}} {{border}}">
     <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
         <img src="{{featureimage-url}}" />
     </div>
     <div class="caption-holder col-md-6 col-12">
-        {{include.descrip}}
+        <div class="feature-description">
+            {{include.descrip}}
+        </div>
+        <br />
+        {% if technicalID %}
+        <div class="technical-button-holder">
+            <button class="btn btn-primary btn-tech-details" type="button" data-toggle="collapse" data-target="#{{technicalID}}" aria-expanded="false" aria-controls="{{technicalID}}">Show Technical Detail</button>
+            {% if include.technicalTopic %}
+                <div class="btn-tech-details--topic">{{include.technicalTopic}}</div>
+            {% endif %}
+        </div>
+        {% endif %}
     </div>
 </div>

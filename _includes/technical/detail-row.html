@@ -1,0 +1,59 @@
+{% comment %}
+include technical/detail-row.html
+    hr-type = "thick"
+    hr-classes = ""
+    row-split = "4-8"
+    row-special == false
+    image = "/assets/flexfolio/fm/techdetail1-1.png"
+    image-styles = ""
+    image-caption = "A press post's custom field group."
+    row-classes = "mt-2"
+
+{% endcomment %}
+
+
+{% if include.hr-type %}
+    {% assign hr-type = {{include.hr-type}} %}
+    {% if include.hr-classes %}
+        {% assign hr-classes = {{include.hr-classes}} %}
+    {% else %}
+        {% assign hr-classes = "" %}
+    {% endif %}
+{% else %}
+    {% assign hr-type = "" %}
+{% endif %}
+
+{% comment %}
+The `row-split` decides how the rows get divided.
+The left side will always contain an image.
+{% endcomment %}
+{% if include.row-split == "4-8" %}
+    {% assign col1-classes = "col-md-4 col-12" %}
+    {% assign col2-classes = "col-md-8 col-12" %}
+{% endif %}
+
+{% if include.row-special == "first" %}
+    {% comment %}
+        If this is the first row, there are no other <div>s to close out.
+    {% endcomment %}
+{% else %}
+        </div>
+    </div>
+{% endif %}
+
+{% comment %} The HR defined in the params is located above the row. {% endcomment %}
+{% if hr-type == "thick" %}
+    <div class="row"><hr class="thick {{hr-classes}}" /></div>
+{% elsif hr-type == "thin" %}
+    <hr class="thin {{hr-classes}}" />
+{% elsif hr-type == "" %}
+{% endif %}
+
+<div class="row {{include.row-classes}}">
+    <div class="{{col1-classes}}">
+        {% if include.image %}
+            {% comment %} The below include can still access this include's params. {% endcomment %}
+            {% include technical/en-image.html %}
+        {% endif %}
+    </div>
+    <div class="{{col2-classes}}">

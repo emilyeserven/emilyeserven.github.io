@@ -1,10 +1,22 @@
+{% if include.technicalClass %}
+    {% assign technicalClass = page.technicalClass %}
+{% else %}
+    {% assign technicalClass = "multi-collapse" %}
+{% endif %}
+
 <div class="main-notes row mb-5 mb-md-4">
     <div class="col-sm-8 col-12">
         {% include portfolio/project-info.html %}
+        {% comment %}
+        {% if include.technicalIDs %}
+            <br />
+            <button class="btn btn-primary multi-technical-detail" type="button" data-toggle="collapse" data-target=".{{technicalClass}}" aria-expanded="false" aria-controls="{{include.technicalIDs}}">Show All Technical Details</button>
+        {% endif %}
+        {% endcomment %}
     </div>
     <div class="col-sm-1 col-12"></div>
     <div class="col-sm-3 col-12 d-flex align-items-center justify-content-center">
         {% include portfolio/project-box.html %}
     </div>
-  </div>
-  <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>

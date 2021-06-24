@@ -22,9 +22,22 @@
     <script type="text/javascript" src="{{ "/js/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script type="text/javascript" src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-    {% if page.category == "photo" %}
       <script type="text/javascript" src="{{ "/js/featherlight.min.js" | prepend: site.baseurl }}"></script>
-    {% endif %}
+
+<script>
+  /* Sniped from: https://bootstrapcreative.com/pattern/toggle-show-hide-text-collapse-button/ */
+  $(document).ready(function() {
+    $('[data-toggle="collapse"]').click(function() {
+      $(this).toggleClass( "active" );
+      if ($(this).hasClass("active")) {
+        $(this).text("Hide Technical Detail");
+      } else {
+        $(this).text("Show Technical Detail");
+      }
+    });
+  });
+
+</script>
   </body>
 
 </html>

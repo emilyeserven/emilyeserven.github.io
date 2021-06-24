@@ -239,6 +239,14 @@ h3 {
         margin:0;
     }
 }
+.image-enlarge-text {
+    font-size: .7em;
+    display: block;
+    text-align: center;
+    margin-top: 4px;
+    font-style: italic;
+    color: $grey-color;
+}
 
 .backlink {
     font-family: $secondary-font;
@@ -554,6 +562,9 @@ h2.section-heading {
     font-family:$brand-font;
     font-size:2em;
     margin-bottom:10px;
+}
+h5 {
+    font-weight:900;
 }
 .site-header {
     @if $new-fonts {
@@ -1451,6 +1462,11 @@ img.portfolio-image {
     }
 }
 .feature-image {
+  .caption-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &.border-enabled {
     padding-bottom: 20px;
     border-bottom: #eee 2px solid;
@@ -1580,7 +1596,7 @@ input.button-link-new {
 */
 
 // SECTION 6: SPECIFIC ELEMENTS
-// 6.03 - Icon Holder
+// 6.01 - Icon Holder
 .icon-holder {
     // class for the `a` tag, parent of `i` class of an icon
     display:block;
@@ -1668,6 +1684,96 @@ pre.lineno {
         transition: all ease 0.15s;
         scroll-behavior: smooth;
     }
+}
+
+// 6.05 - HR Element Styling
+
+hr{
+    width:100%;
+    display:block;
+    border-top:0;
+    &.thin {
+        border-bottom: 2px $grey-color-light solid;
+    }
+    &.thick {
+        border-bottom: 5px $grey-color-light solid;
+    }
+    &.feature-padding {
+        padding-top:20px;
+    }
+}
+
+// 6.06 - Technical Detail Button
+
+.technical-button-holder {
+    display: flex;
+    align-items: center;
+}
+
+.btn-tech-details {
+    font-size: .8em;
+    font-family: $secondary-font;
+    padding: 6px 8px;
+    border-radius: 0;
+    &.active {
+        background-color: $grey-color !important;
+        box-shadow: none !important;
+        border-color: $grey-color !important;
+    }
+}
+
+.btn-tech-details--topic {
+    padding: 2px 12px;
+    display: flex;
+    align-items: center;
+    border: 2px #eee solid;
+    border-left:0;
+    height: 100%;
+}
+
+// 6.07 - Technical Detail Box
+
+.technical-detail {
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+.technical-detail .card {
+    padding-top:2.5rem;
+}
+.technical-detail .card::before {
+    display: block;
+    position: absolute;
+    content: "Technical";
+    top: 0;
+    left: 0;
+    padding: 4px 6px 4px 1.25rem;
+    width: 100%;
+    background-color: #eee;
+    font-size: .8em;
+    font-family: 'Quasimoda';
+}
+.technical-detail .card hr.thin {
+    margin: 12px 0;
+}
+.technical-detail .image-enlarge-text {
+    padding: 0 0 4px;
+    a:hover {
+        background-color:transparent;
+        color: $grey-color-dark;
+    }
+}
+
+.technical-detail .technical-caption {
+    text-align: center;
+    font-size: 0.95em;
+    color: #333;
+    padding: 12px 8px 12px 8px;
+    background-color: #fff;
+}
+.technical-image-holder {
+    margin-bottom:16px;
+    border: 1px $grey-color-light solid;
+    background-color:$grey-color-light;
 }
 
 // SECTION 7: DISPLAY NONES

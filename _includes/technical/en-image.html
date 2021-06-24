@@ -1,0 +1,6 @@
+{% assign imageSrc = include.image %}
+<div class="technical-image-holder {{include.image-classes}}">
+    <a class="technical-image" data-featherlight="{{imageSrc}}"><img src="{{imageSrc}}" style="{{include.image-styles}}"/></a>
+    <span class="image-enlarge-text"><a data-featherlight="{{imageSrc}}"><i class="fa fa-search-plus"></i> Enlarge</a></span>
+    <div class="technical-caption">{{include.caption}}</div>
+</div>

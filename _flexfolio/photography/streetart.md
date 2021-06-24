@@ -25,6 +25,7 @@ casestudy: true
     name="drip drop"
     id="dripdrop"
     gridtype="363-left"
+    bgpos="42% top"
     height=2
     capture="11.04.2017" %}
 
@@ -39,6 +40,7 @@ casestudy: true
     name="door"
     id="door"
     gridtype="363-right"
+    bgsize="350%"
     height=2
     capture="10.07.2017" %}
 
@@ -48,6 +50,7 @@ casestudy: true
     name="with love"
     id="withlove"
     gridtype="66-left"
+    bgpos="35% center"
     height=2
     capture="10.21.2017" %}
 
@@ -55,6 +58,7 @@ casestudy: true
     name="arrivals"
     id="arrivals"
     gridtype="66-right"
+    bgpos="60% center"
     height=2
     capture="10.21.2017" %}
 
@@ -63,12 +67,16 @@ casestudy: true
 {% include gridblocks/photo-block.html
     name="wall"
     id="wall1"
+    bgpos="right 9%"
+    bgsize="230%"
     gridtype="3333-left"
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="wall"
     id="wall2"
+    bgpos="left 15%"
+    bgsize="250%"
     gridtype="3333-midleft"
     capture="11.04.2017" %}
 
@@ -76,12 +84,16 @@ casestudy: true
     name="wall"
     id="wall3"
     gridtype="3333-midright"
+    bgpos="50% 45%"
+    bgsize="300%"
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="scream"
     id="scream"
     gridtype="3333-right"
+    bgpos="20% 20%"
+    bgsize="300%"
     capture="11.04.2017" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -90,12 +102,14 @@ casestudy: true
     name="neighbor"
     id="neighbor"
     gridtype="363-left"
+    bgpos="47% center"
     height=2
     capture="11.04.2017" %}
 
 {% include gridblocks/photo-block.html
     name="art not ads"
     id="artnotads"
+    bgpos="70% center"
     gridtype="363-mid"
     height=2
     capture="11.04.2017" %}

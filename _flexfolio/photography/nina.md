@@ -19,6 +19,7 @@ bgpos: 80% center
       name="Rei, I"
       gridtype="66-right"
       id="01"
+      bgpos="center top"
       capture="11.18.2017" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -35,6 +36,7 @@ bgpos: 80% center
       name="Rei, III"
       id="03"
       gridtype="39-left"
+      bgpos="56% center"
       height=2
       capture="11.18.2017" %}
 
@@ -42,6 +44,7 @@ bgpos: 80% center
       name="Rei RED, I"
       id="red01"
       gridtype="39-right"
+      bgpos="80% center"
       height=2
       capture="11.18.2017" %}
 

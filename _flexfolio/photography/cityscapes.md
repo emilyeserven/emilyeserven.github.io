@@ -33,6 +33,7 @@ casestudy: true
       name="photographing the city"
       id="bbp"
       gridtype="93-right"
+      bgpos="65% center"
       height=2
       capture="10.21.2017" %}
 
@@ -42,34 +43,41 @@ casestudy: true
       name="the village"
       id="greenwich"
       gridtype="66-left"
+      bgpos="center bottom"
       capture="10.15.2017" %}
 
 {% include gridblocks/photo-block.html
       name="midtown"
       id="manhattan"
       gridtype="66-right"
+      bgpos="center top"
       capture="10.15.2017" %}
+
+{% comment %} NEW ROW {% endcomment %}
+
+{% include gridblocks/photo-block.html
+      name="look across"
+      id="bbp-fidi"
+      gridtype="12-full"
+      bgpos="65% 80%"
+      bgsize="115%"
+      capture="10.28.2017" %}
 
 {% comment %} NEW ROW {% endcomment %}
 
 {% include gridblocks/photo-block.html
       name="towards manhattan"
       id="bbp2"
-      gridtype="363-left"
+      gridtype="66-left"
+      bgpos="50% 30%"
       height=2
       capture="10.21.2017" %}
 
 {% include gridblocks/photo-block.html
-      name="look across"
-      id="bbp-fidi"
-      gridtype="363-mid"
-      height=2
-      capture="10.28.2017" %}
-
-{% include gridblocks/photo-block.html
       name="heading downtown"
       id="unionsq-bway"
-      gridtype="363-right"
+      gridtype="66-right"
+      bgpos="75% 100%"
       height=2
       capture="11.04.2017" %}
 
@@ -88,6 +96,7 @@ casestudy: true
       name="marina"
       id="brookfield"
       gridtype="66-left"
+      bgpos="right center"
       height=2
       capture="11.11.2017" %}
 

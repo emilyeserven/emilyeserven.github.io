@@ -42,68 +42,78 @@ TEMPLATE:
 {% endif %}
 
 {% comment %}
-    Use `width` parameter if passed to the include,
-    otherwise default to "col-6".
-    The `width` variable controls the image block's
-    width. It uses bootstrap columns, but usually
-    col-3, col-6, col-9, and col-12 are the values.
+    The `gridtype` parameter controls two things:
+      1: The [Bootstrap 4] padding classes that get added on to a photo-block
+      2: The width/grid classes that get addded on to a photo-block
 
-{% if include.width %}
-    {% assign width = include.width %}
-{% else %}
-    {% assign width = "col-6" %}
-{% endif %}
+    Grid types are named like this: [columnWidths]-[blockAlignment]
+        Column widths are based on the non-collapsed widths.
+        Block alignment is named semantically according to the presentation on the frontend.
+
+    Examples:
+        66-left => The photo-block is part of a row that contains two half-width blocks.
+                    This photo-block is the first (left) block out of that set.
+
+        363-mid => The photo-block is part of a row that contains a 1/4 width block, a 1/2 width block,
+                    and another 1/4 width block, in that order.
+                    As this block is designated 'mid', it's the second block (the 1/2 width) in the set.
+
+    For padding assignments, the left side classes are listed first, then the right side classes. Both
+    in order by screen size.
+
+    For width assignments, the first class listed is the largest (non-collapsed, non-mobile) width.
+    This is so the "true" width is seen more easily, and the list is more easily scannable.
 {% endcomment %}
 
 {% if include.gridtype == "12-full" %}
     {% assign padding = "pl-3 pr-3" %}
     {% assign width = "col-12" %}
 {% elsif include.gridtype == "66-left" %}
-    {% assign padding = "pr-3 pl-3 pl-md-3 pr-md-2" %}
+    {% assign padding = "pl-3 pr-3  pl-md-3 pr-md-2" %}
     {% assign width = "col-md-6 col-12" %}
 {% elsif include.gridtype == "66-right" %}
-    {% assign padding = "pl-3 pr-3 pr-md-3 pl-md-2" %}
+    {% assign padding = "pl-3 pr-3  pl-md-2 pr-md-3" %}
     {% assign width = "col-md-6 col-12" %}
     {% comment %} HALVES DONE {% endcomment %}
 
 {% elsif include.gridtype == "363-left" %}
-    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign padding = "pr-1 pr-sm-3" %}
     {% assign width = "col-3" %}
 {% elsif include.gridtype == "363-mid" %}
-    {% assign padding = "px-0" %}
+    {% assign padding = "px-1" %}
     {% assign width = "col-6" %}
 {% elsif include.gridtype == "363-right" %}
-    {% assign padding = "pl-2 pl-sm-3" %}
+    {% assign padding = "pl-1 pl-sm-3" %}
     {% assign width = "col-3" %}
     {% comment %} THIRDS DONE {% endcomment %}
 
 {% elsif include.gridtype == "3333-left" %}
-    {% assign padding = "pr-2 pr-sm-3" %}
-    {% assign width = "col-md-3 col-6" %}
+    {% assign padding = "pr-1  pr-sm-3" %}
+    {% assign width = "col-md-3 col-3" %}
 {% elsif include.gridtype == "3333-midleft" %}
-    {% assign padding = "pr-3 pr-sm-2 pl-0" %}
-    {% assign width = "col-md-3 col-6" %}
+    {% assign padding = "px-1  pr-sm-2" %}
+    {% assign width = "col-md-3 col-3" %}
 {% elsif include.gridtype == "3333-midright" %}
-    {% assign padding = "pr-2 pr-sm-0 pl-3 pl-sm-2" %}
-    {% assign width = "col-md-3 col-6" %}
+    {% assign padding = "px-1  pl-sm-2 pr-sm-1" %}
+    {% assign width = "col-md-3 col-3" %}
 {% elsif include.gridtype == "3333-right" %}
-    {% assign padding = "pl-0 pl-sm-3" %}
-    {% assign width = "col-md-3 col-6" %}
-    {% comment %} THIRDS DONE {% endcomment %}
+    {% assign padding = "pl-1  pl-sm-3" %}
+    {% assign width = "col-md-3 col-3" %}
+    {% comment %} FOURTHS DONE {% endcomment %}
 
 {% elsif include.gridtype == "39-left" %}
-    {% assign padding = "pr-2 pr-sm-3" %}
+    {% assign padding = "pr-1  pr-sm-3" %}
     {% assign width = "col-3" %}
 {% elsif include.gridtype == "39-right" %}
-    {% assign padding = "pl-0" %}
+    {% assign padding = "pl-1" %}
     {% assign width = "col-9" %}
     {% comment %} QTR-3QTR DONE {% endcomment %}
 
 {% elsif include.gridtype == "93-left" %}
-    {% assign padding = "pr-0" %}
+    {% assign padding = "pr-1" %}
     {% assign width = "col-9" %}
 {% elsif include.gridtype == "93-right" %}
-    {% assign padding = "pl-2 pl-sm-3 pr-3" %}
+    {% assign padding = "pl-1 pr-3  pl-sm-3" %}
     {% assign width = "col-3" %}
     {% comment %} 3QTR-QTR DONE {% endcomment %}
 
@@ -138,12 +148,27 @@ TEMPLATE:
     {% assign filename = "missing.jpg" %}
 {% endif %}
 
+{% if include.bgpos %}
+    {% assign background-position = "background-position: " | append: include.bgpos | append: ";"%}
+{% else %}
+    {% assign background-position = "" %}
+    {% comment %} inline CSS not required since it's already in the actual CSS. {% endcomment %}
+{% endif %}
+
+{% if include.bgsize %}
+    {% assign background-size = "background-size: " | append: include.bgsize | append: ";"%}
+{% else %}
+    {% assign background-size = "" %}
+    {% comment %} inline CSS not required since it's already in the actual CSS. {% endcomment %}
+{% endif %}
+
+{% comment %} Image URLs are assigned here for readability's sake{% endcomment %}
 {% assign bgimg-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '.' | append: ext }} %}
 {% assign featherlight-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '-full.' | append: ext}} %}
 
 
 <div class="grid-photo {{width}} {{padding}} port-height-{{height}}">
-    <div class="block-image" style="background-image: url({{bgimg-url}});">
+    <div class="block-image" style="background-image: url({{featherlight-url}}); {{background-position}} {{background-size}}">
     <a class="fl-gallery-item" data-featherlight="{{featherlight-url}}">
         <h3>{{include.name}}</h3>
         <p>

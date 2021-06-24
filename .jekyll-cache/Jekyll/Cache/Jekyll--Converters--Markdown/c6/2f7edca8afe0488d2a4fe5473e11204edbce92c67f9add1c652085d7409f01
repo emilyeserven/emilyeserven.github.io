@@ -1,0 +1,58 @@
+I"R<div class="grid-photo photo-content col-md-6 col-12 port-height-1">
+    
+      <p>
+        Twitch Streamer, DJ, and Dance Music Producer.
+      </p>
+    
+    
+      <p>
+        <strong>Locations:</strong> Lower East Side, Industry City
+      </p>
+    
+</div>
+
+<div class="grid-photo col-md-6 col-12 pl-3 pr-3  pl-md-2 pr-md-3 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/djbraj/photo-braj-full.jpg); background-position: cover; ">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/djbraj/photo-braj-full.jpg">
+        <h3>Braj</h3>
+        <p>
+        <em>08.12.2018</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-12 pl-3 pr-3 port-height-1">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/djbraj/photo-tt1-full.jpg); background-position: cover; ">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/djbraj/photo-tt1-full.jpg">
+        <h3>Turntable, I</h3>
+        <p>
+        <em>08.12.2018</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-3 pr-2  pr-sm-3 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/djbraj/photo-working-full.jpg); background-position: cover; ">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/djbraj/photo-working-full.jpg">
+        <h3>Working</h3>
+        <p>
+        <em>08.12.2018</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+<div class="grid-photo col-9 pl-0 port-height-2">
+    <div class="block-image" style="background-image: url(/assets/flexfolio/djbraj/photo-tt2-full.jpg); background-position: cover; ">
+    <a class="fl-gallery-item" data-featherlight="/assets/flexfolio/djbraj/photo-tt2-full.jpg">
+        <h3>Turntable, II</h3>
+        <p>
+        <em>08.12.2018</em>
+        </p>
+    </a>
+    </div>
+</div>
+
+:ET

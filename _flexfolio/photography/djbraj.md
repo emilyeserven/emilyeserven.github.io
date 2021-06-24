@@ -18,6 +18,7 @@ casestudy: true
       name="Braj"
       id="braj"
       gridtype="66-right"
+      bgpos="center top"
       capture="08.12.2018" %}
 
 {% comment %} NEW ROW {% endcomment %}
@@ -34,6 +35,7 @@ casestudy: true
       name="Working"
       id="working"
       gridtype="39-left"
+      bgpos="75% center"
       height=2
       capture="08.12.2018" %}
 

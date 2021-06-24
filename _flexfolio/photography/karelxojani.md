@@ -17,6 +17,7 @@ casestudy: true
       name="XoJani - Red"
       id="janired"
       gridtype="66-right"
+      bgpos="center 30%"
       img-base="201803"
       capture="03.17.2018" %}
 
@@ -53,6 +54,7 @@ casestudy: true
       id="auddance"
       img-base="201710"
       gridtype="363-mid"
+      bgpos="80% center"
       height=2
       capture="10.14.2017" %}
 
@@ -71,6 +73,7 @@ casestudy: true
       id="silhouette"
       img-base="201710"
       gridtype="12-full"
+      bgpos="center top"
       height=1
       capture="10.14.2017" %}
 
@@ -80,6 +83,7 @@ casestudy: true
       name="Red Crowd"
       id="crowdred"
       gridtype="66-left"
+      bgpos="center top"
       img-base="201803"
       capture="03.17.2018" %}
 
@@ -87,6 +91,7 @@ casestudy: true
       name="Karel - Red"
       id="crowdred2"
       gridtype="66-right"
+      bgpos="left top"
       img-base="201803"
       capture="03.17.2018" %}
 
@@ -97,6 +102,7 @@ casestudy: true
       id="karelby"
       img-base="201808"
       gridtype="12-full"
+      bgpos="left 85%"
       height=1
       capture="08.25.2018" %}
 
@@ -114,6 +120,7 @@ casestudy: true
       name="Red Wall"
       id="karelred"
       gridtype="66-right"
+      bgpos="left center"
       img-base="201808"
       height=2
       capture="08.25.2018" %}

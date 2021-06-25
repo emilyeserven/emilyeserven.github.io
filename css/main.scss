@@ -219,7 +219,7 @@ h2 {
     font-family: $secondary-font;
     @if $new-fonts {
         font-size:1.75em;
-        margin-bottom:5px;
+        margin-bottom:8px;
     } @else {
         font-size:2em;
         margin-bottom:-5px;
@@ -733,18 +733,18 @@ h5 {
     color: #fff;
 }
 
-.home-section.info {
-  .headshot {
+.headshot {
     width:150px;
     height:150px;
     display:inline-block;
     border-radius: 75px;
     float:right;
   }
+.home-section.info {
   .info-section {
     margin: 70px 0 70px;
     &:first-of-type {
-      margin-top:40px;
+      margin-top:30px;
     }
     &:last-of-type {
       margin-bottom: 40px;
@@ -1804,6 +1804,12 @@ hr{
     }
 }
 
+// 6.08 - Photo Page Profile Photo
+
+.photo-profile-photo {
+    border-radius: 100%;
+}
+
 // SECTION 7: DISPLAY NONES
 .post-header.no-title {
     display:none;
@@ -1945,14 +1951,14 @@ input.buttons {
         .description {
             order: 2;
         }
-        .headshot-holder {
-            text-align:center;
-            order: 1;
-            margin-bottom: 20px;
-            img {
-                float:none;
-                margin:0;
-            }
+    }
+    .headshot-holder {
+        text-align:center;
+        order: 1;
+        margin-bottom: 20px;
+        img {
+            float:none;
+            margin:0;
         }
     }
     .footer-section.contact .wrapper {
@@ -2131,7 +2137,7 @@ input.buttons {
         font-size: 2.5em;
     }
     .post-header.fullwidth {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         background: #333;
         padding: 5px 0;
     }

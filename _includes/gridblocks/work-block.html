@@ -41,15 +41,29 @@
     {% assign banner-img = {{ "" | append: "../assets/flexfolio/" | append: {{code}} | append: "/banner.jpg" }} %}
 {% endif %}
 
-<div class="work-block {{size}}">
-  <img src="{{banner-img}}" />
+{% if casestudy == true %}
+    {% assign block-url = {{project.url}} %}
+{% else %}
+    {% assign block-url = {{project.projlink[0].url}} %}
+{% endif %}
+
+<div class="work-block {{size}} {{project.category}}-block">
+  <a href="{{block-url}}"><img src="{{banner-img}}" /></a>
   <p class="workall-info">
-    <b>{{project.title}}</b><br />
-    {% if casestudy == true %}
+    {% if project.category == "photo" %}
+      <a href="{{block-url}}" class="work-block--title"><b>{{project.title}}</b> ➝</a><br />
+    {% elsif casestudy == false %}
+    <a href="{{block-url}}" class="work-block--title"><b>{{project.title}}</b>&nbsp; <i style="font-size: 0.8em;" class="fa fa-external-link"></i></a><br />
+    {% else %}
+      <a href="{{block-url}}" class="work-block--title"><b>{{project.title}}</b></a><br />
+    {% endif %}
+    {% comment %}
+    {% if casestudy == true and project.category != "photo" %}
       <a href="{{project.url}}" alt="Case Study"><i class="fa fa-archive"></i></a>&nbsp;&nbsp;
     {% endif %}
     {% for link in project.projlink %}
       <a href="{{link.url}}" alt="{{link.name}}"><i class="fa {{link.icon}}"></i></a>&nbsp;&nbsp;
     {% endfor %}
+    {% endcomment %}
   </p>
 </div>

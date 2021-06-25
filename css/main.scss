@@ -125,6 +125,7 @@ $brand-color-ter:  #4F92E7;
 $brand-color-light:#79ACED;
 
 $grey-color:       #828282;
+$grey-color-mid:   #ccc;
 $grey-color-light: #eee;
 $grey-color-dark:  #333;
 
@@ -1235,9 +1236,26 @@ img.portfolio-image {
 .work-block {
     img {
         border: $grey-color-light 5px solid;
+        &:hover {
+            opacity: 0.7;
+        }
     }
     .workall-info {
         margin-top: 5px;
+    }
+
+    &.col-6 a.work-block--title {
+        font-size: 0.9em;
+    }
+
+    a.work-block--title {
+        padding: 0 4px;
+        .photo-block {
+            color: $brand-color;
+            &:hover {
+                color: #000;
+            }
+        }
     }
 }
 
@@ -1738,7 +1756,8 @@ hr{
     margin-bottom: 24px;
 }
 .technical-detail .card {
-    padding-top:2.5rem;
+    padding-top:1.70rem;
+    padding-bottom:0;
 }
 .technical-detail .card::before {
     display: block;
@@ -1748,7 +1767,7 @@ hr{
     left: 0;
     padding: 4px 6px 4px 1.25rem;
     width: 100%;
-    background-color: #eee;
+    background-color: $grey-color-mid;
     font-size: .8em;
     font-family: 'Quasimoda';
 }
@@ -1774,6 +1793,15 @@ hr{
     margin-bottom:16px;
     border: 1px $grey-color-light solid;
     background-color:$grey-color-light;
+}
+
+.technical-header.row {
+    background-color: $grey-color-light;
+    padding: 8px 4px;
+    margin: 0 -20px 16px -20px;
+    h4 {
+        margin-bottom: 0;
+    }
 }
 
 // SECTION 7: DISPLAY NONES

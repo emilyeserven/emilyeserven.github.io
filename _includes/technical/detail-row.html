@@ -1,21 +1,21 @@
 {% comment %}
-include technical/detail-row.html
-    hr-type = "thick"
-    hr-classes = ""
+ include technical/detail-row.html
+    hrType = "thick"
+    hrClasses = ""
     row-split = "4-8"
     row-special == false
     image = "/assets/flexfolio/fm/techdetail1-1.png"
-    image-styles = ""
-    image-caption = "A press post's custom field group."
-    row-classes = "mt-2"
+    imageStyles = ""
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" 
 
 {% endcomment %}
 
 
-{% if include.hr-type %}
-    {% assign hr-type = {{include.hr-type}} %}
-    {% if include.hr-classes %}
-        {% assign hr-classes = {{include.hr-classes}} %}
+{% if include.hrType %}
+    {% assign hr-type = {{include.hrType}} %}
+    {% if include.hrClasses %}
+        {% assign hr-classes = {{include.hrClasses}} %}
     {% else %}
         {% assign hr-classes = "" %}
     {% endif %}
@@ -24,12 +24,14 @@ include technical/detail-row.html
 {% endif %}
 
 {% comment %}
-The `row-split` decides how the rows get divided.
-The left side will always contain an image.
+    The `row-split` decides how the rows get divided.
+    The left side will always contain an image.
 {% endcomment %}
 {% if include.row-split == "4-8" %}
     {% assign col1-classes = "col-md-4 col-12" %}
     {% assign col2-classes = "col-md-8 col-12" %}
+{% elsif include.row-split == "12" %}
+    {% assign col2-classes = "col-12" %}
 {% endif %}
 
 {% if include.row-special == "first" %}
@@ -50,10 +52,12 @@ The left side will always contain an image.
 {% endif %}
 
 <div class="row {{include.row-classes}}">
+    {% if row-split != "12" %}
     <div class="{{col1-classes}}">
         {% if include.image %}
             {% comment %} The below include can still access this include's params. {% endcomment %}
             {% include technical/en-image.html %}
         {% endif %}
     </div>
+    {% endif %}
     <div class="{{col2-classes}}">

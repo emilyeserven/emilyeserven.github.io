@@ -40,26 +40,23 @@ projlink:
 {% include technical/detail-card-start.html
     techID = "fmTech1" %}
 
+{% include technical/detail-header.html
+    title="Scenario" %}
+
 {% include technical/detail-row.html
-    row-special = "first"
     row-split = "4-8" %}
 
-<h5>Challenge</h5>
 <p>
     Feyer needed to easily be able to add Press items as well as keep them in a professional and standardized format. WYSIWYG editors may be easy for clients to use on a surface level, but maintaining order and consistent spacing can end up being tedious and difficult.
 </p>
 
-{% include technical/detail-row.html
-    hr-type = "thick"
-    hr-classes = "mt-1 mb-4"
-    row-split = "4-8" %}
-
-<h5>Solution</h5>
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="Inner Workings" %}
 
 {% include technical/detail-row.html
     row-split = "4-8"
     image = "/assets/flexfolio/fm/techdetail1-1.png"
-    image-styles = ""
     caption = "A press post's custom field group."
     row-classes = "mt-2" %}
 
@@ -76,11 +73,11 @@ projlink:
 </ul>
 
 {% include technical/detail-row.html
-    hr-type = "thin"
+    hrType = "thin"
     row-split = "4-8"
     image = "/assets/flexfolio/fm/techdetail1-2.png"
-    image-styles = "max-width: 200px;padding-top:8px;"
-    image-classes = "text-center"
+    imageStyles = "max-width: 200px;padding-top:8px;"
+    imageClasses = "text-center"
     caption = "The result of step ①'s custom fields being filled out."
     row-classes = "mt-2" %}
 
@@ -89,7 +86,7 @@ projlink:
 </p>
 
 {% include technical/detail-row.html
-    hr-type = "thin"
+    hrType = "thin"
     row-split = "4-8"
     image = "/assets/flexfolio/fm/techdetail1-3.png"
     caption = "The main Press page with each Press post using the same view template."
@@ -100,12 +97,13 @@ projlink:
 </p>
 
 
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="Summary" %}
+
 {% include technical/detail-row.html
-    hr-type = "thick"
-    hr-classes = "mb-3"
     row-split = "4-8" %}
 
-<h5>Result</h5>
 <p>
     When Feyer wants to add a new press article link, all he needs to do is create a new Press post, fill in some fields, and then publish. The display of it gets taken care of automatically, and he can quickly get back to entertaining fans!
 </p>
@@ -113,7 +111,8 @@ projlink:
     The upfront cost of this method was steeper than just starting off with a visual/WYSIWYG builder, however it absolutely saved time and stress in the long run.
 </p>
 
-{% include technical/detail-card-end.html %}
+{% include technical/detail-card-end.html
+    endDivCount = 6 %}
 
 {% comment %} END -- fmTech1 TECHNICAL DETAIL {% endcomment %}
 

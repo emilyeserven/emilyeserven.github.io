@@ -162,6 +162,11 @@ TEMPLATE:
     {% comment %} inline CSS not required since it's already in the actual CSS. {% endcomment %}
 {% endif %}
 
+{% if include.capture %}
+    {% assign capture = {{include.capture}} %}
+{% else %}
+    {% assign capture = {{page.orig-post}} %}
+{% endif %}
 {% comment %} Image URLs are assigned here for readability's sake{% endcomment %}
 {% assign bgimg-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '.' | append: ext }} %}
 {% assign featherlight-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: filename | append: '-full.' | append: ext}} %}
@@ -172,7 +177,7 @@ TEMPLATE:
     <a class="fl-gallery-item" data-featherlight="{{featherlight-url}}">
         <h3>{{include.name}}</h3>
         <p>
-        <em>{{include.capture}}</em>
+        <em>{{capture}}</em>
         </p>
     </a>
     </div>

@@ -119,7 +119,7 @@ projlink:
 <p>
     1: Build out a page with a visual editor plugin: This seems simple at first, but making sure that every item has the same visual settings can become a challenge the larger the Press list grows.
 </p>
-<pre>
+<p>
     2: Use the core WordPress post functionality: This has the same scale problem as the first option, but also an create a challenge down the road if the client wants to actually use the default blog post functionality. Not only that, but out-of-the-box URL slugs will still read as <pre>post</pre>, instead of <pre>press</pre>.
 </p>
 <h5>Other Site Builders</h5>

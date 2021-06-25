@@ -1,0 +1,361 @@
+I"� 
+<div class="main-notes row mb-5 mb-md-4">
+    <div class="col-sm-8 col-12">
+        
+    <p>Feyer is a musician based in New York City. He needed a new website to coincide with the release of his first full album.</p>
+
+
+<p>
+    
+        <strong>Date</strong>: January 2012<br />
+    
+
+    
+        <strong>Tech Stack</strong>: WordPress.org, WP Toolset<br />
+    
+
+    
+        <strong>Responsibilities</strong>: Front-End Development, Design, Tutorials, Server Management<br />
+    
+
+    
+        <strong>Type</strong>: Commercial<br />
+    
+
+    
+</p>
+        
+    </div>
+    <div class="col-sm-1 col-12"></div>
+    <div class="col-sm-3 col-12 d-flex align-items-center justify-content-center">
+        <div class="project-box">
+    <p>
+        
+        
+        <strong>Project Link</strong>:
+        
+        
+        <br /><a href="http://www.feyermusic.com">Feyer Music</a>
+        
+    </p>
+</div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="row">
+<div class="col-12">
+
+
+
+
+
+
+
+
+
+
+<div class="feature-image row spacing-none border-enabled">
+    <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
+        <img src="/assets/flexfolio/fm/feat1.jpg" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        <div class="feature-description">
+            <div><h5>Music</h5>Feyer's new album, <em>Signals Internalized</em>, was a primary focus of his career as well as the website's branding. I added an easy way for fans to listen and then stream or buy the album officially.</div>
+        </div>
+        <br />
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="feature-image row spacing-default ">
+    <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
+        <img src="/assets/flexfolio/fm/feat2.jpg" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        <div class="feature-description">
+            <div><h5>Press Page</h5>With modularity and flexibility in mind, the Press page has a front-end design that works with any content thrown into it. It also has a simplified and specialized backend workflow, making it easy for Feyer to edit.</div>
+        </div>
+        <br />
+        
+        <div class="technical-button-holder">
+            <button class="btn btn-primary btn-tech-details" type="button" data-toggle="collapse" data-target="#fmTech1" aria-expanded="false" aria-controls="fmTech1">Show Technical Detail</button>
+            
+                <div class="btn-tech-details--topic">Custom Press Loop</div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="collapse fmTechDetail technical-detail" id="fmTech1">
+    <div class="card card-body" style="padding-bottom: 0;">
+
+
+
+
+
+<div class="row technical-header ">
+    <div class="col-md-4 col-12">
+    </div>
+    <div class="col-md-8 col-12">
+        <h4>User Scenario</h4>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="row ">
+    
+    <div class="col-md-4 col-12">
+        
+    </div>
+    
+    <div class="col-md-8 col-12">
+
+<p>
+   Feyer just had a press article written about his new song. He wants to quickly add it to his website without needing to worry about messing up the formatting and/or presentation of the other Press items.
+</p>
+<h5>Typical Setups</h5>
+<p>
+    Many website builders nowadays advertise building tools that don't require coding, however actually using these tools to get exact results you want can be difficult. This problem is increased further when mobile is factored in, and clients aren't sure why a change in desktop view also made a change in mobile view.
+</p>
+<p>
+    Additionally, there are many websites that don't allow for the editing of CSS, which makes it very difficult for clients to achieve their exact design visions.
+</p>
+<h5>Custom Press Loop Steps</h5>
+<ol>
+    <li>Feyer adds a new Press post and fills in a few designated fields are filled in with relevant information.</li>
+    <li>The new post is active on the website and Feyer can go back to entertaining his fans.</li>
+</ol>
+
+
+
+
+</div></div>
+
+
+<div class="row technical-header ">
+    <div class="col-md-4 col-12">
+    </div>
+    <div class="col-md-8 col-12">
+        <h4>Behind the Scenes</h4>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="row mt-2">
+    
+    <div class="col-md-4 col-12">
+        
+            
+            
+<div class="technical-image-holder ">
+    <a class="technical-image" data-featherlight="/assets/flexfolio/fm/techdetail1-1.png"><img src="/assets/flexfolio/fm/techdetail1-1.png" style="" /></a>
+    <span class="image-enlarge-text"><a data-featherlight="/assets/flexfolio/fm/techdetail1-1.png"><i class="fa fa-search-plus"></i> Enlarge</a></span>
+    <div class="technical-caption">A press post's custom field group.</div>
+</div>
+        
+    </div>
+    
+    <div class="col-md-8 col-12">
+
+<p>
+    ① During initial website creation, a new post type ("Press") was created.
+</p>
+<ul>
+    <li>
+        Keeping the press posts away from the default posts meant that core WordPress functionality was not touched.
+    </li>
+    <li>
+        Creating a new post type enabled the creation of new custom fields (pictured to the side). These custom fields allowed for standardization and validation of information.
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <hr class="thin " />
+
+
+<div class="row mt-2">
+    
+    <div class="col-md-4 col-12">
+        
+            
+            
+<div class="technical-image-holder text-center">
+    <a class="technical-image" data-featherlight="/assets/flexfolio/fm/techdetail1-2.png"><img src="/assets/flexfolio/fm/techdetail1-2.png" style="max-width: 200px;padding-top:8px;" /></a>
+    <span class="image-enlarge-text"><a data-featherlight="/assets/flexfolio/fm/techdetail1-2.png"><i class="fa fa-search-plus"></i> Enlarge</a></span>
+    <div class="technical-caption">The result of step ①'s custom fields being filled out.</div>
+</div>
+        
+    </div>
+    
+    <div class="col-md-8 col-12">
+
+<p>
+    ② A view template for individual Press posts was created. This utilized the custom fields.
+</p>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <hr class="thin " />
+
+
+<div class="row mt-2">
+    
+    <div class="col-md-4 col-12">
+        
+            
+            
+<div class="technical-image-holder ">
+    <a class="technical-image" data-featherlight="/assets/flexfolio/fm/techdetail1-3.png"><img src="/assets/flexfolio/fm/techdetail1-3.png" style="" /></a>
+    <span class="image-enlarge-text"><a data-featherlight="/assets/flexfolio/fm/techdetail1-3.png"><i class="fa fa-search-plus"></i> Enlarge</a></span>
+    <div class="technical-caption">The main Press page with each Press post using the same view template.</div>
+</div>
+        
+    </div>
+    
+    <div class="col-md-8 col-12">
+
+<p>
+    ③ A page template with a custom loop containing the Press posts got assigned to the Press Archive page. This ensured that as soon as a new Press post got added, it showed up on the website with designated formatting.
+</p>
+
+
+
+
+
+</div></div>
+
+
+<div class="row technical-header ">
+    <div class="col-md-4 col-12">
+    </div>
+    <div class="col-md-8 col-12">
+        <h4>Closing Thoughts</h4>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="row ">
+    
+    <div class="col-md-4 col-12">
+        
+    </div>
+    
+    <div class="col-md-8 col-12">
+
+<p>
+    Overall, the upfront cost of this method was steeper than just starting off with a visual/WYSIWYG builder, however it absolutely saved time and stress in the long run.
+</p>
+
+
+
+
+</div></div></div></div></div></div>
+
+<div class="row"><hr class="thin feature-padding" /></div>
+
+<div class="feature-image row spacing-default ">
+    <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
+        <img src="/assets/flexfolio/fm/feat3.jpg" />
+    </div>
+    <div class="caption-holder col-md-6 col-12">
+        <div class="feature-description">
+            <div><h5>Personality</h5>I decided to take advantage of Feyer's frequent use of Instagram by adding his Instagram feed on the website. It's the perfect way to allow fans to get to know him while keeping the website updated with new content regularly.</div>
+        </div>
+        <br />
+        
+    </div>
+</div>
+
+<div class="row"><hr class="thick feature-padding" /></div>
+
+<div class="feature-image col-12 spacing-large">
+    <div class="image-holder">
+      <img src="/assets/flexfolio/fm/fullfeat.jpg" />
+    </div>
+    
+</div>
+:ET

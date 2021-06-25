@@ -50,7 +50,7 @@
 <div class="work-block {{size}} {{project.category}}-block">
   <a href="{{block-url}}"><img src="{{banner-img}}" /></a>
   <p class="workall-info">
-    {% if project.category == "photo" %}
+    {% if casestudy == true %}
       <a href="{{block-url}}" class="work-block--title"><b>{{project.title}}</b> ➝</a><br />
     {% elsif casestudy == false %}
     <a href="{{block-url}}" target="_blank" class="work-block--title"><b>{{project.title}}</b>&nbsp; <i style="font-size: 0.8em;" class="fa fa-external-link"></i></a><br />

@@ -41,18 +41,23 @@ projlink:
     techID = "fmTech1" %}
 
 {% include technical/detail-header.html
-    title="Scenario" %}
+    title="User Scenario" %}
 
 {% include technical/detail-row.html
     row-split = "4-8" %}
 
 <p>
-    Feyer needed to easily be able to add Press items as well as keep them in a professional and standardized format. WYSIWYG editors may be easy for clients to use on a surface level, but maintaining order and consistent spacing can end up being tedious and difficult.
+   Feyer just had a press article written about his new song. He wants to quickly add it to his website without needing to worry about messing up the formatting and/or presentation of the other Press items.
 </p>
+<h5>Custom Press Loop Steps</h5>
+<ol>
+    <li>Feyer adds a new Press post and fills in a few designated fields are filled in with relevant information.</li>
+    <li>The new post is active on the website and Feyer can go back to entertaining his fans.</li>
+</ol>
 
 {% include technical/detail-header.html
     endDivCount = 2
-    title="Inner Workings" %}
+    title="How I Built the Custom Press Loop" %}
 
 {% include technical/detail-row.html
     row-split = "4-8"
@@ -60,8 +65,9 @@ projlink:
     caption = "A press post's custom field group."
     row-classes = "mt-2" %}
 
+<h5>①</h5>
 <p>
-    ① A new post type ("Press") was created.
+    During initial website creation, a new post type ("Press") was created.
 </p>
 <ul>
     <li>
@@ -81,8 +87,9 @@ projlink:
     caption = "The result of step ①'s custom fields being filled out."
     row-classes = "mt-2" %}
 
+<h5>②</h5>
 <p>
-    ② A view template for individual Press posts was created. This utilized the custom fields.
+    A view template for individual Press posts was created. This utilized the custom fields.
 </p>
 
 {% include technical/detail-row.html
@@ -92,23 +99,39 @@ projlink:
     caption = "The main Press page with each Press post using the same view template."
     row-classes = "mt-2" %}
 
+<h5>③</h5>
 <p>
-    ③ A page template with a custom loop containing the Press posts got assigned to the Press Archive page. This ensured that as soon as a new Press post got added, it showed up on the website with designated formatting.
+    A page template with a custom loop containing the Press posts got assigned to the Press Archive page. This ensured that as soon as a new Press post got added, it showed up on the website with designated formatting.
 </p>
 
 
 {% include technical/detail-header.html
     endDivCount = 2
-    title="Summary" %}
+    title="Typical Setups and Their Drawbacks" %}
 
 {% include technical/detail-row.html
     row-split = "4-8" %}
 
+<h5>WordPress Set-ups</h5>
 <p>
-    When Feyer wants to add a new press article link, all he needs to do is create a new Press post, fill in some fields, and then publish. The display of it gets taken care of automatically, and he can quickly get back to entertaining fans!
+    Oftentimes when WordPress sites have a Press page, they have two options (with their own drawbacks).
 </p>
 <p>
-    The upfront cost of this method was steeper than just starting off with a visual/WYSIWYG builder, however it absolutely saved time and stress in the long run.
+    1: Build out a page with a visual editor plugin: This seems simple at first, but making sure that every item has the same visual settings can become a challenge the larger the Press list grows.
+</p>
+<p>
+    2: Use the core WordPress post functionality: This has the same scale problem as the first option, but also an create a challenge down the road if the client wants to actually use the default blog post functionality. Not only that, but out-of-the-box URL slugs will still read as `post`, instead of `press`.
+</p>
+<h5>Other Site Builders</h5>
+<p>
+    Many website builders nowadays advertise building tools that don't require coding, however actually using these tools to get exact results you want can be difficult. This problem is increased further when mobile is factored in, and clients aren't sure why a change in desktop view also made a change in mobile view.
+</p>
+<p>
+    Additionally, there are many websites that don't allow for the editing of CSS, which makes it very difficult for clients to achieve their exact design visions.
+</p>
+<h5>Closing Notes</h5>
+<p>
+    Overall, the upfront cost of this method was steeper than just starting off with a visual/WYSIWYG builder, however it absolutely saved time and stress in the long run.
 </p>
 
 {% include technical/detail-card-end.html
@@ -128,6 +151,3 @@ projlink:
 {% include portfolio/feature-full.html
     image="fullfeat.jpg"
     spacing="large" %}
-
-</div>
-</div>

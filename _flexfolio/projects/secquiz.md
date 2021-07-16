@@ -21,17 +21,17 @@ projlink:
 {% include portfolio/dev-descrip.html %}
 
 {% include portfolio/feature-left.html
-    image="question.jpg"
+    image="question"
     border=true
     descrip="<strong>Introspective Questions</strong><br />The quiz contains questions that ask users about their online habits. This forces more introspection, instead of just telling them if they do or don't know something. Questions are scored according to how much of a security risk they are introducing into their lives." %}
 
 {% include portfolio/feature-left.html
-    image="results.jpg"
+    image="results"
     border=true
     descrip="<strong>Breakdown of Results</strong><br />Results are broken down into categories so that users can see what areas they need to improve the most. A larger number means the user has higher security risks that are introduced through their digital habits." %}
 
 {% include portfolio/feature-left.html
-    image="lessoncontent.jpg"
+    image="lessoncontent"
     border="thick"
     descrip="<strong>Actionable Lessons</strong><br />Lessons for each category break up subjects into quick bite-sized lessons. Each lesson contains links to other websites where users can take action and improve their digital habits." %}
 

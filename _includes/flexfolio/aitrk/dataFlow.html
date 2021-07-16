@@ -1,0 +1,171 @@
+{% comment %} START -- aitrkTech3 TECHNICAL DETAIL {% endcomment %}
+
+{% include technical/detail-card-start.html
+    techID = "aitrkTech-dataFlow" %}
+
+{% include technical/detail-header.html
+    title="The Pub/Sub System" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<p>
+    The asynchronous data flow in AiTrk4 is heavily reliant on the “pub/sub system”.
+</p>
+
+<p>
+    The pub/sub system is centered around “topics”, which themselves are simple text strings. Topics are “subscribed to” (via a JS method) and “published to” (also via a JS method). Using a “subscribe” method on a topic is like adding an event listener for some custom event, and using a “publish” method is like firing off the event.
+</p>
+
+<p>
+    In the case of AiTrk4, most of these custom events essentially boiled down to “the data requested is ready (for topic X)”. A card is subscribed to a topic depending on the endpoint it uses in the JS code. If any card uses the same endpoint, they’ll have the same topic. So, whichever card loads first will request the data, but all cards that require that data will end up receiving it once it arrives.
+</p>
+
+<p>
+    Using the pub/sub system was much easier than trying to wrestle with pre-set events, and more efficient than using actual custom events (because custom events will inform every node in the system, thereby causing a lot of overhead).
+</p>
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="User Scenario" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8" %}
+
+<p>
+    A user wants to view data for the Google campaign for client “Innovation Corp.”
+</p>
+<ol>
+    <li>The user uses the Client Picker to select “Innovation Corp.” first, and then selects the Program “Google Display”.</li>
+    <li>The user confirms their selection <strong>(data request is sent)</strong> and waits for the data to load.</li>
+    <li>The user views the dashboard and now also has the option to select a more specific date range (and a <strong>separate data request is sent</strong>).</li>
+</ol>
+<p>
+    So what happens each time a data request is sent?
+</p>
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="Asynchronous Data Flow" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>① Cards Send Data Requests</h5>
+<p>
+    Once a user confirms their Client+Program/Group selection, the cards send their request to the server using an endpoint. Remember, each card manages its own data and sends off its own request, and the application needed to be able to handle any request in any order given (hence the ‘asynchronous’ part).
+</p>
+<p>
+    <strong>Hazards:</strong> It was imperative that topics were spellchecked and made sure to be the same if they required the same endpoint. Failing to do so would cause the app to load the same data multiple times.
+</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>② Endpoint Receives Data</h5>
+<p>
+    The endpoint gets the raw server data and then assembles it into JSON that the frontend can use.
+</p>
+<p>
+    <strong>Hazards:</strong> Occasionally, we would have cases where the data that appeared on the front-end wasn’t as expected or showed incorrect results. In these cases, debugging was required at each step of the data transform to see where these errors occurred. (Was it a server problem? Was data transformed incorrectly on the front-end?)
+</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>③ Cards Receive Data</h5>
+<p>
+    When the data is ready to load, any card that will use that data (has the same “topic”) gets published to and given said data.
+</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>④ Cards Copy the Data</h5>
+<p>
+    Cards copy the data from the server
+</p>
+<p>
+    <strong>Hazards:</strong> Cards using the same topic also shared the same data by reference. The problem with that is each card/viz tended to have slightly different schemas (both between each other as well as the data straight from the server), so the data needed to be transformed. If the data wasn’t copied over to a card-specific variable (and allowed to be edited “by value”) before being transformed, data bugs would turn up because “Card A” was manipulating “Card B”’s data accidentally.
+</p>
+<p>
+    Debugging this required checking the data of all the cards using the same topic and then seeing if one of them (likely the first that received the data) was affecting the others.
+</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>⑤ Cards Transform the Raw Data</h5>
+<p>
+    Cards transform the raw data.
+</p>
+<p>
+    <strong>Hazards:</strong> Due to the raw server data not always having the same schema, you usually could not do a copy-paste of the data transform between different cards. Each transform needed to be tailored to the card, and then tailored to the viz the card would use.
+</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>⑥ Transformed Data is Sent to Visualizations</h5>
+<p>
+    The transformed data is sent to and used by the visualizations
+</p>
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="Data Transformations" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8"
+    caption = "A press post's custom field group."
+    row-classes = "mt-2" %}
+
+<h5>Common Steps</h5>
+
+<ol>
+    <li>Create categories data can be sorted into</li>
+    <li>Run through the initial data and add/tabulate based on categories</li>
+    <li>Send the resulting categories object to the viz</li>
+</ol>
+
+<p>
+    Following are some examples of what kinds of categories data got sorted into for step (1).
+</p>
+
+<h5>Date-based Categorization (Date Binning)</h5>
+<p>
+    Linearea chart and sparkline data needed to be transformed via a process we called “date binning”. In this process, an object was created that contained named objects for every date in the date range.
+</p>
+<p>
+    Why? Charts needed all dates in the schema, even if the metric had a value of 0. This is because the lines would otherwise be drawn in a way that someone might think there actually was a non-0 value for that particular date.
+</p>
+
+<h5>Pre-Determined Categories</h5>
+<p>
+    For cards like the donut charts, the categories were set in code instead of dynamically (ie according to date range) since there were usually a set of expected categories (and they had designated color sets to go with them too).
+</p>
+
+{% include technical/detail-card-end.html
+    endDivCount = 4 %}
+
+
+{% comment %} END -- trkTech3 TECHNICAL DETAIL {% endcomment %}

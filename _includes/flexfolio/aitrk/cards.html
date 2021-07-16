@@ -1,0 +1,382 @@
+
+
+{% comment %} START -- aitrkTech2 TECHNICAL DETAIL {% endcomment %}
+
+{% include technical/detail-card-start.html
+    techID = "aitrkTech-cards" %}
+
+{% include technical/detail-header.html
+    title="Card Components" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8" %}
+
+<h5>Card ASPX</h5>
+<p>
+    The card ASPX itself handles the main structure (column width and such), card viz legends, the empty state, the info button content, preloader viz, card title, and of course, it points to the JS that the card ends up using.
+</p>
+
+<h5>Card JS</h5>
+<p>
+    The JS of the cards used on the pages all <code>extend</code> a main Card prototype, so they all share some commonalities (and are able to use the same menu buttons/mixins without difficulty). Furthermore, the JS is generally of similar structure, most cards have common methods (<code>constructor</code>, <code>setup</code>, <code>onload</code>, <code>update</code>) with predictable flow between these methods.
+</p>
+<p>
+    <strong>Hazard:</strong> Occasionally, depending on the card, the method flow would be different and thus the data flow would become unpredictable. When detangling this, I typically plopped in some console logs with easily identifiable messages to see what order they fired in.
+</p>
+
+<h5>Card JS - AMD</h5>
+<p>
+    The Card JS is where most of the variable components of the card was declared. The reason for this was the Asynchronous Module Definition system - various pieces reused between cards were all AMD modules and got included in the JS. Even parts that had places in the ASPX (such as the info button) needed their AMD modules included to fully work.
+</p>
+<p>
+    So, how did these modules look like and work in practice?
+</p>
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    headerWidth = "full"
+    title="AMD Examples - Tabular Cards" %}
+
+{% include technical/detail-row.html
+    row-split = "12" %}
+
+<p>
+    This section contains a few examples of different "Table Cards". The tables are all using the same base dGrid, but may also include an AMD module that modifies its behavior and/or appearance.
+</p>
+
+<p>
+    In addition, the cards containing the tables are using different modules that usually change the table's appearance, or use the data the table is using. The front-end elements for these modules can usually be found on the right side of the card's title section.
+</p>
+
+{% include technical/detail-row.html
+    row-split = "12" %}
+
+
+
+<table class="table compare-table">
+    <thead>
+    <tr>
+        <td></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-1.jpg"><img src="/assets/flexfolio/aitrk/tabular-1-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-2.jpg"><img src="/assets/flexfolio/aitrk/tabular-2-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-3.jpg"><img src="/assets/flexfolio/aitrk/tabular-3-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-4.jpg"><img src="/assets/flexfolio/aitrk/tabular-4-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-5.jpg"><img src="/assets/flexfolio/aitrk/tabular-5-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/tabular-6.jpg"><img src="/assets/flexfolio/aitrk/tabular-6-thumb.jpg"/></a></td>
+    </tr>
+    </thead>
+    <thead class="thead-light">
+        <tr>
+            <th colspan="7">
+                Mixin Modules
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Table Type</td>
+        <td>Radio Buttons</td>
+        <td>N/A</td>
+        <td>N/A</td>
+        <td>Tabbed</td>
+        <td>Checkbox</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td>Totals Row</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Subgrids</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <thead class="thead-light">
+        <tr>
+            <th colspan="7">
+                Card Modules
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Total Row<br />Counter</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Searcher</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Column<br />Selector</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Downloader</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Horizontal<br  />Expander</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="grey-cell">✗</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+    </tr>
+</table>
+
+{% comment %}
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-1.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-1-thumb.jpg"
+    row-classes = "mt-1" %}
+
+<p>Detail table with the <b>radio button</b> selection mixin module.</p>
+<p>The containing card has included the following modules:</p>
+<ul>
+<li>Searcher</li>
+<li>Column selector</li>
+<li>Downloader</li>
+<li>The horizontal expander</li>
+</ul>
+
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-2.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-2-thumb.jpg"
+    row-classes = "mt-2" %}
+
+<p>Table with a <b>Totals Row</b> mixin module (bottom of the table) and <b>Subgrids</b> mixin module (see the more shaded row) that contain their own column selectors.</p>
+<p>The containing card has included the following modules:</p>
+<ul>
+<li>The Total Row Counter</li>
+<li>Searcher</li>
+<li>Column selector</li>
+<li>Downloader</li>
+</ul>
+
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-3.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-3-thumb.jpg"
+    row-classes = "mt-2" %}
+
+<p><strong>Plain table</strong> with no mixin modules.</p>
+<p>The containing card has included a Downloader module.</p>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-4.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-4-thumb.jpg"
+    row-classes = "mt-2" %}
+
+<p>Table with a <strong>Tabs</strong> mixin (seen above the table but below the card title), <strong>Totals Row</strong>, and <strong>Subgrid</strong> (indicated and expanded using the arrows on the left of the rows) mixin modules.</p>
+<p>The containing card has included the following modules:</p>
+<ul>
+    <li>Total Row Counter</li>
+    <li>Column Selector</li>
+    <li>Downloader</li>
+</ul>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-5.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-5-thumb.jpg"
+    row-classes = "mt-2" %}
+
+<p>Detail table with the <strong>checkbox selection</strong> mixin module.</p>
+<p>The containing card has included the following modules:</p>
+<ul>
+    <li>Searcher</li>
+    <li>Column Selector</li>
+    <li>Downloader</li>
+    <li>Horizontal Expander</li>
+</ul>
+
+{% include technical/detail-row.html
+    hrType = "thin"
+    row-split = "4-8"
+    image = "/assets/flexfolio/aitrk/tabular-6.jpg"
+    thumb = "/assets/flexfolio/aitrk/tabular-6-thumb.jpg"
+    row-classes = "mt-2" %}
+
+<p>Table with a <strong>Totals Row</strong> mixin module and <strong>Subgrids</strong> mixin module without a column selector.</p>
+<p>The containing card has the following modules:</p>
+<ul>
+<li>Total Row Counter</li>
+<li>Searcher</li>
+<li>Column Selector</li>
+<li>Downloader</li>
+</ul>
+
+{% endcomment %}
+
+
+<br />
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    headerWidth = "full"
+    title="AMD Examples - Chart Cards" %}
+
+{% include technical/detail-row.html
+    row-split = "12" %}
+
+<p>
+    This section contains a few examples of different "Linearea Chart" Cards. The tables are all using the same base dGrid, but may also include an AMD module that modifies its behavior and/or appearance.
+</p>
+
+{% include technical/detail-row.html
+    row-split = "12" %}
+
+
+
+<table class="table compare-table">
+    <thead>
+    <tr>
+        <td></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/linearea-1.jpg"><img src="/assets/flexfolio/aitrk/linearea-1-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/linearea-2.jpg"><img src="/assets/flexfolio/aitrk/linearea-2-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/linearea-3.jpg"><img src="/assets/flexfolio/aitrk/linearea-3-thumb.jpg"/></a></td>
+        <td><a data-featherlight="/assets/flexfolio/aitrk/linearea-4.jpg"><img src="/assets/flexfolio/aitrk/linearea-4-thumb.jpg"/></a></td>
+    </tr>
+    </thead>
+    <thead class="thead-light">
+        <tr>
+            <th colspan="5">
+                Mixin Modules
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Metric Selector</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Metric Compare</td>
+        <td class="grey-cell">✗</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Device Breakout</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <thead class="thead-light">
+        <tr>
+            <th colspan="5">
+                Card Modules
+            </th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Downloader</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+    </tr>
+    <tr>
+        <td>Info<br />Button</td>
+        <td class="green-cell">✔</td>
+        <td class="green-cell">✔</td>
+        <td class="grey-cell">✗</td>
+        <td class="green-cell">✔</td>
+    </tr>
+</table>
+
+{% include technical/detail-header.html
+    endDivCount = 2
+    title="Detail (Parent and Child) Cards" %}
+
+{% include technical/detail-row.html
+    row-split = "4-8" %}
+
+<h5>User Scenario</h5>
+
+<p>
+    The user selects or deselects data in the parent card to view in more detail in the child cards.
+</p>
+
+
+<h5>Technical Bits</h5>
+<p>
+    Basic set-up for the Detail Cards was similar to the main cards, in that...
+</p>
+<ol>
+    <li>It used the pub/sub system (see the previous Technical section for more details) to pass data around</li>
+    <li>That data got copied and then transformed</li>
+    <li>transformed data got sent to the visualizations</li>
+</ol>
+<p>
+    However, the <strong>exact use of the pub/sub system was a bit different.</strong>
+</p>
+
+<ol>
+    <li>All cards in a "detail set" have a shared topic defined. The child cards subscribe to this topic, and the parent card will use the topic to publish the info to.</li>
+    <li>When the user Selects and Deselects items, an event fires on each selection/deselection. This event also calls the publish method, and sends the data selected in the parent card (the “filtered data”) to the topic shared between the child and parent cards.</li>
+    <li>The filtered data gets processed according to the kind of information the child card is displaying.</li>
+</ol>
+<!--
+<h5>Examples</h5>
+
+<p>
+    Example 1: One of the child cards is a linearea chart. Since the data needs to be separated by date, it is datebinned (I know, I need to explain this) before being sent to the chart itself.
+</p>
+<p>
+    Example 2: One of the child cards is a collection of sparkline charts. Like the linearea chart, the data needs to be separated by date in order to display the sparkline. However, the totals for a specific metric also need to be calculated, since this is shown above the sparkline itself.
+</p>
+-->
+<p>
+    <strong>Hazards:</strong> Same as the initial pub/sub data loading, each card needs to make its own copy of data before modifying things so that they don’t end up stepping on each other’s toes.
+</p>
+
+{% include technical/detail-card-end.html
+    endDivCount = 4 %}
+
+
+{% comment %} END -- trkTech4 TECHNICAL DETAIL {% endcomment %}

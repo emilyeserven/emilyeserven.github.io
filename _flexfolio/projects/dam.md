@@ -28,17 +28,17 @@ projlink:
 {% include portfolio/dev-descrip.html %}
 
 {% include portfolio/feature-left.html
-    image="tree.jpg"
+    image="tree"
     border=true
     descrip="<strong>All Assets in One Place</strong><br />The overall directory screen  is linked to the JSON file containing asset information. This information dynamically populates the areas in the React component (template)." %}
 
 {% include portfolio/feature-left.html
-    image="info.jpg"
+    image="info"
     border=true
     descrip="<strong>Detailed Asset Information</strong><br />Each asset is linked to the JSON file and pulls the asset's information into fields on the sidebar. This allows for consistent design and less confusion." %}
 
 {% include portfolio/feature-left.html
-    image="uploads.jpg"
+    image="uploads"
     border="thick"
     descrip="<strong>Quick Additions Allowed</strong><br />A 1-step process has been conceptualized to quickly add new assets to the user's personal catalog." %}
 

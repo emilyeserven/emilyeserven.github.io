@@ -1,5 +1,7 @@
 {% assign endDivCount = include.endDivCount %}
 
+
+
 {% if endDivCount == 1 %}
 </div>
 {% elsif endDivCount == 2 %}
@@ -15,7 +17,13 @@
 {% endif %}
 
 <div class="row technical-header {{include.row-classes}}">
-    <div class="col-md-4 col-12">
-    </div>
-    <div class="col-md-8 col-12">
-        <h4>{{include.title}}</h4>
+
+{% if include.headerWidth == "full" %}
+<div class="col-12">
+    <h4>{{include.title}}</h4>
+{% else %}
+<div class="col-md-4 col-12">
+</div>
+<div class="col-md-8 col-12">
+    <h4>{{include.title}}</h4>
+{% endif %}

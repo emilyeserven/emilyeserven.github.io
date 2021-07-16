@@ -1,6 +1,12 @@
 {% assign imageSrc = include.image %}
 <div class="technical-image-holder {{include.imageClasses}}">
-    <a class="technical-image" data-featherlight="{{imageSrc}}"><img src="{{imageSrc}}" style="{{include.imageStyles}}"/></a>
+    <a class="technical-image" data-featherlight="{{imageSrc}}">
+        {% if include.thumb %}
+            <img src="{{include.thumb}}" style="{{include.imageStyles}}"/>
+        {% else %}
+            <img src="{{imageSrc}}" style="{{include.imageStyles}}"/>
+        {% endif %}
+    </a>
     <span class="image-enlarge-text"><a data-featherlight="{{imageSrc}}"><i class="fa fa-search-plus"></i> Enlarge</a></span>
     <div class="technical-caption">{{include.caption}}</div>
 </div>

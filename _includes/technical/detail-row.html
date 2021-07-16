@@ -30,6 +30,9 @@
 {% if include.row-split == "4-8" %}
     {% assign col1-classes = "col-md-4 col-12" %}
     {% assign col2-classes = "col-md-8 col-12" %}
+{% elsif include.row-split == "2-10" %}
+    {% assign col1-classes = "col-md-2 col-12" %}
+    {% assign col2-classes = "col-md-10 col-12" %}
 {% elsif include.row-split == "12" %}
     {% assign col2-classes = "col-12" %}
 {% endif %}

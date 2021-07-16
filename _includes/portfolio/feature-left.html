@@ -17,12 +17,38 @@
     {% assign border = "" %}
 {% endif %}
 
-{% assign featureimage-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image }} %}
+{% if include.image-ext %}
+    {% assign image-ext = include.image-ext %}
+{% else %}
+    {% assign image-ext = ".jpg" %}
+{% endif %}
+
+{% assign featureimage-url = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image | append: image-ext }} %}
+{% if include.image-full %}
+    {% assign imagefull = {{site.baseurl | append: '/assets/flexfolio/' | append: page.code | append: '/' | append: include.image | append: "-full" | append: image-ext }} %}
+{% endif %}
+
+{% if page.color %}
+    {% assign color = page.color %}
+{% else %}
+    {% assign color = "#2a7ae2" %}
+{% endif %}
+
+{% if page.color-dark == false %}
+    {% assign fontcolor = "#333333" %}
+{% else %}
+    {% assign fontcolor = "#eeeeee" %}
+{% endif %}
+
 {% assign technicalID = include.technicalID %}
 
 <div class="feature-image row spacing-{{spacing}} {{border}}">
     <div class="image-holder col-md-6 col-12 mb-3 mb-md-0">
-        <img src="{{featureimage-url}}" />
+        {% if imagefull %}
+            <a data-featherlight="{{imagefull}}"><img src="{{featureimage-url}}" /></a>
+        {% else %}
+            <img src="{{featureimage-url}}" />
+        {% endif %}
     </div>
     <div class="caption-holder col-md-6 col-12">
         <div class="feature-description">
@@ -31,7 +57,7 @@
         <br />
         {% if technicalID %}
         <div class="technical-button-holder">
-            <button class="btn btn-primary btn-tech-details" type="button" data-toggle="collapse" data-target="#{{technicalID}}" aria-expanded="false" aria-controls="{{technicalID}}">Show Technical Detail</button>
+            <button class="btn btn-primary btn-tech-details" type="button" data-toggle="collapse" data-target="#{{technicalID}}" aria-expanded="false" aria-controls="{{technicalID}}" style="background-color: {{color}}; border-color: {{color}}; color: {{fontcolor}};">Show Technical Detail</button>
             {% if include.technicalTopic %}
                 <div class="btn-tech-details--topic">{{include.technicalTopic}}</div>
             {% endif %}

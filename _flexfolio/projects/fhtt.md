@@ -28,12 +28,12 @@ projlink:
 {% include portfolio/dev-descrip.html %}
 
 {% include portfolio/feature-left.html
-    image="feat1.jpg"
+    image="feat1"
     border=true
     descrip="<strong>Organizer Screen</strong><br />The organizer answers three questions about the event they're planning. These answers generate a URL that can be passed to any participant." %}
 
 {% include portfolio/feature-left.html
-    image="feat2.jpg"
+    image="feat2"
     border="thick"
     descrip="<strong>Participant Screen</strong><br />Event participants get the link to a customized screen from the organizer. All they need to do is specify what train station they're coming from, and they'll get a short list of the best trains they can use to get to the event on time." %}
 

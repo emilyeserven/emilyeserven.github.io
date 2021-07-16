@@ -2217,3 +2217,36 @@ input.buttons {
         */
     }
 }
+
+
+/* SORT LATER */
+table.compare-table {
+    width: calc(100% - 2em);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:3em;
+    margin-top: 1em;
+    max-width: 700px;
+    border: 2px solid $grey-color-light;
+}
+
+table.compare-table td {
+    text-align:center;
+    &.green-cell {
+        color: $brand-color;
+    }
+    &.grey-cell {
+        color: $grey-color;
+    }
+}
+
+.table.compare-table .thead-light th {
+    background-color:$grey-color-mid;
+    border-color: $grey-color-mid;
+    color: $grey-color-dark;
+}
+
+table.compare-table tr td:first-child {
+    text-align:left;
+    background-color:$grey-color-light;
+}

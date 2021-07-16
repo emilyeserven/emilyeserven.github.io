@@ -27,16 +27,16 @@ projlink:
 <h2>Highlighted Features</h2>
 
 {% include portfolio/feature-left.html
-    image="feat1.jpg"
+    image="feat1"
     spacing="none"
     descrip="<strong>Button and Display</strong><br />Clicking the button will cause the display to get updated with the new amount of 'money' the user has collected." %}
 
 {% include portfolio/feature-left.html
-    image="feat2.jpg"
+    image="feat2"
     descrip="<strong>Conversion Displays</strong><br />Pieces on the page that were modified upon the click of the 💸 button. The amount of venti-sized Starbucks Americano beverages and the amount of bitcoins that can be afforded are displayed." %}
 
 {% include portfolio/feature-left.html
-    image="feat3.jpg"
+    image="feat3"
     descrip="<strong>Money Multipliers</strong><br />Fulfilled the need to have buttons that affected the rest of the page somehow. Clicking on a multiplier multiplies the amount of money the button generates." %}
 
 <br />

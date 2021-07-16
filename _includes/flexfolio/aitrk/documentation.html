@@ -1,0 +1,20 @@
+{% include technical/detail-card-start.html
+    techID = "aitrkTech-documentation" %}
+
+{% include technical/detail-header.html
+    headerWidth = "full"
+    title="Example Documentation" %}
+
+{% include technical/detail-row.html
+    row-split = "12"
+    row-classes = "mt-2" %}
+
+<p><strong>Card Tracing</strong> - Document for new developer onboarding; it showed exactly how to find files associated with a card by locating specific pieces of code as well as noting naming conventions that were stuck to across the app. Associated files usually included the file for the section, the file for the section tab, the endpoint(s) used by the card, any standard procedures (sprocs) used, and the topic used for the XHR data flow.</p>
+<p><strong>Card Directory</strong> - This was a quick reference for developers who wanted to find files associated with a card, but hadn’t yet internalized the content in the Card Tracing document. This was also a quick reference for the DBAs, who could just use this document to figure out which sprocs to edit instead of needing to document it per-ticket or ask a developer.</p>
+<p><strong>New Developer Onboarding Document</strong> - I contributed to this document as I was onboarding. Specifically, I assisted in filling out the sections having to do with setting up the VPN and AiTrk4’s dev environment (on both Mac and PC). A section having to do with transferring virtual machines was also added by me, as I needed to transfer a Parallels VM on Mac to VirtualBox on PC at one point.</p>
+<p><strong>How to change the endpoints</strong> - Guide for developer onboarding and DBAs. It showed what to be wary of when editing endpoint files as well as how to find the meat of what needed to be edited (the SQL) for someone who was unfamiliar with C#. (Before, most of the endpoint SQL was on the endpoint file itself. Eventually this changed, and the SQL was instead referred to by a standard procedure that the DBAs edited.)</p>
+<p><strong>How to test the endpoints</strong> - Guide for developer onboarding. Essentially described how to create an endpoint link to check raw data from, as well as documented the query strings used by the endpoint.</p>
+
+
+{% include technical/detail-card-end.html
+    endDivCount = 4 %}

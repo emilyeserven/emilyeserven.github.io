@@ -4,6 +4,8 @@ The portfolio site for Emily Serven! I'm not really important, just another web 
 
 # Current Effort
 
+(Currently reflected by [this issue](https://github.com/emilyeserven/emilyeserven.github.io/issues/22) but hopefully will soon be identified with separate issues and one main label?)
+
 My code process has recently evolved to involve writing documentation much more frequently and alongside the task. I'm updating my site to reflect this better.
 
 # Next Effort

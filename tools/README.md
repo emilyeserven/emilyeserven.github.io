@@ -8,7 +8,9 @@ I'm attempting to document the YAML schemas I tend to use (especially the custom
 
 # How can I use this?
 
-I've got this to work in both [VSCode](https://joshuaavalon.io/intellisense-json-yaml-vs-code) and [WebStorm](https://www.jetbrains.com/help/idea/json.html#ws_json_using_schemas)
+First off, basic setup. I've got this to work in both [VSCode](https://joshuaavalon.io/intellisense-json-yaml-vs-code) and [WebStorm](https://www.jetbrains.com/help/idea/json.html#ws_json_using_schemas). The file to reference is the `flexfolio.schema.json`.
+
+You can't actually use this in the posts directly due to... file extension shenanigans. Instead, use a `.yml` file in **this directory**, or explore the `photo-template.yml` or `webdev-template.yml` files. There, you can explore the various descriptions as you craft the YAML frontmatter.
 
 # How could I implement this?
 

@@ -65,8 +65,8 @@
         "team": {
           "type": "array",
           "default": "- ",
-          "description": "Parameters are 'name', 'role', and 'url'.Repeat as many times as necessary, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.Repeated entries appear as a comma separated list.",
-          "x-intellij-html-description": "<ul><li>Parameters are '<code>name</code>', '<code>role</code>', and '<code>url</code>'.</li><li>Repeat as many times as necessary, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.</li><li>Repeated entries appear as a comma separated list.</li></ul><b>Example renders:</b><br /><i>Single:</i><br /><a href='URL'>NAME</a> (ROLE)<br /><br /><i>Multiple</i><br /><a href='URL'>NAME</a> (ROLE), <a href='URL2'>NAME2</a> (ROLE2)</p>",
+          "description": "Parameters are 'name', 'role', and 'url'. Repeat as many times as necessary, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.Repeated entries appear as a comma separated list.",
+          "x-intellij-html-description": "<p>Used to show other people involved in a project and give proper credit.</p><br /><p><b>Nested parameters:</b> <code>name</code>, <code>role</code>, <code>url</code></p><br /><p><b>Technical Reminders:</b><ul><li>Repeat as many times as necessary for each team member, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.</li><li>Repeated entries appear as a comma separated list.</li></ul></p><p><b>Example renders:</b><br /><i>Single:</i><br /><a href='URL'>NAME</a> (ROLE)<br /><br /><i>Multiple</i><br /><a href='URL'>NAME</a> (ROLE), <a href='URL2'>NAME2</a> (ROLE2)</p>",
           "items": {
             "$ref": "#/definitions/Team"
           }

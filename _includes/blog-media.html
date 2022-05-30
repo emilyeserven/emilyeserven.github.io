@@ -1,3 +1,27 @@
+<!--
+PURPOSE: The old blog media system was designed to allow for relatively complicated layouts, only using icons.
+
+WHERE: This only shows up within `blog-loop.html`.
+
+DEPRECATION: If I decide to not use the blog anymore, I should just delete this after transitioning post media to be images instead.
+
+PARAMETERS: None
+
+INPUTS: All the inputs are from post page frontmatter.
+- `col1-content`
+- `col2-content`
+- `col3-content`
+- `media-layout`
+- `media-layweight`
+- `textcolor`
+- `media-bgcolor`
+- `media`
+Note: Elaborate a bit more.
+
+EXAMPLE SYNTAX:
+{% include blog-media.html %}
+-->
+
 <div class="post-image">
 {% if post.media-layout %}
 <a href="{{ post.url | prepend: site.baseurl }}">

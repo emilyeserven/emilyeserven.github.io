@@ -10,7 +10,8 @@
           "type": "string",
           "enum": ["flexfolio", "photofolio"],
           "default": "flexfolio",
-          "x-intellij-html-description": "<p>This notes the general layout. Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout.</p><br /><p><b>Options:</b> <b><code>flexfolio</code></b>, <code>photofolio</code></p>"
+          "description": "This notes the general layout. Officially, it's a Jekyll built-in. Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout. Options: flexfolio, photofolio",
+          "x-intellij-html-description": "<ul><li>This notes the general layout. Officially, it's a Jekyll built-in.</li><li>Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout.</li></ul><p><b>Options:</b> <u><code>flexfolio</code></u>, <code>photofolio</code></p>"
         },
         "title": {
           "type": "string",
@@ -32,6 +33,7 @@
         "category": {
           "type": "string",
           "enum": ["webdev", "photo"],
+          "description": "The main category/section the item is in. Upon updating my sites to be separated between different audiences, this property will more closely resemble the current subcategory property. Options: webdev, photo",
           "x-intellij-html-description": "<p>The main category/section the item is in. Upon updating my sites to be separated between different audiences, this property will more closely resemble the current subcategory property.</p><br /><p><b>Options:</b> <b><code>webdev</code></b>, <code>photo</code></p>"
         },
         "img-base": {
@@ -61,7 +63,8 @@
         "team": {
           "type": "array",
           "default": "- ",
-          "x-intellij-html-description": "Parameters are '<code>name</code>', '<code>role</code>', and '<code>url</code>'.",
+          "description": "Parameters are 'name', 'role', and 'url'.Repeat as many times as necessary, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.Repeated entries appear as a comma separated list.",
+          "x-intellij-html-description": "<ul><li>Parameters are '<code>name</code>', '<code>role</code>', and '<code>url</code>'.</li><li>Repeat as many times as necessary, but ensure new entries have the dash in front of them and are indented as siblings of other items, not children.</li><li>Repeated entries appear as a comma separated list.</li></ul><b>Example renders:</b><br /><i>Single:</i><br /><a href='URL'>NAME</a> (ROLE)<br /><br /><i>Multiple</i><br /><a href='URL'>NAME</a> (ROLE), <a href='URL2'>NAME2</a> (ROLE2)</p>",
           "items": {
             "$ref": "#/definitions/Team"
           }
@@ -72,12 +75,14 @@
         },
         "bgpos": {
           "type": "string",
-          "description": "Custom CSS for the background-position."
+          "description": "Custom CSS for the background-position of the banner image. Default value is defined in /_layouts/flexfolio.html.",
+          "x-intellij-html-description": "<ul><li>Custom CSS for the background-position of the banner image.</li><li>Default value is defined in <code>/_layouts/flexfolio.html</code>.</li></ul><p><b>Default value</b>:<br /><code>background-position: 50%;</code></p>"
         },
         "subcategory": {
           "type": "string",
           "enum": ["Photography","Lab","Commercial","Project"],
-          "x-intellij-html-description": "<p>Single string shared by other items.</p><br /><p><b>Options:</b> <b><code>Photography</code></b>, <code>Lab</code>, <code>Commercial</code>, <code>Project</code></p>"
+          "description": "Single string shared by other items. Options: Photography, Lab, Commercial, Project",
+          "x-intellij-html-description": "<p>Single string shared by other items.</p><br /><p><b>Options:</b> <u><code>Photography</code></u>, <code>Lab</code>, <code>Commercial</code>, <code>Project</code></p>"
         },
         "casestudy": {
           "type": "boolean",
@@ -143,11 +148,13 @@
       "properties": {
         "name": {
           "type": "string",
-          "description": "The name of this team member. Example: 'Emily Serven'"
+          "description": "The name of this team member.",
+          "x-intellij-html-description": "<p>The name of this team member.</p><<br /><p><b>Example:</b><br /><code>Emily Serven</code></p>"
         },
         "role": {
           "type": "string",
-          "description": "The role of this team member. Example: 'Web Developer, Project Manager'"
+          "description": "The role of this team member.",
+          "x-intellij-html-description": "<p>The role of this team member.</p><<br /><p><b>Example:</b><br /><code>Web Developer, Project Manager</code></p>"
         },
         "url": {
           "type": "string",
@@ -155,7 +162,8 @@
           "qt-uri-protocols": [
             "https"
           ],
-          "description": "The URL for the website of the team member."
+          "description": "The URL for the website of the team member.",
+          "x-intellij-html-description": "<p>The URL for the website of the team member.</p><<br /><p><b>Example:</b><br /><code>https://www.emilyserven.net</code></p>"
         }
       },
       "required": [

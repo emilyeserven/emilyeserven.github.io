@@ -40,7 +40,7 @@
         },
         "img-base": {
           "type": "string",
-          "description": "Images for this project will be prepended with the value of this property."
+          "description": "Images for this project will be prepended with the value of this property. A reminder that the images are all placed in the assets folder, in a subdirectory dictated by the client code."
         },
         "orig-post": {
           "type": "string",
@@ -119,6 +119,7 @@
     "Projlink": {
       "type": "object",
       "additionalProperties": false,
+      "description": "Space to add all links related to the project.",
       "properties": {
         "name": {
           "type": "string"

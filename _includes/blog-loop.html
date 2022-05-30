@@ -1,3 +1,18 @@
+<!--
+PURPOSE: This is the individual blog post within the blog loop.
+
+WHERE: Intended to be used inside a `for` loop asking for `site.tags.<TAG>` (see example syntax).
+
+DEPRECATION: Looks like it was on its way towards being deprecated because there's a file called `blog-loop-new.html` that isn't actually being used.
+
+PARAMETERS: None, but the input is done before the include via the `for` loop it should be nested inside.
+
+EXAMPLE SYNTAX:
+{% for post in site.tags.design %}
+  {% include blog-loop.html %}
+{% endfor %}
+-->
+
 <li>
   {% include blog-media.html %}
   <span class="post-cat">

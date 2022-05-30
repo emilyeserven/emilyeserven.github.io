@@ -1,3 +1,24 @@
+<!--
+PURPOSE:
+- This generates the tag bar at the top of each Topic page.
+- It also assigns the active Topic class properly so it's highlighted for the user.
+
+WHERE:
+- Each file in `/topics` has a `blog-header` include.
+
+DEPRECATION:
+- Candidate for deprecation/deletion.
+- Currently used in the currently-hidden blog.
+
+PARAMETERS:
+- `slug`: String
+    - The slug indicates the slug of the page that's being used
+    - The slug also helps determine which button will be highlighted
+    - Look into this: If not deprecated, change the slug to just intake the categoryid page param
+
+EXAMPLE SYNTAX:
+{% include blog-header.html slug="internet" %}
+-->
 <!-- <div class="blog-holder standalone"> -->
   <span>Topics:</span> <ul class="tag-box inline">
 <!-- Following code from: http://stackoverflow.com/a/21080786 -->

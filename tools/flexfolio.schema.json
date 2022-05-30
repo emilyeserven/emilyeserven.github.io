@@ -10,7 +10,7 @@
           "type": "string",
           "enum": ["flexfolio", "photofolio"],
           "default": "flexfolio",
-          "description": "This notes the general layout. Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout."
+          "x-intellij-html-description": "<p>This notes the general layout. Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout.</p><br /><p><b>Options:</b> <b><code>flexfolio</code></b>, <code>photofolio</code></p>"
         },
         "title": {
           "type": "string",
@@ -32,7 +32,7 @@
         "category": {
           "type": "string",
           "enum": ["webdev", "photo"],
-          "description": "The main category/section the item is in. Upon updating my sites to be separated between different audiences, this property will more closely resemble the current subcategory property."
+          "x-intellij-html-description": "<p>The main category/section the item is in. Upon updating my sites to be separated between different audiences, this property will more closely resemble the current subcategory property.</p><br /><p><b>Options:</b> <b><code>webdev</code></b>, <code>photo</code></p>"
         },
         "img-base": {
           "type": "string",
@@ -61,7 +61,7 @@
         "team": {
           "type": "array",
           "default": "- ",
-          "description": "Parameters are 'name', 'role', and 'url'.",
+          "x-intellij-html-description": "Parameters are '<code>name</code>', '<code>role</code>', and '<code>url</code>'.",
           "items": {
             "$ref": "#/definitions/Team"
           }
@@ -77,7 +77,7 @@
         "subcategory": {
           "type": "string",
           "enum": ["Photography","Lab","Commercial","Project"],
-          "description": "Single string shared by other items. "
+          "x-intellij-html-description": "<p>Single string shared by other items.</p><br /><p><b>Options:</b> <b><code>Photography</code></b>, <code>Lab</code>, <code>Commercial</code>, <code>Project</code></p>"
         },
         "casestudy": {
           "type": "boolean",

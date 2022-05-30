@@ -15,11 +15,13 @@
         },
         "title": {
           "type": "string",
-          "description": "The name of the client."
+          "description": "Required. The name of the client. This is used in the browser title bar as well as the page title itself.",
+          "x-intellij-html-description": "<p><b>Required</b>. The name of the client. </p><br/><p><b>Usage</b>: Browser title bar, page title.</p>"
         },
         "description": {
           "type": "string",
-          "description": "A description of the client. This is usually taken from their website so I don't need to actually write something myself."
+          "description": "Required. A description of the client. This is usually taken from their website so I don't need to actually write something myself.",
+          "x-intellij-html-description": "<p><b>Required</b>. A description of the client. This is usually taken from their website so I don't need to actually write something myself.</p><br/><p><b>Usage</b>: Full page under the page title.</p>"
         },
         "code": {
           "type": "string",

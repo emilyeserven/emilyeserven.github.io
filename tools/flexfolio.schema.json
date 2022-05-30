@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/ESProjects Flexfolio",
+  "definitions": {
+    "ESProjects Flexfolio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "layout": {
+          "type": "string",
+          "enum": ["flexfolio", "photofolio"],
+          "default": "flexfolio",
+          "description": "This notes the general layout. Use 'flexfolio' for more flexibility, or use 'photofolio' for a stricter (deprecated) layout."
+        },
+        "title": {
+          "type": "string",
+          "description": "The name of the client."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the client. This is usually taken from their website so I don't need to actually write something myself."
+        },
+        "code": {
+          "type": "string",
+          "description": "The client code. Usually used in billing, and typically 2-3 characters long."
+        },
+        "color":{
+          "type": "string",
+          "default": "#",
+          "description": "The client's main color. Usually used in image backgrounds in case study posts."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["webdev", "photo"],
+          "description": "The main category/section the item is in. Upon updating my sites to be separated between different audiences, this property will more closely resemble the current subcategory property."
+        },
+        "img-base": {
+          "type": "string",
+          "description": "Images for this project will be prepended with the value of this property."
+        },
+        "orig-post": {
+          "type": "string",
+          "description": "Original posting of the page."
+        },
+        "last-update": {
+          "type": "string",
+          "description": "When the page was last updated."
+        },
+        "time": {
+          "type": "string",
+          "description": "The time the client was active."
+        },
+        "stack": {
+          "type": "string",
+          "description": "The tech stack used. Eventually, I'd like to convert this to being an array so autocomplete is easier."
+        },
+        "responsibilities": {
+          "type": "string",
+          "description": "Responsibilities I had during the project."
+        },
+        "team": {
+          "type": "array",
+          "default": "- ",
+          "description": "Parameters are 'name', 'role', and 'url'.",
+          "items": {
+            "$ref": "#/definitions/Team"
+          }
+        },
+        "location": {
+          "type": "string",
+          "description": "The location the project took place. Usually used for photography."
+        },
+        "bgpos": {
+          "type": "string",
+          "description": "Custom CSS for the background-position."
+        },
+        "subcategory": {
+          "type": "string",
+          "enum": ["Photography","Lab","Commercial","Project"],
+          "description": "Single string shared by other items. "
+        },
+        "casestudy": {
+          "type": "boolean",
+          "default": false,
+          "description": "This will determine if a unique page for this client is linked to or not. If false (default), then a link will not be generated to the separate page."
+        },
+        "projlink": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Projlink"
+          }
+        },
+
+        "technical-class": {
+          "type": "string",
+          "description": "This will be used as a CSS class in Technical blocks and can be used to style these sections differently."
+        }
+      },
+      "required": [
+        "casestudy",
+        "category",
+        "code",
+        "description",
+        "layout",
+        "subcategory",
+        "team",
+        "time",
+        "title"
+      ],
+      "title": "ESProjects Flexfolio"
+    },
+    "Projlink": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "qt-uri-extensions": [
+            ".html"
+          ]
+        }
+      },
+      "required": [
+        "icon",
+        "name",
+        "url"
+      ],
+      "title": "Projlink"
+    },
+    "Team": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of this team member. Example: 'Emily Serven'"
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of this team member. Example: 'Web Developer, Project Manager'"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "description": "The URL for the website of the team member."
+        }
+      },
+      "required": [
+        "name",
+        "role"
+      ],
+      "title": "Team"
+    }
+  }
+}

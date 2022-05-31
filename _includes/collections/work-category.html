@@ -1,11 +1,21 @@
-{% capture category %}{{ include.subcategory }}{% endcapture %}
+<!--
+PURPOSE: Was used to generate categories of work automatically.
+- It loops through the flexfolio projects, then checks if it gets shown within the workall-view. It filters to only show items that are of the category specified.
+
+WHERE: The "All Work" section.
+
+DEPRECATION: It's not used, so it's a candidate for deletion.
+
+PARAMETERS: None
+
+EXAMPLE SYNTAX: None
+-->
+
+{% capture category %}
+    {{ include.subcategory }}
+{% endcapture %}
 <div class="all-work-category">
     <h2 id="{{ category | downcase }}">{{ category }}</h2>
-    <!--
-      <p>
-        Work with clients and agencies.
-      </p>
-    -->
     <div class="all-work-holder row">
       {% for project in site.flexfolio %}
         {% if project.workall-view == true %}

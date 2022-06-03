@@ -1,10 +1,19 @@
-{% comment %}
-This block is to link to other projects using an image with
-text that overlays.
+<!--
+PURPOSE: This block is to link to other projects using an image with text that overlays.
 
-{% endcomment %}
+WHERE: Describe where this is usually placed if not already stated.
 
+DEPRECATION: Note if anything needs to be deprecated.
 
+PARAMETERS:
+- code
+- width
+- height
+- banner-img
+
+EXAMPLE SYNTAX:
+Find it somewhere or note if it's not in use now.
+-->
 
 {% assign project = site.flexfolio | where:"code", include.code | first %}
 

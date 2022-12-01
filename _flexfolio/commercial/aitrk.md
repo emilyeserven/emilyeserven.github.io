@@ -8,7 +8,7 @@ category: webdev
 time: July 2018 - June 2021
 stack: [JavaScript, D3, Dojo Toolkit]
 responsibilities:  Front-End Development
-subcategory: Commercial
+subcategory: Web App
 casestudy: true
 technical-class: trkTechDetail
 ---

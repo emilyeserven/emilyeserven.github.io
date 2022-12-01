@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 # What is this folder for?
 I'm attempting to document the YAML schemas I tend to use (especially the custom ones) for a few reasons:
 

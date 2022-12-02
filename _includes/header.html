@@ -22,15 +22,10 @@ EXAMPLE SYNTAX:
     <nav class="site-navi new col-md-6 col-12 justify-content-center justify-content-md-end align-self-center">
 
       <div class="menu-holder justify-content-center justify-content-sm-start justify-content-md-end flex-wrap flex-md-nowrap">
-        <!-- SORTED MENU: https://stackoverflow.com/questions/9053066/sorted-navigation-menu-with-jekyll-and-liquid -->
-        {% assign all_pages = site.pages | sort:"order" %}
-        {% for my_page in all_pages %}
-          {% if my_page.title %}
-            {% unless my_page.exclude %}
-                <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
+        <a class="page-link" href="/">Home</a>
+        <a class="page-link" href="/webdev/">Web Dev</a>
+        <a class="page-link" href="/photography/">Photography</a>
+        <a class="page-link" href="/contact/">Contact</a>
       </div>
     </nav>
   </div>

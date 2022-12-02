@@ -18,3 +18,6 @@ projlink:
 ---
 
 {% include portfolio/dev-descrip.html %}
+
+<h3>Due to the proprietary nature of the project, I cannot share specifics in this case study. Please inquire for more details, or just enjoy this promotional image from the product page:</h3>
+<img src="/assets/flexfolio/lumi/promo.jpg" />

@@ -1,7 +1,7 @@
 ---
 layout: flexfolio
 title: AiTrk4 for Ai Media Group
-description: <p>Ai Media Group is an ad buying agency based in NYC. I was hired as a front-end developer to assist in developing the latest iteration of their proprietary web application, AiTrk4.</p><p><i>More technical sections are being added to this Case Study over the next few days!</i></p>
+description: <p>Ai Media Group is an ad buying agency based in NYC. I was hired as a front-end developer to assist in developing the latest iteration of their proprietary web application, AiTrk4.</p>
 code: aitrk
 color: "#3088B0"
 category: webdev

@@ -1,6 +1,6 @@
 ---
 layout: flexfolio
-title: Click to Contact Me for Full-time Opportunities
+title: Interested in hiring me full-time?
 description: ...
 code: seeking
 category: webdev

@@ -4,11 +4,11 @@
 
 <p>
     {% if page.time %}
-        <strong>Date</strong>: {{page.time | date: "%B %Y"}}<br />
+        <strong>Date</strong>: {{page.time}}<br />
     {% endif %}
 
     {% if page.stack %}
-        <strong>Tech Stack</strong>: {{page.stack | join: ', '}}<br />
+        <strong>Tech I Worked With</strong>: {{page.stack | join: ', '}}<br />
     {% endif %}
 
     {% if page.responsibilities %}

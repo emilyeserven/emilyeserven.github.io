@@ -3,8 +3,10 @@ _drafts
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
+.idea
 
 assets/\.DS_Store
+assets/images/\.DS_Store
 
 assets/flexfolio/\.DS_Store
 

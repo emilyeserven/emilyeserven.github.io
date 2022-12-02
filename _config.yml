@@ -9,7 +9,7 @@
 title: Emily Serven - Web Application Developer
 email: emily@emilyserven.net
 description: > # this means to ignore newlines until "baseurl:"
-  Portfolio for web designer and developer, Emily Serven.
+  Portfolio for web application developer, Emily Serven.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: emilyeserven

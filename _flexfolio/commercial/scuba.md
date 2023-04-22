@@ -2,7 +2,7 @@
 layout: flexfolio
 title: Scuba Analytics
 description: <p>"Scuba Analytics is the Customer Intelligence Platform that unifies, activates, and empowers customer-obsessed teams to make fast data decisions."</p>
-code: lumi
+code: scuba
 color: "#082636"
 category: webdev
 time: March 2023 - Present

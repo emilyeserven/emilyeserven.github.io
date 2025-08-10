@@ -1,5 +1,7 @@
+import type {LogoTheme} from "@/components/ui/Logo.tsx";
+
 interface GetLogoColorsObject {
-  theme: string;
+  theme: LogoTheme;
   isStrokeShown: boolean;
 }
 

@@ -13,7 +13,7 @@ const meta = {
   args: {
     theme: "color",
     size: "md",
-    isTextShown: true,
+    mode: "full",
     isStrokeShown: true
   },
   render: (args) => (
@@ -37,7 +37,7 @@ export const SMark: Story = {
   args: {
     theme: "color",
     size: "md",
-    isTextShown: false,
+    mode: "icon",
     isStrokeShown: true
   }
 };

@@ -1,19 +1,33 @@
+import type {LogoMode, LogoSize} from "@/components/ui/Logo.tsx";
+
+interface GetLogoSizeProps {
+    size: LogoSize,
+    mode: LogoMode
+}
+
 interface LogoSizeObject {
     width: number;
     height: number;
-    viewBox: string
+    viewBox: string;
 }
-export default function getLogoSize({size = "md", isTextShown = true}): LogoSizeObject {
+export default function getLogoSize({size = "md", mode = "full"}: GetLogoSizeProps): LogoSizeObject {
     // Define the base width and height
     let width = 350,
         height = 66,
         viewBox = "0 0 720 137";
 
     // Change it if text isn't shown
-    if (!isTextShown) {
+    if (mode === "icon") {
         width = 67;
         height = 38;
         viewBox = "0 0 125 80";
+    }
+
+    // Change it if text isn't shown
+    if (mode === "arrow") {
+        width = 18;
+        height = 28;
+        viewBox = "90 10 40 58";
     }
 
     // Modify the base width and heights for size options

@@ -5,39 +5,71 @@ interface LogoProps {
   isStrokeShown: boolean;
 }
 
-export function Logo({ theme = "color", size = "md", isTextShown = true, isStrokeShown = true }: LogoProps) {
-  let bracketColor = "#0C4D9D",
-    sFillColor = "#BAD7ED",
-    sStrokeColor = "#0C4D9D",
-    textColor = "#000";
+interface GetLogoColorsObject {
+  theme: string;
+  isStrokeShown: boolean;
+}
 
-  if (!isStrokeShown) {
-    sStrokeColor = sFillColor;
-  }
+interface LogoColorObject {
+  bracketColor: string;
+  sFillColor: string;
+  sStrokeColor: string;
+  textColor: string;
+}
+function getLogoColors({
+  theme = "color",
+  isStrokeShown = false,
+}: GetLogoColorsObject): LogoColorObject {
+  const colorBlack = "#000",
+    colorWhite = "#FFF",
+    colorDarkBlue = "#0C4D9D",
+    colorLightBlue = "#BAD7ED";
 
   if (theme === "black") {
-    bracketColor = "#000";
-    sFillColor = "#000";
-    sStrokeColor = "#000";
-    textColor = "#000";
-  } else if (theme === "white") {
-    bracketColor = "#FFF";
-    sFillColor = "#FFF";
-    sStrokeColor = "#FFF";
-    textColor = "#FFF";
+    return {
+      bracketColor: colorBlack,
+      sFillColor: colorBlack,
+      sStrokeColor: colorBlack,
+      textColor: colorBlack,
+    };
   }
+  if (theme === "white") {
+    return {
+      bracketColor: colorWhite,
+      sFillColor: colorWhite,
+      sStrokeColor: colorWhite,
+      textColor: colorWhite,
+    };
+  }
+  return {
+    bracketColor: colorDarkBlue,
+    sFillColor: colorLightBlue,
+    sStrokeColor: isStrokeShown ? colorDarkBlue : colorLightBlue,
+    textColor: colorBlack,
+  };
+}
+
+export function Logo({
+  theme = "color",
+  size = "md",
+  isTextShown = true,
+  isStrokeShown = true,
+}: LogoProps) {
+  const { bracketColor, sFillColor, sStrokeColor, textColor } = getLogoColors({
+    theme,
+    isStrokeShown,
+  });
 
   let width = 350,
-      height = 66;
+    height = 66;
 
-  console.log('dims 1', width, height, isTextShown);
+  console.log("dims 1", width, height, isTextShown);
 
   if (!isTextShown) {
     width = 67;
     height = 38;
   }
-  console.log('dims 2', width, height, isTextShown);
-
+  console.log("dims 2", width, height, isTextShown);
 
   if (size === "sm") {
     width = width / 2;
@@ -46,8 +78,7 @@ export function Logo({ theme = "color", size = "md", isTextShown = true, isStrok
     width = width * 2;
     height = height * 2;
   }
-  console.log('dims 3', width, height, isTextShown);
-
+  console.log("dims 3", width, height, isTextShown);
 
   return (
     <svg

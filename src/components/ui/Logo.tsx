@@ -52,34 +52,39 @@ function getLogoColors({
 interface LogoSizeObject {
   width: number;
   height: number;
+  viewBox: string
 }
 function getLogoSize({size = "md", isTextShown = true}): LogoSizeObject {
   // Define the base width and height
   let width = 350,
-      height = 66;
+      height = 66,
+      viewBox = "0 0 720 137";
 
   // Change it if text isn't shown
   if (!isTextShown) {
     width = 67;
     height = 38;
+    viewBox = "0 0 125 80";
   }
 
   // Modify the base width and heights for size options
   if (size === "sm") {
     return {
       width: width / 2,
-      height: height / 2
+      height: height / 2,
+      viewBox
     }
   }
   if (size === "lg") {
     return {
       width: width * 2,
-      height: height * 2
+      height: height * 2,
+      viewBox
     }
   }
 
   return {
-    width, height
+    width, height, viewBox
   }
 }
 
@@ -93,13 +98,13 @@ export function Logo({
     theme,
     isStrokeShown,
   });
-  const {width, height} = getLogoSize({size, isTextShown});
+  const {width, height, viewBox} = getLogoSize({size, isTextShown});
 
   return (
     <svg
       width={width}
       height={height}
-      viewBox={isTextShown ? "0 0 720 137" : "0 0 125 80"}
+      viewBox={viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

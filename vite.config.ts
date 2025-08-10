@@ -16,6 +16,11 @@ export default defineConfig({
     target: 'react',
     autoCodeSplitting: true
   }), tailwindcss(), react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   test: {
     projects: [{
       extends: true,

@@ -10,6 +10,7 @@ interface LogoProps {
   size: LogoSize;
   mode: LogoMode;
   isStrokeShown: boolean;
+  className?: string;
 }
 
 export function Logo({
@@ -17,6 +18,7 @@ export function Logo({
   size = "md",
   mode = "full",
   isStrokeShown = true,
+    className
 }: LogoProps) {
   const { bracketColor, sFillColor, sStrokeColor, textColor } = getLogoColors({
     theme,
@@ -31,6 +33,7 @@ export function Logo({
       viewBox={viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       {mode === "full" && (
         <>

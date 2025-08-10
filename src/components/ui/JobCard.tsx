@@ -28,12 +28,12 @@ export function JobCard({
     }: JobCardProps) {
     return (
         <Card className="pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-60">
-            <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-40">
+            <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-40 dark:bg-white/90">
                 <img src={imageSrc} />
             </CardHeader>
             <CardContent className="px-2">
               <CardTitle className="text-xl">{company}</CardTitle>
-              <CardDescription className="text-black">{description}</CardDescription>
+              <CardDescription className="text-black dark:text-white">{description}</CardDescription>
             </CardContent>
             <CardFooter className="mt-2 px-0">
                 <div className="text-xs pl-2 w-full flex items-start justify-center flex-col">
@@ -47,7 +47,7 @@ export function JobCard({
                         </span>
                     ))}</div>
                 </div>
-                <CardAction className="ml-4 dark:bg-white bg-black text-white hover:text-black hover:bg-white border-t-2 border-l-2 w-12 h-12 flex justify-center items-center hover:cursor-pointer">
+                <CardAction className="ml-4 dark:bg-white bg-black dark:text-black text-white hover:text-black dark:hover:text-white dark:hover:bg-black hover:bg-white border-t-2 border-l-2 w-12 h-12 flex justify-center items-center hover:cursor-pointer">
                     <LucideChevronRight className="w-10 h-10" />
                 </CardAction>
             </CardFooter>

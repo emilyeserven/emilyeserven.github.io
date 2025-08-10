@@ -1,91 +1,11 @@
+import getLogoSize from "@/components/ui/utils/getLogoSize.ts";
+import getLogoColors from "@/components/ui/utils/getLogoColors.ts";
+
 interface LogoProps {
   theme: "color" | "black" | "white";
   size: "sm" | "md" | "lg";
   isTextShown: boolean;
   isStrokeShown: boolean;
-}
-
-interface GetLogoColorsObject {
-  theme: string;
-  isStrokeShown: boolean;
-}
-
-interface LogoColorObject {
-  bracketColor: string;
-  sFillColor: string;
-  sStrokeColor: string;
-  textColor: string;
-}
-function getLogoColors({
-  theme = "color",
-  isStrokeShown = false,
-}: GetLogoColorsObject): LogoColorObject {
-  const colorBlack = "#000",
-    colorWhite = "#FFF",
-    colorDarkBlue = "#0C4D9D",
-    colorLightBlue = "#BAD7ED";
-
-  if (theme === "black") {
-    return {
-      bracketColor: colorBlack,
-      sFillColor: colorBlack,
-      sStrokeColor: colorBlack,
-      textColor: colorBlack,
-    };
-  }
-  if (theme === "white") {
-    return {
-      bracketColor: colorWhite,
-      sFillColor: colorWhite,
-      sStrokeColor: colorWhite,
-      textColor: colorWhite,
-    };
-  }
-  return {
-    bracketColor: colorDarkBlue,
-    sFillColor: colorLightBlue,
-    sStrokeColor: isStrokeShown ? colorDarkBlue : colorLightBlue,
-    textColor: colorBlack,
-  };
-}
-
-interface LogoSizeObject {
-  width: number;
-  height: number;
-  viewBox: string
-}
-function getLogoSize({size = "md", isTextShown = true}): LogoSizeObject {
-  // Define the base width and height
-  let width = 350,
-      height = 66,
-      viewBox = "0 0 720 137";
-
-  // Change it if text isn't shown
-  if (!isTextShown) {
-    width = 67;
-    height = 38;
-    viewBox = "0 0 125 80";
-  }
-
-  // Modify the base width and heights for size options
-  if (size === "sm") {
-    return {
-      width: width / 2,
-      height: height / 2,
-      viewBox
-    }
-  }
-  if (size === "lg") {
-    return {
-      width: width * 2,
-      height: height * 2,
-      viewBox
-    }
-  }
-
-  return {
-    width, height, viewBox
-  }
 }
 
 export function Logo({

@@ -11,12 +11,12 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {},
   args: {
-    imageSrc: "Something",
+    imageSrc: "./laz-logo.png",
     company: "Employer",
     description: "Company does whaaaat?",
     title: "Underling",
     tags: ["frontend", "react"],
-    timeActive: "2025 - present"
+    timeActive: "2025 - present",
   },
   render: (args) => (
     <JobCard {...args} />

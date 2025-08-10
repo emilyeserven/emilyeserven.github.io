@@ -7,7 +7,7 @@ import {
     CardHeader,
     CardTitle
 } from "@/components/shad/ui/card.tsx";
-import React from "react";
+import {LucideChevronRight} from "lucide-react";
 
 interface JobCardProps {
     imageSrc: string,
@@ -16,35 +16,41 @@ interface JobCardProps {
     title: string,
     tags: string[],
     timeActive: string,
+    linkTo?: string
 }
 export function JobCard({
+    imageSrc,
     company,
     title,
     description,
     tags,
-    timeActive
+    timeActive,
     }: JobCardProps) {
     return (
-        <Card className="pt-0">
-            <CardHeader className="px-0">
-                Image
+        <Card className="pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-60">
+            <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-40">
+                <img src={imageSrc} />
             </CardHeader>
-            <CardContent className="px-4">
-              <CardTitle>{company}</CardTitle>
-              <CardDescription>{description}</CardDescription>
+            <CardContent className="px-2">
+              <CardTitle className="text-xl">{company}</CardTitle>
+              <CardDescription className="text-black">{description}</CardDescription>
             </CardContent>
-            <CardFooter className="px-4">
-                <div>
-                    <p>{title} // {timeActive}</p>
-                    <p>{tags.map(tag => (
-                        <React.Fragment key={tag}>{tag}, </React.Fragment>
-                    ))}</p>
+            <CardFooter className="mt-2 px-0">
+                <div className="text-xs pl-2 w-full flex items-start justify-center flex-col">
+                    <div className="flex flex-wrap gap-2 font-bold">
+                        <span>{title}</span>
+                        <span>//</span>
+                        <span>{timeActive}</span></div>
+                    <div className="flex flex-wrap gap-2">{tags.map((tag) => (
+                        <span key={tag}>
+                            #{tag}
+                        </span>
+                    ))}</div>
                 </div>
-                <CardAction>
-                    Arrow
+                <CardAction className="ml-4 dark:bg-white bg-black text-white hover:text-black hover:bg-white border-t-2 border-l-2 w-12 h-12 flex justify-center items-center hover:cursor-pointer">
+                    <LucideChevronRight className="w-10 h-10" />
                 </CardAction>
             </CardFooter>
-
         </Card>
     )
 }

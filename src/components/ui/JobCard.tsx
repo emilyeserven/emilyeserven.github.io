@@ -33,11 +33,11 @@ export function JobCard({
             <CardHeader className="px-4 py-2 flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer">
                 <img src={imageSrc} />
             </CardHeader>
-            <CardContent className="border-t-2 px-2 pt-2">
+            <CardContent className="border-t-2 px-2 pt-2 -mt-2">
               <CardTitle className="text-xl hover:opacity-50 hover:cursor-pointer leading-[1.2] inline">{company}</CardTitle>
-              <CardDescription className="text-black dark:text-white mt-1">{description}</CardDescription>
+              <CardDescription className="text-black dark:text-white mt-[0.5]">{description}</CardDescription>
             </CardContent>
-            <CardFooter className="mt-2 px-0">
+            <CardFooter className="px-0">
                 <div className="text-xs pl-2 w-full flex items-start justify-center flex-col">
                     <div className="flex flex-wrap gap-2 font-bold">
                         <span>{title}</span>

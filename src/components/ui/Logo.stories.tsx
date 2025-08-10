@@ -41,3 +41,12 @@ export const SMark: Story = {
     isStrokeShown: true
   }
 };
+
+export const Arrow: Story = {
+  args: {
+    theme: "color",
+    size: "md",
+    mode: "arrow",
+    isStrokeShown: true
+  }
+};

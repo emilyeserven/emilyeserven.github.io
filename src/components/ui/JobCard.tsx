@@ -10,7 +10,7 @@ import {
 import {Logo} from "@/components/ui/Logo.tsx";
 
 interface JobCardProps {
-    imageSrc: string,
+    imageSrc?: string,
     company: string,
     description: string,
     title: string,
@@ -31,7 +31,11 @@ export function JobCard({
     return (
         <Card className={`pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-sm ${classNames}`}>
             <CardHeader className="px-4 py-2 flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer">
+                {imageSrc ?
                 <img src={imageSrc} />
+                    :
+                    <Logo mode="icon" size="lg" theme="black" />
+                }
             </CardHeader>
             <CardContent className="border-t-2 px-2 pt-2 -mt-2">
               <CardTitle className="text-xl hover:opacity-50 hover:cursor-pointer leading-[1.2] inline">{company}</CardTitle>

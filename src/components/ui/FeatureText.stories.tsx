@@ -12,7 +12,8 @@ const meta = {
   argTypes: {},
   args: {
     boldedText: "I’m usually a front-end dev for JavaScript web apps.",
-    subText: "My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed."
+    subText: "My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.",
+    isSubtextSmaller: false
   },
   render: (args) => (
     <FeatureText {...args} />

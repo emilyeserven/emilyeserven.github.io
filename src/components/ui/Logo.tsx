@@ -2,13 +2,18 @@ interface LogoProps {
   theme: "color" | "black" | "white";
   size: "sm" | "md" | "lg";
   isTextShown: boolean;
+  isStrokeShown: boolean;
 }
 
-export function Logo({ theme = "color", isTextShown = true }: LogoProps) {
+export function Logo({ theme = "color", size = "md", isTextShown = true, isStrokeShown = true }: LogoProps) {
   let bracketColor = "#0C4D9D",
     sFillColor = "#BAD7ED",
     sStrokeColor = "#0C4D9D",
     textColor = "#000";
+
+  if (!isStrokeShown) {
+    sStrokeColor = sFillColor;
+  }
 
   if (theme === "black") {
     bracketColor = "#000";
@@ -22,11 +27,33 @@ export function Logo({ theme = "color", isTextShown = true }: LogoProps) {
     textColor = "#FFF";
   }
 
+  let width = 350,
+      height = 66;
+
+  console.log('dims 1', width, height, isTextShown);
+
+  if (!isTextShown) {
+    width = 67;
+    height = 38;
+  }
+  console.log('dims 2', width, height, isTextShown);
+
+
+  if (size === "sm") {
+    width = width / 2;
+    height = height / 2;
+  } else if (size === "lg") {
+    width = width * 2;
+    height = height * 2;
+  }
+  console.log('dims 3', width, height, isTextShown);
+
+
   return (
     <svg
-      width="350"
-      height="66"
-      viewBox="0 0 720 137"
+      width={width}
+      height={height}
+      viewBox={isTextShown ? "0 0 720 137" : "0 0 125 80"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

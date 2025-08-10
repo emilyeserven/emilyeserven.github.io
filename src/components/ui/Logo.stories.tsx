@@ -11,7 +11,10 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {},
   args: {
-    theme: "color"
+    theme: "color",
+    size: "md",
+    isTextShown: true,
+    isStrokeShown: true
   },
   render: (args) => (
     <Logo {...args} />
@@ -29,3 +32,12 @@ type Story = StoryObj<typeof meta>;
  * The default form of the card.
  */
 export const Default: Story = {};
+
+export const SMark: Story = {
+  args: {
+    theme: "color",
+    size: "md",
+    isTextShown: false,
+    isStrokeShown: true
+  }
+};

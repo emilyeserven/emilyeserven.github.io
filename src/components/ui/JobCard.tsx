@@ -16,7 +16,8 @@ interface JobCardProps {
     title: string,
     tags: string[],
     timeActive: string,
-    linkTo?: string
+    linkTo?: string,
+    classNames?: string,
 }
 export function JobCard({
     imageSrc,
@@ -25,9 +26,10 @@ export function JobCard({
     description,
     tags,
     timeActive,
+    classNames
     }: JobCardProps) {
     return (
-        <Card className="pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-sm">
+        <Card className={`pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-sm ${classNames}`}>
             <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-52 dark:bg-white/90">
                 <img src={imageSrc} />
             </CardHeader>

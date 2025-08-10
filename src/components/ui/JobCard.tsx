@@ -27,8 +27,8 @@ export function JobCard({
     timeActive,
     }: JobCardProps) {
     return (
-        <Card className="pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-60">
-            <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-40 dark:bg-white/90">
+        <Card className="pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-sm">
+            <CardHeader className="px-4 py-2 border-b-2 flex items-center justify-center h-52 dark:bg-white/90">
                 <img src={imageSrc} />
             </CardHeader>
             <CardContent className="px-2">

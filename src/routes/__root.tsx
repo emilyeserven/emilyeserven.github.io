@@ -6,7 +6,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <div className="flex flex-row h-full">
-        <div className="p-4 bg-base-300 w-full overflow-y-scroll">
+        <div className="bg-base-300 w-full overflow-y-scroll">
           <Outlet />
         </div>
       </div>

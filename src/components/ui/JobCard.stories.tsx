@@ -34,3 +34,27 @@ type Story = StoryObj<typeof meta>;
  * The default form of the card.
  */
 export const Default: Story = {};
+
+export const LotsOfTags: Story = {
+  args: {
+    tags: ["react", "typescript", "javascript", "dashboard", "data-viz", "express", "nextjs", "payloadcms", "wordpress"]
+  }
+}
+
+export const LongEmployerName: Story = {
+  args: {
+    company: "A Really Long Company Name For Some Reason"
+  }
+}
+
+export const LongEmployerDescription: Story = {
+  args: {
+    description: "A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason"
+  }
+}
+
+export const NoImageProvided: Story = {
+  args: {
+    imageSrc: ""
+  }
+}

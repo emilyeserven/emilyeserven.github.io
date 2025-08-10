@@ -28,3 +28,19 @@ type Story = StoryObj<typeof meta>;
  * The default form of the card.
  */
 export const Default: Story = {};
+
+export const SmallerSubtext: Story = {
+  args: {
+    boldedText: "I’m usually a front-end dev for JavaScript web apps.",
+    subText: "My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.",
+    isSubtextSmaller: true
+  }
+};
+
+export const NoSubtext: Story = {
+  args: {
+    boldedText: "I’m usually a front-end dev for JavaScript web apps.",
+    subText: "",
+    isSubtextSmaller: false
+  }
+};

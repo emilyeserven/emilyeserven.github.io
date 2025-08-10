@@ -42,12 +42,12 @@ export function JobCard({
               <CardDescription className="text-black dark:text-white mt-[0.5]">{description}</CardDescription>
             </CardContent>
             <CardFooter className="px-0">
-                <div className="text-xs pl-2 w-full flex items-start justify-center flex-col">
+                <div className="text-xs pl-2 w-full flex items-start justify-end flex-col">
                     <div className="flex flex-wrap gap-2 font-bold">
                         <span>{title}</span>
                         <span>//</span>
                         <span>{timeActive}</span></div>
-                    <div className="flex flex-wrap gap-x-2 gap-y-0">{tags.map((tag) => (
+                    <div className="flex flex-wrap gap-x-2 gap-y-0 mb-1">{tags.map((tag) => (
                         <span key={tag} className="hover:text-black/50 hover:cursor-pointer">
                             #{tag}
                         </span>

@@ -52,3 +52,9 @@ export const LongEmployerDescription: Story = {
     description: "A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason A Really Long Company Description For Some Reason"
   }
 }
+
+export const NoImageProvided: Story = {
+  args: {
+    imageSrc: ""
+  }
+}

@@ -1,15 +1,15 @@
 import getLogoSize from "@/components/ui/utils/getLogoSize.ts";
 import getLogoColors from "@/components/ui/utils/getLogoColors.ts";
 
-export type LogoTheme = "color" | "black" | "white";
+export type LogoTheme = "color" | "black" | "white" | "css";
 export type LogoSize = "sm" | "md" | "lg";
 export type LogoMode = "full" | "icon" | "arrow";
 
 interface LogoProps {
-  theme: LogoTheme;
-  size: LogoSize;
-  mode: LogoMode;
-  isStrokeShown: boolean;
+  theme?: LogoTheme;
+  size?: LogoSize;
+  mode?: LogoMode;
+  isStrokeShown?: boolean;
   classNames?: string;
 }
 
@@ -124,7 +124,7 @@ export function Logo({
       {/* Right Bracket */}
       <path
         d="M99.673 68.8735L89.894 59.0955L108.923 40.0665L89.894 21.0335L99.673 11.2545L128.481 40.0665L99.673 68.8735Z"
-        fill={bracketColor}
+        fill={theme === "css" ? "currentColor" : bracketColor}
       ></path>
     </svg>
   );

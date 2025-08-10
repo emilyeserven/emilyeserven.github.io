@@ -49,6 +49,40 @@ function getLogoColors({
   };
 }
 
+interface LogoSizeObject {
+  width: number;
+  height: number;
+}
+function getLogoSize({size = "md", isTextShown = true}): LogoSizeObject {
+  // Define the base width and height
+  let width = 350,
+      height = 66;
+
+  // Change it if text isn't shown
+  if (!isTextShown) {
+    width = 67;
+    height = 38;
+  }
+
+  // Modify the base width and heights for size options
+  if (size === "sm") {
+    return {
+      width: width / 2,
+      height: height / 2
+    }
+  }
+  if (size === "lg") {
+    return {
+      width: width * 2,
+      height: height * 2
+    }
+  }
+
+  return {
+    width, height
+  }
+}
+
 export function Logo({
   theme = "color",
   size = "md",
@@ -59,26 +93,7 @@ export function Logo({
     theme,
     isStrokeShown,
   });
-
-  let width = 350,
-    height = 66;
-
-  console.log("dims 1", width, height, isTextShown);
-
-  if (!isTextShown) {
-    width = 67;
-    height = 38;
-  }
-  console.log("dims 2", width, height, isTextShown);
-
-  if (size === "sm") {
-    width = width / 2;
-    height = height / 2;
-  } else if (size === "lg") {
-    width = width * 2;
-    height = height * 2;
-  }
-  console.log("dims 3", width, height, isTextShown);
+  const {width, height} = getLogoSize({size, isTextShown});
 
   return (
     <svg

@@ -13,7 +13,8 @@ export function Button({variant = "default", size = "default", children}: Button
         <ShadButton variant={variant} size={size} className={`
         rounded-none
         ${cn({
-            "": variant === "default"
+            "border-2 border-primary hover:bg-transparent hover:text-primary": variant === "default",
+            "text-lg": size === "lg"
         })}`}>{children}</ShadButton>
     )
 }

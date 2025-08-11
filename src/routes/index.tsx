@@ -81,8 +81,8 @@ function Index() {
         </div>
         <div className="mt-12">
           <FeatureText
-            boldedText="Lately, I’ve been exploring full-stack frameworks."
-            subText="Being able to understand as much of the tech stack as I can has been an exciting journey, and I’m eager to continue."
+            boldedText="I have skills beyond the stack, too."
+            subText="As a freelancer with 12+ years of experience, I partner with clients that have little tech knowledge. I manage web projects start-to-finish, implement, and more."
           />
         </div>
         <div className="grid grid-cols-2 gap-x-4">

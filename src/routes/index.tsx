@@ -3,6 +3,7 @@ import { JobCard } from "@/components/ui/JobCard.tsx";
 import { FeatureText } from "@/components/ui/FeatureText.tsx";
 import { Button } from "@/components/ui/Button.tsx";
 import { Header } from "@/components/layout/Header.tsx";
+import {Pill} from "@/components/ui/Pill.tsx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,13 +18,7 @@ function Index() {
           <div className="w-[600px] border-2 bg-white/70 px-4 py-4 backdrop-blur-sm flex flex-col">
             <p className="text-lg font-medium mb-2 flex items-center">
               Nice to meet you! I’m{" "}
-              <span className="mx-1 bg-black rounded-full pr-2 text-white inline-flex justify-between gap-2">
-                <img
-                  src="./headshot-small.jpeg"
-                  className="rounded-full w-7 h-7"
-                />
-                Emily
-              </span>
+              <Pill />
               .
             </p>
             <p className="text-2xl font-bold">

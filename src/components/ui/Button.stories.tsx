@@ -12,6 +12,7 @@ const meta = {
   argTypes: {},
   args: {
     variant: "default",
+    size: "default",
     children: "Sample"
   },
   render: (args) => (

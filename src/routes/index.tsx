@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { JobCard } from "@/components/ui/JobCard.tsx";
 import { FeatureText } from "@/components/ui/FeatureText.tsx";
+import {Button} from "@/components/ui/Button.tsx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -63,17 +64,25 @@ function Index() {
                     timeActive={"2023.01 - 2023.05"}
                 />
             </div>
-            <div className="mt-12">
+            <div className="mt-12 flex flex-col gap-y-4">
                 <FeatureText
                     boldedText="That's the gist of it!"
                 />
+                <div className="flex gap-x-2">
+                    <Button isArrowShown={true} size="lg">Explore more websites</Button>
+                    <Button variant="outline" isArrowShown={true} size="lg">Download Resume</Button>
+                </div>
             </div>
-            <div className="mt-12">
+            <div className="mt-12 flex flex-col gap-y-4">
                 <FeatureText
                     boldedText="(By the way, I’m more than just a developer.)"
                     subText="Frog Caretaker, 日本語 Learner, Photographer, Designer, Wing Tsun Practitioner, Music Collector, Animation Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover, Amateur Gardener..."
                     isSubtextSmaller={true}
                 />
+                <div className="flex gap-x-2">
+                    <Button isArrowShown={true} size="lg">Biography</Button>
+                    <Button variant="outline" isArrowShown={true} size="lg">Blog</Button>
+                </div>
             </div>
         </div>
     </>

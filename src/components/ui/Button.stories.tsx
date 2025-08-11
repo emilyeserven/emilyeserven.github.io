@@ -13,7 +13,8 @@ const meta = {
   args: {
     variant: "default",
     size: "default",
-    children: "Sample"
+    children: "Sample",
+    isArrowShown: false,
   },
   render: (args) => (
     <Button {...args} />

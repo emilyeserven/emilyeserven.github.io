@@ -122,5 +122,5 @@
 }
 
 .container {
-  @apply w-[1200px] max-w-[80%] mx-auto;
+  @apply w-[800px] max-w-[80%] mx-auto;
 }

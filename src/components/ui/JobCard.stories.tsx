@@ -11,7 +11,7 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {},
   args: {
-    imageSrc: "./laz-logo.png",
+    logoSrc: "./laz-logo.png",
     company: "Employer",
     description: "Company does whaaaat?",
     title: "Underling",
@@ -55,6 +55,7 @@ export const LongEmployerDescription: Story = {
 
 export const NoImageProvided: Story = {
   args: {
-    imageSrc: ""
+    logoSrc: "",
+    bgSrc: ""
   }
 }

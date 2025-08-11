@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { JobCard } from "@/components/ui/JobCard.tsx";
 import { FeatureText } from "@/components/ui/FeatureText.tsx";
-import {Button} from "@/components/ui/Button.tsx";
+import { Button } from "@/components/ui/Button.tsx";
+import { Header } from "@/components/layout/Header.tsx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -11,23 +12,20 @@ function Index() {
   return (
     <>
       <div className="w-full bg-[url(./home-header.jpg)] border-b-2">
-        <div className="bg-white/70 backdrop-blur-sm border-b-2">
-          <div className="w-[1200px] max-w-[80%] mx-auto py-2 flex justify-between items-center">
-            <div>
-              <p className="text-2xl font-bold">Emily Serven</p>
-              <p className="text-md font-bold">Software Engineer</p>
-            </div>
-            <ul className="text-lg font-medium flex justify-end list-none gap-8">
-              <li>About</li>
-              <li>Projects</li>
-              <li>Blog</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </div>
-        <div className="w-[1200px] max-w-[80%] mx-auto pt-20 pb-40">
+        <Header />
+        <div className="container pt-20 pb-40">
           <div className="w-[600px] border-2 bg-white/70 px-4 py-4 backdrop-blur-sm flex flex-col">
-            <p className="text-lg font-medium mb-2 flex items-center">Nice to meet you! I’m <span className="mx-1 bg-black rounded-full pr-2 text-white inline-flex justify-between gap-2"><img src="./headshot-small.jpeg" className="rounded-full w-7 h-7" />Emily</span>.</p>
+            <p className="text-lg font-medium mb-2 flex items-center">
+              Nice to meet you! I’m{" "}
+              <span className="mx-1 bg-black rounded-full pr-2 text-white inline-flex justify-between gap-2">
+                <img
+                  src="./headshot-small.jpeg"
+                  className="rounded-full w-7 h-7"
+                />
+                Emily
+              </span>
+              .
+            </p>
             <p className="text-2xl font-bold">
               I develop scalable and usable experiences
             </p>
@@ -48,7 +46,7 @@ function Index() {
           </div>
         </div>
       </div>
-      <div className="w-[1200px] max-w-[80%] mx-auto flex flex-col gap-y-12 -mt-8">
+      <div className="container flex flex-col gap-y-12 -mt-8">
         <div className="grid grid-cols-2 gap-x-4">
           <FeatureText
             boldedText="I’m usually a front-end dev for JavaScript web apps."

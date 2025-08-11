@@ -37,7 +37,7 @@ export function JobCard({
     >
       <CardHeader
         className={`flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer bg-cover`}
-        style={{backgroundImage: bgSrc ? `url(${bgSrc})` : ''}}
+        style={{ backgroundImage: bgSrc ? `url(${bgSrc})` : "" }}
       >
         {logoSrc && (
           <div className="px-4 py-2">
@@ -46,40 +46,42 @@ export function JobCard({
         )}
         {!logoSrc && !bgSrc && <Logo mode="icon" size="lg" theme="black" />}
       </CardHeader>
-      <CardContent className="border-t-2 px-2 pt-2 -mt-2">
-        <CardTitle className="text-xl hover:opacity-50 hover:cursor-pointer leading-[1.2] inline">
-          {company}
-        </CardTitle>
-        <CardDescription className="text-black dark:text-white mt-[0.5]">
-          {description}
-        </CardDescription>
-      </CardContent>
-      <CardFooter className="px-0">
-        <div className="text-xs pl-2 w-full flex items-start justify-end flex-col">
-          <div className="flex flex-wrap gap-2 font-bold">
-            <span>{title}</span>
-            <span>//</span>
-            <span>{timeActive}</span>
+      <div className="flex flex-col justify-between flex-grow-1 gap-y-4">
+        <CardContent className="border-t-2 px-2 pt-2 -mt-2">
+          <CardTitle className="text-2xl hover:opacity-50 hover:cursor-pointer leading-[1.2] inline">
+            {company}
+          </CardTitle>
+          <CardDescription className="text-lg text-black dark:text-white mt-[0.5]">
+            {description}
+          </CardDescription>
+        </CardContent>
+        <CardFooter className="px-0">
+          <div className="text-sm pl-2 w-full flex items-start justify-end flex-col">
+            <div className="flex flex-wrap gap-2 font-bold">
+              <span>{title.toLowerCase()}</span>
+              <span>//</span>
+              <span>{timeActive}</span>
+            </div>
+            <div className="flex flex-wrap gap-x-2 gap-y-0 mb-1">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="hover:text-black/50 hover:cursor-pointer"
+                >
+                  #{tag.toLowerCase()}
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-x-2 gap-y-0 mb-1">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="hover:text-black/50 hover:cursor-pointer"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        </div>
-        <CardAction className="ml-4 dark:bg-white bg-black dark:text-black text-white hover:text-black dark:hover:text-white dark:hover:bg-black hover:bg-white border-t-2 border-l-2 w-14 h-12 flex justify-center items-center hover:cursor-pointer self-end">
-          <Logo
-            mode="arrow"
-            theme="css"
-            classNames="fill-white hover:fill-black dark:fill-black dark:hover:fill-white"
-          />
-        </CardAction>
-      </CardFooter>
+          <CardAction className="ml-4 dark:bg-white bg-black dark:text-black text-white hover:text-black dark:hover:text-white dark:hover:bg-black hover:bg-white border-t-2 border-l-2 w-14 h-12 flex justify-center items-center hover:cursor-pointer self-end">
+            <Logo
+              mode="arrow"
+              theme="css"
+              classNames="fill-white hover:fill-black dark:fill-black dark:hover:fill-white"
+            />
+          </CardAction>
+        </CardFooter>
+      </div>
     </Card>
   );
 }

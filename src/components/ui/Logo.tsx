@@ -1,5 +1,6 @@
 import getLogoSize from "@/components/ui/utils/getLogoSize.ts";
 import getLogoColors from "@/components/ui/utils/getLogoColors.ts";
+import {cn} from "@/lib/utils.ts";
 
 export type LogoTheme = "color" | "black" | "white" | "css";
 export type LogoSize = "sm" | "md" | "lg";
@@ -10,6 +11,7 @@ interface LogoProps {
   size?: LogoSize;
   mode?: LogoMode;
   isStrokeShown?: boolean;
+  isLoading?: boolean;
   classNames?: string;
 }
 
@@ -18,6 +20,7 @@ export function Logo({
   size = "md",
   mode = "full",
   isStrokeShown = true,
+    isLoading = false,
     classNames
 }: LogoProps) {
   const { bracketColor, sFillColor, sStrokeColor, textColor } = getLogoColors({
@@ -33,7 +36,9 @@ export function Logo({
       viewBox={viewBox}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={classNames}
+      className={`${cn({
+        "animate-pulse": isLoading
+      })} ${classNames}`}
     >
       {mode === "full" && (
         <>

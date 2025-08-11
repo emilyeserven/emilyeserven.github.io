@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/shad/ui/card.tsx";
 import { Logo } from "@/components/ui/Logo.tsx";
+import { useState } from "react";
 
 interface JobCardProps {
   logoSrc?: string;
@@ -31,20 +32,37 @@ export function JobCard({
   timeActive,
   classNames,
 }: JobCardProps) {
+  const [isLogoLoaded, setIsLogoLoaded] = useState(false);
+  const [isLogoErrored, setIsLogoErrored] = useState(false);
+
   return (
     <Card
-      className={`pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-sm ${classNames}`}
+      className={`pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-full ${classNames}`}
     >
       <CardHeader
         className={`flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer bg-cover`}
         style={{ backgroundImage: bgSrc ? `url(${bgSrc})` : "" }}
       >
-        {logoSrc && (
+        {logoSrc && !isLogoErrored && (
           <div className="px-4 py-2">
-            <img src={logoSrc} />
+            {!isLogoLoaded && (
+              <Logo mode="icon" size="lg" theme="black" isLoading={true} />
+            )}
+            {!isLogoErrored && (
+              <img
+                src={`${logoSrc}`}
+                onLoad={() => {
+                  setIsLogoLoaded(true);
+                }}
+                onError={() => {
+                  setIsLogoErrored(true);
+                }}
+              />
+            )}
           </div>
         )}
-        {!logoSrc && !bgSrc && <Logo mode="icon" size="lg" theme="black" />}
+        {(!logoSrc && !bgSrc) ||
+          (isLogoErrored && <Logo mode="icon" size="lg" theme="black" />)}
       </CardHeader>
       <div className="flex flex-col justify-between flex-grow-1 gap-y-4">
         <CardContent className="border-t-2 px-2 pt-2 -mt-2">

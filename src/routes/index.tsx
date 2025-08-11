@@ -18,7 +18,7 @@ function Index() {
           <div className="w-[600px] border-2 bg-white/70 px-4 py-4 backdrop-blur-sm flex flex-col">
             <p className="text-lg font-medium mb-2 flex items-center">
               Nice to meet you! I’m{" "}
-              <Pill />
+                <Pill imgSrc={'./headshot-small.jpeg'}>Emily</Pill>
               .
             </p>
             <p className="text-2xl font-bold">

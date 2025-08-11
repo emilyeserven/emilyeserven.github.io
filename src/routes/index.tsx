@@ -19,7 +19,7 @@ function Index() {
                     classNames="mt-16"
                 />
                 <JobCard
-                    imageSrc={"./laz-logo.png"}
+                    logoSrc={"./laz-logo.png"}
                     company={"Lazarus AI"}
                     description={"AI for the Public Sector"}
                     title={"Software Engineer"}
@@ -33,10 +33,11 @@ function Index() {
                     subText="Being able to understand as much of the tech stack as I can has been an exciting journey, and I’m eager to continue."
                 />
                 <JobCard
+                    logoSrc={"./p5-logo.png"}
                     company={"Panda5"}
                     description={"knowledge-focused social media"}
                     title={"Software Engineer"}
-                    tags={["react", "remix.run"]}
+                    tags={["react", "remix.run", "typescript", "prototyping", "schema", "prisma", "tailwind"]}
                     timeActive={"2023.01 - 2023.05"}
                 />
             </div>
@@ -49,19 +50,23 @@ function Index() {
             <div className="grid grid-cols-2 gap-x-4">
 
                 <JobCard
-                    company={"Panda5"}
-                    description={"knowledge-focused social media"}
-                    title={"Software Engineer"}
-                    tags={["react", "remix.run"]}
-                    timeActive={"2023.01 - 2023.05"}
+                    bgSrc={"./cod-image.jpg"}
+                    isImageLogo={false}
+                    company={"The Company of Dads"}
+                    description={"community and content for lead dads"}
+                    title={"Web Developer"}
+                    tags={["wordpress", "advanced-custom-fields", "wp-toolset", "email", "ux", "prototyping"]}
+                    timeActive={"2022.03 - Present"}
                 />
 
                 <JobCard
-                    company={"Panda5"}
-                    description={"knowledge-focused social media"}
-                    title={"Software Engineer"}
-                    tags={["react", "remix.run"]}
-                    timeActive={"2023.01 - 2023.05"}
+                    bgSrc={"./cod-tools-image.jpg"}
+                    isImageLogo={false}
+                    company={"COD Tools"}
+                    description={"streamlined content publishing"}
+                    title={"Engineer + Design + PDM"}
+                    tags={["react", "remix.run", "typescript", "schema", "prototyping", "product-management", "tailwind"]}
+                    timeActive={"2022.12 - Present"}
                 />
             </div>
             <div className="mt-12 flex flex-col gap-y-4">

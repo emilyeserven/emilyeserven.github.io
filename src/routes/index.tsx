@@ -27,7 +27,7 @@ function Index() {
             <p className="text-xl">as well as some other fun things.</p>
           </div>
           <div className="-mt-[2px]">
-            <Button isArrowShown={true} variant="secondary" size="lg">
+            <Button isArrowShown={true} variant="secondary" size="lg" classNames="bg-primary">
               Download Resume
             </Button>
             <Button

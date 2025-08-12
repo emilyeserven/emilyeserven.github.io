@@ -40,7 +40,7 @@ export function JobCard({
       className={`pt-0 rounded-none border-2 shadow-none gap-2 pb-0 w-full ${classNames}`}
     >
       <CardHeader
-        className={`flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer bg-cover`}
+        className={`flex items-center justify-center h-52 dark:bg-white/90 hover:opacity-50 hover:cursor-pointer bg-cover transition`}
         style={{ backgroundImage: bgSrc ? `url(${bgSrc})` : "" }}
       >
         {logoSrc && !isLogoErrored && (
@@ -95,7 +95,7 @@ export function JobCard({
             <Logo
               mode="arrow"
               theme="css"
-              classNames="fill-white hover:fill-black dark:fill-black dark:hover:fill-white"
+              classNames="fill-white hover:fill-black dark:fill-black dark:hover:fill-white transition"
             />
           </CardAction>
         </CardFooter>

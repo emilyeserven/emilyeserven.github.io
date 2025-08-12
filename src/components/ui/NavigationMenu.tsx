@@ -23,7 +23,7 @@ export function NavigationMenu({ menuItems, size = "default", theme = "default",
       <NavigationMenuList>
         {menuItemsArr.map((item, i) => (
           <NavigationMenuItem key={i} className={`bg-transparent px-4 py-2 hover:bg-black hover:text-white hover:cursor-pointer ${cn({
-            "hover:bg-primary text-white": theme === "on-black"
+            "hover:bg-primary text-white hover:text-black transition": theme === "on-black"
           })} ${itemClasses}`}>{item}</NavigationMenuItem>
         ))}
       </NavigationMenuList>

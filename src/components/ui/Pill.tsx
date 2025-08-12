@@ -8,7 +8,7 @@ interface PillProps {
 
 export function Pill({imgSrc, children}: PillProps) {
   return (
-    <span className={`mx-1 bg-black rounded-full text-white inline-flex justify-between items-center gap-2 ${cn({
+    <span className={`ml-2 mr-[0.5px] bg-black rounded-full text-white inline-flex justify-between items-center gap-2 ${cn({
         "px-4 py-1": !imgSrc,
         "pr-3": imgSrc
     })}`}>

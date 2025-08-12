@@ -3,7 +3,7 @@ import getLogoColors from "@/components/ui/utils/getLogoColors.ts";
 import {cn} from "@/lib/utils.ts";
 
 export type LogoTheme = "color" | "black" | "white" | "css";
-export type LogoSize = "sm" | "md" | "lg";
+export type LogoSize = "xs" | "sm" | "md" | "lg";
 export type LogoMode = "full" | "icon" | "arrow";
 
 interface LogoProps {

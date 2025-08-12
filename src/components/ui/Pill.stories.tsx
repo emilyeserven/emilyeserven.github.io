@@ -6,7 +6,11 @@ const meta = {
   title: "ui/Pill",
   component: Pill,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    children: {
+      control: "text"
+    }
+  },
   args: {
     imgSrc: './headshot-small.jpeg',
     children: 'Emily'

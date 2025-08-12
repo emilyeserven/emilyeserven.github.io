@@ -34,6 +34,12 @@ export default function getLogoSize({
   }
 
   switch (size) {
+    case "xs":
+      return {
+        width: width / 3,
+        height: height / 3,
+        viewBox,
+      };
     case "sm":
       return {
         width: width / 2,

@@ -50,3 +50,13 @@ export const Arrow: Story = {
     isStrokeShown: true
   }
 };
+
+export const SLoading: Story = {
+  args: {
+    theme: "black",
+    size: "lg",
+    mode: "icon",
+    isStrokeShown: true,
+    isLoading: true
+  }
+};

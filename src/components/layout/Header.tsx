@@ -1,3 +1,5 @@
+import {NavigationMenu} from "@/components/ui/NavigationMenu.tsx";
+
 export function Header() {
     const menuItems = ["About", "Projects", "Blog", "Contact"];
 
@@ -8,11 +10,7 @@ export function Header() {
                     <p className="text-2xl font-bold">Emily Serven</p>
                     <p className="text-md font-bold">Software Engineer</p>
                 </div>
-                <ul className="text-md font-medium flex justify-end list-none gap-4">
-                    {menuItems.map((item) => (
-                        <li className="bg-transparent px-4 py-2 hover:bg-black hover:text-white hover:cursor-pointer">{item}</li>
-                    ))}
-                </ul>
+                <NavigationMenu menuItems={menuItems} />
             </div>
         </div>
     )

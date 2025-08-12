@@ -3,7 +3,7 @@ import {cn} from "@/lib/utils.ts";
 
 interface FeatureTextProps {
     boldedText: string;
-    subText?: string;
+    subText?: string | React.ReactNode;
     isSubtextSmaller?: boolean;
     classNames?: string;
 }

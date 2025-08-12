@@ -3,7 +3,8 @@ import { JobCard } from "@/components/ui/JobCard.tsx";
 import { FeatureText } from "@/components/ui/FeatureText.tsx";
 import { Button } from "@/components/ui/Button.tsx";
 import { Header } from "@/components/layout/Header.tsx";
-import {Pill} from "@/components/ui/Pill.tsx";
+import { Pill } from "@/components/ui/Pill.tsx";
+import {Footer} from "@/components/layout/Footer.tsx";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -18,8 +19,7 @@ function Index() {
           <div className="w-[600px] border-2 bg-white/70 px-4 py-4 backdrop-blur-sm flex flex-col">
             <p className="text-lg font-medium mb-2 flex items-center">
               Nice to meet you! I’m{" "}
-                <Pill imgSrc={'./headshot-small.jpeg'}>Emily</Pill>
-              .
+              <Pill imgSrc={"./headshot-small.jpeg"}>Emily</Pill>.
             </p>
             <p className="text-2xl font-bold">
               I develop scalable and usable experiences
@@ -148,6 +148,23 @@ function Index() {
           </div>
         </div>
       </div>
+
+      <div className="border-t-12 mt-16 border-t-secondary bg-primary py-10">
+        <div className="container">
+          <FeatureText
+            boldedText="Want to chat?"
+            subText={
+              <a href="mailto:emily@emilyserven.net" className="underline underline-offset-4 decoration-secondary px-2 relative -left-2 py-1 hover:bg-black hover:decoration-black">
+                I’m just an email away!
+              </a>
+            }
+            isSubtextSmaller={true}
+            classNames="text-primary-foreground"
+          />
+        </div>
+      </div>
+
+      <Footer />
     </>
   );
 }

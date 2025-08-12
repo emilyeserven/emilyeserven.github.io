@@ -8,6 +8,7 @@ interface ButtonProps {
     | "destructive"
     | "outline"
     | "secondary"
+    | "on-black"
     | "ghost"
     | "link";
   size?: "default" | "sm" | "lg" | "icon";
@@ -23,11 +24,13 @@ export function Button({
   isArrowShown = false,
   classNames,
   children,
-    onClick
+  onClick,
 }: ButtonProps) {
+  const passedVariant = variant !== "on-black" ? variant : "outline";
+
   return (
     <ShadButton
-      variant={variant}
+      variant={passedVariant}
       size={size}
       className={`
         rounded-none border-2 hover:cursor-pointer
@@ -37,6 +40,8 @@ export function Button({
           "border-black hover:bg-black hover:text-white": variant === "outline",
           "bg-black text-white border-black hover:bg-white hover:text-black":
             variant === "secondary",
+          "border-white bg-black hover:bg-white text-white hover:text-black":
+            variant === "on-black",
           "text-lg": size === "lg",
         })}
         ${classNames}

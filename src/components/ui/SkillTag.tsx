@@ -7,7 +7,7 @@ export function SkillTag({tagName}: SkillTagProps) {
         <span
             className="hover:text-black/50 hover:cursor-pointer"
         >
-                  #{tagName}
+                  #{tagName.toLowerCase()}
                 </span>
     )
 }

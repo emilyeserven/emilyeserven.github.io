@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/shad/ui/card.tsx";
 import { Logo } from "@/components/ui/Logo.tsx";
+import {SkillTag} from "@/components/ui/SkillTag.tsx";
 
 interface JobCardProps {
   logoSrc?: string;
@@ -64,12 +65,7 @@ export function JobCard({
             </div>
             <div className="flex flex-wrap gap-x-2 gap-y-0 mb-1">
               {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="hover:text-black/50 hover:cursor-pointer"
-                >
-                  #{tag.toLowerCase()}
-                </span>
+                <SkillTag tagName={tag} />
               ))}
             </div>
           </div>

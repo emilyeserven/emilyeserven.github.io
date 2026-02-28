@@ -18,7 +18,7 @@ const meta = {
     },
     size: {
       control: "select",
-      options: ["default", "xs", "sm", "lg", "icon"],
+      options: ["default", "xs", "sm", "lg", "icon", "icon-xs", "icon-sm", "icon-lg"],
     },
   },
   args: {

@@ -2,7 +2,7 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
 
 const TanStackRouterDevtools =
-  process.env.NODE_ENV === "production"
+  import.meta.env.PROD
     ? () => null
     : lazy(() =>
         import("@tanstack/react-router-devtools").then((res) => ({

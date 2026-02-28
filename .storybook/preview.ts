@@ -11,7 +11,7 @@ const preview: Preview = {
       },
     },
     a11y: {
-      // TODO(#41): Enable a11y checks before site goes live
+      // TODO(#42): Enable a11y checks before site goes live
       test: "todo",
     },
   },

@@ -68,13 +68,8 @@ Components are placed in `src/components/shad/ui/` per `components.json` config.
 
 ## Content Collections
 
-Legacy content preserved from Jekyll — not yet integrated into React:
-
-- `_flexfolio/` — Extended portfolio case studies
-- `_portfolio/` — Portfolio entries
-- `_posts/` — Blog posts (Markdown)
-- `_skills/` — Skills data
-- `_drafts/` — Draft posts
+Legacy Jekyll content (portfolio entries, blog posts, skills data) was removed in the 2026 refresh.
+Content integration into the React app is planned for a future phase.
 
 ## Deployment
 

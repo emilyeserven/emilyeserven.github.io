@@ -33,10 +33,10 @@ src/
 ├── App.css               # Tailwind + shadcn theme vars
 ├── routeTree.gen.ts      # Auto-generated (do not edit)
 ├── components/
-│   ├── layout/           # Header, Footer, shared layouts
+│   ├── layout/           # Page structure (empty, reserved)
 │   ├── shad/ui/          # shadcn components (managed by CLI)
-│   └── ui/               # Custom reusable components
-├── hooks/                # Custom React hooks
+│   └── ui/               # Custom reusable components (empty, reserved)
+├── hooks/                # Custom React hooks (empty, reserved)
 ├── lib/
 │   └── utils.ts          # cn() helper and utilities
 └── routes/

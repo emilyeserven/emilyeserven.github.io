@@ -22,15 +22,12 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
-        {
-          allowConstantExport: true,
-          allowExportNames: ["Route", "buttonVariants"],
-        },
+        { allowConstantExport: true },
       ],
     },
   },
   {
-    files: ["src/routes/**/*.tsx"],
+    files: ["src/routes/**/*.tsx", "src/components/shad/**/*.tsx"],
     rules: {
       "react-refresh/only-export-components": "off",
     },

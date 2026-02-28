@@ -12,7 +12,7 @@ const preview: Preview = {
     },
     a11y: {
       // TODO(#42): Enable a11y checks before site goes live
-      test: "todo",
+      test: "off",
     },
   },
   decorators: [

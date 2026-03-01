@@ -71,6 +71,12 @@ Components are placed in `src/components/shad/ui/` per `components.json` config.
 Legacy Jekyll content (portfolio entries, blog posts, skills data) was removed in the 2026 refresh.
 Content integration into the React app is planned for a future phase.
 
+## CI
+
+- **Triggers:** Pushes to `2026-refresh` and `master`, plus PRs targeting those branches
+- **Checks:** Lint (`pnpm lint`) and build (`pnpm build`) on a single job with pnpm caching
+- Feature branches only get CI when a PR is open against `2026-refresh` or `master`
+
 ## Deployment
 
 - GitHub Pages with custom domain (emilyserven.net)

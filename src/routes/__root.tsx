@@ -13,7 +13,9 @@ const TanStackRouterDevtools =
 export const Route = createRootRoute({
   component: () => (
     <>
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Suspense>
         <TanStackRouterDevtools />
       </Suspense>

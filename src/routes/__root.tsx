@@ -1,11 +1,11 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { lazy, Suspense } from "react";
 
-const TanStackRouterDevtools =
-  import.meta.env.PROD
+const TanStackRouterDevtools
+  = import.meta.env.PROD
     ? () => null
     : lazy(() =>
-        import("@tanstack/react-router-devtools").then((res) => ({
+        import("@tanstack/react-router-devtools").then(res => ({
           default: res.TanStackRouterDevtools,
         })),
       );

@@ -21,6 +21,7 @@ pnpm dev              # Start dev server (localhost:5173)
 pnpm build            # Type-check + production build
 pnpm preview          # Preview production build
 pnpm lint             # ESLint
+pnpm lint:fix         # ESLint with auto-fix
 pnpm storybook        # Storybook dev (localhost:6006)
 pnpm build-storybook  # Build static Storybook
 ```
@@ -82,6 +83,11 @@ Content integration into the React app is planned for a future phase.
 - GitHub Pages with custom domain (emilyserven.net)
 - `CNAME` in `public/` is copied to `dist/` on build
 - Build output: `dist/`
+
+## Git Hooks
+
+- **Husky pre-push:** Runs `pnpm lint:fix` before every push. Auto-commits fixes as "Formatting" if files changed. Blocks push if unfixable lint errors remain.
+- **Claude pre-push-lint:** A Claude Code hook (`.claude/hooks/pre-push-lint.sh`) that triggers on `git push` commands. Same behavior as the husky hook — runs lint:fix, auto-commits fixes, and blocks on errors.
 
 ## MCP Servers
 

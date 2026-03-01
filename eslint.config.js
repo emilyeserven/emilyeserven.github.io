@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import stylistic from "@stylistic/eslint-plugin";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
@@ -33,4 +34,14 @@ export default tseslint.config(
     },
   },
   storybook.configs["flat/recommended"],
+  {
+    ...stylistic.configs.customize({
+      indent: 2,
+      quotes: "double",
+      semi: true,
+      jsx: true,
+    }),
+    files: ["**/*.{ts,tsx}"],
+    ignores: ["src/components/shad/**"],
+  },
 );

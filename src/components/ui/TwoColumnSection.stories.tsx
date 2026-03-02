@@ -17,10 +17,10 @@ export const Default: Story = {
   render: args => (
     <TwoColumnSection {...args}>
       <div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
           Featured Project
         </h2>
-        <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug mt-4">
+        <p className="text-xl sm:text-2xl lg:text-3xl mt-4">
           A showcase of the most recent work with details about the approach and technologies used.
         </p>
       </div>

@@ -35,7 +35,7 @@ export function Footer() {
     <footer className="bg-black text-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
         {/* Top row */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6">
           {/* Left: CTA + social placeholders */}
           <div className="flex flex-col gap-4">
             <Button href="/contact" variant="secondary" size="lg" hasArrow className="border-white">
@@ -58,7 +58,7 @@ export function Footer() {
           </div>
 
           {/* Right: nav + attribution */}
-          <div className="flex flex-col items-start md:items-end gap-3">
+          <div className="flex flex-col flex-1 items-start md:items-end gap-3 md:gap-0 md:justify-between">
             <nav className="flex gap-6 lg:gap-8">
               {footerLinks.map(link => (
                 <Link
@@ -70,15 +70,14 @@ export function Footer() {
                 </Link>
               ))}
             </nav>
-            <p className="text-lg lg:text-3xl font-semibold flex items-center gap-2">
-              <img src="/su-logo-white.svg" alt="" className="h-5 lg:h-7" />
+            <p className="text-lg lg:text-2xl leading-none font-semibold flex items-center gap-2">
+              <img src="/su-logo-white.svg" alt="" className="h-5 lg:h-6" />
               Site dev & design by Emily Serven
             </p>
+            {/* Easter egg quote */}
+            <p className="text-sm text-white/60">{quote}</p>
           </div>
         </div>
-
-        {/* Easter egg quote */}
-        <p className="text-sm text-white/60 mt-6 text-right">{quote}</p>
       </div>
     </footer>
   );

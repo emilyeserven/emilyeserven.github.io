@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { LinkButton } from "@/components/ui/LinkButton";
+import { Button } from "@/components/shad/ui/button";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -18,24 +18,21 @@ interface ProjectCardProps {
 
 export type { ProjectCardProps };
 
-function CardLink({
-  href,
-  className,
-  children,
-}: {
+type CardLinkProps = {
   href: string;
-  className?: string;
   children: React.ReactNode;
-}) {
+} & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">;
+
+function CardLink({ href, children, ...rest }: CardLinkProps) {
   if (href.startsWith("/") && !href.startsWith("//")) {
     return (
-      <Link to={href} className={className}>
+      <Link to={href} {...rest}>
         {children}
       </Link>
     );
   }
   return (
-    <a href={href} className={className}>
+    <a href={href} target="_blank" rel="noopener noreferrer" {...rest}>
       {children}
     </a>
   );
@@ -118,15 +115,16 @@ export function ProjectCard({
           </p>
 
           {href && (
-            <LinkButton
-              to={href}
+            <Button
+              asChild
               variant="secondary"
               size="icon-lg"
               className="lg:size-15 shrink-0"
-              aria-label={`View ${title}`}
             >
-              <ArrowRight className="size-5 lg:size-7" />
-            </LinkButton>
+              <CardLink href={href} aria-label={`View ${title}`}>
+                <ArrowRight className="size-5 lg:size-7" />
+              </CardLink>
+            </Button>
           )}
         </div>
       </div>

@@ -56,24 +56,28 @@ export function ProjectCard({
   return (
     <div className="group flex flex-col border-2 border-black bg-white overflow-hidden max-w-md">
       {/* Image */}
-      {href ? (
-        <CardLink href={href} className="block">
-          {imageContent}
-        </CardLink>
-      ) : (
-        imageContent
-      )}
+      {href
+        ? (
+            <CardLink href={href} className="block">
+              {imageContent}
+            </CardLink>
+          )
+        : (
+            imageContent
+          )}
 
       {/* Content */}
       <div className="border-t-2 border-black p-4 flex flex-col gap-1">
         <h3 className="text-2xl lg:text-4xl font-bold">
-          {href ? (
-            <CardLink href={href} className="hover:opacity-70 transition-opacity">
-              {title}
-            </CardLink>
-          ) : (
-            title
-          )}
+          {href
+            ? (
+                <CardLink href={href} className="hover:opacity-70 transition-opacity">
+                  {title}
+                </CardLink>
+              )
+            : (
+                title
+              )}
         </h3>
         <p className="text-lg lg:text-2xl">{subtitle}</p>
 

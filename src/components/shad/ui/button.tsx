@@ -1,6 +1,6 @@
 import * as React from "react"
+import { Slot as SlotPrimitive } from "radix-ui"
 import { cva, type VariantProps } from "class-variance-authority"
-import { Link } from "@tanstack/react-router"
 
 import { cn } from "@/lib/utils"
 
@@ -43,34 +43,34 @@ function Button({
   className,
   variant = "default",
   size = "default",
-  href,
+  asChild = false,
   hasArrow = false,
   children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
-    href?: string
+    asChild?: boolean
     hasArrow?: boolean
   }) {
-  const Comp: React.ElementType = href ? Link : "button"
-
-  const inner = (
-    <>
-      {children}
-      {hasArrow && <span aria-hidden="true" className="no-underline">→</span>}
-    </>
-  )
+  const Comp = asChild ? SlotPrimitive.Slot : "button"
 
   return (
     <Comp
-      {...(href ? { to: href } : { type: "button" })}
+      {...(!asChild ? { type: "button" as const } : {})}
       data-slot="button"
       data-variant={variant}
       data-size={size}
       className={cn(buttonVariants({ variant, size }), className)}
       {...props}
     >
-      {inner}
+      {asChild
+        ? children
+        : (
+            <>
+              {children}
+              {hasArrow && <span aria-hidden="true" className="no-underline">→</span>}
+            </>
+          )}
     </Comp>
   )
 }

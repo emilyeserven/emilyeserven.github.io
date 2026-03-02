@@ -9,6 +9,12 @@ import {
 import { createElement } from "react";
 import "../src/App.css";
 
+const rootRoute = createRootRoute({ component: () => null });
+const router = createRouter({
+  routeTree: rootRoute,
+  history: createMemoryHistory({ initialEntries: ["/"] }),
+});
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -31,13 +37,7 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => {
-      const rootRoute = createRootRoute({
-        component: Story,
-      });
-      const router = createRouter({
-        routeTree: rootRoute,
-        history: createMemoryHistory({ initialEntries: ["/"] }),
-      });
+      rootRoute.update({ component: Story });
       return createElement(RouterProvider, { router });
     },
   ],

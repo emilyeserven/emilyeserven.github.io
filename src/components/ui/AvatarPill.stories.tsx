@@ -5,7 +5,7 @@ const meta = {
   title: "ui/AvatarPill",
   component: AvatarPill,
   args: {
-    src: "/headshot.jpg",
+    src: "/headshot.png",
     alt: "Emily Serven",
     fallback: "ES",
     name: "Emily",

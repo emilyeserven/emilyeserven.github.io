@@ -1,4 +1,5 @@
 import { Button } from "@/components/shad/ui/button";
+import { LinkButton } from "@/components/ui/LinkButton";
 import { AvatarPill } from "@/components/ui/AvatarPill";
 
 export function HeroSection() {
@@ -8,6 +9,7 @@ export function HeroSection() {
       <img
         src="/hero-bg.png"
         alt=""
+        fetchPriority="high"
         className="absolute inset-0 size-full object-cover"
       />
 
@@ -34,9 +36,9 @@ export function HeroSection() {
         <div className="flex flex-wrap -mt-0.5">
           {/* TODO: Wire to resume PDF */}
           <Button variant="secondary" size="display" hasArrow>Download Resume</Button>
-          <Button href="/projects" variant="outline" size="display" hasArrow className="-ml-0.5">
+          <LinkButton to="/projects" variant="outline" size="display" hasArrow className="-ml-0.5">
             View Projects
-          </Button>
+          </LinkButton>
         </div>
       </div>
     </section>

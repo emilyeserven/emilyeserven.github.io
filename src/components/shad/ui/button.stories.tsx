@@ -18,9 +18,10 @@ const meta = {
     },
     size: {
       control: "select",
-      options: ["default", "xs", "sm", "lg", "icon", "icon-xs", "icon-sm", "icon-lg"],
+      options: ["default", "xs", "sm", "lg", "display", "icon", "icon-xs", "icon-sm", "icon-lg"],
     },
     hasArrow: { control: "boolean" },
+    asChild: { control: "boolean" },
   },
   args: {
     children: "Button",
@@ -60,6 +61,10 @@ export const Large: Story = {
   args: { size: "lg" },
 };
 
+export const Display: Story = {
+  args: { size: "display" },
+};
+
 export const Disabled: Story = {
   args: { disabled: true },
 };
@@ -74,8 +79,4 @@ export const OutlineArrow: Story = {
 
 export const DefaultArrow: Story = {
   args: { variant: "default", size: "lg", hasArrow: true },
-};
-
-export const WithHref: Story = {
-  args: { href: "/projects", size: "lg", hasArrow: true },
 };

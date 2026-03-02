@@ -4,6 +4,7 @@ import { TwoColumnSection } from "@/components/ui/TwoColumnSection";
 import { DisplaySection } from "@/components/ui/DisplaySection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Button } from "@/components/shad/ui/button";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,7 +28,6 @@ function Index() {
           role="software engineer"
           dates="2025.06 - present"
           tags={["react", "data-viz", "typescript", "dashboard"]}
-          href="#"
           imageSrc="/projects/lazarus-ai.png"
           imageFit="contain"
           imagePlaceholderColor="#f2f2f2"
@@ -55,7 +55,6 @@ function Index() {
             "prisma",
             "tailwind",
           ]}
-          href="#"
           imageSrc="/projects/panda5.png"
           imageFit="contain"
           imagePlaceholderColor="#ffffff"
@@ -80,7 +79,6 @@ function Index() {
               "ux",
               "prototyping",
             ]}
-            href="#"
             imageSrc="/projects/company-of-dads.png"
           />
           <ProjectCard
@@ -97,7 +95,6 @@ function Index() {
               "product-management",
               "tailwind",
             ]}
-            href="#"
             imageSrc="/projects/cod-tools.png"
           />
         </div>
@@ -107,9 +104,9 @@ function Index() {
       <DisplaySection>
         <h2 className="section-heading">That's the gist of it!</h2>
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
-          <Button href="/projects" variant="default" size="display" hasArrow>
+          <LinkButton to="/projects" variant="default" size="display" hasArrow>
             Explore more websites
-          </Button>
+          </LinkButton>
           {/* TODO: Wire to resume PDF */}
           <Button variant="outline" size="display" hasArrow>Download Resume</Button>
         </div>
@@ -129,12 +126,12 @@ function Index() {
           Amateur Gardener...
         </p>
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
-          <Button href="/about" variant="default" size="display" hasArrow>
+          <LinkButton to="/about" variant="default" size="display" hasArrow>
             Biography
-          </Button>
-          <Button href="/blog" variant="outline" size="display" hasArrow>
+          </LinkButton>
+          <LinkButton to="/blog" variant="outline" size="display" hasArrow>
             Blog
-          </Button>
+          </LinkButton>
         </div>
       </DisplaySection>
 

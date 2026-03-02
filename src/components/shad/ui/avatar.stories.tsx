@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: args => (
     <Avatar {...args}>
-      <AvatarImage src="/headshot.jpg" alt="Emily Serven" />
+      <AvatarImage src="/headshot.png" alt="Emily Serven" />
       <AvatarFallback>ES</AvatarFallback>
     </Avatar>
   ),
@@ -28,7 +28,7 @@ export const Small: Story = {
   args: { size: "sm" },
   render: args => (
     <Avatar {...args}>
-      <AvatarImage src="/headshot.jpg" alt="Emily Serven" />
+      <AvatarImage src="/headshot.png" alt="Emily Serven" />
       <AvatarFallback>ES</AvatarFallback>
     </Avatar>
   ),
@@ -38,7 +38,7 @@ export const Large: Story = {
   args: { size: "lg" },
   render: args => (
     <Avatar {...args}>
-      <AvatarImage src="/headshot.jpg" alt="Emily Serven" />
+      <AvatarImage src="/headshot.png" alt="Emily Serven" />
       <AvatarFallback>ES</AvatarFallback>
     </Avatar>
   ),

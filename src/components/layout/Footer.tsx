@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { SiGithub, SiInstagram, Si500px } from "@icons-pack/react-simple-icons";
 import { Linkedin } from "lucide-react";
-import { Button } from "@/components/shad/ui/button";
+import { LinkButton } from "@/components/ui/LinkButton";
 
 const socialLinks = [
   { label: "GitHub", href: "https://github.com/emilyeserven/", icon: SiGithub },
@@ -31,9 +31,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6">
           {/* Left: CTA + social placeholders */}
           <div className="flex flex-col gap-4">
-            <Button href="/contact" variant="secondary" size="lg" hasArrow className="border-white">
+            <LinkButton to="/contact" variant="secondary" size="lg" hasArrow className="border-white">
               Contact Me
-            </Button>
+            </LinkButton>
             <div className="flex gap-3">
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a

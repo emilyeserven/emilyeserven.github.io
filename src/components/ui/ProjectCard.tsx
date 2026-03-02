@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/shad/ui/button";
+import { LinkButton } from "@/components/ui/LinkButton";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -27,17 +27,17 @@ function CardLink({
   className?: string;
   children: React.ReactNode;
 }) {
-  if (href.startsWith("http")) {
+  if (href.startsWith("/") && !href.startsWith("//")) {
     return (
-      <a href={href} className={className}>
+      <Link to={href} className={className}>
         {children}
-      </a>
+      </Link>
     );
   }
   return (
-    <Link to={href} className={className}>
+    <a href={href} className={className}>
       {children}
-    </Link>
+    </a>
   );
 }
 
@@ -118,14 +118,15 @@ export function ProjectCard({
           </p>
 
           {href && (
-            <Button
-              href={href}
+            <LinkButton
+              to={href}
               variant="secondary"
               size="icon-lg"
               className="lg:size-15 shrink-0"
+              aria-label={`View ${title}`}
             >
               <ArrowRight className="size-5 lg:size-7" />
-            </Button>
+            </LinkButton>
           )}
         </div>
       </div>

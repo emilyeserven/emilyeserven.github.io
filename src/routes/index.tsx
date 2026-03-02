@@ -119,17 +119,16 @@ function Index() {
       </DisplaySection>
 
       {/* More than a developer */}
-      <DisplaySection heading="(By the way, I'm more than just a developer.)">
-        <p className="text-xl sm:text-2xl lg:text-3xl lg:leading-snug font-medium">
-          Frog Caretaker, 日本語 Learner,
-          {" "}
+      <DisplaySection
+        heading="(By the way, I'm more than just a developer.)"
+        body={<>Frog Caretaker, 日本語 Learner,{" "}
           <span className="underline decoration-2 underline-offset-4">
             Photographer
           </span>
           , Designer, Wing Tsun Practitioner, Music Collector, Animation
           Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover,
-          Amateur Gardener...
-        </p>
+          Amateur Gardener...</>}
+      >
         <div className="flex flex-wrap gap-4 mt-8">
           <Button href="/about" variant="default" size="display" hasArrow>
             Biography

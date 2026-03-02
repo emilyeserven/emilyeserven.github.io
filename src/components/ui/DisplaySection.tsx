@@ -3,7 +3,8 @@ import { SectionHeading } from "./SectionHeading";
 
 interface DisplaySectionProps {
   heading: string;
-  body?: string;
+  body?: React.ReactNode;
+  bodyClassName?: string;
   children?: React.ReactNode;
   className?: string;
 }
@@ -11,13 +12,14 @@ interface DisplaySectionProps {
 export function DisplaySection({
   heading,
   body,
+  bodyClassName,
   children,
   className,
 }: DisplaySectionProps) {
   return (
     <section className={cn("py-12 lg:py-20", className)}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading heading={heading} body={body} />
+        <SectionHeading heading={heading} body={body} bodyClassName={bodyClassName} />
         {children && <div className="mt-4 lg:mt-6">{children}</div>}
       </div>
     </section>

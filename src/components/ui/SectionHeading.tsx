@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
   heading: string;
-  body?: string;
+  body?: React.ReactNode;
   className?: string;
   bodyClassName?: string;
 }

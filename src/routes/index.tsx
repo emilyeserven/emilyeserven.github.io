@@ -108,7 +108,7 @@ function Index() {
             Explore more websites
           </LinkButton>
           {/* TODO: Wire to resume PDF */}
-          <Button variant="outline" size="display" hasArrow>Download Resume</Button>
+          <Button variant="outline" size="display" hasArrow disabled>Download Resume</Button>
         </div>
       </DisplaySection>
 

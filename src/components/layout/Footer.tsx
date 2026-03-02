@@ -49,7 +49,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="size-10 lg:size-[52px] bg-white text-black flex items-center justify-center hover:opacity-70 transition-opacity"
+                  className="size-10 lg:size-13 bg-white text-black flex items-center justify-center hover:opacity-70 transition-opacity"
                 >
                   <Icon className="size-5 lg:size-7" />
                 </a>
@@ -70,7 +70,7 @@ export function Footer() {
                 </Link>
               ))}
             </nav>
-            <p className="text-lg lg:text-[28px] font-semibold">
+            <p className="text-lg lg:text-3xl font-semibold">
               Site dev & design by Emily Serven
             </p>
           </div>

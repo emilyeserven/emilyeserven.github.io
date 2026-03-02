@@ -28,7 +28,7 @@ export function Navbar() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-lg lg:text-[28px] font-semibold hover:opacity-70 transition-opacity"
+              className="text-lg lg:text-3xl font-semibold hover:opacity-70 transition-opacity"
             >
               {link.label}
             </Link>

@@ -20,7 +20,7 @@ export const Default: Story = {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
           Featured Project
         </h2>
-        <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-4">
+        <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug mt-4">
           A showcase of the most recent work with details about the approach and technologies used.
         </p>
       </div>

@@ -20,11 +20,11 @@ export function DisplaySection({
           {heading}
         </h2>
         {body && (
-          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-2">
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug mt-2">
             {body}
           </p>
         )}
-        {children && <div className="mt-8 lg:mt-12">{children}</div>}
+        {children && <div className="mt-4 lg:mt-6">{children}</div>}
       </div>
     </section>
   );

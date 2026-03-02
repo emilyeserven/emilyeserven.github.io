@@ -24,7 +24,7 @@ function Index() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
             I'm usually a front-end dev for JavaScript web apps.
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-4">
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug mt-4">
             My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.
           </p>
         </div>
@@ -45,7 +45,7 @@ function Index() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
             Lately, I've been exploring full-stack frameworks.
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-4">
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug mt-4">
             Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue.
           </p>
         </div>
@@ -124,7 +124,7 @@ function Index() {
 
       {/* More than a developer */}
       <DisplaySection heading="(By the way, I'm more than just a developer.)">
-        <p className="text-xl sm:text-2xl lg:text-[32px] lg:leading-[1.4] font-medium">
+        <p className="text-xl sm:text-2xl lg:text-3xl lg:leading-snug font-medium">
           Frog Caretaker, 日本語 Learner,
           {" "}
           <span className="underline decoration-2 underline-offset-4">
@@ -145,12 +145,12 @@ function Index() {
       </DisplaySection>
 
       {/* Blue CTA */}
-      <section className="bg-portfolio-blue border-t-[24px] border-portfolio-blue-light">
+      <section className="bg-portfolio-blue border-t-24 border-portfolio-blue-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
             Need a website? Want to chat?
           </h2>
-          <p className="text-xl sm:text-2xl lg:text-[32px] font-medium text-white mt-2">
+          <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-white mt-2">
             I'm just an email away!
           </p>
         </div>

@@ -101,7 +101,7 @@ export function ProjectCard({
               href={href}
               variant="secondary"
               size="icon-lg"
-              className="lg:size-[60px] shrink-0"
+              className="lg:size-15 shrink-0"
             >
               <ArrowRight className="size-5 lg:size-7" />
             </Button>

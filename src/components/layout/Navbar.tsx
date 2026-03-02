@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -12,6 +12,13 @@ const navLinks = [
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
+
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname);
+    setMobileOpen(false);
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-4 border-black">

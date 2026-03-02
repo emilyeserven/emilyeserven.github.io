@@ -74,7 +74,7 @@ export function ProjectCard({
       );
 
   return (
-    <div className={`group flex flex-col border-2 border-black bg-white overflow-hidden${isWide ? "" : " max-w-md"}`}>
+    <div className={cn("group flex flex-col border-2 border-black bg-white overflow-hidden", !isWide && "max-w-md")}>
       {/* Image */}
       {href
         ? (

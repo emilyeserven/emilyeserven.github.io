@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { TwoColumnSection } from "./TwoColumnSection";
+import { SectionHeading } from "./SectionHeading";
 import { ProjectCard } from "./ProjectCard";
 
 const meta = {
@@ -16,14 +17,11 @@ export const Default: Story = {
   },
   render: args => (
     <TwoColumnSection {...args}>
-      <div>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-          Featured Project
-        </h2>
-        <p className="text-xl sm:text-2xl lg:text-3xl mt-4">
-          A showcase of the most recent work with details about the approach and technologies used.
-        </p>
-      </div>
+      <SectionHeading
+        heading="Featured Project"
+        body="A showcase of the most recent work with details about the approach and technologies used."
+        bodyClassName="mt-4"
+      />
       <ProjectCard
         title="Portfolio Site"
         subtitle="Personal website redesign"

@@ -15,9 +15,6 @@ function Index() {
       {/* Hero */}
       <HeroSection />
 
-      {/* Divider */}
-      <div className="border-b-2 border-black h-12" />
-
       {/* Front-end dev + Lazarus AI */}
       <TwoColumnSection>
         <div>

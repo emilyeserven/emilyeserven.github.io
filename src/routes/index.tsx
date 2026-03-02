@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/layout/HeroSection";
 import { TwoColumnSection } from "@/components/ui/TwoColumnSection";
 import { DisplaySection } from "@/components/ui/DisplaySection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/shad/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -18,11 +17,10 @@ function Index() {
 
       {/* Front-end dev + Lazarus AI */}
       <TwoColumnSection>
-        <SectionHeading
-          heading="I'm usually a front-end dev for JavaScript web apps."
-          body="My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed."
-          bodyClassName="mt-4"
-        />
+        <div>
+          <h2 className="section-heading">I'm usually a front-end dev for JavaScript web apps.</h2>
+          <p className="section-body mt-4">My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.</p>
+        </div>
         <ProjectCard
           title="Lazarus AI"
           subtitle="AI for the public sector"
@@ -38,11 +36,10 @@ function Index() {
 
       {/* Full-stack frameworks + Panda5 */}
       <TwoColumnSection>
-        <SectionHeading
-          heading="Lately, I've been exploring full-stack frameworks."
-          body="Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue."
-          bodyClassName="mt-4"
-        />
+        <div>
+          <h2 className="section-heading">Lately, I've been exploring full-stack frameworks.</h2>
+          <p className="section-body mt-4">Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue.</p>
+        </div>
         <ProjectCard
           title="Panda5"
           subtitle="knowledge-focused social media"
@@ -66,11 +63,10 @@ function Index() {
       </TwoColumnSection>
 
       {/* Skills beyond the stack */}
-      <DisplaySection
-        heading="I have skills beyond the stack, too."
-        body="As a freelancer with 12+ years of experience, I partner with clients that have little tech knowledge. I manage web projects start-to-finish, implement, and more."
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <DisplaySection>
+        <h2 className="section-heading">I have skills beyond the stack, too.</h2>
+        <p className="section-body">As a freelancer with 12+ years of experience, I partner with clients that have little tech knowledge. I manage web projects start-to-finish, implement, and more.</p>
+        <div className="mt-4 lg:mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           <ProjectCard
             title="The Company of Dads"
             subtitle="community and content for lead dads"
@@ -108,8 +104,9 @@ function Index() {
       </DisplaySection>
 
       {/* That's the gist of it! */}
-      <DisplaySection heading="That's the gist of it!">
-        <div className="flex flex-wrap gap-4">
+      <DisplaySection>
+        <h2 className="section-heading">That's the gist of it!</h2>
+        <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
           <Button href="/projects" variant="default" size="display" hasArrow>
             Explore more websites
           </Button>
@@ -119,17 +116,16 @@ function Index() {
       </DisplaySection>
 
       {/* More than a developer */}
-      <DisplaySection
-        heading="(By the way, I'm more than just a developer.)"
-        body={<>Frog Caretaker, 日本語 Learner,{" "}
+      <DisplaySection>
+        <h2 className="section-heading">(By the way, I'm more than just a developer.)</h2>
+        <p className="section-body">Frog Caretaker, 日本語 Learner,{" "}
           <span className="underline decoration-2 underline-offset-4">
             Photographer
           </span>
           , Designer, Wing Tsun Practitioner, Music Collector, Animation
           Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover,
-          Amateur Gardener...</>}
-      >
-        <div className="flex flex-wrap gap-4 mt-8">
+          Amateur Gardener...</p>
+        <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
           <Button href="/about" variant="default" size="display" hasArrow>
             Biography
           </Button>
@@ -142,12 +138,8 @@ function Index() {
       {/* Blue CTA */}
       <section className="bg-portfolio-blue border-t-24 border-portfolio-blue-light">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-          <SectionHeading
-            heading="Need a website? Want to chat?"
-            body="I'm just an email away!"
-            className="text-white"
-            bodyClassName="font-medium text-white"
-          />
+          <h2 className="section-heading text-white">Need a website? Want to chat?</h2>
+          <p className="text-lg sm:text-xl lg:text-2xl mt-2 font-medium text-white">I'm just an email away!</p>
         </div>
       </section>
     </>

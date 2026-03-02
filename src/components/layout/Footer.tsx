@@ -1,20 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { SiGithub, SiInstagram, Si500px } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 import { Button } from "@/components/shad/ui/button";
 
-function Icon500px({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M7.439 9.01A2.994 2.994 0 0 0 4.449 12a2.994 2.994 0 0 0 2.99 2.99 2.994 2.994 0 0 0 2.99-2.99 2.994 2.994 0 0 0-2.99-2.99m0 4.48A1.494 1.494 0 0 1 5.949 12c0-.824.666-1.49 1.49-1.49s1.49.666 1.49 1.49-.666 1.49-1.49 1.49m9.494-4.48A2.994 2.994 0 0 0 13.943 12a2.994 2.994 0 0 0 2.99 2.99 2.994 2.994 0 0 0 2.99-2.99 2.994 2.994 0 0 0-2.99-2.99m0 4.48A1.494 1.494 0 0 1 15.443 12c0-.824.666-1.49 1.49-1.49s1.49.666 1.49 1.49-.666 1.49-1.49 1.49M11.262 9.541a.397.397 0 0 0-.299-.131h-.39c-.109 0-.22.047-.299.131a4.36 4.36 0 0 1-3.236 1.473.386.386 0 0 0-.283.122.39.39 0 0 0-.116.286v.156c0 .107.042.21.116.286a.386.386 0 0 0 .283.122c.76 0 1.484-.2 2.128-.553v3.025a.4.4 0 0 0 .399.399h.156a.4.4 0 0 0 .399-.399V9.84a.404.404 0 0 0-.058-.199z" />
-    </svg>
-  );
-}
-
 const socialLinks = [
-  { label: "GitHub", href: "https://github.com/emilyeserven/", icon: Github },
+  { label: "GitHub", href: "https://github.com/emilyeserven/", icon: SiGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/emilyserven/", icon: Linkedin },
-  { label: "Instagram", href: "https://www.instagram.com/emilyserven/", icon: Instagram },
-  { label: "500px", href: "https://500px.com/emilyeserven", icon: Icon500px },
+  { label: "Instagram", href: "https://www.instagram.com/emilyserven/", icon: SiInstagram },
+  { label: "500px", href: "https://500px.com/emilyeserven", icon: Si500px },
 ] as const;
 
 const footerLinks = [

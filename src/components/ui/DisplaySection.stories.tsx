@@ -5,24 +5,25 @@ import { Button } from "@/components/shad/ui/button";
 const meta = {
   title: "ui/DisplaySection",
   component: DisplaySection,
-  args: {
-    heading: "Section Heading",
-  },
 } satisfies Meta<typeof DisplaySection>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const WithBody: Story = {
-  args: {
-    body: "This is a body paragraph that provides additional context about the section.",
-  },
+  render: args => (
+    <DisplaySection {...args}>
+      <h2 className="section-heading">Section Heading</h2>
+      <p className="section-body">This is a body paragraph that provides additional context about the section.</p>
+    </DisplaySection>
+  ),
 };
 
 export const WithChildren: Story = {
   render: args => (
     <DisplaySection {...args}>
-      <div className="flex flex-wrap gap-4">
+      <h2 className="section-heading">Section Heading</h2>
+      <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
         <Button variant="default" size="display" hasArrow>Primary Action</Button>
         <Button variant="secondary" size="display" hasArrow>Secondary Action</Button>
       </div>
@@ -30,4 +31,10 @@ export const WithChildren: Story = {
   ),
 };
 
-export const HeadingOnly: Story = {};
+export const HeadingOnly: Story = {
+  render: args => (
+    <DisplaySection {...args}>
+      <h2 className="section-heading">Section Heading</h2>
+    </DisplaySection>
+  ),
+};

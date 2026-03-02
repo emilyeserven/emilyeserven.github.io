@@ -15,7 +15,7 @@ export function HeroSection() {
         {/* Frosted glass card */}
         <div className="bg-white/90 backdrop-blur-lg border-2 border-black px-4 py-2 sm:p-6 max-w-3xl">
           {/* Greeting with headshot placeholder */}
-          <p className="text-lg sm:text-xl lg:text-xl font-semibold flex items-center flex-wrap">
+          <p className="text-xl sm:text-2xl lg:text-3xl flex items-center flex-wrap">
             <span>Nice to meet you! I'm</span>
             <AvatarPill src="/headshot.png" alt="Emily Serven" fallback="ES" name="Emily" className="ml-2" />
             <span>.</span>

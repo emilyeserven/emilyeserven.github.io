@@ -53,26 +53,28 @@ export function ProjectCard({
   imagePlaceholderColor = "#e5e5e5",
   isWide = false,
 }: ProjectCardProps) {
-  const imageContent = imageSrc ? (
-    <div
-      className="h-48 sm:h-56 lg:h-72 w-full"
-      style={{ backgroundColor: imageFit === "contain" ? imagePlaceholderColor : undefined }}
-    >
-      <img
-        src={imageSrc}
-        alt={title}
-        className={cn(
-          "size-full",
-          imageFit === "contain" ? "object-contain p-6" : "object-cover",
-        )}
-      />
-    </div>
-  ) : (
-    <div
-      className="h-48 sm:h-56 lg:h-72 w-full"
-      style={{ backgroundColor: imagePlaceholderColor }}
-    />
-  );
+  const imageContent = imageSrc
+    ? (
+        <div
+          className="h-48 sm:h-56 lg:h-72 w-full"
+          style={{ backgroundColor: imageFit === "contain" ? imagePlaceholderColor : undefined }}
+        >
+          <img
+            src={imageSrc}
+            alt={title}
+            className={cn(
+              "size-full",
+              imageFit === "contain" ? "object-contain p-6" : "object-cover",
+            )}
+          />
+        </div>
+      )
+    : (
+        <div
+          className="h-48 sm:h-56 lg:h-72 w-full"
+          style={{ backgroundColor: imagePlaceholderColor }}
+        />
+      );
 
   return (
     <div className={`group flex flex-col border-2 border-black bg-white overflow-hidden${isWide ? "" : " max-w-md"}`}>

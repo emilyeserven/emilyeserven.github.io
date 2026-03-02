@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ContentSection } from "./ContentSection";
+import { Button } from "@/components/shad/ui/button";
 
 const meta = {
   title: "ui/ContentSection",
@@ -21,10 +22,9 @@ export const WithBody: Story = {
 export const WithChildren: Story = {
   render: args => (
     <ContentSection {...args}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-6 border-2 border-black">Placeholder card 1</div>
-        <div className="p-6 border-2 border-black">Placeholder card 2</div>
-        <div className="p-6 border-2 border-black">Placeholder card 3</div>
+      <div className="flex flex-wrap gap-4">
+        <Button variant="default" size="lg" hasArrow>Primary Action</Button>
+        <Button variant="secondary" size="lg" hasArrow>Secondary Action</Button>
       </div>
     </ContentSection>
   ),

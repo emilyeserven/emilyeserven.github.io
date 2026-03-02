@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/layout/HeroSection";
-import { TextWithCardSection } from "@/components/ui/TextWithCardSection";
+import { TwoColumnSection } from "@/components/ui/TwoColumnSection";
 import { ContentSection } from "@/components/ui/ContentSection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Button } from "@/components/shad/ui/button";
@@ -19,30 +19,42 @@ function Index() {
       <div className="border-b-2 border-black h-12" />
 
       {/* Front-end dev + Lazarus AI */}
-      <TextWithCardSection
-        heading="I'm usually a front-end dev for JavaScript web apps."
-        body="My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed."
-        project={{
-          title: "Lazarus AI",
-          subtitle: "AI for the public sector",
-          role: "software engineer",
-          dates: "2025.06 - present",
-          tags: ["react", "data-viz", "typescript", "dashboard"],
-          href: "#",
-          imagePlaceholderColor: "#f2f2f2",
-        }}
-      />
+      <TwoColumnSection>
+        <div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
+            I'm usually a front-end dev for JavaScript web apps.
+          </h2>
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-4">
+            My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.
+          </p>
+        </div>
+        <ProjectCard
+          title="Lazarus AI"
+          subtitle="AI for the public sector"
+          role="software engineer"
+          dates="2025.06 - present"
+          tags={["react", "data-viz", "typescript", "dashboard"]}
+          href="#"
+          imagePlaceholderColor="#f2f2f2"
+        />
+      </TwoColumnSection>
 
       {/* Full-stack frameworks + Panda5 */}
-      <TextWithCardSection
-        heading="Lately, I've been exploring full-stack frameworks."
-        body="Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue."
-        project={{
-          title: "Panda5",
-          subtitle: "knowledge-focused social media",
-          role: "software engineer",
-          dates: "2023.01 - 2023.05",
-          tags: [
+      <TwoColumnSection>
+        <div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
+            Lately, I've been exploring full-stack frameworks.
+          </h2>
+          <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[40px] xl:leading-[1.3] mt-4">
+            Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue.
+          </p>
+        </div>
+        <ProjectCard
+          title="Panda5"
+          subtitle="knowledge-focused social media"
+          role="software engineer"
+          dates="2023.01 - 2023.05"
+          tags={[
             "mvp",
             "react",
             "remix.run",
@@ -51,11 +63,11 @@ function Index() {
             "schema",
             "prisma",
             "tailwind",
-          ],
-          href: "#",
-          imagePlaceholderColor: "#e8e8e8",
-        }}
-      />
+          ]}
+          href="#"
+          imagePlaceholderColor="#e8e8e8"
+        />
+      </TwoColumnSection>
 
       {/* Skills beyond the stack */}
       <ContentSection

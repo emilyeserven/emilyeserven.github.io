@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/shad/ui/button";
 
 interface ProjectCardProps {
   title: string;
@@ -14,6 +14,29 @@ interface ProjectCardProps {
 
 export type { ProjectCardProps };
 
+function CardLink({
+  href,
+  className,
+  children,
+}: {
+  href: string;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  if (href.startsWith("http")) {
+    return (
+      <a href={href} className={className}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link to={href} className={className}>
+      {children}
+    </Link>
+  );
+}
+
 export function ProjectCard({
   title,
   subtitle,
@@ -23,23 +46,35 @@ export function ProjectCard({
   href,
   imagePlaceholderColor = "#e5e5e5",
 }: ProjectCardProps) {
-  const isExternal = href?.startsWith("http");
-  const className = cn(
-    "group flex flex-col border-2 border-black bg-white overflow-hidden max-w-md",
-    href && "cursor-pointer",
+  const imageContent = (
+    <div
+      className="h-48 sm:h-56 lg:h-72 w-full"
+      style={{ backgroundColor: imagePlaceholderColor }}
+    />
   );
 
-  const content = (
-    <>
-      {/* Image placeholder */}
-      <div
-        className="h-48 sm:h-56 lg:h-72 w-full"
-        style={{ backgroundColor: imagePlaceholderColor }}
-      />
+  return (
+    <div className="group flex flex-col border-2 border-black bg-white overflow-hidden max-w-md">
+      {/* Image */}
+      {href ? (
+        <CardLink href={href} className="block">
+          {imageContent}
+        </CardLink>
+      ) : (
+        imageContent
+      )}
 
       {/* Content */}
       <div className="border-t-2 border-black p-4 flex flex-col gap-1">
-        <h3 className="text-2xl lg:text-4xl font-bold">{title}</h3>
+        <h3 className="text-2xl lg:text-4xl font-bold">
+          {href ? (
+            <CardLink href={href} className="hover:opacity-70 transition-opacity">
+              {title}
+            </CardLink>
+          ) : (
+            title
+          )}
+        </h3>
         <p className="text-lg lg:text-2xl">{subtitle}</p>
 
         {(role || dates) && (
@@ -56,30 +91,17 @@ export function ProjectCard({
           </p>
 
           {href && (
-            <div className="bg-black size-10 lg:size-[60px] flex items-center justify-center shrink-0">
-              <ArrowRight className="size-5 lg:size-7 text-white" />
-            </div>
+            <Button
+              href={href}
+              variant="secondary"
+              size="icon-lg"
+              className="lg:size-[60px] shrink-0"
+            >
+              <ArrowRight className="size-5 lg:size-7" />
+            </Button>
           )}
         </div>
       </div>
-    </>
+    </div>
   );
-
-  if (href && isExternal) {
-    return (
-      <a href={href} className={className}>
-        {content}
-      </a>
-    );
-  }
-
-  if (href) {
-    return (
-      <Link to={href} className={className}>
-        {content}
-      </Link>
-    );
-  }
-
-  return <div className={className}>{content}</div>;
 }

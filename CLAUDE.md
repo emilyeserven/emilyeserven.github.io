@@ -1,61 +1,94 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project Overview
 
-Jekyll-based portfolio website for Emily Serven, deployed on GitHub Pages at emilyserven.net. The site includes web development portfolio, photography gallery, blog, and contact sections.
+Personal portfolio site for Emily Serven (emilyserven.net), built as a React SPA.
 
-## Development Commands
+## Tech Stack
+
+- **Framework:** React 19 + TypeScript
+- **Build:** Vite 7
+- **Routing:** TanStack Router (file-based, auto code-splitting)
+- **Styling:** Tailwind CSS v4 (CSS-first config)
+- **Components:** shadcn/ui (new-york style, neutral base)
+- **Testing:** Storybook 10 + Vitest
+- **Package Manager:** pnpm
+
+## Commands
 
 ```bash
-# Serve locally with live reload
-bundle exec jekyll serve
-
-# Build the site (output to _site/)
-bundle exec jekyll build
+pnpm dev              # Start dev server (localhost:5173)
+pnpm build            # Type-check + production build
+pnpm preview          # Preview production build
+pnpm lint             # ESLint
+pnpm lint:fix         # ESLint with auto-fix
+pnpm storybook        # Storybook dev (localhost:6006)
+pnpm build-storybook  # Build static Storybook
 ```
 
-There is no package.json, Gemfile, or other build tooling — the site relies on GitHub Pages' default Jekyll environment. The `node_modules/` and `dist/` directories are artifacts from past experimentation and are not part of the build.
+## Project Structure
 
-## Architecture
+```
+src/
+├── main.tsx              # App entry, router setup
+├── App.css               # Tailwind + shadcn theme vars
+├── routeTree.gen.ts      # Auto-generated (do not edit)
+├── components/
+│   ├── layout/           # Page structure (empty, reserved)
+│   ├── shad/ui/          # shadcn components (managed by CLI)
+│   └── ui/               # Custom reusable components (empty, reserved)
+├── hooks/                # Custom React hooks (empty, reserved)
+├── lib/
+│   └── utils.ts          # cn() helper and utilities
+└── routes/
+    ├── __root.tsx         # Root layout with Outlet
+    └── index.tsx          # Homepage (/)
+```
 
-### Jekyll Collections
+## Routing
 
-Three collections are defined in `_config.yml`:
+- Uses TanStack Router file-based routing in `src/routes/`
+- Route tree is auto-generated — add new routes by creating files in `src/routes/`
+- Router devtools are available in development mode
+- See: https://tanstack.com/router/latest/docs/framework/react/guide/file-based-routing
 
-- **`_flexfolio/`** — Primary portfolio collection (output: true). Organized into subdirectories: `commercial/`, `projects/`, `lab/`, `photography/`, `drafts/`. Each item uses rich YAML front matter (title, code, category, subcategory, stack, responsibilities, features array, image paths, grid positioning via flexwidth/flexheight/flexorder).
-- **`_portfolio/`** — Legacy portfolio collection (output: true, permalink: `/portfolio/:path/`).
-- **`_skills/`** — Skill categories for display (output: false, not rendered as pages).
+## Component Conventions
 
-### Template System
+- **shadcn components** go in `src/components/shad/ui/` — managed by shadcn CLI, avoid manual edits
+- **Custom components** go in `src/components/ui/` for reusable UI or `src/components/layout/` for page structure
+- Use `cn()` from `@/lib/utils` for conditional class merging
+- Import alias: `@/*` resolves to `src/*`
 
-- **`_layouts/`** — Page templates. `default.html` is the base; variants include `default-notitle.html`, `default-nowrap.html`, `default-photo.html`. Content layouts: `flexfolio.html`, `photofolio.html`, `post.html`, `blog-category.html`.
-- **`_includes/`** — Reusable partials organized by purpose:
-  - `gridblocks/` — Grid item renderers (work-block, showcase-block, photo-block)
-  - `layout/` — Wrapper components (work-block-start/end, category-btn)
-  - `technical/` — Detail card formatting
-  - `portfolio/` and `flexfolio/` — Collection-specific components
-  - `head.html`, `header.html`, `footer.html` — Site-wide structure
+## Adding shadcn Components
 
-Includes are documented with PURPOSE, WHERE, DEPRECATION, and PARAMETERS comments.
+```bash
+pnpm dlx shadcn@latest add <component-name>
+```
 
-### Styling
+Components are placed in `src/components/shad/ui/` per `components.json` config.
 
-- `css/main.scss` — Primary stylesheet (~2200 lines) with structured TABLE OF CONTENTS sections
-- `css/fonts.scss` — Custom web fonts (Bw Modelica, Quasimoda, CorporativeSansRd) and icon fonts
-- `_sass/` — Partials: `_base.scss`, `_layout.scss`, `_syntax-highlighting.scss`
-- Bootstrap 4.x grid system for responsive layout
-- Featherlight for image lightboxes
+## Content Collections
 
-### Content Pages
+Legacy Jekyll content (portfolio entries, blog posts, skills data) was removed in the 2026 refresh.
+Content integration into the React app is planned for a future phase.
 
-Root HTML files (`index.html`, `about.html`, `contact.html`, `blog.html`, portfolio pages) use Jekyll front matter to select layouts. Topic category pages live in `topics/`.
+## CI
 
-### Assets
-
-Portfolio item images are stored at `assets/flexfolio/[code]/` where `[code]` matches the item's `code` front matter field. General images in `assets/images/`, icons in `assets/icons/`.
+- **Triggers:** Pushes to `2026-refresh` and `master`, plus PRs targeting those branches
+- **Checks:** Lint (`pnpm lint`) and build (`pnpm build`) on a single job with pnpm caching
+- Feature branches only get CI when a PR is open against `2026-refresh` or `master`
 
 ## Deployment
 
-Push to `master` branch triggers automatic GitHub Pages build. Custom domain configured via `CNAME` file pointing to `emilyserven.net`.
+- GitHub Pages with custom domain (emilyserven.net)
+- `CNAME` in `public/` is copied to `dist/` on build
+- Build output: `dist/`
+
+## Git Hooks
+
+- **Husky pre-push:** Runs `pnpm lint:fix` before every push. Auto-commits fixes as "Formatting" if files changed. Blocks push if unfixable lint errors remain.
+- **Claude pre-push-lint:** A Claude Code hook (`.claude/hooks/pre-push-lint.sh`) that triggers on `git push` commands. Same behavior as the husky hook — runs lint:fix, auto-commits fixes, and blocks on errors.
+
+## MCP Servers
+
+- **shadcn:** Component library assistant (configured in `.mcp.json`)

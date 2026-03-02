@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+# Run lint with auto-fix
+pnpm lint:fix
+
+# If any files were changed by the fix, stage and commit them
+if [ -n "$(git diff --name-only)" ]; then
+  git add -u
+  git commit -m "Formatting"
+fi
+
+# Final lint check — block push if unfixable errors remain
+pnpm lint

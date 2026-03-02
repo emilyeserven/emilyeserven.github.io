@@ -1,17 +1,34 @@
-_site
-_drafts
-.sass-cache
-.jekyll-metadata
-.jekyll-cache
-.idea
+# Dependencies
+node_modules/
 
-assets/\.DS_Store
-assets/images/\.DS_Store
+# Build output
+dist/
+storybook-static/
 
-assets/flexfolio/\.DS_Store
+# Environment
+.env
+.env.local
+.env.*.local
 
-assets/flexfolio/djbraj/\.DS_Store
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
 
-assets/flexfolio/karelxojani/\.DS_Store
+# OS
+.DS_Store
+Thumbs.db
 
-\.DS_Store
+# Vite
+*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*

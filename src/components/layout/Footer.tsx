@@ -33,7 +33,7 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 export function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
         {/* Top row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left: CTA + social placeholders */}

@@ -14,9 +14,9 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         {/* Frosted glass card */}
-        <div className="bg-white/90 backdrop-blur-lg border-2 border-black p-6 sm:p-8 lg:p-10 max-w-3xl">
+        <div className="bg-white/90 backdrop-blur-lg border-2 border-black px-4 py-2 sm:p-6 max-w-3xl">
           {/* Greeting with headshot placeholder */}
           <p className="text-lg sm:text-xl lg:text-xl font-semibold flex items-center flex-wrap">
             <span>Nice to meet you! I'm</span>

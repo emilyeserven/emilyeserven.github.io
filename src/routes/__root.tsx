@@ -10,8 +10,8 @@ const TanStackRouterDevtools
         })),
       );
 
-export const Route = createRootRoute({
-  component: () => (
+function RootLayout() {
+  return (
     <>
       <main>
         <Outlet />
@@ -20,5 +20,9 @@ export const Route = createRootRoute({
         <TanStackRouterDevtools />
       </Suspense>
     </>
-  ),
+  );
+}
+
+export const Route = createRootRoute({
+  component: RootLayout,
 });

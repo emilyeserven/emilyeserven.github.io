@@ -122,7 +122,7 @@ function Index() {
             Photographer
           </span>
           , Designer, Wing Tsun Practitioner, Music Collector, Animation
-          Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover,
+          Enthusiast, Pasta & Noodle Enthusiast, Tea Lover,
           Amateur Gardener...
         </p>
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">

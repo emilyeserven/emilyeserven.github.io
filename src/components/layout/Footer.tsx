@@ -16,6 +16,7 @@ const footerLinks = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
+// TODO: Replace placeholder quotes with real content
 const quotes = [
   "\"Little quote to be randomly selected on render as an easter egg\" - Attribution",
 ];

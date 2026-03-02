@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/layout/HeroSection";
 import { TwoColumnSection } from "@/components/ui/TwoColumnSection";
-import { ContentSection } from "@/components/ui/ContentSection";
+import { DisplaySection } from "@/components/ui/DisplaySection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { Button } from "@/components/shad/ui/button";
 
@@ -70,7 +70,7 @@ function Index() {
       </TwoColumnSection>
 
       {/* Skills beyond the stack */}
-      <ContentSection
+      <DisplaySection
         heading="I have skills beyond the stack, too."
         body="As a freelancer with 12+ years of experience, I partner with clients that have little tech knowledge. I manage web projects start-to-finish, implement, and more."
       >
@@ -79,6 +79,7 @@ function Index() {
             title="The Company of Dads"
             subtitle="community and content for lead dads"
             dates="2022.03 - Present"
+            isWide
             tags={[
               "wordpress",
               "advanced-custom-fields",
@@ -94,6 +95,7 @@ function Index() {
             title="COD Tools"
             subtitle="streamlined content publishing"
             dates="2022.12 - Present"
+            isWide
             tags={[
               "react",
               "remix.run",
@@ -107,21 +109,21 @@ function Index() {
             imagePlaceholderColor="#e0e0e0"
           />
         </div>
-      </ContentSection>
+      </DisplaySection>
 
       {/* That's the gist of it! */}
-      <ContentSection heading="That's the gist of it!">
+      <DisplaySection heading="That's the gist of it!">
         <div className="flex flex-wrap gap-4">
-          <Button href="/projects" variant="default" size="lg" hasArrow>
+          <Button href="/projects" variant="default" size="display" hasArrow>
             Explore more websites
           </Button>
           {/* TODO: Wire to resume PDF */}
-          <Button variant="outline" size="lg" hasArrow>Download Resume</Button>
+          <Button variant="outline" size="display" hasArrow>Download Resume</Button>
         </div>
-      </ContentSection>
+      </DisplaySection>
 
       {/* More than a developer */}
-      <ContentSection heading="(By the way, I'm more than just a developer.)">
+      <DisplaySection heading="(By the way, I'm more than just a developer.)">
         <p className="text-xl sm:text-2xl lg:text-[32px] lg:leading-[1.4] font-medium">
           Frog Caretaker, 日本語 Learner,
           {" "}
@@ -133,14 +135,14 @@ function Index() {
           Amateur Gardener...
         </p>
         <div className="flex flex-wrap gap-4 mt-8">
-          <Button href="/about" variant="default" size="lg" hasArrow>
+          <Button href="/about" variant="default" size="display" hasArrow>
             Biography
           </Button>
-          <Button href="/blog" variant="outline" size="lg" hasArrow>
+          <Button href="/blog" variant="outline" size="display" hasArrow>
             Blog
           </Button>
         </div>
-      </ContentSection>
+      </DisplaySection>
 
       {/* Blue CTA */}
       <section className="bg-portfolio-blue border-t-[24px] border-portfolio-blue-light">
@@ -151,9 +153,6 @@ function Index() {
           <p className="text-xl sm:text-2xl lg:text-[32px] font-medium text-white mt-2">
             I'm just an email away!
           </p>
-          <Button href="/contact" variant="secondary" size="lg" hasArrow className="border-white mt-6">
-            Contact Me
-          </Button>
         </div>
       </section>
     </>

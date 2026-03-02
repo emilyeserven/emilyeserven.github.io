@@ -10,6 +10,7 @@ interface ProjectCardProps {
   tags: string[];
   href?: string;
   imagePlaceholderColor?: string;
+  isWide?: boolean;
 }
 
 export type { ProjectCardProps };
@@ -45,6 +46,7 @@ export function ProjectCard({
   tags,
   href,
   imagePlaceholderColor = "#e5e5e5",
+  isWide = false,
 }: ProjectCardProps) {
   const imageContent = (
     <div
@@ -54,7 +56,7 @@ export function ProjectCard({
   );
 
   return (
-    <div className="group flex flex-col border-2 border-black bg-white overflow-hidden max-w-md">
+    <div className={`group flex flex-col border-2 border-black bg-white overflow-hidden${isWide ? "" : " max-w-md"}`}>
       {/* Image */}
       {href
         ? (

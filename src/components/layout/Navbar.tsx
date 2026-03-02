@@ -19,7 +19,7 @@ export function Navbar() {
         {/* Left: name + title */}
         <Link to="/" className="flex flex-col leading-tight">
           <span className="text-2xl lg:text-4xl font-bold">Emily Serven</span>
-          <span className="text-base lg:text-2xl">Software Engineer</span>
+          <span className="text-base lg:text-2xl">Senior Software Engineer</span>
         </Link>
 
         {/* Desktop nav */}
@@ -28,7 +28,7 @@ export function Navbar() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-lg lg:text-3xl font-semibold hover:opacity-70 transition-opacity"
+              className="text-base lg:text-xl font-semibold hover:opacity-70 transition-opacity"
             >
               {link.label}
             </Link>

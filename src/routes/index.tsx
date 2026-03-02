@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/layout/HeroSection";
 import { TextWithCardSection } from "@/components/ui/TextWithCardSection";
 import { ContentSection } from "@/components/ui/ContentSection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { ArrowButton } from "@/components/ui/ArrowButton";
+import { Button } from "@/components/shad/ui/button";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -100,10 +100,11 @@ function Index() {
       {/* That's the gist of it! */}
       <ContentSection heading="That's the gist of it!">
         <div className="flex flex-wrap gap-4">
-          <ArrowButton href="/projects" variant="blue">
+          <Button href="/projects" variant="default" size="lg" hasArrow>
             Explore more websites
-          </ArrowButton>
-          <ArrowButton variant="outline">Download Resume</ArrowButton>
+          </Button>
+          {/* TODO: Wire to resume PDF */}
+          <Button variant="outline" size="lg" hasArrow>Download Resume</Button>
         </div>
       </ContentSection>
 
@@ -116,16 +117,16 @@ function Index() {
             Photographer
           </span>
           , Designer, Wing Tsun Practitioner, Music Collector, Animation
-          Enthusiast, Gardener, Pasta &amp; Noodle Enthusiast, Tea Lover,
+          Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover,
           Amateur Gardener...
         </p>
         <div className="flex flex-wrap gap-4 mt-8">
-          <ArrowButton href="/about" variant="blue">
+          <Button href="/about" variant="default" size="lg" hasArrow>
             Biography
-          </ArrowButton>
-          <ArrowButton href="/blog" variant="outline">
+          </Button>
+          <Button href="/blog" variant="outline" size="lg" hasArrow>
             Blog
-          </ArrowButton>
+          </Button>
         </div>
       </ContentSection>
 
@@ -138,6 +139,9 @@ function Index() {
           <p className="text-xl sm:text-2xl lg:text-[32px] font-medium text-white mt-2">
             I'm just an email away!
           </p>
+          <Button href="/contact" variant="secondary" size="lg" hasArrow className="border-white mt-6">
+            Contact Me
+          </Button>
         </div>
       </section>
     </>

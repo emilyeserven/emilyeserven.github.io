@@ -1,9 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowButton } from "@/components/ui/ArrowButton";
+import { Button } from "@/components/shad/ui/button";
 
 const footerLinks = [
   { label: "About", to: "/about" },
-  { label: "Web Dev", to: "/projects" },
   { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
 ] as const;
@@ -23,9 +22,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left: CTA + social placeholders */}
           <div className="flex flex-col gap-4">
-            <ArrowButton href="/contact" variant="filled" className="border-white">
+            <Button href="/contact" variant="secondary" size="lg" hasArrow className="border-white">
               Contact Me
-            </ArrowButton>
+            </Button>
+            {/* TODO: Replace with real social links and descriptive aria-labels */}
             <div className="flex gap-3">
               {[1, 2, 3, 4].map(i => (
                 <div
@@ -51,7 +51,7 @@ export function Footer() {
               ))}
             </nav>
             <p className="text-lg lg:text-[28px] font-semibold">
-              Site dev &amp; design by Emily Serven
+              Site dev & design by Emily Serven
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 interface ProjectCardProps {
   title: string;
@@ -22,17 +23,14 @@ export function ProjectCard({
   href,
   imagePlaceholderColor = "#e5e5e5",
 }: ProjectCardProps) {
-  const Wrapper = href ? "a" : "div";
-  const wrapperProps = href ? { href } : {};
+  const isExternal = href?.startsWith("http");
+  const className = cn(
+    "group flex flex-col border-2 border-black bg-white overflow-hidden",
+    href && "cursor-pointer",
+  );
 
-  return (
-    <Wrapper
-      {...wrapperProps}
-      className={cn(
-        "group flex flex-col border-2 border-black bg-white overflow-hidden",
-        href && "cursor-pointer",
-      )}
-    >
+  const content = (
+    <>
       {/* Image placeholder */}
       <div
         className="h-48 sm:h-56 lg:h-72 w-full"
@@ -64,6 +62,24 @@ export function ProjectCard({
           )}
         </div>
       </div>
-    </Wrapper>
+    </>
   );
+
+  if (href && isExternal) {
+    return (
+      <a href={href} className={className}>
+        {content}
+      </a>
+    );
+  }
+
+  if (href) {
+    return (
+      <Link to={href} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }

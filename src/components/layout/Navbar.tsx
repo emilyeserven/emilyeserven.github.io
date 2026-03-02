@@ -40,6 +40,7 @@ export function Navbar() {
           className="md:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={mobileOpen}
         >
           <Menu className="size-6" />
         </button>

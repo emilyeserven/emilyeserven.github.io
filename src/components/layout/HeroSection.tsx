@@ -1,4 +1,4 @@
-import { ArrowButton } from "@/components/ui/ArrowButton";
+import { Button } from "@/components/shad/ui/button";
 
 export function HeroSection() {
   return (
@@ -37,10 +37,11 @@ export function HeroSection() {
 
         {/* CTA buttons */}
         <div className="flex flex-wrap gap-4 mt-6">
-          <ArrowButton variant="filled">Download Resume</ArrowButton>
-          <ArrowButton href="/projects" variant="outline">
+          {/* TODO: Wire to resume PDF */}
+          <Button variant="secondary" size="lg" hasArrow>Download Resume</Button>
+          <Button href="/projects" variant="outline" size="lg" hasArrow>
             View Projects
-          </ArrowButton>
+          </Button>
         </div>
       </div>
     </section>

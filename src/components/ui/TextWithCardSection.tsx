@@ -25,9 +25,7 @@ export function TextWithCardSection({
             {body}
           </p>
         </div>
-        <div className="max-w-md">
-          <ProjectCard {...project} />
-        </div>
+        <ProjectCard {...project} />
       </div>
     </section>
   );

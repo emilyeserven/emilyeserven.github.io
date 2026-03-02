@@ -25,7 +25,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   const isExternal = href?.startsWith("http");
   const className = cn(
-    "group flex flex-col border-2 border-black bg-white overflow-hidden",
+    "group flex flex-col border-2 border-black bg-white overflow-hidden max-w-md",
     href && "cursor-pointer",
   );
 

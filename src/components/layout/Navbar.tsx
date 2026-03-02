@@ -59,6 +59,7 @@ export function Navbar() {
           "md:hidden border-t border-black/10 bg-white/95 backdrop-blur-md overflow-hidden transition-all duration-200",
           mobileOpen ? "max-h-64 py-4" : "max-h-0",
         )}
+        inert={!mobileOpen ? true : undefined}
       >
         <div className="max-w-5xl mx-auto px-4 flex flex-col gap-3">
           {navLinks.map(link => (

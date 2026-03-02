@@ -91,7 +91,7 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="border-t-2 border-black p-4 flex flex-col gap-1">
-        <h3 className="text-2xl lg:text-3xl font-bold">
+        <h3 className="text-xl lg:text-2xl font-bold">
           {href
             ? (
                 <CardLink href={href} className="hover:opacity-70 transition-opacity">
@@ -102,7 +102,7 @@ export function ProjectCard({
                 title
               )}
         </h3>
-        <p className="text-lg lg:text-2xl">{subtitle}</p>
+        <p className="text-base lg:text-xl">{subtitle}</p>
 
         {(role || dates) && (
           <p className="text-sm lg:text-base font-medium mt-1">

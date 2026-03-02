@@ -22,7 +22,7 @@ export function HeroSection() {
           </p>
 
           {/* Tagline */}
-          <h1 className="mt-2 text-2xl sm:text-3xl lg:text-4xl lg:leading-12 font-semibold">
+          <h1 className="mt-4 text-2xl sm:text-3xl lg:text-4xl lg:leading-12 font-semibold">
             I develop scalable and usable experiences
           </h1>
           <p className="text-xl sm:text-2xl lg:text-3xl mt-1">

@@ -139,7 +139,7 @@ function Index() {
       <section className="bg-portfolio-blue border-t-24 border-portfolio-blue-light">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
           <h2 className="section-heading text-white">Need a website? Want to chat?</h2>
-          <p className="text-lg sm:text-xl lg:text-2xl mt-2 font-medium text-white">I'm just an email away!</p>
+          <p className="text-lg sm:text-xl lg:text-2xl mt-2 font-medium text-white"><a href="mailto:emily@emilyserven.net" className="underline underline-offset-4 hover:opacity-70 transition-opacity">I'm just an email away!</a></p>
         </div>
       </section>
     </>

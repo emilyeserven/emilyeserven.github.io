@@ -34,10 +34,10 @@ export function HeroSection() {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-wrap gap-4 mt-6">
+        <div className="flex flex-wrap -mt-0.5">
           {/* TODO: Wire to resume PDF */}
           <Button variant="secondary" size="display" hasArrow>Download Resume</Button>
-          <Button href="/projects" variant="outline" size="display" hasArrow>
+          <Button href="/projects" variant="outline" size="display" hasArrow className="-ml-0.5">
             View Projects
           </Button>
         </div>

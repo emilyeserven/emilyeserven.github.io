@@ -4,14 +4,11 @@ import { AvatarPill } from "@/components/ui/AvatarPill";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden border-b-4 border-black">
-      {/* Background placeholder — geometric pattern area */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 opacity-40" />
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(0,0,0,0.15) 40px, rgba(0,0,0,0.15) 42px), repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(0,0,0,0.15) 40px, rgba(0,0,0,0.15) 42px)",
-        }}
+      {/* Background image */}
+      <img
+        src="/hero-bg.png"
+        alt=""
+        className="absolute inset-0 size-full object-cover"
       />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -20,7 +17,7 @@ export function HeroSection() {
           {/* Greeting with headshot placeholder */}
           <p className="text-lg sm:text-xl lg:text-xl font-semibold flex items-center flex-wrap">
             <span>Nice to meet you! I'm</span>
-            <AvatarPill src="/headshot.jpg" alt="Emily Serven" fallback="ES" name="Emily" className="ml-2" />
+            <AvatarPill src="/headshot.png" alt="Emily Serven" fallback="ES" name="Emily" className="ml-2" />
             <span>.</span>
           </p>
 

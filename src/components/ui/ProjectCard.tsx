@@ -9,6 +9,7 @@ interface ProjectCardProps {
   dates?: string;
   tags: string[];
   href?: string;
+  imageSrc?: string;
   imagePlaceholderColor?: string;
   isWide?: boolean;
 }
@@ -45,10 +46,17 @@ export function ProjectCard({
   dates,
   tags,
   href,
+  imageSrc,
   imagePlaceholderColor = "#e5e5e5",
   isWide = false,
 }: ProjectCardProps) {
-  const imageContent = (
+  const imageContent = imageSrc ? (
+    <img
+      src={imageSrc}
+      alt={title}
+      className="h-48 sm:h-56 lg:h-72 w-full object-cover"
+    />
+  ) : (
     <div
       className="h-48 sm:h-56 lg:h-72 w-full"
       style={{ backgroundColor: imagePlaceholderColor }}

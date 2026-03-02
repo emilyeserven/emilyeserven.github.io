@@ -70,7 +70,8 @@ export function Footer() {
                 </Link>
               ))}
             </nav>
-            <p className="text-lg lg:text-3xl font-semibold">
+            <p className="text-lg lg:text-3xl font-semibold flex items-center gap-2">
+              <img src="/su-logo-white.svg" alt="" className="h-5 lg:h-7" />
               Site dev & design by Emily Serven
             </p>
           </div>

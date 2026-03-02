@@ -32,7 +32,7 @@ function Index() {
           dates="2025.06 - present"
           tags={["react", "data-viz", "typescript", "dashboard"]}
           href="#"
-          imagePlaceholderColor="#f2f2f2"
+          imageSrc="/projects/lazarus-ai.png"
         />
       </TwoColumnSection>
 
@@ -62,7 +62,7 @@ function Index() {
             "tailwind",
           ]}
           href="#"
-          imagePlaceholderColor="#e8e8e8"
+          imageSrc="/projects/panda5.png"
         />
       </TwoColumnSection>
 
@@ -86,7 +86,7 @@ function Index() {
               "prototyping",
             ]}
             href="#"
-            imagePlaceholderColor="#ddd"
+            imageSrc="/projects/company-of-dads.png"
           />
           <ProjectCard
             title="COD Tools"
@@ -103,7 +103,7 @@ function Index() {
               "tailwind",
             ]}
             href="#"
-            imagePlaceholderColor="#e0e0e0"
+            imageSrc="/projects/cod-tools.png"
           />
         </div>
       </DisplaySection>

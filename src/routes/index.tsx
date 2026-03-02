@@ -118,13 +118,16 @@ function Index() {
       {/* More than a developer */}
       <DisplaySection>
         <h2 className="section-heading">(By the way, I'm more than just a developer.)</h2>
-        <p className="section-body">Frog Caretaker, 日本語 Learner,{" "}
+        <p className="section-body">
+          Frog Caretaker, 日本語 Learner,
+          {" "}
           <span className="underline decoration-2 underline-offset-4">
             Photographer
           </span>
           , Designer, Wing Tsun Practitioner, Music Collector, Animation
           Enthusiast, Gardener, Pasta & Noodle Enthusiast, Tea Lover,
-          Amateur Gardener...</p>
+          Amateur Gardener...
+        </p>
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
           <Button href="/about" variant="default" size="display" hasArrow>
             Biography

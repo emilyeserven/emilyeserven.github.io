@@ -1,6 +1,5 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "radix-ui"
 import { Link } from "@tanstack/react-router"
 
 import { cn } from "@/lib/utils"
@@ -43,18 +42,16 @@ function Button({
   className,
   variant = "default",
   size = "default",
-  asChild = false,
   href,
   hasArrow = false,
   children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
     href?: string
     hasArrow?: boolean
   }) {
-  const combinedClassName = cn(buttonVariants({ variant, size }), className)
+  const Comp: React.ElementType = href ? Link : "button"
 
   const inner = (
     <>
@@ -63,45 +60,17 @@ function Button({
     </>
   )
 
-  if (href) {
-    return (
-      <Link
-        to={href}
-        data-slot="button"
-        data-variant={variant}
-        data-size={size}
-        className={combinedClassName}
-      >
-        {inner}
-      </Link>
-    )
-  }
-
-  if (asChild) {
-    return (
-      <Slot.Root
-        data-slot="button"
-        data-variant={variant}
-        data-size={size}
-        className={combinedClassName}
-        {...props}
-      >
-        {children}
-      </Slot.Root>
-    )
-  }
-
   return (
-    <button
-      type="button"
+    <Comp
+      {...(href ? { to: href } : { type: "button" })}
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={combinedClassName}
+      className={cn(buttonVariants({ variant, size }), className)}
       {...props}
     >
       {inner}
-    </button>
+    </Comp>
   )
 }
 

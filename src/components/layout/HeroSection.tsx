@@ -1,4 +1,5 @@
 import { Button } from "@/components/shad/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/shad/ui/avatar";
 
 export function HeroSection() {
   return (
@@ -19,8 +20,11 @@ export function HeroSection() {
           {/* Greeting with headshot placeholder */}
           <p className="text-lg sm:text-xl lg:text-[22px] font-semibold flex items-center gap-2 flex-wrap">
             <span>Nice to meet you! I'm</span>
-            <span className="inline-flex items-center gap-1.5 bg-black text-white rounded-full px-3 py-0.5 text-base lg:text-lg">
-              <span className="size-6 lg:size-8 rounded-full bg-gray-400 shrink-0" />
+            <span className="inline-flex items-center gap-1.5 bg-black text-white rounded-full pl-0 pr-3 py-0.5 text-base lg:text-lg">
+              <Avatar className="size-6 lg:size-8">
+                <AvatarImage src="/headshot.jpg" alt="Emily Serven" />
+                <AvatarFallback className="text-xs">ES</AvatarFallback>
+              </Avatar>
               Emily
             </span>
             <span>.</span>

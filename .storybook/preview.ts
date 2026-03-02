@@ -1,5 +1,12 @@
 import type { Preview } from "@storybook/react-vite";
 import { withThemeByClassName } from "@storybook/addon-themes";
+import {
+  createMemoryHistory,
+  createRootRoute,
+  createRouter,
+  RouterProvider,
+} from "@tanstack/react-router";
+import { createElement } from "react";
 import "../src/App.css";
 
 const preview: Preview = {
@@ -23,6 +30,16 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
+    (Story) => {
+      const rootRoute = createRootRoute({
+        component: Story,
+      });
+      const router = createRouter({
+        routeTree: rootRoute,
+        history: createMemoryHistory({ initialEntries: ["/"] }),
+      });
+      return createElement(RouterProvider, { router });
+    },
   ],
 };
 

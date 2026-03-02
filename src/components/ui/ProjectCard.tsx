@@ -91,7 +91,7 @@ export function ProjectCard({
 
       {/* Content */}
       <div className="border-t-2 border-black p-4 flex flex-col gap-1">
-        <h3 className="text-2xl lg:text-4xl font-bold">
+        <h3 className="text-2xl lg:text-3xl font-bold">
           {href
             ? (
                 <CardLink href={href} className="hover:opacity-70 transition-opacity">

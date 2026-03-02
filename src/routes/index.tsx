@@ -33,6 +33,8 @@ function Index() {
           tags={["react", "data-viz", "typescript", "dashboard"]}
           href="#"
           imageSrc="/projects/lazarus-ai.png"
+          imageFit="contain"
+          imagePlaceholderColor="#f2f2f2"
         />
       </TwoColumnSection>
 
@@ -63,6 +65,8 @@ function Index() {
           ]}
           href="#"
           imageSrc="/projects/panda5.png"
+          imageFit="contain"
+          imagePlaceholderColor="#ffffff"
         />
       </TwoColumnSection>
 

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/shad/ui/button";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
   tags: string[];
   href?: string;
   imageSrc?: string;
+  imageFit?: "cover" | "contain";
   imagePlaceholderColor?: string;
   isWide?: boolean;
 }
@@ -47,15 +49,24 @@ export function ProjectCard({
   tags,
   href,
   imageSrc,
+  imageFit = "cover",
   imagePlaceholderColor = "#e5e5e5",
   isWide = false,
 }: ProjectCardProps) {
   const imageContent = imageSrc ? (
-    <img
-      src={imageSrc}
-      alt={title}
-      className="h-48 sm:h-56 lg:h-72 w-full object-cover"
-    />
+    <div
+      className="h-48 sm:h-56 lg:h-72 w-full"
+      style={{ backgroundColor: imageFit === "contain" ? imagePlaceholderColor : undefined }}
+    >
+      <img
+        src={imageSrc}
+        alt={title}
+        className={cn(
+          "size-full",
+          imageFit === "contain" ? "object-contain p-6" : "object-cover",
+        )}
+      />
+    </div>
   ) : (
     <div
       className="h-48 sm:h-56 lg:h-72 w-full"

@@ -27,3 +27,11 @@ export const WithoutLink: Story = {
 export const MinimalFields: Story = {
   args: { role: undefined, dates: undefined },
 };
+
+export const ContainFit: Story = {
+  args: {
+    imageSrc: "/projects/lazarus-ai.png",
+    imageFit: "contain",
+    imagePlaceholderColor: "#f2f2f2",
+  },
+};

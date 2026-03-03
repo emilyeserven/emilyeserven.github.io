@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function useThemeToggle() {
   const [dark, setDark] = useState(() => {
@@ -12,6 +12,19 @@ export function useThemeToggle() {
     }
     return false;
   });
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    function handleChange(e: MediaQueryListEvent) {
+      if (!localStorage.getItem("theme")) {
+        const next = e.matches;
+        document.documentElement.classList.toggle("dark", next);
+        setDark(next);
+      }
+    }
+    mq.addEventListener("change", handleChange);
+    return () => mq.removeEventListener("change", handleChange);
+  }, []);
 
   function toggle() {
     const next = !dark;

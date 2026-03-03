@@ -28,7 +28,6 @@ function Projects() {
           tags={["react", "data-viz", "typescript", "dashboard"]}
           imageSrc="/projects/lazarus-ai.png"
           imageFit="contain"
-          imagePlaceholderColor="#f2f2f2"
         />
         <ProjectCard
           title="Panda5"
@@ -47,12 +46,11 @@ function Projects() {
           ]}
           imageSrc="/projects/panda5.png"
           imageFit="contain"
-          imagePlaceholderColor="#ffffff"
         />
         <ProjectCard
           title="The Company of Dads"
           subtitle="community and content for lead dads"
-          dates="2022.03 - Present"
+          dates="2022.03 - present"
           tags={[
             "wordpress",
             "advanced-custom-fields",
@@ -66,7 +64,7 @@ function Projects() {
         <ProjectCard
           title="COD Tools"
           subtitle="streamlined content publishing"
-          dates="2022.12 - Present"
+          dates="2022.12 - present"
           tags={[
             "react",
             "remix.run",

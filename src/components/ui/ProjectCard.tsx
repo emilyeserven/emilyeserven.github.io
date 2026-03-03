@@ -52,10 +52,16 @@ export function ProjectCard({
   imageSize = "default",
   isWide = false,
 }: ProjectCardProps) {
+  const imageHeightClass = imageSize === "tall"
+    ? "h-48 sm:h-56 lg:h-72"
+    : imageSize === "medium"
+      ? "h-40 sm:h-48 lg:h-56"
+      : "h-36 sm:h-40 lg:h-48";
+
   const imageContent = imageSrc
     ? (
         <div
-          className={cn("w-full", imageSize === "tall" ? "h-48 sm:h-56 lg:h-72" : imageSize === "medium" ? "h-40 sm:h-48 lg:h-56" : "h-36 sm:h-40 lg:h-48")}
+          className={cn("w-full", imageHeightClass)}
           style={{ backgroundColor: imageFit === "contain" ? imagePlaceholderColor : undefined }}
         >
           <img
@@ -70,7 +76,7 @@ export function ProjectCard({
       )
     : (
         <div
-          className={cn("w-full", imageSize === "tall" ? "h-48 sm:h-56 lg:h-72" : imageSize === "medium" ? "h-40 sm:h-48 lg:h-56" : "h-36 sm:h-40 lg:h-48")}
+          className={cn("w-full", imageHeightClass)}
           style={{ backgroundColor: imagePlaceholderColor }}
         />
       );

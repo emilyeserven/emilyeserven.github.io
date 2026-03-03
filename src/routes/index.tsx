@@ -30,7 +30,6 @@ function Index() {
           tags={["react", "data-viz", "typescript", "dashboard"]}
           imageSrc="/projects/lazarus-ai.png"
           imageFit="contain"
-          imagePlaceholderColor="#f2f2f2"
           imageSize="medium"
         />
       </TwoColumnSection>
@@ -58,7 +57,6 @@ function Index() {
           ]}
           imageSrc="/projects/panda5.png"
           imageFit="contain"
-          imagePlaceholderColor="#ffffff"
           imageSize="medium"
         />
       </TwoColumnSection>
@@ -71,7 +69,7 @@ function Index() {
           <ProjectCard
             title="The Company of Dads"
             subtitle="community and content for lead dads"
-            dates="2022.03 - Present"
+            dates="2022.03 - present"
             isWide
             tags={[
               "wordpress",
@@ -87,7 +85,7 @@ function Index() {
           <ProjectCard
             title="COD Tools"
             subtitle="streamlined content publishing"
-            dates="2022.12 - Present"
+            dates="2022.12 - present"
             isWide
             tags={[
               "react",
@@ -112,7 +110,7 @@ function Index() {
             Explore more websites
           </LinkButton>
           {/* TODO: Wire to resume PDF */}
-          <Button variant="outline" size="display" hasArrow>Download Resume</Button>
+          <Button variant="outline" size="display" hasArrow disabled>Download Resume</Button>
         </div>
       </DisplaySection>
 

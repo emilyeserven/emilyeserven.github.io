@@ -35,7 +35,10 @@ export function HeroSection() {
         {/* CTA buttons */}
         <div className="flex flex-wrap -mt-0.5">
           <Button asChild variant="secondary" size="display">
-            <a href="/assets/emily-serven-resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume <span aria-hidden="true" className="no-underline">→</span></a>
+            <a href="/assets/emily-serven-resume.pdf" target="_blank" rel="noopener noreferrer">
+              Download Resume
+              <span aria-hidden="true" className="no-underline">→</span>
+            </a>
           </Button>
           <LinkButton to="/projects" variant="outline" size="display" hasArrow className="-ml-0.5 hover:border-l-white">
             View Projects

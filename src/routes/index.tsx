@@ -108,7 +108,7 @@ function Index() {
             Explore more websites
           </LinkButton>
           {/* TODO: Wire to resume PDF */}
-          <Button variant="outline" size="display" hasArrow disabled>Download Resume</Button>
+          <Button variant="outline" size="display" hasArrow>Download Resume</Button>
         </div>
       </DisplaySection>
 
@@ -128,9 +128,6 @@ function Index() {
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
           <LinkButton to="/about" variant="default" size="display" hasArrow>
             Biography
-          </LinkButton>
-          <LinkButton to="/blog" variant="outline" size="display" hasArrow>
-            Blog
           </LinkButton>
         </div>
       </DisplaySection>

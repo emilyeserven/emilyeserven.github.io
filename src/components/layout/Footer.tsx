@@ -58,7 +58,7 @@ export function Footer() {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="text-base lg:text-xl font-semibold hover:opacity-70 transition-opacity"
+                  className="text-sm lg:text-lg font-semibold hover:underline underline-offset-4 transition-opacity"
                 >
                   {link.label}
                 </Link>

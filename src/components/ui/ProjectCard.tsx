@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/shad/ui/button";
+import { Button, buttonVariants } from "@/components/shad/ui/button";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -74,7 +74,7 @@ export function ProjectCard({
       );
 
   return (
-    <div className={cn("group flex flex-col border-2 border-black bg-white overflow-hidden", !isWide && "max-w-md")}>
+    <div className={cn("group flex flex-col border-2 border-black dark:border-white bg-white dark:bg-black overflow-hidden", !isWide && "max-w-md")}>
       {/* Image */}
       {href
         ? (
@@ -87,7 +87,7 @@ export function ProjectCard({
           )}
 
       {/* Content */}
-      <div className="border-t-2 border-black p-4 flex flex-col gap-1">
+      <div className="border-t-2 border-black dark:border-white p-4 flex flex-col gap-1">
         <h3 className="text-xl lg:text-2xl font-bold">
           {href
             ? (
@@ -110,11 +110,11 @@ export function ProjectCard({
         )}
 
         <div className="flex items-end justify-between gap-2 mt-1">
-          <p className="text-sm lg:text-base font-light text-black/60 flex-1">
+          <p className="text-sm lg:text-base font-light text-black/60 dark:text-white/75 flex-1">
             {tags.map(tag => `#${tag}`).join("    ")}
           </p>
 
-          {href && (
+          {href ? (
             <Button
               asChild
               variant="secondary"
@@ -125,6 +125,10 @@ export function ProjectCard({
                 <ArrowRight className="size-5 lg:size-7" />
               </CardLink>
             </Button>
+          ) : (
+            <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0")}>
+              <ArrowRight className="size-5 lg:size-7" />
+            </span>
           )}
         </div>
       </div>

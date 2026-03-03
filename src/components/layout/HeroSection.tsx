@@ -4,7 +4,7 @@ import { AvatarPill } from "@/components/ui/AvatarPill";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden border-b-4 border-black">
+    <section className="relative overflow-hidden border-b-4 border-black dark:border-white">
       {/* Background image */}
       <img
         src="/hero-bg.png"
@@ -15,7 +15,7 @@ export function HeroSection() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         {/* Frosted glass card */}
-        <div className="bg-white/90 backdrop-blur-lg border-2 border-black px-4 py-2 sm:p-6 max-w-3xl">
+        <div className="bg-white/90 dark:bg-black/80 backdrop-blur-lg border-2 border-black dark:border-white px-4 py-2 sm:p-6 max-w-3xl">
           {/* Greeting with headshot placeholder */}
           <p className="text-xl sm:text-2xl lg:text-3xl flex items-center flex-wrap">
             <span>Nice to meet you! I'm</span>
@@ -35,7 +35,7 @@ export function HeroSection() {
         {/* CTA buttons */}
         <div className="flex flex-wrap -mt-0.5">
           {/* TODO: Wire to resume PDF */}
-          <Button variant="secondary" size="display" hasArrow disabled>Download Resume</Button>
+          <Button variant="secondary" size="display" hasArrow>Download Resume</Button>
           <LinkButton to="/projects" variant="outline" size="display" hasArrow className="-ml-0.5">
             View Projects
           </LinkButton>

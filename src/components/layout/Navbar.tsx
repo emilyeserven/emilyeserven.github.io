@@ -1,17 +1,30 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { Menu } from "lucide-react";
+import { Menu, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "About", to: "/about" },
   { label: "Projects", to: "/projects" },
-  { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
+function useThemeToggle() {
+  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+
+  function toggle() {
+    const next = !dark;
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+    setDark(next);
+  }
+
+  return { dark, toggle };
+}
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { dark, toggle: toggleTheme } = useThemeToggle();
   const location = useLocation();
   const [prevPathname, setPrevPathname] = useState(location.pathname);
 
@@ -21,7 +34,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-4 border-black">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b-4 border-black dark:border-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
         {/* Left: name + title */}
         <Link to="/" className="flex flex-col leading-tight">
@@ -35,28 +48,44 @@ export function Navbar() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-base lg:text-xl font-semibold hover:opacity-70 transition-opacity"
+              className="text-sm lg:text-lg font-semibold hover:underline underline-offset-4 transition-opacity"
             >
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={toggleTheme}
+            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+            className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
+          >
+            {dark ? <Sun className="size-5 lg:size-6" /> : <Moon className="size-5 lg:size-6" />}
+          </button>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle navigation"
-          aria-expanded={mobileOpen}
-        >
-          <Menu className="size-6" />
-        </button>
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-1">
+          <button
+            onClick={toggleTheme}
+            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+            className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
+          >
+            {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
+          </button>
+          <button
+            className="p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
+          >
+            <Menu className="size-6" />
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav dropdown */}
       <nav
         className={cn(
-          "md:hidden border-t border-black/10 bg-white/95 backdrop-blur-md overflow-hidden transition-all duration-200",
+          "md:hidden border-t border-black/10 dark:border-white/10 bg-white/95 dark:bg-black/95 backdrop-blur-md overflow-hidden transition-all duration-200",
           mobileOpen ? "max-h-64 py-4" : "max-h-0",
         )}
         inert={!mobileOpen ? true : undefined}

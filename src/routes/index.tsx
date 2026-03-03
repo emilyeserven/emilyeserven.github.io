@@ -109,8 +109,8 @@ function Index() {
           <LinkButton to="/projects" variant="default" size="display" hasArrow>
             Explore more websites
           </LinkButton>
-          <Button asChild variant="outline" size="display" hasArrow>
-            <a href="/assets/emily-serven-resume.pdf">Download Resume</a>
+          <Button asChild variant="outline" size="display">
+            <a href="/assets/emily-serven-resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume <span aria-hidden="true" className="no-underline">→</span></a>
           </Button>
         </div>
       </DisplaySection>

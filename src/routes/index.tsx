@@ -17,7 +17,7 @@ function Index() {
       <HeroSection />
 
       {/* Front-end dev + Lazarus AI */}
-      <TwoColumnSection>
+      <TwoColumnSection centered className="-mt-14 sm:-mt-16 lg:-mt-20 relative z-10">
         <div>
           <h2 className="section-heading">I'm usually a front-end dev for JavaScript web apps.</h2>
           <p className="section-body mt-4">My work does skew towards ReactJS, but my foundation in vanilla JS allows me to pivot if needed.</p>
@@ -26,16 +26,17 @@ function Index() {
           title="Lazarus AI"
           subtitle="AI for the public sector"
           role="software engineer"
-          dates="2025.06 - present"
+          dates="2025.06 - 2026.01"
           tags={["react", "data-viz", "typescript", "dashboard"]}
           imageSrc="/projects/lazarus-ai.png"
           imageFit="contain"
           imagePlaceholderColor="#f2f2f2"
+          imageSize="medium"
         />
       </TwoColumnSection>
 
       {/* Full-stack frameworks + Panda5 */}
-      <TwoColumnSection>
+      <TwoColumnSection centered>
         <div>
           <h2 className="section-heading">Lately, I've been exploring full-stack frameworks.</h2>
           <p className="section-body mt-4">Being able to understand as much of the tech stack as I can has been an exciting journey, and I'm eager to continue.</p>
@@ -58,6 +59,7 @@ function Index() {
           imageSrc="/projects/panda5.png"
           imageFit="contain"
           imagePlaceholderColor="#ffffff"
+          imageSize="medium"
         />
       </TwoColumnSection>
 
@@ -80,6 +82,7 @@ function Index() {
               "prototyping",
             ]}
             imageSrc="/projects/company-of-dads.png"
+            imageSize="tall"
           />
           <ProjectCard
             title="COD Tools"
@@ -96,6 +99,7 @@ function Index() {
               "tailwind",
             ]}
             imageSrc="/projects/cod-tools.png"
+            imageSize="tall"
           />
         </div>
       </DisplaySection>

@@ -13,6 +13,7 @@ interface ProjectCardProps {
   imageSrc?: string;
   imageFit?: "cover" | "contain";
   imagePlaceholderColor?: string;
+  imageSize?: "default" | "medium" | "tall";
   isWide?: boolean;
 }
 
@@ -47,13 +48,14 @@ export function ProjectCard({
   href,
   imageSrc,
   imageFit = "cover",
-  imagePlaceholderColor = "#e5e5e5",
+  imagePlaceholderColor = "transparent",
+  imageSize = "default",
   isWide = false,
 }: ProjectCardProps) {
   const imageContent = imageSrc
     ? (
         <div
-          className="h-48 sm:h-56 lg:h-72 w-full"
+          className={cn("w-full", imageSize === "tall" ? "h-48 sm:h-56 lg:h-72" : imageSize === "medium" ? "h-40 sm:h-48 lg:h-56" : "h-36 sm:h-40 lg:h-48")}
           style={{ backgroundColor: imageFit === "contain" ? imagePlaceholderColor : undefined }}
         >
           <img
@@ -68,7 +70,7 @@ export function ProjectCard({
       )
     : (
         <div
-          className="h-48 sm:h-56 lg:h-72 w-full"
+          className={cn("w-full", imageSize === "tall" ? "h-48 sm:h-56 lg:h-72" : imageSize === "medium" ? "h-40 sm:h-48 lg:h-56" : "h-36 sm:h-40 lg:h-48")}
           style={{ backgroundColor: imagePlaceholderColor }}
         />
       );
@@ -87,51 +89,57 @@ export function ProjectCard({
           )}
 
       {/* Content */}
-      <div className="border-t-2 border-black dark:border-white p-4 flex flex-col gap-1">
-        <h3 className="text-xl lg:text-2xl font-bold">
-          {href
-            ? (
-                <CardLink href={href} className="hover:opacity-70 transition-opacity">
-                  {title}
-                </CardLink>
-              )
-            : (
-                title
-              )}
-        </h3>
-        <p className="text-base lg:text-xl">{subtitle}</p>
-
-        {(role || dates) && (
-          <p className="text-sm lg:text-base font-medium mt-1">
-            {role}
-            {role && dates && "  //  "}
-            {dates}
-          </p>
-        )}
-
-        <div className="flex items-end justify-between gap-2 mt-1">
-          <p className="text-sm lg:text-base font-light text-black/60 dark:text-white/75 flex-1">
-            {tags.map(tag => `#${tag}`).join("    ")}
-          </p>
-
-          {href
-            ? (
-                <Button
-                  asChild
-                  variant="secondary"
-                  size="icon-lg"
-                  className="lg:size-15 shrink-0"
-                >
-                  <CardLink href={href} aria-label={`View ${title}`}>
-                    <ArrowRight className="size-5 lg:size-7" />
+      <div className="border-t-2 border-black dark:border-white pt-2 px-2 flex flex-col justify-between gap-4 flex-1">
+        {/* Top group: company + tagline */}
+        <div>
+          <h3 className="text-xl lg:text-2xl font-bold">
+            {href
+              ? (
+                  <CardLink href={href} className="hover:opacity-70 transition-opacity">
+                    {title}
                   </CardLink>
-                </Button>
-              )
-            : (
-                <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0")}>
-                  <ArrowRight className="size-5 lg:size-7" />
-                </span>
-              )}
+                )
+              : (
+                  title
+                )}
+          </h3>
+          <p className="text-base lg:text-xl mt-1">{subtitle}</p>
+        </div>
+
+        {/* Bottom group: role/dates, tags, arrow */}
+        <div>
+          {(role || dates) && (
+            <p className="text-sm lg:text-base font-medium leading-tight">
+              {role}
+              {role && dates && "  //  "}
+              {dates}
+            </p>
+          )}
+
+          <div className="flex items-end justify-between gap-4 pt-2 -mx-2">
+            <p className="text-xs lg:text-sm font-light text-black/60 dark:text-white/75 flex-1 pb-2 pl-2">
+              {tags.map(tag => `#${tag}`).join("    ")}
+            </p>
+
+            {href
+              ? (
+                  <Button
+                    asChild
+                    variant="secondary"
+                    size="icon-lg"
+                    className="lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]"
+                  >
+                    <CardLink href={href} aria-label={`View ${title}`}>
+                      <ArrowRight className="size-5 lg:size-7" />
+                    </CardLink>
+                  </Button>
+                )
+              : (
+                  <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]")}>
+                    <ArrowRight className="size-5 lg:size-7" />
+                  </span>
+                )}
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useThemeToggle } from "@/hooks/useThemeToggle";
 
 const navLinks = [
   { label: "About", to: "/about" },
@@ -9,17 +10,24 @@ const navLinks = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-function useThemeToggle() {
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
-
-  function toggle() {
-    const next = !dark;
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-    setDark(next);
-  }
-
-  return { dark, toggle };
+function ThemeToggleButton({
+  dark,
+  onToggle,
+  iconClass,
+}: {
+  dark: boolean;
+  onToggle: () => void;
+  iconClass: string;
+}) {
+  return (
+    <button
+      onClick={onToggle}
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
+    >
+      {dark ? <Sun className={iconClass} /> : <Moon className={iconClass} />}
+    </button>
+  );
 }
 
 export function Navbar() {
@@ -53,24 +61,12 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={toggleTheme}
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-            className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
-          >
-            {dark ? <Sun className="size-5 lg:size-6" /> : <Moon className="size-5 lg:size-6" />}
-          </button>
+          <ThemeToggleButton dark={dark} onToggle={toggleTheme} iconClass="size-5 lg:size-6" />
         </nav>
 
         {/* Mobile: theme toggle + hamburger */}
         <div className="md:hidden flex items-center gap-1">
-          <button
-            onClick={toggleTheme}
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-            className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
-          >
-            {dark ? <Sun className="size-5" /> : <Moon className="size-5" />}
-          </button>
+          <ThemeToggleButton dark={dark} onToggle={toggleTheme} iconClass="size-5" />
           <button
             className="p-2"
             onClick={() => setMobileOpen(!mobileOpen)}

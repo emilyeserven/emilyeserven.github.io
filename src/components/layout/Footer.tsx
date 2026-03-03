@@ -27,6 +27,7 @@ const quote = quotes[Math.floor(Math.random() * quotes.length)];
 export function Footer() {
   return (
     <footer className="bg-black text-white">
+      {/* Footer is intentionally always-dark — no dark: variant classes needed */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
         {/* Top row */}
         <div className="flex flex-col md:flex-row md:items-stretch md:justify-between gap-6">

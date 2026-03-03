@@ -13,7 +13,7 @@ export function HeroSection() {
         className="absolute inset-0 size-full object-cover"
       />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 pb-32 sm:pb-36 lg:pb-44">
         {/* Frosted glass card */}
         <div className="bg-white/90 dark:bg-black/80 backdrop-blur-lg border-2 border-black dark:border-white px-4 py-2 sm:p-6 max-w-3xl">
           {/* Greeting with headshot placeholder */}

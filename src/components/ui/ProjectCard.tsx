@@ -114,22 +114,24 @@ export function ProjectCard({
             {tags.map(tag => `#${tag}`).join("    ")}
           </p>
 
-          {href ? (
-            <Button
-              asChild
-              variant="secondary"
-              size="icon-lg"
-              className="lg:size-15 shrink-0"
-            >
-              <CardLink href={href} aria-label={`View ${title}`}>
-                <ArrowRight className="size-5 lg:size-7" />
-              </CardLink>
-            </Button>
-          ) : (
-            <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0")}>
-              <ArrowRight className="size-5 lg:size-7" />
-            </span>
-          )}
+          {href
+            ? (
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="icon-lg"
+                  className="lg:size-15 shrink-0"
+                >
+                  <CardLink href={href} aria-label={`View ${title}`}>
+                    <ArrowRight className="size-5 lg:size-7" />
+                  </CardLink>
+                </Button>
+              )
+            : (
+                <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0")}>
+                  <ArrowRight className="size-5 lg:size-7" />
+                </span>
+              )}
         </div>
       </div>
     </div>

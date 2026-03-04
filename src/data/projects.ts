@@ -3,40 +3,44 @@ import type { ProjectCardProps } from "@/components/ui/ProjectCard";
 export interface ProjectData extends ProjectCardProps {
   category: string;
   isFeatured: boolean;
-  sortDate: number;
+  startDate: number;
+  endDate: number;
 }
 
+/** Use for ongoing projects in endDate */
+export const PRESENT = 999999;
+
 export const categories = [
-  "PubSec Web App",
-  "Commercial Web App",
-  "Marketing Site",
-  "Dev Project",
+  "PubSec",
+  "Social Networking",
+  "Commercial",
+  "Media & Publishing",
 ] as const;
 
 export const twelveLabs: ProjectData = {
   title: "TwelveLabs",
   subtitle: "multimodal AI video understanding",
-  role: "software engineer",
   dates: "2026.01 - present",
   tags: ["react", "typescript", "video", "ai"],
   imageSrc: "/projects/twelvelabs.png",
   imageFit: "contain",
-  category: "PubSec Web App",
+  category: "PubSec",
   isFeatured: true,
-  sortDate: 202601,
+  startDate: 202601,
+  endDate: PRESENT,
 };
 
 export const lazarusAi: ProjectData = {
   title: "Lazarus AI",
   subtitle: "AI for the public sector",
-  role: "software engineer",
   dates: "2025.06 - 2026.01",
   tags: ["react", "data-viz", "typescript", "dashboard"],
   imageSrc: "/projects/lazarus-ai.png",
   imageFit: "contain",
-  category: "PubSec Web App",
+  category: "PubSec",
   isFeatured: true,
-  sortDate: 202506,
+  startDate: 202506,
+  endDate: 202601,
 };
 
 export const panda5: ProjectData = {
@@ -56,9 +60,10 @@ export const panda5: ProjectData = {
   ],
   imageSrc: "/projects/panda5.png",
   imageFit: "contain",
-  category: "Commercial Web App",
+  category: "Social Networking",
   isFeatured: false,
-  sortDate: 202301,
+  startDate: 202301,
+  endDate: 202305,
 };
 
 export const companyOfDads: ProjectData = {
@@ -74,9 +79,10 @@ export const companyOfDads: ProjectData = {
     "prototyping",
   ],
   imageSrc: "/projects/company-of-dads.png",
-  category: "Marketing Site",
+  category: "Media & Publishing",
   isFeatured: false,
-  sortDate: 202203,
+  startDate: 202203,
+  endDate: PRESENT,
 };
 
 export const codTools: ProjectData = {
@@ -93,9 +99,131 @@ export const codTools: ProjectData = {
     "tailwind",
   ],
   imageSrc: "/projects/cod-tools.png",
-  category: "Dev Project",
+  category: "Media & Publishing",
   isFeatured: false,
-  sortDate: 202212,
+  startDate: 202212,
+  endDate: PRESENT,
+};
+
+export const aitrk: ProjectData = {
+  title: "AiTrk4 for Ai Media Group",
+  subtitle: "proprietary ad buying dashboard",
+  role: "front-end development",
+  dates: "2018.07 - 2021.06",
+  tags: ["javascript", "d3", "dojo-toolkit"],
+  imageSrc: "/projects/aitrk.jpg",
+  imageFit: "cover",
+  category: "Commercial",
+  isFeatured: false,
+  startDate: 201807,
+  endDate: 202106,
+};
+
+export const lumi: ProjectData = {
+  title: "Daylight for Luminoso",
+  subtitle: "NLP data visualization dashboard",
+  role: "front-end development",
+  dates: "2021.10 - 2022.11",
+  tags: ["react", "styled-components", "storybook", "jest"],
+  imageSrc: "/projects/lumi.jpg",
+  imageFit: "cover",
+  href: "https://www.luminoso.com/daylight",
+  category: "Commercial",
+  isFeatured: false,
+  startDate: 202110,
+  endDate: 202211,
+};
+
+export const scuba: ProjectData = {
+  title: "Scuba Analytics",
+  subtitle: "customer intelligence platform",
+  role: "front-end development",
+  dates: "2023.03 - 2025.05",
+  tags: ["react", "redux", "jest"],
+  imageSrc: "/projects/scuba.jpg",
+  imageFit: "cover",
+  href: "https://www.scuba.io/product",
+  category: "Commercial",
+  isFeatured: false,
+  startDate: 202303,
+  endDate: 202505,
+};
+
+export const d3Music: ProjectData = {
+  title: "D3 Music Experiments",
+  subtitle: "interactive music data visualizations",
+  tags: ["d3", "javascript"],
+  imageSrc: "/projects/d3.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 0,
+  endDate: 0,
+};
+
+export const moneyMachine: ProjectData = {
+  title: "The Money Machine",
+  subtitle: "creative class project collaboration",
+  dates: "Oct 2017",
+  tags: ["html", "css", "javascript", "jquery"],
+  imageSrc: "/projects/moneymach.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 201710,
+  endDate: 201710,
+};
+
+export const nyExcelsior: ProjectData = {
+  title: "New York Excelsior Concept Site",
+  subtitle: "esports team concept website",
+  dates: "Feb 2018",
+  tags: ["html", "css"],
+  imageSrc: "/projects/nyexcelsior.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 201802,
+  endDate: 201802,
+};
+
+export const ornette: ProjectData = {
+  title: "Ornette",
+  subtitle: "single-page design experiment",
+  dates: "Feb 2016",
+  tags: ["html", "css"],
+  imageSrc: "/projects/ornette.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 201602,
+  endDate: 201602,
+};
+
+export const rockPaperScissors: ProjectData = {
+  title: "Rock Paper Scissors",
+  subtitle: "DOM manipulation practice project",
+  dates: "Aug 2016",
+  tags: ["html", "css", "javascript"],
+  imageSrc: "/projects/rockpaperscissors.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 201608,
+  endDate: 201608,
+};
+
+export const quoteLovecraft: ProjectData = {
+  title: "Typography - Lovecraft",
+  subtitle: "blackletter typography mood piece",
+  dates: "Oct 2014",
+  tags: ["html", "css"],
+  imageSrc: "/projects/quote-lc.jpg",
+  imageFit: "cover",
+  category: "Lab",
+  isFeatured: false,
+  startDate: 201410,
+  endDate: 201410,
 };
 
 export const allProjects: ProjectData[] = [
@@ -104,4 +232,16 @@ export const allProjects: ProjectData[] = [
   panda5,
   companyOfDads,
   codTools,
+  aitrk,
+  lumi,
+  scuba,
+];
+
+export const labProjects: ProjectData[] = [
+  d3Music,
+  moneyMachine,
+  nyExcelsior,
+  ornette,
+  rockPaperScissors,
+  quoteLovecraft,
 ];

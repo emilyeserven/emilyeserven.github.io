@@ -89,7 +89,7 @@ export function ProjectCard({
         ? "text-xs"
         : "text-xs lg:text-sm";
 
-  const showRoleDates = variant !== "compact";
+  const showRole = variant !== "compact";
 
   const imageContent = imageSrc
     ? (
@@ -136,7 +136,7 @@ export function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="border-t-2 border-black dark:border-white pt-2 px-2 flex flex-col justify-between gap-4 flex-1">
+      <div className="border-t-2 border-black dark:border-white px-2 flex flex-col justify-between flex-1 pt-2 gap-4">
         {/* Top group: company + tagline */}
         <div className={cn(category && "mt-2")}>
           <h3 className={cn(titleClass, "font-bold")}>
@@ -155,10 +155,10 @@ export function ProjectCard({
 
         {/* Bottom group: role/dates, tags, arrow */}
         <div>
-          {showRoleDates && (role || dates) && (
+          {((showRole && role) || dates) && (
             <p className="text-sm lg:text-base font-medium leading-tight">
-              {role}
-              {role && dates && "  //  "}
+              {showRole && role}
+              {showRole && role && dates && "  //  "}
               {dates}
             </p>
           )}
@@ -172,11 +172,11 @@ export function ProjectCard({
               <Button
                 asChild
                 variant="secondary"
-                size="icon-lg"
-                className="lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]"
+                size={variant === "compact" ? "icon" : "icon-lg"}
+                className={cn("shrink-0 rounded-none -mb-[2px] -mr-[2px]", variant === "compact" ? "size-10" : "lg:size-15")}
               >
                 <CardLink href={href} aria-label={`View ${title}`}>
-                  <ArrowRight className="size-5 lg:size-7" />
+                  <ArrowRight className={variant === "compact" ? "size-5" : "size-5 lg:size-7"} />
                 </CardLink>
               </Button>
             )}

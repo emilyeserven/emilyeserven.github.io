@@ -41,8 +41,8 @@ export function HeroSection() {
             </a>
           </Button>
           {/* -ml-0.5 overlaps left border with adjacent button; hover:border-l-white hides the seam */}
-          <LinkButton to="/projects" variant="outline" size="display" hasArrow className="-ml-0.5 hover:border-l-white">
-            View Projects
+          <LinkButton to="/work" variant="outline" size="display" hasArrow className="-ml-0.5 hover:border-l-white">
+            View Work
           </LinkButton>
         </div>
       </div>

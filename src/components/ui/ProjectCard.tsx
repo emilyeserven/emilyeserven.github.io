@@ -15,6 +15,8 @@ interface ProjectCardProps {
   imagePlaceholderColor?: string;
   imageSize?: "default" | "medium" | "tall";
   isWide?: boolean;
+  category?: string;
+  variant?: "default" | "featured" | "compact";
 }
 
 export type { ProjectCardProps };
@@ -52,12 +54,42 @@ export function ProjectCard({
   imagePlaceholderColor = "transparent",
   imageSize = "default",
   isWide = false,
+  category,
+  variant = "default",
 }: ProjectCardProps) {
-  const imageHeightClass = imageSize === "tall"
-    ? "h-48 sm:h-56 lg:h-72"
-    : imageSize === "medium"
-      ? "h-40 sm:h-48 lg:h-56"
-      : "h-36 sm:h-40 lg:h-48";
+  const imageHeightClass
+    = variant === "featured"
+      ? "h-48 sm:h-56 lg:h-72"
+      : variant === "compact"
+        ? "h-32 sm:h-36 lg:h-40"
+        : imageSize === "tall"
+          ? "h-48 sm:h-56 lg:h-72"
+          : imageSize === "medium"
+            ? "h-40 sm:h-48 lg:h-56"
+            : "h-36 sm:h-40 lg:h-48";
+
+  const titleClass
+    = variant === "featured"
+      ? "text-2xl lg:text-4xl"
+      : variant === "compact"
+        ? "text-lg lg:text-xl"
+        : "text-xl lg:text-2xl";
+
+  const subtitleClass
+    = variant === "featured"
+      ? "text-xl lg:text-2xl"
+      : variant === "compact"
+        ? "text-sm lg:text-base"
+        : "text-base lg:text-xl";
+
+  const tagClass
+    = variant === "featured"
+      ? "text-sm lg:text-base"
+      : variant === "compact"
+        ? "text-xs"
+        : "text-xs lg:text-sm";
+
+  const showRoleDates = variant !== "compact";
 
   const imageContent = imageSrc
     ? (
@@ -83,23 +115,31 @@ export function ProjectCard({
       );
 
   return (
-    <div className={cn("group flex flex-col border-2 border-black dark:border-white bg-white dark:bg-black overflow-hidden", !isWide && "max-w-md")}>
-      {/* Image */}
-      {href
-        ? (
-            <CardLink href={href} className="block">
-              {imageContent}
-            </CardLink>
-          )
-        : (
-            imageContent
-          )}
+    <div className={cn("group flex flex-col border-2 border-black dark:border-white bg-white dark:bg-black overflow-hidden", !isWide && variant === "default" && "max-w-md")}>
+      {/* Image + Category badge */}
+      <div className="relative">
+        {href
+          ? (
+              <CardLink href={href} className="block">
+                {imageContent}
+              </CardLink>
+            )
+          : (
+              imageContent
+            )}
+
+        {category && (
+          <span className="absolute bottom-0 left-2 translate-y-1/2 bg-black dark:bg-white text-white dark:text-black text-xs font-bold px-2 py-0.5 z-10">
+            {category}
+          </span>
+        )}
+      </div>
 
       {/* Content */}
       <div className="border-t-2 border-black dark:border-white pt-2 px-2 flex flex-col justify-between gap-4 flex-1">
         {/* Top group: company + tagline */}
-        <div>
-          <h3 className="text-xl lg:text-2xl font-bold">
+        <div className={cn(category && "mt-2")}>
+          <h3 className={cn(titleClass, "font-bold")}>
             {href
               ? (
                   <CardLink href={href} className="hover:opacity-70 transition-opacity">
@@ -110,12 +150,12 @@ export function ProjectCard({
                   title
                 )}
           </h3>
-          <p className="text-base lg:text-xl mt-1">{subtitle}</p>
+          <p className={cn(subtitleClass, "mt-1")}>{subtitle}</p>
         </div>
 
         {/* Bottom group: role/dates, tags, arrow */}
         <div>
-          {(role || dates) && (
+          {showRoleDates && (role || dates) && (
             <p className="text-sm lg:text-base font-medium leading-tight">
               {role}
               {role && dates && "  //  "}
@@ -124,7 +164,7 @@ export function ProjectCard({
           )}
 
           <div className="flex items-end justify-between gap-4 pt-2 -mx-2">
-            <p className="text-xs lg:text-sm font-light text-black/60 dark:text-white/75 flex-1 pb-2 pl-2">
+            <p className={cn(tagClass, "font-light text-black/60 dark:text-white/75 flex-1 pb-2 pl-2")}>
               {tags.map(tag => `#${tag}`).join("    ")}
             </p>
 

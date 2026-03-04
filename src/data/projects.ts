@@ -1,7 +1,19 @@
 import type { ProjectCardProps } from "@/components/ui/ProjectCard";
 
-// TODO: add href when project detail pages are ready
-export const twelveLabs: ProjectCardProps = {
+export interface ProjectData extends ProjectCardProps {
+  category: string;
+  isFeatured: boolean;
+  sortDate: number;
+}
+
+export const categories = [
+  "PubSec Web App",
+  "Commercial Web App",
+  "Marketing Site",
+  "Dev Project",
+] as const;
+
+export const twelveLabs: ProjectData = {
   title: "TwelveLabs",
   subtitle: "multimodal AI video understanding",
   role: "software engineer",
@@ -9,9 +21,12 @@ export const twelveLabs: ProjectCardProps = {
   tags: ["react", "typescript", "video", "ai"],
   imageSrc: "/projects/twelvelabs.png",
   imageFit: "contain",
+  category: "PubSec Web App",
+  isFeatured: true,
+  sortDate: 202601,
 };
 
-export const lazarusAi: ProjectCardProps = {
+export const lazarusAi: ProjectData = {
   title: "Lazarus AI",
   subtitle: "AI for the public sector",
   role: "software engineer",
@@ -19,9 +34,12 @@ export const lazarusAi: ProjectCardProps = {
   tags: ["react", "data-viz", "typescript", "dashboard"],
   imageSrc: "/projects/lazarus-ai.png",
   imageFit: "contain",
+  category: "PubSec Web App",
+  isFeatured: true,
+  sortDate: 202506,
 };
 
-export const panda5: ProjectCardProps = {
+export const panda5: ProjectData = {
   title: "Panda5",
   subtitle: "knowledge-focused social media",
   role: "software engineer",
@@ -38,9 +56,12 @@ export const panda5: ProjectCardProps = {
   ],
   imageSrc: "/projects/panda5.png",
   imageFit: "contain",
+  category: "Commercial Web App",
+  isFeatured: false,
+  sortDate: 202301,
 };
 
-export const companyOfDads: ProjectCardProps = {
+export const companyOfDads: ProjectData = {
   title: "The Company of Dads",
   subtitle: "community and content for lead dads",
   dates: "2022.03 - present",
@@ -53,9 +74,12 @@ export const companyOfDads: ProjectCardProps = {
     "prototyping",
   ],
   imageSrc: "/projects/company-of-dads.png",
+  category: "Marketing Site",
+  isFeatured: false,
+  sortDate: 202203,
 };
 
-export const codTools: ProjectCardProps = {
+export const codTools: ProjectData = {
   title: "COD Tools",
   subtitle: "streamlined content publishing",
   dates: "2022.12 - present",
@@ -69,4 +93,15 @@ export const codTools: ProjectCardProps = {
     "tailwind",
   ],
   imageSrc: "/projects/cod-tools.png",
+  category: "Dev Project",
+  isFeatured: false,
+  sortDate: 202212,
 };
+
+export const allProjects: ProjectData[] = [
+  twelveLabs,
+  lazarusAi,
+  panda5,
+  companyOfDads,
+  codTools,
+];

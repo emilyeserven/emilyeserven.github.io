@@ -123,7 +123,7 @@ function CardLink({ href, children, ...rest }: CardLinkProps) {
 
 function CategoryBadge({ category }: { category: string }) {
   return (
-    <Badge className="absolute bottom-0 left-2 translate-y-1/2 rounded-none bg-black dark:bg-white text-white dark:text-black text-xs font-bold px-2 py-0.5 z-10">
+    <Badge className="absolute bottom-0 left-2 translate-y-1/2 bg-black dark:bg-white text-white dark:text-black text-xs font-bold px-2 py-0.5 z-10">
       {category}
     </Badge>
   );

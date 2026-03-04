@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Button, type buttonVariants } from "@/components/shad/ui/button";
+import { Button, ButtonArrow, type buttonVariants } from "@/components/shad/ui/button";
 import type { VariantProps } from "class-variance-authority";
 
 type LinkButtonProps = {
@@ -16,7 +16,7 @@ export function LinkButton({ hasArrow = false, children, variant, size, classNam
     <Button asChild variant={variant} size={size} className={className}>
       <Link {...linkProps}>
         {children}
-        {hasArrow && <span aria-hidden="true" className="no-underline">→</span>}
+        {hasArrow && <ButtonArrow />}
       </Link>
     </Button>
   );

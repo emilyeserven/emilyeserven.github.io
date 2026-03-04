@@ -26,6 +26,7 @@ export function useThemeToggle() {
     return () => mq.removeEventListener("change", handleChange);
   }, []);
 
+  // TODO: add system-default option (three-way toggle: light/dark/system)
   function toggle() {
     const next = !dark;
     document.documentElement.classList.toggle("dark", next);

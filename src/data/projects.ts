@@ -1,5 +1,6 @@
 import type { ProjectCardProps } from "@/components/ui/ProjectCard";
 
+// TODO: add href when project detail pages are ready
 export const twelveLabs: ProjectCardProps = {
   title: "TwelveLabs",
   subtitle: "multimodal AI video understanding",

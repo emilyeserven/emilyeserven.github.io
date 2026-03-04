@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/layout/HeroSection";
 import { TwoColumnSection } from "@/components/ui/TwoColumnSection";
 import { DisplaySection } from "@/components/ui/DisplaySection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { Button } from "@/components/shad/ui/button";
+import { Button, ButtonArrow } from "@/components/shad/ui/button";
 import { LinkButton } from "@/components/ui/LinkButton";
 import {
   lazarusAi,
@@ -60,7 +60,7 @@ function Index() {
           <Button asChild variant="outline" size="display">
             <a href="/assets/emily-serven-resume.pdf" target="_blank" rel="noopener noreferrer">
               Download Resume
-              <span aria-hidden="true" className="no-underline">→</span>
+              <ButtonArrow />
             </a>
           </Button>
         </div>

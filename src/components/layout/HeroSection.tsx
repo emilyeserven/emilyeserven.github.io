@@ -1,4 +1,4 @@
-import { Button } from "@/components/shad/ui/button";
+import { Button, ButtonArrow } from "@/components/shad/ui/button";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { AvatarPill } from "@/components/ui/AvatarPill";
 
@@ -37,9 +37,10 @@ export function HeroSection() {
           <Button asChild variant="secondary" size="display">
             <a href="/assets/emily-serven-resume.pdf" target="_blank" rel="noopener noreferrer">
               Download Resume
-              <span aria-hidden="true" className="no-underline">→</span>
+              <ButtonArrow />
             </a>
           </Button>
+          {/* -ml-0.5 overlaps left border with adjacent button; hover:border-l-white hides the seam */}
           <LinkButton to="/projects" variant="outline" size="display" hasArrow className="-ml-0.5 hover:border-l-white">
             View Projects
           </LinkButton>

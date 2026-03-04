@@ -67,7 +67,7 @@ export function ProjectCard({
         >
           <img
             src={imageSrc}
-            alt=""
+            alt={`Logo of ${title}`}
             className={cn(
               "size-full",
               imageFit === "contain" ? "object-contain p-6" : "object-cover",

@@ -2,6 +2,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/shad/ui/button";
 import { useThemeToggle } from "@/hooks/useThemeToggle";
 
 const navLinks = [
@@ -20,13 +21,14 @@ function ThemeToggleButton({
   iconClass: string;
 }) {
   return (
-    <button
+    <Button
+      variant="ghost"
+      size="icon"
       onClick={onToggle}
       aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-      className="p-2 cursor-pointer hover:opacity-70 transition-opacity"
     >
       {dark ? <Sun className={iconClass} /> : <Moon className={iconClass} />}
-    </button>
+    </Button>
   );
 }
 
@@ -72,6 +74,7 @@ export function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
             aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
           >
             <Menu className="size-6" />
           </button>
@@ -80,6 +83,7 @@ export function Navbar() {
 
       {/* Mobile nav dropdown */}
       <nav
+        id="mobile-nav"
         className={cn(
           "md:hidden border-t border-black/10 dark:border-white/10 bg-white/95 dark:bg-black/95 backdrop-blur-md overflow-hidden transition-all duration-200",
           mobileOpen ? "max-h-64 py-4" : "max-h-0",

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { Button, buttonVariants } from "@/components/shad/ui/button";
+import { Button } from "@/components/shad/ui/button";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -48,6 +48,7 @@ export function ProjectCard({
   href,
   imageSrc,
   imageFit = "cover",
+  // All current cards have images; transparent avoids flash if one is missing
   imagePlaceholderColor = "transparent",
   imageSize = "default",
   isWide = false,
@@ -66,7 +67,7 @@ export function ProjectCard({
         >
           <img
             src={imageSrc}
-            alt={title}
+            alt=""
             className={cn(
               "size-full",
               imageFit === "contain" ? "object-contain p-6" : "object-cover",
@@ -127,24 +128,18 @@ export function ProjectCard({
               {tags.map(tag => `#${tag}`).join("    ")}
             </p>
 
-            {href
-              ? (
-                  <Button
-                    asChild
-                    variant="secondary"
-                    size="icon-lg"
-                    className="lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]"
-                  >
-                    <CardLink href={href} aria-label={`View ${title}`}>
-                      <ArrowRight className="size-5 lg:size-7" />
-                    </CardLink>
-                  </Button>
-                )
-              : (
-                  <span className={cn(buttonVariants({ variant: "secondary", size: "icon-lg" }), "lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]")}>
-                    <ArrowRight className="size-5 lg:size-7" />
-                  </span>
-                )}
+            {href && (
+              <Button
+                asChild
+                variant="secondary"
+                size="icon-lg"
+                className="lg:size-15 shrink-0 rounded-none -mb-[2px] -mr-[2px]"
+              >
+                <CardLink href={href} aria-label={`View ${title}`}>
+                  <ArrowRight className="size-5 lg:size-7" />
+                </CardLink>
+              </Button>
+            )}
           </div>
         </div>
       </div>

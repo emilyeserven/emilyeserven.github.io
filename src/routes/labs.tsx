@@ -17,7 +17,7 @@ function Labs() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {labProjects.map(p => (
             <ProjectCard
-              key={p.title}
+              key={p.id}
               {...p}
               variant="compact"
               isWide

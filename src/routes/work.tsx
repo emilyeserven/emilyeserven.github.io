@@ -39,36 +39,33 @@ function Work() {
       </DisplaySection>
 
       <DisplaySection className="pt-0 lg:pt-0">
-        {featured.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {featured.map(p => (
-              <ProjectCard
-                key={p.title}
-                {...p}
-                variant="featured"
-                isWide
-              />
-            ))}
-          </div>
-        )}
+        <div className="flex flex-col gap-4">
+          {featured.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {featured.map(p => (
+                <ProjectCard
+                  key={p.id}
+                  {...p}
+                  variant="featured"
+                  isWide
+                />
+              ))}
+            </div>
+          )}
 
-        {featured.length > 0 && compact.length > 0 && (
-          <div className="h-4" />
-        )}
-
-        {compact.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {compact.map(p => (
-              <ProjectCard
-                key={p.title}
-                {...p}
-                variant="compact"
-                isWide
-              />
-            ))}
-          </div>
-        )}
-
+          {compact.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {compact.map(p => (
+                <ProjectCard
+                  key={p.id}
+                  {...p}
+                  variant="compact"
+                  isWide
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </DisplaySection>
     </>
   );

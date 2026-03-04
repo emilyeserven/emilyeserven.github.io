@@ -21,9 +21,8 @@ export const Default: Story = {
         <p className="section-body mt-4">A showcase of the most recent work with details about the approach and technologies used.</p>
       </div>
       <ProjectCard
-        title="Portfolio Site"
+        projectName="Portfolio Site"
         subtitle="Personal website redesign"
-        role="Designer & Developer"
         dates="2025–2026"
         tags={["React", "TypeScript", "Tailwind"]}
         href="https://example.com"

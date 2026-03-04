@@ -1,7 +1,10 @@
 import type { ProjectCardProps } from "@/components/ui/ProjectCard";
 
+export type ProjectCategory = (typeof categories)[number] | "Lab";
+
 export interface ProjectData extends ProjectCardProps {
-  category: string;
+  id: string;
+  category: ProjectCategory;
   isFeatured: boolean;
   startDate: number;
   endDate: number;
@@ -9,6 +12,9 @@ export interface ProjectData extends ProjectCardProps {
 
 /** Use for ongoing projects in endDate */
 export const PRESENT = 999999;
+
+/** Use when a project has no meaningful date */
+export const UNKNOWN_DATE = 0;
 
 export const categories = [
   "PubSec",
@@ -18,7 +24,8 @@ export const categories = [
 ] as const;
 
 export const twelveLabs: ProjectData = {
-  title: "TwelveLabs",
+  id: "twelveLabs",
+  projectName: "TwelveLabs",
   subtitle: "multimodal AI video understanding",
   dates: "2026.01 - present",
   tags: ["react", "typescript", "video", "ai"],
@@ -31,7 +38,8 @@ export const twelveLabs: ProjectData = {
 };
 
 export const lazarusAi: ProjectData = {
-  title: "Lazarus AI",
+  id: "lazarusAi",
+  projectName: "Lazarus AI",
   subtitle: "AI for the public sector",
   dates: "2025.06 - 2026.01",
   tags: ["react", "data-viz", "typescript", "dashboard"],
@@ -44,9 +52,9 @@ export const lazarusAi: ProjectData = {
 };
 
 export const panda5: ProjectData = {
-  title: "Panda5",
+  id: "panda5",
+  projectName: "Panda5",
   subtitle: "knowledge-focused social media",
-  role: "software engineer",
   dates: "2023.01 - 2023.05",
   tags: [
     "mvp",
@@ -67,7 +75,8 @@ export const panda5: ProjectData = {
 };
 
 export const companyOfDads: ProjectData = {
-  title: "The Company of Dads",
+  id: "companyOfDads",
+  projectName: "The Company of Dads",
   subtitle: "community and content for lead dads",
   dates: "2022.03 - present",
   tags: [
@@ -86,7 +95,8 @@ export const companyOfDads: ProjectData = {
 };
 
 export const codTools: ProjectData = {
-  title: "COD Tools",
+  id: "codTools",
+  projectName: "COD Tools",
   subtitle: "streamlined content publishing",
   dates: "2022.12 - present",
   tags: [
@@ -106,9 +116,9 @@ export const codTools: ProjectData = {
 };
 
 export const aitrk: ProjectData = {
-  title: "AiTrk4 for Ai Media Group",
+  id: "aitrk",
+  projectName: "AiTrk4 for Ai Media Group",
   subtitle: "proprietary ad buying dashboard",
-  role: "front-end development",
   dates: "2018.07 - 2021.06",
   tags: ["javascript", "d3", "dojo-toolkit"],
   imageSrc: "/projects/aitrk.jpg",
@@ -120,9 +130,9 @@ export const aitrk: ProjectData = {
 };
 
 export const lumi: ProjectData = {
-  title: "Daylight for Luminoso",
+  id: "lumi",
+  projectName: "Daylight for Luminoso",
   subtitle: "NLP data visualization dashboard",
-  role: "front-end development",
   dates: "2021.10 - 2022.11",
   tags: ["react", "styled-components", "storybook", "jest"],
   imageSrc: "/projects/lumi.jpg",
@@ -135,9 +145,9 @@ export const lumi: ProjectData = {
 };
 
 export const scuba: ProjectData = {
-  title: "Scuba Analytics",
+  id: "scuba",
+  projectName: "Scuba Analytics",
   subtitle: "customer intelligence platform",
-  role: "front-end development",
   dates: "2023.03 - 2025.05",
   tags: ["react", "redux", "jest"],
   imageSrc: "/projects/scuba.jpg",
@@ -150,19 +160,21 @@ export const scuba: ProjectData = {
 };
 
 export const d3Music: ProjectData = {
-  title: "D3 Music Experiments",
+  id: "d3Music",
+  projectName: "D3 Music Experiments",
   subtitle: "interactive music data visualizations",
   tags: ["d3", "javascript"],
   imageSrc: "/projects/d3.jpg",
   imageFit: "cover",
   category: "Lab",
   isFeatured: false,
-  startDate: 0,
-  endDate: 0,
+  startDate: UNKNOWN_DATE,
+  endDate: UNKNOWN_DATE,
 };
 
 export const moneyMachine: ProjectData = {
-  title: "The Money Machine",
+  id: "moneyMachine",
+  projectName: "The Money Machine",
   subtitle: "creative class project collaboration",
   dates: "Oct 2017",
   tags: ["html", "css", "javascript", "jquery"],
@@ -175,7 +187,8 @@ export const moneyMachine: ProjectData = {
 };
 
 export const nyExcelsior: ProjectData = {
-  title: "New York Excelsior Concept Site",
+  id: "nyExcelsior",
+  projectName: "New York Excelsior Concept Site",
   subtitle: "esports team concept website",
   dates: "Feb 2018",
   tags: ["html", "css"],
@@ -188,7 +201,8 @@ export const nyExcelsior: ProjectData = {
 };
 
 export const ornette: ProjectData = {
-  title: "Ornette",
+  id: "ornette",
+  projectName: "Ornette",
   subtitle: "single-page design experiment",
   dates: "Feb 2016",
   tags: ["html", "css"],
@@ -201,7 +215,8 @@ export const ornette: ProjectData = {
 };
 
 export const rockPaperScissors: ProjectData = {
-  title: "Rock Paper Scissors",
+  id: "rockPaperScissors",
+  projectName: "Rock Paper Scissors",
   subtitle: "DOM manipulation practice project",
   dates: "Aug 2016",
   tags: ["html", "css", "javascript"],
@@ -214,7 +229,8 @@ export const rockPaperScissors: ProjectData = {
 };
 
 export const quoteLovecraft: ProjectData = {
-  title: "Typography - Lovecraft",
+  id: "quoteLovecraft",
+  projectName: "Typography - Lovecraft",
   subtitle: "blackletter typography mood piece",
   dates: "Oct 2014",
   tags: ["html", "css"],

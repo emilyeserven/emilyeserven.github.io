@@ -1,13 +1,10 @@
 import { Button } from "@/components/shad/ui/button";
-import { cn } from "@/lib/utils";
 
 interface ProjectFiltersProps {
   categories: readonly string[];
   activeCategory: string | null;
   onSelectCategory: (cat: string | null) => void;
 }
-
-const activeClass = "bg-foreground text-background outline outline-2 outline-offset-2 outline-foreground";
 
 export function ProjectFilters({
   categories,
@@ -20,7 +17,8 @@ export function ProjectFilters({
       <Button
         variant="outline"
         size="sm"
-        className={cn(activeCategory === null && activeClass)}
+        aria-pressed={activeCategory === null}
+        {...(activeCategory === null ? { "data-active": "" } : {})}
         onClick={() => onSelectCategory(null)}
       >
         All
@@ -30,7 +28,8 @@ export function ProjectFilters({
           key={cat}
           variant="outline"
           size="sm"
-          className={cn(activeCategory === cat && activeClass)}
+          aria-pressed={activeCategory === cat}
+          {...(activeCategory === cat ? { "data-active": "" } : {})}
           onClick={() => onSelectCategory(cat)}
         >
           {cat}

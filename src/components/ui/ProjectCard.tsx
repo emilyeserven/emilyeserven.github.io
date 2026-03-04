@@ -129,15 +129,18 @@ function CategoryBadge({ category }: { category: string }) {
   );
 }
 
-function ProjectTitle({ projectName, href }: { projectName: string; href?: string }) {
-  if (href) {
-    return (
-      <CardLink href={href} className="hover:opacity-70 transition-opacity">
-        {projectName}
-      </CardLink>
-    );
-  }
-  return <>{projectName}</>;
+function ProjectTitle({ projectName, href, className }: { projectName: string; href?: string; className?: string }) {
+  return (
+    <h3 className={className}>
+      {href
+        ? (
+            <CardLink href={href} className="hover:opacity-70 transition-opacity">
+              {projectName}
+            </CardLink>
+          )
+        : projectName}
+    </h3>
+  );
 }
 
 function ProjectDates({ dates }: { dates: string }) {
@@ -206,9 +209,7 @@ export function ProjectCard({
       <div className="border-t-2 border-black dark:border-white px-2 flex flex-col justify-between flex-1 pt-2 gap-4">
         {/* Top group: company + tagline */}
         <div className={cn(category && "mt-2")}>
-          <h3 className={titleVariants({ variant })}>
-            <ProjectTitle projectName={projectName} href={href} />
-          </h3>
+          <ProjectTitle projectName={projectName} href={href} className={titleVariants({ variant })} />
           <p className={subtitleVariants({ variant })}>{subtitle}</p>
         </div>
 

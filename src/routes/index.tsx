@@ -54,7 +54,7 @@ function Index() {
       <DisplaySection>
         <h2 className="section-heading">That's the gist of it!</h2>
         <div className="mt-4 lg:mt-6 flex flex-wrap gap-4">
-          <LinkButton to="/projects" variant="default" size="display" hasArrow>
+          <LinkButton to="/work" variant="default" size="display" hasArrow>
             Explore more websites
           </LinkButton>
           <Button asChild variant="outline" size="display">

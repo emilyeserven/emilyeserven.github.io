@@ -7,7 +7,8 @@ import { useThemeToggle } from "@/hooks/useThemeToggle";
 
 const navLinks = [
   { label: "About", to: "/about" },
-  { label: "Projects", to: "/projects" },
+  { label: "Work", to: "/work" },
+  { label: "Labs", to: "/labs" },
   { label: "Contact", to: "/contact" },
 ] as const;
 

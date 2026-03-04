@@ -12,7 +12,7 @@ const socialLinks = [
 
 const footerLinks = [
   { label: "About", to: "/about" },
-  { label: "Projects", to: "/projects" },
+  { label: "Work", to: "/work" },
   { label: "Contact", to: "/contact" },
 ] as const;
 

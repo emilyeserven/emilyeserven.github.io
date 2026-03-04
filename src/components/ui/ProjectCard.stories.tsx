@@ -5,9 +5,8 @@ const meta = {
   title: "ui/ProjectCard",
   component: ProjectCard,
   args: {
-    title: "Project Title",
+    projectName: "Project Title",
     subtitle: "A brief description of the project",
-    role: "Lead Developer",
     dates: "2024–2026",
     tags: ["React", "TypeScript", "Tailwind"],
     href: "https://example.com",
@@ -25,7 +24,7 @@ export const WithoutLink: Story = {
 };
 
 export const MinimalFields: Story = {
-  args: { role: undefined, dates: undefined },
+  args: { dates: undefined },
 };
 
 export const ContainFit: Story = {

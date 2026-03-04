@@ -10,7 +10,7 @@ export function DisplaySection({
   className,
 }: DisplaySectionProps) {
   return (
-    <section className={cn("py-12 lg:py-20", className)}>
+    <section className={cn("py-8 lg:py-12", className)}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {children}
       </div>

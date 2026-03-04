@@ -68,11 +68,15 @@ function Button({
         : (
             <>
               {children}
-              {hasArrow && <span aria-hidden="true" className="no-underline">→</span>}
+              {hasArrow && <ButtonArrow />}
             </>
           )}
     </Comp>
   )
 }
 
-export { Button, buttonVariants }
+function ButtonArrow() {
+  return <span aria-hidden="true" className="no-underline">→</span>
+}
+
+export { Button, ButtonArrow, buttonVariants }

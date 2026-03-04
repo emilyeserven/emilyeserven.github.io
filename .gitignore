@@ -23,6 +23,7 @@ Thumbs.db
 
 # Vite
 *.local
+.vite/
 
 # TypeScript
 *.tsbuildinfo
